@@ -1,0 +1,42 @@
+{
+  "name": "hdm-industrial",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HDM Industrial — plataforma digital B2B de suministro de personal industrial cualificado",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check:placeholders": "tsx scripts/check-placeholders.ts",
+    "check:seo": "tsx scripts/check-seo.ts",
+    "check:claims": "tsx scripts/check-claims.ts",
+    "verify": "npm run lint && npm run typecheck && npm run test && npm run check:placeholders && npm run check:claims && npm run build && npm run check:seo",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "next": "16.3.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.18.0",
+    "eslint-config-next": "16.3.4",
+    "jsdom": "^25.0.1",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.5"
+  }
+}

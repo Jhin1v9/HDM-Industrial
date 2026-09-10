@@ -1,0 +1,194 @@
+[
+  {
+    "id": "PH-PHOTO-HERO-01",
+    "file": "/images/hero-industrial.jpg",
+    "alt": {
+      "es": "Trabajador industrial esmerilando acero con una explosión de chispas doradas en un entorno oscuro y cinematográfico",
+      "ca": "Treballador industrial esmolant acer amb una explosió d'espurnes daurades en un entorn fosc i cinematogràfic",
+      "en": "Industrial worker grinding steel with a burst of golden sparks in a dark, cinematic setting",
+      "pt": "Trabalhador industrial a esmerilar aço com uma explosão de faíscas douradas num ambiente escuro e cinematográfico"
+    },
+    "context": "Trabajador (sin rostro visible) rectificando una viga de acero con radial; lluvia de chispas doradas, fondo industrial desenfocado, atmósfera oscura cinematográfica.",
+    "sourceUrl": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1920&q=80&fm=jpg&fit=max",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "PH-PHOTO-HERO-MOBILE-01",
+    "file": "/images/hero-mobile.jpg",
+    "alt": {
+      "es": "Manos de un trabajador industrial esmerilando acero con chispas doradas, encuadre vertical",
+      "ca": "Mans d'un treballador industrial esmolant acer amb espurnes daurades, emmarcat vertical",
+      "en": "Hands of an industrial worker grinding steel with golden sparks, vertical framing",
+      "pt": "Mãos de um trabalhador industrial a esmerilar aço com faíscas douradas, enquadramento vertical"
+    },
+    "context": "Mismo motivo del hero en recorte vertical 1080x1600: manos con radial sobre acero y explosión de chispas.",
+    "sourceUrl": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1080&h=1600&q=80&fm=jpg&fit=crop",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "width": 1080,
+    "height": 1600
+  },
+  {
+    "id": "PH-PHOTO-TIG-01",
+    "file": "/images/profile-tig.jpg",
+    "alt": {
+      "es": "Soldador con careta realizando soldadura de precisión con arco azulado intenso",
+      "ca": "Soldador amb careta realitzant soldadura de precisió amb arc blavós intens",
+      "en": "Welder in a welding helmet carrying out precision welding with an intense bluish arc",
+      "pt": "Soldador com máscara a realizar soldadura de precisão com arco azulado intenso"
+    },
+    "context": "Primer plano de soldadura con arco azul brillante, careta decorada y manos enguantadas sujetando la pieza; transmite precisión (slot TIG).",
+    "sourceUrl": "https://images.unsplash.com/photo-1455165814004-1126a7199f9b?w=1920&q=80&fm=jpg&fit=max",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "PH-PHOTO-MIGMAG-01",
+    "file": "/images/profile-migmag.jpg",
+    "alt": {
+      "es": "Soldador con careta y guantes soldando con tocha sobre chapa metálica, chispas y humo azulado",
+      "ca": "Soldador amb careta i guants soldant amb torxa sobre xapa metàl·lica, espurnes i fum blavós",
+      "en": "Welder in a welding helmet and gloves welding sheet metal with a torch, sparks and bluish smoke",
+      "pt": "Soldador com máscara e luvas a soldar com tocha sobre chapa metálica, faíscas e fumo azulado"
+    },
+    "context": "Soldador con careta abatible trabajando con tocha sobre perfil/chapa metálica en banco de taller; arco, chispas y humo (slot MIG/MAG).",
+    "sourceUrl": "https://images.pexels.com/photos/2381463/pexels-photo-2381463.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    "source": "Pexels",
+    "license": "Pexels License",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "PH-PHOTO-ELECTRODO-01",
+    "file": "/images/profile-electrodo.jpg",
+    "alt": {
+      "es": "Soldador con careta sujetando pinza porta-electrodo con electrodo revestido entre chispas intensas",
+      "ca": "Soldador amb careta subjectant pinça portaelèctrode amb elèctrode revestit entre espurnes intenses",
+      "en": "Welder in a welding helmet holding an electrode holder with a coated electrode amid intense sparks",
+      "pt": "Soldador com máscara a segurar pinça porta-eletrodo com eletrodo revestido entre faíscas intensas"
+    },
+    "context": "Primer plano de soldador con careta y pinza porta-electrodo con varilla (electrodo revestido); chispas y humo intensos (slot electrodo/SMAW).",
+    "sourceUrl": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80&fm=jpg&fit=max",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "PH-PHOTO-CALDERERO-01",
+    "file": "/images/profile-calderero.jpg",
+    "alt": {
+      "es": "Calderero esmerilando una chapa metálica sujeta con una mordaza roja, saltando chispas",
+      "ca": "Calderer esmolant una xapa metàl·lica subjecta amb una mordassa vermella, saltant espurnes",
+      "en": "Boilermaker grinding a sheet metal plate held in a red vice, sparks flying",
+      "pt": "Caldeireiro a esmerilar uma chapa metálica segura por uma morsa vermelha, com faíscas a saltar"
+    },
+    "context": "Trabajo de calderería en banco: amoladora angular cortando/esmerilando chapa metálica fijada con sargento rojo; chispas (slot calderero).",
+    "sourceUrl": "https://images.unsplash.com/photo-1529926542502-77aceca00aa3?w=1920&q=80&fm=jpg&fit=max",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "width": 1920,
+    "height": 1920
+  },
+  {
+    "id": "PH-PHOTO-MONTADOR-01",
+    "file": "/images/profile-montador.jpg",
+    "alt": {
+      "es": "Montadores de estructuras metálicas trabajando en altura sobre vigas de acero desde una plataforma elevadora",
+      "ca": "Muntadors d'estructures metàl·liques treballant en alçada sobre bigues d'acer des d'una plataforma elevadora",
+      "en": "Structural fitters working at height on steel beams from a mobile elevating work platform",
+      "pt": "Montadores de estruturas metálicas a trabalhar em altura sobre vigas de aço a partir de uma plataforma elevatória"
+    },
+    "context": "Dos montadores con casco, arnés y chaleco reflectante colocando/apuntalando vigas de acero en altura desde cesta elevadora en obra de estructura metálica.",
+    "sourceUrl": "https://images.unsplash.com/photo-1616224952327-6240f31e5bdc?w=1920&q=80&fm=jpg&fit=max",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "PH-PHOTO-ELECTRICISTA-01",
+    "file": "/images/profile-electricista.jpg",
+    "alt": {
+      "es": "Electricista industrial trabajando de espaldas en un cuadro eléctrico con interruptores y cableado de colores",
+      "ca": "Electricista industrial treballant d'esquena en un quadre elèctric amb interruptors i cablejat de colors",
+      "en": "Industrial electrician working, seen from behind, on an electrical switchboard with breakers and coloured wiring",
+      "pt": "Eletricista industrial a trabalhar de costas num quadro elétrico com interruptores e cablagem de cores"
+    },
+    "context": "Electricista (de espaldas, sin rostro) apretando con destornillador en cuadro eléctrico industrial lleno de magnetotérmicos, contactores y cableado; sin marcas legibles.",
+    "sourceUrl": "https://images.pexels.com/photos/9679179/pexels-photo-9679179.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    "source": "Pexels",
+    "license": "Pexels License",
+    "width": 1920,
+    "height": 2560
+  },
+  {
+    "id": "PH-PHOTO-PLANT-01",
+    "file": "/images/plant-industrial.jpg",
+    "alt": {
+      "es": "Planta industrial de refinería al anochecer con antorchas y torres iluminadas",
+      "ca": "Planta industrial de refineria al capvespre amb torxes i torres il·luminades",
+      "en": "Refinery industrial plant at dusk with flares and illuminated towers",
+      "pt": "Planta industrial de refinação ao anoitecer com tochas e torres iluminadas"
+    },
+    "context": "Vista amplia de refinería/planta petroquímica al anochecer: chimeneas rojiblancas, flare encendido y estructuras iluminadas; sin logotipos.",
+    "sourceUrl": "https://images.unsplash.com/photo-1588011930968-eadac80e6a5a?w=1920&q=80&fm=jpg&fit=max",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "width": 1920,
+    "height": 1282
+  },
+  {
+    "id": "PH-PHOTO-STRUCTURE-01",
+    "file": "/images/structure-steel.jpg",
+    "alt": {
+      "es": "Estructura metálica de nave industrial en construcción con trabajadores montando la cubierta",
+      "ca": "Estructura metàl·lica de nau industrial en construcció amb treballadors muntant la coberta",
+      "en": "Steel structure of an industrial building under construction with workers erecting the roof",
+      "pt": "Estrutura metálica de nave industrial em construção com trabalhadores a montar a cobertura"
+    },
+    "context": "Pórticos de acero de una nave industrial en montaje, con operarios colocando correas/cubierta contra cielo despejado (formato vertical).",
+    "sourceUrl": "https://images.unsplash.com/photo-1649907346402-9fbcf485d018?w=1920&q=80&fm=jpg&fit=max",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "width": 1920,
+    "height": 3405
+  },
+  {
+    "id": "PH-PHOTO-MOBILIZATION-01",
+    "file": "/images/mobilization-logistics.jpg",
+    "alt": {
+      "es": "Vista aérea de una terminal de contenedores con grúas pórtico y camiones, logística industrial",
+      "ca": "Vista aèria d'una terminal de contenidors amb grues pòrtic i camions, logística industrial",
+      "en": "Aerial view of a container terminal with gantry cranes and lorries, industrial logistics",
+      "pt": "Vista aérea de um terminal de contentores com pórticos e camiões, logística industrial"
+    },
+    "context": "Terminal portuaria de contenedores vista desde el aire: grúas, miles de contenedores y camiones; logística y movilización industrial a gran escala.",
+    "sourceUrl": "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80&fm=jpg&fit=max",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "PH-PHOTO-EPI-01",
+    "file": "/images/epi-safety.jpg",
+    "alt": {
+      "es": "Trabajador equipado con EPI completo (casco, mascarilla, mono y botas de seguridad) subiendo una escalera en planta industrial",
+      "ca": "Treballador equipat amb EPI complet (casc, mascareta, mono i botes de seguretat) pujant una escala en planta industrial",
+      "en": "Worker equipped with full PPE (helmet, respirator mask, coveralls and safety boots) climbing a ladder in an industrial plant",
+      "pt": "Trabalhador equipado com EPI completo (capacete, máscara, fato-macaco e botas de segurança) a subir uma escada numa planta industrial"
+    },
+    "context": "Trabajador de espaldas con EPI completo —casco blanco, respirador, mono verde, guantes y botas rojas— subiendo por escalera amarilla entre motores y tuberías industriales.",
+    "sourceUrl": "https://images.unsplash.com/photo-1681812508855-f7b04fefcd83?w=1920&q=80&fm=jpg&fit=max",
+    "source": "Unsplash",
+    "license": "Unsplash License",
+    "width": 1920,
+    "height": 2880
+  }
+]

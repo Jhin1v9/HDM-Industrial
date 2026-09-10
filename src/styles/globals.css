@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+/*
+ * HDM Industrial — Design tokens (Prompt Supremo §59–60).
+ * Concept: CONTROLLED INDUSTRIAL MASS — linhas, estrutura, contraste, dados,
+ * grande tipografia, espaços controlados. Sem gradientes vistosos, sem glass,
+ * rounded contido, sombras raras. Sem amarelo/preto cliché, sem textura metálica.
+ */
+@theme {
+  /* color — tinta profunda + papel quente + aço + acento sinal contido */
+  --color-ink-950: #10151a;
+  --color-ink-900: #161d24;
+  --color-ink-800: #1f2831;
+  --color-ink-700: #2b3742;
+  --color-ink-600: #3d4b58;
+  --color-steel-500: #5f7183;
+  --color-steel-400: #8195a6;
+  --color-steel-300: #a9b8c4;
+  --color-line-300: #d6d3cb;
+  --color-line-200: #e4e2db;
+  --color-paper-100: #f4f3ef;
+  --color-paper-50: #faf9f6;
+  --color-signal-700: #a63d17;
+  --color-signal-600: #c2491d;
+  --color-signal-500: #d9551f;
+  --color-signal-100: #f7e4d9;
+  --color-ok-600: #2e6b4f;
+  --color-warn-700: #8a5a13;
+
+  /* typography */
+  --font-sans: var(--font-archivo), "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-archivo), "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: var(--font-archivo), "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --text-hero: clamp(2.4rem, 5.4vw, 4.6rem);
+  --text-section: clamp(1.7rem, 3.2vw, 2.6rem);
+
+  /* spacing / containers */
+  --container-site: 76rem;
+  --container-narrow: 56rem;
+
+  /* radii — contidos, industriais */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  /* shadows — raras e secas */
+  --shadow-frame: 0 1px 0 0 rgb(16 21 26 / 0.06);
+  --shadow-lift: 0 10px 28px -14px rgb(16 21 26 / 0.28);
+
+  /* motion */
+  --ease-industrial: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --duration-fast: 140ms;
+  --duration-med: 240ms;
+
+  /* z-index */
+  --z-header: 40;
+  --z-drawer: 60;
+  --z-request-bar: 50;
+  --z-consent: 70;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--color-paper-50);
+  color: var(--color-ink-950);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-signal-500);
+  color: #fff;
+}
+
+/* Focus visível e consistente (WCAG 2.2 AA) */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--color-signal-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--color-ink-950);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* Technical grid fallback para MediaPlaceholder — intencional, não quebrado */
+.tech-grid {
+  background-image:
+    linear-gradient(var(--color-line-200) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line-200) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.tech-grid-dark {
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Números tabulares para dados */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+}
