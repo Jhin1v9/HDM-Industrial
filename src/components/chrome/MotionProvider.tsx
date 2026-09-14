@@ -130,9 +130,11 @@ export function MotionProvider() {
           return inners;
         };
 
+        let revealEls: HTMLElement[] = [];
+
         const ctx = gsap.context(() => {
           // ── Reveal em batch (seções, cards, fora do hero) ──────────────
-          const revealEls = gsap.utils.toArray<HTMLElement>("[data-reveal]:not([data-reveal='hero'])");
+          revealEls = gsap.utils.toArray<HTMLElement>("[data-reveal]:not([data-reveal='hero'])");
           if (revealEls.length) {
             gsap.set(revealEls, { y: 28, autoAlpha: 0 });
             ScrollTrigger.batch(revealEls, {
@@ -267,6 +269,37 @@ export function MotionProvider() {
         requestAnimationFrame(() => {
           if (!disposed) ScrollTrigger.refresh();
         });
+
+        // Failsafe anti-conteúdo-preso: se 2,5s após o boot algum elemento com
+        // [data-reveal] estiver na viewport mas ainda oculto (batch que não
+        // disparou — rede lenta, edge case de refresh etc.), força a revelação.
+        // Elementos abaixo da dobra mantêm a animação normal no scroll.
+        const failsafeTimer = window.setTimeout(() => {
+          if (disposed) return;
+          const stuck = revealEls.filter((el) => {
+            if (Number(gsap.getProperty(el, "autoAlpha")) > 0.05) return false;
+            const rect = el.getBoundingClientRect();
+            return rect.top < window.innerHeight && rect.bottom > 0;
+          });
+          if (stuck.length) {
+            gsap.to(stuck, {
+              y: 0,
+              autoAlpha: 1,
+              duration: 0.5,
+              ease: "power2.out",
+              overwrite: true,
+            });
+          }
+        }, 2500);
+
+        teardown = () => {
+          window.removeEventListener("resize", onResize);
+          window.clearTimeout(resizeTimer);
+          window.clearTimeout(failsafeTimer);
+          ctx.revert();
+          gsap.ticker.remove(onTick);
+          lenis?.destroy();
+        };
       } catch {
         restoreContent();
       }
