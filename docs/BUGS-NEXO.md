@@ -101,7 +101,8 @@ retornam 404, porque o export gera `pt.html` + pasta `pt/` sem `index.html`.
 
 - **Comunicação com o cliente (regra de ouro):** zero internals (nunca Vercel,
   GitHub, deploy, bugs, credenciais no painel/relatório do cliente); linguagem
-  de leigo traduzida em benefício; tratar pelo nome ("Olá, Matheus!"), assinar
+  por canal — relatório (relatorio.html) TÉCNICA, painel/comentários na VPS
+  leigos, traduzidos em benefício; tratar pelo nome ("Olá, Matheus!"), assinar
   "Equipe Nexo Digital"; um comentário bem feito por entrega (evita poluir a
   timeline — ver BUG-01).
 - **Encoding:** postar JSON com acentos via `curl -d` no Git Bash corrompe

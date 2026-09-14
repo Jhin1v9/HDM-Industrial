@@ -141,9 +141,10 @@ ajuste manual na VPS; conferir quando subir o do Matheus.
 
 - **Zero internals**: nunca mencionar Vercel, GitHub, deploy, bloqueios, bugs,
   credenciais ou estado de builds no painel do cliente nem no relatório.
-- **Linguagem de leigo**: traduzir tudo em benefício ("a página rola mais
-  suave", "os blocos aparecem gradualmente"). Sem jargão (GSAP, Lenis, parallax,
-  testes, CI).
+- **Linguagem por canal** (ver `MODO DE TRABALHO.md`): **relatório = TÉCNICA**
+  (pode citar GSAP, Lenis, parallax, SEO técnico etc.); **painel da VPS = leiga**,
+  traduzindo em benefício ("a página rola mais suave", "os blocos aparecem
+  gradualmente"), sem jargão.
 - Tratar pelo nome: "Olá, Matheus!" / "HDM Industrial". Assinar "Equipe Nexo Digital".
 - **Um comentário bem feito** por entrega — a timeline não limpa comentários
   apagados (BUG-01), então não poluir.
@@ -378,7 +379,8 @@ PUT. Assim qualquer texto interno que vazar pode ser corrigido na hora, sem dele
 
 - **Comunicação com o cliente (regra de ouro):** zero internals (nunca Vercel,
   GitHub, deploy, bugs, credenciais no painel/relatório do cliente); linguagem
-  de leigo traduzida em benefício; tratar pelo nome ("Olá, Matheus!"), assinar
+  por canal — relatório (relatorio.html) TÉCNICA, painel/comentários na VPS
+  leigos, traduzidos em benefício; tratar pelo nome ("Olá, Matheus!"), assinar
   "Equipe Nexo Digital"; um comentário bem feito por entrega (evita poluir a
   timeline — ver BUG-01).
 - **Encoding:** postar JSON com acentos via `curl -d` no Git Bash corrompe

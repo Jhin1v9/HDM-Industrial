@@ -132,9 +132,10 @@ Causas localizadas e fixes sugeridos em `docs\BUGS-NEXO.md`:
 
 - **Zero internals**: nunca mencionar Vercel, GitHub, deploy, bloqueios, bugs,
   credenciais ou estado de builds no painel do cliente nem no relatório.
-- **Linguagem de leigo**: traduzir tudo em benefício ("a página rola mais
-  suave", "os blocos aparecem gradualmente"). Sem jargão (GSAP, Lenis, parallax,
-  testes, CI).
+- **Linguagem por canal** (ver `MODO DE TRABALHO.md`): **relatório = TÉCNICA**
+  (pode citar GSAP, Lenis, parallax, SEO técnico etc.); **painel da VPS = leiga**,
+  traduzindo em benefício ("a página rola mais suave", "os blocos aparecem
+  gradualmente"), sem jargão.
 - Tratar pelo nome: "Olá, Matheus!" / "HDM Industrial". Assinar "Equipe Nexo Digital".
 - **Um comentário bem feito** por entrega — a timeline não limpa comentários
   apagados (BUG-01), então não poluir.
