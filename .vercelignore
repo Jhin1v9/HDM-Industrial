@@ -1,0 +1,8 @@
+# Vercel CLI upload — não enviar build local nem segredos
+.next
+out
+node_modules
+.git
+.env
+.env.*
+*.log
