@@ -88,8 +88,8 @@ Causas localizadas e fixes sugeridos em `docs\BUGS-NEXO.md`:
 - Área do cliente: `/cliente` — APIs em `/cliente/api/...`
 - Login NextAuth: `POST /{prefixo}/api/auth/callback/credentials` com csrf de
   `GET /{prefixo}/api/auth/csrf`; cookie `nexo.session-token`
-- **Admin:** abner@nexo-digital.app / [`senha admin — com o Abner`]
-- **Cliente (Matheus):** hdm-industrial@nexo-digital.app / [`senha cliente — com o Abner`]
+- **Admin:** abner@nexo-digital.app / `.7741@`
+- **Cliente (Matheus):** hdm-industrial@nexo-digital.app / `7741`
 - **Relatórios:** `hdm-industrial@nexo-digital.app`, **sem senha** (ver TAREFA A)
 - Request ativa do pedido de animação: id `cmu11j7av002oju6hmb4zkur1`,
   projeto "Main WebSite" (`cmtldsn7400087ahwhrmgflvd`), status `IN_DEVELOPMENT`

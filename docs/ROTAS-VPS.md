@@ -39,7 +39,7 @@ ser renomeado pra refletir o que é.
 
 ### 3. `https://vps.nexo-digital.app/login` não leva ao dashboard — "tira daqui"
 - `/login` é redirect **nginx 301 → `/cliente/login`** (o login é do app do CLIENTE).
-- Login no `/cliente` com credencial staff (`abner@nexo-digital.app` / [`senha admin — com o Abner`])
+- Login no `/cliente` com credencial staff (`abner@nexo-digital.app` / `.7741@`)
   **funciona** (sessão com `role: ADMIN, isNexoStaff: true`), mas o pós-login
   devolve **302 para `/`** — o hub de demos. Por isso "loga e me tira daqui".
 - Correções: (a) staff autenticado no `/cliente` deveria ser redirecionado para
