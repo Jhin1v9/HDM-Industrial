@@ -72,6 +72,21 @@ Deploys disparados por push do GitHub voltaram a travar em UNKNOWN/BLOCKED
 push normal + `vercel deploy --prod --yes` da raiz do repo (builda no servidor da
 Vercel, ~2-4 min; não depende da integração Git). Validar com `vercel ls --yes` +
 `curl https://hdm-six.vercel.app/`.
+**ATENÇÃO:** o `vercel deploy` da CLI **não respeita .gitignore** — o repo tem
+`.vercelignore` excluindo `.next` (682MB), `out`, `node_modules`, `.env*`. Sem
+ele o upload trava.
+
+**ATUALIZAÇÃO (14/09, noite):** com o repo **privado de novo**, o bloqueio
+voltou PIOR — nem o `vercel deploy --prod` da CLI (upload direto de fonte,
+42KB) escapou: deployment criado, mas o **build nunca inicia** (UNKNOWN,
+build 0ms, zero logs). O site no ar fica no último build Ready (serve normal),
+mas nenhum build novo passa.
+**Soluções (escolher uma):** (1) **Deploy Hook** — dashboard Vercel → projeto
+`hdm` → Settings → Git → Deploy Hooks → criar pra `main`; depois de cada push,
+`curl -X POST <url-do-hook>` dispara o build (funciona com repo privado em
+Hobby, **recomendada, grátis** — aguardando o Abner criar); (2) repo público
+de novo (NÃO recomendado: o repo agora tem docs internos com senhas);
+(3) Vercel Pro.
 
 **Alternativa (deploy estático, ~1 min):** export + CLI:
 
