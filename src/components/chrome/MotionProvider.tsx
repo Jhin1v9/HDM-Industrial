@@ -136,16 +136,25 @@ export function MotionProvider() {
           // ── Reveal em batch (seções, cards, fora do hero) ──────────────
           revealEls = gsap.utils.toArray<HTMLElement>("[data-reveal]:not([data-reveal='hero'])");
           if (revealEls.length) {
-            gsap.set(revealEls, { y: 28, autoAlpha: 0 });
+            // Entrada 3D perceptível: o bloco levanta de baixo com rotação de
+            // perspectiva (como uma placa se erguendo), não um simples fade.
+            gsap.set(revealEls, {
+              y: 64,
+              rotationX: -14,
+              transformPerspective: 900,
+              transformOrigin: "50% 100%",
+              autoAlpha: 0,
+            });
             ScrollTrigger.batch(revealEls, {
-              start: "top 88%",
+              start: "top 92%",
               onEnter: (batch, triggers) => {
                 gsap.to(batch, {
                   y: 0,
+                  rotationX: 0,
                   autoAlpha: 1,
-                  duration: 0.9,
-                  ease: "power3.out",
-                  stagger: 0.08,
+                  duration: 1.15,
+                  ease: "power4.out",
+                  stagger: 0.12,
                   delay: (i, target) =>
                     Number((target as HTMLElement).dataset.delay ?? 0) / 1000,
                   overwrite: true,
@@ -172,6 +181,8 @@ export function MotionProvider() {
               try {
                 const inners = splitIntoLines(target);
                 if (inners && inners.length) {
+                  // Estado inicial da máscara: linhas 120% abaixo, prontas pra subir.
+                  gsap.set(inners, { yPercent: 120 });
                   splitInners.push(...inners);
                   splitOk = true;
                 }
@@ -188,39 +199,47 @@ export function MotionProvider() {
           }
 
           if (heroEls.length) {
-            gsap.set(plainHero, { y: 24, autoAlpha: 0 });
-            gsap.set(zoomHero, { autoAlpha: 0, scale: 1.04 });
+            // Blocos do hero levantam em 3D (rotação de perspectiva + subida).
+            gsap.set(plainHero, {
+              y: 56,
+              rotationX: -12,
+              transformPerspective: 800,
+              transformOrigin: "50% 100%",
+              autoAlpha: 0,
+            });
+            gsap.set(zoomHero, { autoAlpha: 0, scale: 1.1 });
             const tl = gsap.timeline({
-              defaults: { ease: "power3.out" },
+              defaults: { ease: "power4.out" },
               delay: 0.15,
               onComplete: () => {
                 heroPlayed = true;
               },
             });
             if (splitInners.length) {
-              tl.to(splitInners, { yPercent: 0, duration: 1, stagger: 0.08 }, 0);
+              // Cada linha do título sobe da máscara com presença.
+              tl.to(splitInners, { yPercent: 0, duration: 1.3, stagger: 0.12 }, 0);
             }
             if (plainHero.length) {
-              tl.to(plainHero, { y: 0, autoAlpha: 1, duration: 1, stagger: 0.08 }, splitInners.length ? 0.1 : 0);
+              tl.to(plainHero, { y: 0, rotationX: 0, autoAlpha: 1, duration: 1.2, stagger: 0.12 }, splitInners.length ? 0.15 : 0);
             }
             if (zoomHero.length) {
-              tl.to(zoomHero, { autoAlpha: 1, scale: 1, duration: 1.1 }, 0.25);
+              tl.to(zoomHero, { autoAlpha: 1, scale: 1, duration: 1.5, ease: "power3.out" }, 0.3);
             }
           }
 
-          // ── Parallax sutil em imagens editoriais ─────────────────────────
+          // ── Parallax em imagens editoriais (mais profundo) ───────────────
           for (const el of gsap.utils.toArray<HTMLElement>("[data-parallax]")) {
             const trigger = el.closest("[data-parallax-root]") ?? el.parentElement ?? el;
-            // Escala 1.12 dá margem para o deslocamento de ±6% sem gaps.
-            gsap.set(el, { scale: 1.12, yPercent: -6 });
+            // Escala 1.15 dá margem para o deslocamento de ±10% sem gaps.
+            gsap.set(el, { scale: 1.15, yPercent: -10 });
             gsap.to(el, {
-              yPercent: 6,
+              yPercent: 10,
               ease: "none",
               scrollTrigger: {
                 trigger,
                 start: "top bottom",
                 end: "bottom top",
-                scrub: 0.6,
+                scrub: 0.8,
               },
             });
           }
@@ -236,7 +255,7 @@ export function MotionProvider() {
             el.textContent = original;
             try {
               const inners = splitIntoLines(el);
-              if (inners) gsap.set(inners, { yPercent: heroPlayed ? 0 : 110 });
+              if (inners) gsap.set(inners, { yPercent: heroPlayed ? 0 : 120 });
             } catch {
               el.textContent = original;
             }
@@ -284,6 +303,7 @@ export function MotionProvider() {
           if (stuck.length) {
             gsap.to(stuck, {
               y: 0,
+              rotationX: 0,
               autoAlpha: 1,
               duration: 0.5,
               ease: "power2.out",
