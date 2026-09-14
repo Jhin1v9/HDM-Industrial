@@ -2,6 +2,7 @@ import mediaManifest from "@/content/mediaManifest.json";
 import { getPlaceholder } from "@/content/placeholders";
 import type { Locale } from "@/domain/types";
 import { getDictionary } from "@/i18n";
+import { Reveal } from "@/components/ui/Reveal";
 
 /**
  * MediaPlaceholder (§21) — componente estruturado:
@@ -59,19 +60,21 @@ export function Media({
 
   if (entry) {
     return (
-      <figure className={`overflow-hidden ${className}`}>
-        {/* eslint-disable-next-line @next/next/no-img-element -- static export, dimensões conhecidas */}
-        <img
-          src={entry.file}
-          alt={entry.alt[locale] ?? entry.alt.es}
-          width={entry.width}
-          height={entry.height}
-          loading={priority ? "eager" : "lazy"}
-          fetchPriority={priority ? "high" : "auto"}
-          decoding="async"
-          className={imgClassName}
-        />
-      </figure>
+      <Reveal delay={80}>
+        <figure className={`overflow-hidden ${className}`}>
+          {/* eslint-disable-next-line @next/next/no-img-element -- static export, dimensões conhecidas */}
+          <img
+            src={entry.file}
+            alt={entry.alt[locale] ?? entry.alt.es}
+            width={entry.width}
+            height={entry.height}
+            loading={priority ? "eager" : "lazy"}
+            fetchPriority={priority ? "high" : "auto"}
+            decoding="async"
+            className={imgClassName}
+          />
+        </figure>
+      </Reveal>
     );
   }
 

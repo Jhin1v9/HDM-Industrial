@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { fontVariables } from "@/lib/fonts";
 import { SiteShell } from "@/components/chrome/SiteShell";
+import { RevealInit } from "@/components/chrome/RevealInit";
 import { getDictionary } from "@/i18n";
 import { siteUrl } from "@/lib/seo";
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang={LOCALE} className={fontVariables}>
       <body className="min-h-dvh bg-paper-50 font-sans text-ink-900 antialiased">
+        <RevealInit />
         <SiteShell locale={LOCALE}>{children}</SiteShell>
       </body>
     </html>

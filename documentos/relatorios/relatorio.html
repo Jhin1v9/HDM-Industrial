@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório — HDM Industrial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --ink-950: #10151a;
+      --ink-900: #161d24;
+      --ink-800: #1f2831;
+      --ink-700: #2b3742;
+      --steel-500: #5f7183;
+      --steel-400: #8195a6;
+      --steel-300: #a9b8c4;
+      --line-300: #d6d3cb;
+      --line-200: #e4e2db;
+      --paper-100: #f4f3ef;
+      --paper-50: #faf9f6;
+      --signal-700: #a63d17;
+      --signal-600: #c2491d;
+      --signal-500: #d9551f;
+      --signal-100: #f7e4d9;
+      --ok-600: #2e6b4f;
+      --warn-700: #8a5a13;
+      --radius-xs: 2px;
+      --radius-sm: 4px;
+      --radius-md: 6px;
+      --shadow-frame: 0 1px 0 0 rgb(16 21 26 / 0.06);
+      --shadow-lift: 0 10px 28px -14px rgb(16 21 26 / 0.28);
+      --ease-industrial: cubic-bezier(0.2, 0.6, 0.2, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+      background: var(--paper-100);
+      color: var(--ink-950);
+      line-height: 1.6;
+    }
+
+    .mono { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+
+    .container { width: 100%; max-width: 76rem; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Navegação */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(16,21,26,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-size: 1rem; font-weight: 800; letter-spacing: 0.02em;
+      color: var(--paper-50); text-decoration: none; text-transform: uppercase;
+    }
+    .nav-logo .mark {
+      width: 28px; height: 28px; background: var(--signal-500);
+      display: flex; align-items: center; justify-content: center;
+      border-radius: var(--radius-xs); color: var(--paper-50);
+      font-size: 0.7rem; font-weight: 800;
+    }
+    .nav-links { display: none; gap: 0.25rem; align-items: center; }
+    @media (min-width: 900px) { .nav-links { display: flex; } }
+    .nav-links a {
+      color: rgba(250,249,246,0.7); text-decoration: none;
+      font-size: 0.75rem; font-weight: 600; padding: 0.5rem 0.75rem;
+      border-radius: var(--radius-sm); transition: all 140ms var(--ease-industrial);
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .nav-links a:hover { color: var(--paper-50); background: rgba(255,255,255,0.06); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--ink-950) 0%, var(--ink-800) 100%);
+      color: var(--paper-50);
+      padding: 9rem 0 5rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -50%; right: -20%;
+      width: 60%; height: 150%;
+      background: radial-gradient(circle, rgba(217,85,31,0.14) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid var(--signal-500); color: var(--signal-500);
+      padding: 0.375rem 1rem; border-radius: var(--radius-xs);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.15em;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5.4vw, 4.2rem);
+      line-height: 1.05; font-weight: 800;
+      max-width: 800px; margin-bottom: 1.5rem;
+      text-transform: uppercase; letter-spacing: -0.01em;
+    }
+    .hero h1 span { color: var(--signal-500); }
+    .hero p { font-size: 1.1rem; color: rgba(250,249,246,0.7); max-width: 640px; margin-bottom: 2.5rem; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 3rem; }
+    @media (min-width: 768px) { .stats-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; } }
+    .stat-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-sm); padding: 1.5rem;
+      transition: all 240ms var(--ease-industrial);
+    }
+    .stat-card:hover { background: rgba(255,255,255,0.06); transform: translateY(-2px); }
+    .stat-icon { color: var(--signal-500); margin-bottom: 0.75rem; }
+    .stat-number { font-size: 2rem; font-weight: 800; color: var(--paper-50); line-height: 1; }
+    .stat-label { font-size: 0.8rem; color: rgba(250,249,246,0.6); margin-top: 0.5rem; }
+
+    /* Seções */
+    .section { padding: 5rem 0; }
+    .section-light { background: var(--paper-100); }
+    .section-dark { background: var(--ink-950); color: var(--paper-50); }
+    .section-header { max-width: 700px; margin-bottom: 3rem; }
+    .section-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--signal-600); font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;
+    }
+    .section-dark .section-tag { color: var(--signal-500); }
+    .section-title {
+      font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+      font-weight: 800; line-height: 1.15; margin-bottom: 1rem;
+      text-transform: uppercase; letter-spacing: -0.01em;
+    }
+    .section-subtitle { color: var(--steel-500); font-size: 1.05rem; }
+    .section-dark .section-subtitle { color: rgba(250,249,246,0.65); }
+
+    /* Changelog */
+    .changelog-list { max-width: 900px; }
+    .changelog-item {
+      display: grid; grid-template-columns: 150px 1fr; gap: 1.5rem;
+      background: var(--paper-50);
+      border: 1px solid var(--line-200);
+      border-left: 3px solid var(--line-300);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem; margin-bottom: 1rem;
+      box-shadow: var(--shadow-frame);
+      transition: all 240ms var(--ease-industrial);
+    }
+    .changelog-item:hover { box-shadow: var(--shadow-lift); transform: translateY(-2px); }
+    .changelog-item.in-progress { border-left-color: var(--signal-500); background: #fff; }
+    .changelog-date {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem; font-weight: 600;
+      color: var(--steel-500); text-transform: uppercase;
+      display: flex; align-items: flex-start; gap: 0.4rem; padding-top: 0.2rem;
+    }
+    .changelog-badge {
+      display: inline-block; margin-left: 0.35rem;
+      background: var(--signal-500); color: #fff;
+      font-family: 'Archivo', sans-serif;
+      font-size: 0.62rem; font-weight: 700;
+      padding: 0.15rem 0.55rem; border-radius: var(--radius-xs);
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .changelog-badge.done { background: var(--ok-600); }
+    .changelog-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .changelog-desc { font-size: 0.9rem; color: var(--steel-500); line-height: 1.65; }
+    .changelog-desc code {
+      font-family: 'IBM Plex Mono', monospace; font-size: 0.82em;
+      background: var(--line-200); padding: 0.1em 0.4em; border-radius: var(--radius-xs);
+    }
+    @media (max-width: 640px) { .changelog-item { grid-template-columns: 1fr; gap: 0.5rem; } }
+
+    /* Status em andamento */
+    .progress-banner {
+      max-width: 900px;
+      display: flex; align-items: center; gap: 0.75rem;
+      background: var(--signal-100); border: 1px solid var(--signal-500);
+      border-radius: var(--radius-sm); padding: 0.875rem 1.25rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem; font-weight: 600; color: var(--signal-700);
+    }
+    .progress-banner .pulse {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--signal-500); flex-shrink: 0;
+      animation: pulse 1.6s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(217,85,31,0.4); }
+      50% { box-shadow: 0 0 0 6px rgba(217,85,31,0); }
+    }
+
+    /* Timeline */
+    .timeline { position: relative; max-width: 900px; }
+    .timeline::before {
+      content: ''; position: absolute; left: 1rem; top: 0; bottom: 0; width: 2px;
+      background: linear-gradient(to bottom, var(--signal-500), rgba(217,85,31,0.15));
+    }
+    @media (min-width: 768px) { .timeline::before { left: 50%; transform: translateX(-50%); } }
+    .timeline-item { position: relative; padding-left: 3rem; margin-bottom: 2.5rem; }
+    @media (min-width: 768px) {
+      .timeline-item { padding-left: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+      .timeline-item:nth-child(even) .timeline-content { grid-column: 2; }
+      .timeline-item:nth-child(even) .timeline-meta { grid-column: 1; grid-row: 1; text-align: right; }
+    }
+    .timeline-dot {
+      position: absolute; left: 0.65rem; top: 0.25rem;
+      width: 0.75rem; height: 0.75rem;
+      background: var(--signal-500); border-radius: var(--radius-xs);
+      border: 3px solid var(--paper-100);
+      box-shadow: 0 0 0 3px rgba(217,85,31,0.2);
+      z-index: 2;
+    }
+    @media (min-width: 768px) { .timeline-dot { left: 50%; transform: translateX(-50%); } }
+    .timeline-meta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--signal-600); margin-bottom: 0.25rem;
+    }
+    .timeline-content {
+      background: var(--paper-50);
+      border: 1px solid var(--line-200);
+      border-radius: var(--radius-sm); padding: 1.5rem;
+      box-shadow: var(--shadow-frame);
+    }
+    .timeline-content h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 0.75rem; text-transform: uppercase; }
+    .timeline-content ul { list-style: none; }
+    .timeline-content ul li { position: relative; padding-left: 1.25rem; margin-bottom: 0.4rem; font-size: 0.9rem; color: var(--steel-500); }
+    .timeline-content ul li::before {
+      content: ''; position: absolute; left: 0; top: 0.55rem;
+      width: 6px; height: 2px; background: var(--signal-500);
+    }
+
+    /* Cards */
+    .features-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    @media (min-width: 640px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .features-grid { grid-template-columns: repeat(3, 1fr); } }
+    .feature-box {
+      background: var(--paper-50);
+      border: 1px solid var(--line-200);
+      border-radius: var(--radius-sm); padding: 1.75rem;
+      box-shadow: var(--shadow-frame);
+      transition: all 240ms var(--ease-industrial);
+    }
+    .feature-box:hover { box-shadow: var(--shadow-lift); transform: translateY(-3px); }
+    .feature-box-dark { background: var(--ink-800); border-color: rgba(255,255,255,0.08); }
+    .feature-icon { color: var(--signal-500); margin-bottom: 1rem; }
+    .feature-box h3 { font-size: 1rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase; }
+    .feature-box p, .feature-box ul { font-size: 0.9rem; color: var(--steel-500); line-height: 1.65; }
+    .feature-box-dark p, .feature-box-dark ul { color: rgba(250,249,246,0.65); }
+    .feature-box code {
+      font-family: 'IBM Plex Mono', monospace; font-size: 0.82em;
+      background: var(--line-200); padding: 0.1em 0.4em; border-radius: var(--radius-xs);
+    }
+    .feature-box-dark code { background: rgba(255,255,255,0.1); color: var(--paper-50); }
+
+    /* Pendências */
+    .pending-list { max-width: 900px; }
+    .pending-item {
+      display: flex; align-items: flex-start; gap: 0.875rem;
+      background: var(--paper-50);
+      border: 1px solid var(--line-200);
+      border-radius: var(--radius-sm); padding: 1.125rem 1.5rem;
+      margin-bottom: 0.75rem; font-size: 0.92rem;
+    }
+    .pending-item .icon { color: var(--warn-700); flex-shrink: 0; margin-top: 0.15rem; }
+    .pending-item strong { display: block; margin-bottom: 0.15rem; }
+    .pending-item span { color: var(--steel-500); font-size: 0.85rem; }
+
+    /* CTA */
+    .cta-section { background: var(--ink-950); padding: 5rem 0; text-align: center; color: var(--paper-50); }
+    .cta-section h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800; text-transform: uppercase; margin-bottom: 1rem; }
+    .cta-section h2 span { color: var(--signal-500); }
+    .cta-section p { color: rgba(250,249,246,0.65); max-width: 520px; margin: 0 auto 2rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--signal-500); color: #fff;
+      font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;
+      padding: 0.875rem 2rem; border-radius: var(--radius-sm);
+      text-decoration: none; transition: all 140ms var(--ease-industrial);
+    }
+    .btn:hover { background: var(--signal-600); transform: translateY(-2px); }
+
+    footer {
+      background: var(--ink-950); color: var(--steel-400);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 2rem 0; font-size: 0.8rem;
+    }
+    footer .container { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; }
+
+    /* Reveal (o próprio relatório já usa o efeito pedido) */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 600ms var(--ease-industrial), transform 600ms var(--ease-industrial); }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo"><span class="mark">H</span> HDM Industrial</a>
+      <div class="nav-links">
+        <a href="#changelog">Novidades</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#arquitetura">Arquitetura</a>
+        <a href="#request">Solicitações</a>
+        <a href="#tecnologia">Tech</a>
+        <a href="#pendentes">Pendentes</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <i data-lucide="clipboard-list" class="w-4 h-4"></i>
+        Relatório técnico — Nexo Digital
+      </div>
+      <h1>HDM Industrial: <span>tudo que construímos</span> até aqui</h1>
+      <p>Site corporativo multilíngue com motor de solicitações de disponibilidade, SEO internacional e arquitetura pronta para escalar. Relatório vivo: cada modificação entra aqui, com as mais recentes no topo.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i data-lucide="languages" class="w-6 h-6"></i></div>
+          <div class="stat-number">4</div>
+          <div class="stat-label">idiomas (ES na raiz, PT, EN, CA)</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i data-lucide="file-stack" class="w-6 h-6"></i></div>
+          <div class="stat-number">40+</div>
+          <div class="stat-label">páginas geradas por locale</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i data-lucide="send" class="w-6 h-6"></i></div>
+          <div class="stat-number">1</div>
+          <div class="stat-label">motor central de solicitações</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+          <div class="stat-number">100%</div>
+          <div class="stat-label">estático — qualquer hosting</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- CHANGELOG / MUDANÇAS RECENTES -->
+    <section class="section section-light" id="changelog">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="zap" class="w-4 h-4"></i> Mudanças recentes</span>
+          <h2 class="section-title">O que mudou no site</h2>
+          <p class="section-subtitle">Mais recente primeiro. É aqui que você olha para ver o que foi feito desde a última visita.</p>
+        </div>
+
+        <div class="progress-banner reveal" style="background:#e3efe9;border-color:var(--ok-600);color:var(--ok-600);">
+          <i data-lucide="check-circle-2" class="w-5 h-5" style="flex-shrink:0;"></i>
+          Última entrega — animação de scroll reveal implementada e testada (14/09). Deploy pendente.
+        </div>
+
+        <div class="changelog-list">
+          <div class="changelog-item reveal" style="border-left-color:var(--ok-600);">
+            <div class="changelog-date">
+              <i data-lucide="calendar" class="w-3 h-3"></i>
+              14 Set 2026
+              <span class="changelog-badge done">Entregue</span>
+            </div>
+            <div>
+              <h3 class="changelog-title">Animação de scroll reveal em todo o site</h3>
+              <p class="changelog-desc">Seções, cards e imagens agora aparecem gradualmente conforme a página é rolada, em todos os 4 idiomas. Efeito suave e profissional, respeitando quem prefere menos movimento (reduced motion). Sem impacto no SEO: conteúdo continua visível para buscadores. Validado com 80 testes automáticos e build completo.</p>
+            </div>
+          </div>
+
+          <div class="changelog-item reveal">
+            <div class="changelog-date">
+              <i data-lucide="calendar" class="w-3 h-3"></i>
+              14 Set 2026
+            </div>
+            <div>
+              <h3 class="changelog-title">Pedido registrado: animação de scroll reveal + placeholders de fotos</h3>
+              <p class="changelog-desc">Pedido do Matheus registrado no painel Nexo. Como ainda não há fotos próprias da equipe, as imagens editoriais licenciadas já cumprem o papel de placeholder até o ensaio fotográfico acontecer.</p>
+            </div>
+          </div>
+
+          <div class="changelog-item reveal">
+            <div class="changelog-date">
+              <i data-lucide="calendar" class="w-3 h-3"></i>
+              Set 2026
+              <span class="changelog-badge done">Entregue</span>
+            </div>
+            <div>
+              <h3 class="changelog-title">Nível 1 — Plataforma completa entregue</h3>
+              <p class="changelog-desc">Lançamento do site HDM Industrial: todas as seções, os 4 idiomas, o motor de solicitações, páginas legais, SEO internacional e deploy estático. Resumo completo nas seções abaixo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section section-light" id="timeline" style="padding-top:0;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="clock" class="w-4 h-4"></i> Linha do tempo</span>
+          <h2 class="section-title">Evolução do projeto</h2>
+          <p class="section-subtitle">Da definição estratégica à plataforma no ar.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-meta">Fase 1 — Estratégia</div>
+            <div class="timeline-content">
+              <h3>Posicionamento e verdades de negócio</h3>
+              <ul>
+                <li>HDM é fornecedora de mão de obra industrial — nunca fabricante/executora</li>
+                <li>Público primário: cliente B2B (empresas), não candidatos</li>
+                <li>CTA único: "Solicitar disponibilidad"</li>
+                <li>Regras de conteúdo: sem números inventados, sem clientes fictícios, sem fotos de banco apresentadas como equipe real</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-meta">Fase 2 — Base técnica</div>
+            <div class="timeline-content">
+              <h3>Stack moderna e tipada</h3>
+              <ul>
+                <li>Next.js 16 (App Router) + React 19, export 100% estático</li>
+                <li>TypeScript strict, sem <code>any</code></li>
+                <li>Tailwind CSS v4 com tokens de design próprios</li>
+                <li>Zod v4 no esquema da solicitação (compartilhado com os testes)</li>
+                <li>Vitest para testes de domínio e componentes</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-meta">Fase 3 — Conteúdo e i18n</div>
+            <div class="timeline-content">
+              <h3>Site completo em 4 idiomas</h3>
+              <ul>
+                <li>Espanhol na raiz; /pt, /en, /ca com slugs localizados</li>
+                <li>Seções: Início, Empresa, Soluções, Personal Industrial, Sectores, Cobertura, Como Trabalhamos, Projetos, Contato</li>
+                <li>Páginas legais: aviso legal, privacidade, cookies</li>
+                <li>Registros centrais: perfis, setores, cobertura, claims e placeholders num só lugar</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-meta">Fase 4 — Produto central</div>
+            <div class="timeline-content">
+              <h3>Motor de solicitações (Request Engine)</h3>
+              <ul>
+                <li>Composição multiperfil (modo expert e assistido)</li>
+                <li>Valor antes que dados: contato só no final</li>
+                <li>Rascunho salvo no navegador por 14 dias</li>
+                <li>Sucesso só após persistência real — nunca simula envio</li>
+                <li>Handoff para WhatsApp se algo falhar</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-meta">Fase 5 — SEO e confiança</div>
+            <div class="timeline-content">
+              <h3>Descoberta internacional</h3>
+              <ul>
+                <li>Canonical por idioma + hreflang es/ca/en/pt</li>
+                <li>Sitemap e robots gerados no build</li>
+                <li>Fotos editoriais licenciadas (Unsplash/Pexels), registradas em manifesto com procedência</li>
+                <li>Check automático anti-claims proibidos no CI</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-meta">Fase 6 — Movimento</div>
+            <div class="timeline-content" style="border-left: 3px solid var(--ok-600);">
+              <h3>Animação de scroll reveal entregue</h3>
+              <ul>
+                <li>Seções, cards e imagens revelados gradualmente no scroll, nos 4 idiomas</li>
+                <li>Respeita prefers-reduced-motion (acessibilidade)</li>
+                <li>SEO preservado: conteúdo visível para crawlers mesmo sem JS</li>
+                <li>80 testes automáticos + build completo validados</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARQUITETURA -->
+    <section class="section section-dark" id="arquitetura">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="layout" class="w-4 h-4"></i> Arquitetura</span>
+          <h2 class="section-title">Como o site está organizado</h2>
+          <p class="section-subtitle">Estrutura pensada para escalar conteúdo sem duplicar esforço.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box feature-box-dark reveal">
+            <div class="feature-icon"><i data-lucide="database" class="w-6 h-6"></i></div>
+            <h3>Registros centrais</h3>
+            <p>Perfis profissionais, setores, zonas de cobertura, soluções e páginas vivem em <code>src/content/</code>. Adicionar um perfil propaga rotas, sitemap, SEO e interface automaticamente.</p>
+          </div>
+          <div class="feature-box feature-box-dark reveal">
+            <div class="feature-icon"><i data-lucide="languages" class="w-6 h-6"></i></div>
+            <h3>i18n real</h3>
+            <p>IDs de domínio independentes de idioma (ex.: <code>profession=welder</code>); só os rótulos mudam. A solicitação do cliente sobrevive à troca de idioma.</p>
+          </div>
+          <div class="feature-box feature-box-dark reveal">
+            <div class="feature-icon"><i data-lucide="git-branch" class="w-6 h-6"></i></div>
+            <h3>Componentes server-first</h3>
+            <p>Server Components por padrão; Client Components só onde necessário: solicitação, mapa, menus e upload.</p>
+          </div>
+          <div class="feature-box feature-box-dark reveal">
+            <div class="feature-icon"><i data-lucide="map" class="w-6 h-6"></i></div>
+            <h3>Mapa próprio de cobertura</h3>
+            <p>Mapa SVG desenhado sob medida das zonas de atuação (Espanha e Portugal), sem dependência de serviços externos.</p>
+          </div>
+          <div class="feature-box feature-box-dark reveal">
+            <div class="feature-icon"><i data-lucide="cookie" class="w-6 h-6"></i></div>
+            <h3>Consentimento real</h3>
+            <p>Analytics só carrega após consentimento de cookies. Sem banner enganoso, sem rastreamento escondido.</p>
+          </div>
+          <div class="feature-box feature-box-dark reveal">
+            <div class="feature-icon"><i data-lucide="lock" class="w-6 h-6"></i></div>
+            <h3>Anexos privados</h3>
+            <p>Uploads do cliente com validação de tipo, limite de tamanho, caminho aleatório e acesso por link assinado. Nunca bucket público.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REQUEST ENGINE -->
+    <section class="section section-light" id="request">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="send" class="w-4 h-4"></i> Coração do site</span>
+          <h2 class="section-title">Motor de solicitações</h2>
+          <p class="section-subtitle">É assim que um cliente B2B pede disponibilidade de pessoal — a peça central da conversão.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box reveal">
+            <div class="feature-icon"><i data-lucide="users" class="w-6 h-6"></i></div>
+            <h3>Composição de equipe</h3>
+            <p>Montagem perfil a perfil (soldadores TIG/MIG/eletrodo, caldeireiros, montadores, eletricistas, auxiliares, supervisores) com quantidades e datas.</p>
+          </div>
+          <div class="feature-box reveal">
+            <div class="feature-icon"><i data-lucide="route" class="w-6 h-6"></i></div>
+            <h3>Dois modos de uso</h3>
+            <p>Modo expert para quem já sabe o que precisa e modo assistido que guia a escolha por setor e perfil.</p>
+          </div>
+          <div class="feature-box reveal">
+            <div class="feature-icon"><i data-lucide="save" class="w-6 h-6"></i></div>
+            <h3>Nada se perde</h3>
+            <p>Rascunho salvo no navegador por 14 dias; trocar de idioma ou página não apaga a solicitação. Dados de contato ficam só em memória até o envio.</p>
+          </div>
+          <div class="feature-box reveal">
+            <div class="feature-icon"><i data-lucide="check-circle-2" class="w-6 h-6"></i></div>
+            <h3>Honestidade técnica</h3>
+            <p>A tela de sucesso só aparece depois de gravar de verdade. Sem backend configurado, o site desativa o envio online e oferece o caminho humano (WhatsApp/telefone).</p>
+          </div>
+          <div class="feature-box reveal">
+            <div class="feature-icon"><i data-lucide="paperclip" class="w-6 h-6"></i></div>
+            <h3>Anexos de contexto</h3>
+            <p>O cliente pode anexar arquivos (planta, especificação) com acesso privado via Supabase.</p>
+          </div>
+          <div class="feature-box reveal">
+            <div class="feature-icon"><i data-lucide="flask-conical" class="w-6 h-6"></i></div>
+            <h3>Testado</h3>
+            <p>Suíte Vitest cobre esquema, reducer, totais, expiração de rascunho, WhatsApp e upload — 11 verificações E2E em cada modo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECNOLOGIA -->
+    <section class="section section-dark" id="tecnologia">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="cpu" class="w-4 h-4"></i> Por baixo do capô</span>
+          <h2 class="section-title">Tecnologia e qualidade</h2>
+          <p class="section-subtitle">Escolhas técnicas que protegem o investimento do site.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box feature-box-dark reveal">
+            <div class="feature-icon"><i data-lucide="zap" class="w-6 h-6"></i></div>
+            <h3>Static-first</h3>
+            <p>Build gera HTML puro: rápido, barato de hospedar e imune a quedas de banco no acesso público.</p>
+          </div>
+          <div class="feature-box feature-box-dark reveal">
+            <div class="feature-icon"><i data-lucide="type" class="w-6 h-6"></i></div>
+            <h3>TypeScript strict</h3>
+            <p>Tipos rigorosos de ponta a ponta — menos bugs em produção e mudanças mais seguras.</p>
+          </div>
+          <div class="feature-box feature-box-dark reveal">
+            <div class="feature-icon"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+            <h3>Portão de qualidade</h3>
+            <p>Pipeline <code>npm run verify</code>: lint, tipos, testes, placeholders, anti-claims proibidos e SEO — tudo antes de qualquer deploy.</p>
+          </div>
+          <div class="feature-box feature-box-dark reveal">
+            <div class="feature-icon"><i data-lucide="search" class="w-6 h-6"></i></div>
+            <h3>SEO auditável</h3>
+            <p>Checagem automática de h1, title e canonical no HTML gerado. Sitemap e hreflang por build.</p>
+          </div>
+          <div class="feature-box feature-box-dark reveal">
+            <div class="feature-icon"><i data-lucide="image" class="w-6 h-6"></i></div>
+            <h3>Fotos com procedência</h3>
+            <p>As 12 fotos editoriais têm licença comercial registrada e verificada — nunca passadas como equipe real da HDM.</p>
+          </div>
+          <div class="feature-box feature-box-dark reveal">
+            <div class="feature-icon"><i data-lucide="database" class="w-6 h-6"></i></div>
+            <h3>Backend plugável</h3>
+            <p>Supabase pronto (migração SQL + RLS insert-only) para ativar a persistência real das solicitações quando as credenciais forem configuradas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PENDÊNCIAS -->
+    <section class="section section-light" id="pendentes">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="list-checks" class="w-4 h-4"></i> Próximos passos</span>
+          <h2 class="section-title">Pendências do cliente</h2>
+          <p class="section-subtitle">O que depende de informação ou material da HDM para deixar o site 100%.</p>
+        </div>
+
+        <div class="pending-list">
+          <div class="pending-item reveal">
+            <i data-lucide="camera" class="icon w-5 h-5"></i>
+            <div>
+              <strong>Fotos da equipe e da empresa</strong>
+              <span>Ensaio fotográfico na empresa de um cliente (sem data definida). Até lá, usamos imagens gratuitas de referência. Quando as fotos chegarem, substituímos e o site ganha prova real.</span>
+            </div>
+          </div>
+          <div class="pending-item reveal">
+            <i data-lucide="phone" class="icon w-5 h-5"></i>
+            <div>
+              <strong>Contatos oficiais (telefone, WhatsApp, e-mail público)</strong>
+              <span>Ativam os botões de contato e o handoff de WhatsApp do motor de solicitações. Formulário antigo já indica números, mas precisamos da confirmação dos valores finais.</span>
+            </div>
+          </div>
+          <div class="pending-item reveal">
+            <i data-lucide="file-badge" class="w-5 h-5"></i>
+            <div>
+              <strong>Certificações específicas</strong>
+              <span>Hoje o site cita "PRL" e "certificados de soldadura" de forma genérica. Norma, organismo e validade elevam a credibilidade quando confirmados.</span>
+            </div>
+          </div>
+          <div class="pending-item reveal">
+            <i data-lucide="map-pin" class="icon w-5 h-5"></i>
+            <div>
+              <strong>Endereço fiscal em Portugal</strong>
+              <span>Rua, código postal, cidade e NIF para completar as páginas legais e o contato.</span>
+            </div>
+          </div>
+          <div class="pending-item reveal">
+            <i data-lucide="message-square" class="icon w-5 h-5"></i>
+            <div>
+              <strong>Testemunhos e cases publicáveis</strong>
+              <span>Modelo "PROJETO CONFIDENCIAL" pronto no site — basta autorização e material de um cliente real para publicar.</span>
+            </div>
+          </div>
+          <div class="pending-item reveal">
+            <i data-lucide="server" class="w-5 h-5"></i>
+            <div>
+              <strong>Ativação do banco de dados (Supabase)</strong>
+              <span>Código e migração prontos. Com as credenciais, as solicitações passam a ser gravadas online com sucesso confirmado na hora.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Dúvidas ou novo <span>pedido?</span></h2>
+        <p>Toda solicitação feita pelo painel entra neste relatório. É só pedir.</p>
+        <a class="btn" href="https://vps.nexo-digital.app/nexo/pt/solicitacoes">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          Abrir painel de solicitações
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>HDM Industrial — relatório gerado pela Nexo Digital</span>
+      <span class="mono">Atualizado em 14 Set 2026</span>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

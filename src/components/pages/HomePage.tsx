@@ -8,6 +8,7 @@ import { coverageAreas } from "@/content/coverage";
 import { sectors } from "@/content/sectors";
 import { solutions } from "@/content/modes";
 import { Section, SectionHeader } from "@/components/ui/layout";
+import { Reveal } from "@/components/ui/Reveal";
 import { Media, getMedia } from "@/components/media/Media";
 import { Pictogram } from "@/components/ui/pictograms";
 import { TeamComposer } from "@/features/request/composer";
@@ -41,7 +42,7 @@ export function HomePage({ locale }: { locale: Locale }) {
       {/* HERO — Brand moment 01: "Opa, posso mexer" */}
       <section className="bg-ink-950 text-paper-50">
         <div className="mx-auto grid max-w-[76rem] gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.1fr_1fr] lg:py-20">
-          <div className="flex flex-col justify-center">
+          <Reveal className="flex flex-col justify-center">
             <p className="mb-4 font-mono text-xs tracking-[0.22em] text-steel-400 uppercase">
               {h.heroEyebrow}
             </p>
@@ -72,10 +73,10 @@ export function HomePage({ locale }: { locale: Locale }) {
               ) : null}
             </div>
             <p className="mt-5 text-sm text-steel-400">{h.heroNote}</p>
-          </div>
+          </Reveal>
 
           {/* Mini-composer: a mesma lógica do Request completo (§196) */}
-          <div className="border border-ink-700 bg-paper-50 p-5 text-ink-950 sm:p-6">
+          <Reveal delay={120} className="border border-ink-700 bg-paper-50 p-5 text-ink-950 sm:p-6">
             <p className="mb-1 font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase">
               {h.heroComposerTitle}
             </p>
@@ -87,11 +88,11 @@ export function HomePage({ locale }: { locale: Locale }) {
               {dict.common.requestCta}
             </OpenRequestButton>
             <p className="mt-3 text-xs text-steel-500">{h.heroComposerNote}</p>
-          </div>
+          </Reveal>
         </div>
 
         {/* Hero editorial image — full HD verificada, com srcset mobile */}
-        <div className="relative mx-auto max-w-[76rem] px-5 pb-14 sm:px-8">
+        <Reveal className="relative mx-auto max-w-[76rem] px-5 pb-14 sm:px-8" delay={160}>
           <div className="relative overflow-hidden border border-ink-700">
             <picture>
               <source media="(max-width: 768px)" srcSet="/images/hero-mobile.jpg" />
@@ -109,12 +110,12 @@ export function HomePage({ locale }: { locale: Locale }) {
               {dict.common.editorialPhoto}
             </p>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Escala por estrutura (§23): números derivados de registries */}
       <section className="border-b border-line-200 bg-paper-100">
-        <div className="mx-auto max-w-[76rem] px-5 py-10 sm:px-8">
+        <Reveal className="mx-auto max-w-[76rem] px-5 py-10 sm:px-8">
           <p className="mb-5 font-mono text-[11px] tracking-[0.22em] text-steel-500 uppercase">
             {h.scaleEyebrow}
           </p>
@@ -126,7 +127,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               </div>
             ))}
           </dl>
-        </div>
+        </Reveal>
       </section>
 
       {/* Perfis — Brand moment 02: "Opa, posso aumentar" */}
