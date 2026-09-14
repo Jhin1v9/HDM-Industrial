@@ -16,6 +16,7 @@ import { totalProfessionals } from "@/domain/request";
 import { getDictionary } from "@/i18n";
 import { useRequest } from "./store";
 import { RequestPanel } from "./panel";
+import { getActiveLenis } from "@/lib/lenis";
 
 /**
  * Request UI shell — indicador global (§38), drawer acessível,
@@ -183,9 +184,14 @@ export function RequestDrawer({ locale }: { locale: Locale }) {
     };
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
+    // Trava o smooth scroll do Lenis enquanto o modal está aberto: a roda
+    // sobre o backdrop rolaria a página por trás do drawer (o Lenis anima
+    // window.scroll independentemente do overflow:hidden do body).
+    getActiveLenis()?.stop();
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
+      getActiveLenis()?.start();
       for (const el of inerted) el.removeAttribute("inert");
       // Devolve o foco a quem abriu (se ainda existir no documento).
       const opener = openerRef.current;
@@ -211,7 +217,10 @@ export function RequestDrawer({ locale }: { locale: Locale }) {
         onClick={closeRequest}
         className="absolute inset-0 bg-ink-950/60"
       />
-      <div className="relative h-full w-full max-w-2xl overflow-y-auto bg-paper-50 shadow-[0_0_40px_rgba(16,21,26,0.4)]">
+      <div
+        data-lenis-prevent
+        className="relative h-full w-full max-w-2xl overflow-y-auto bg-paper-50 shadow-[0_0_40px_rgba(16,21,26,0.4)]"
+      >
         <div className="sticky top-0 z-10 flex items-center justify-between border-b border-line-200 bg-paper-50 px-5 py-4 sm:px-8">
           <p className="font-mono text-xs font-bold tracking-[0.2em] text-ink-800 uppercase">
             {dict.request.title}

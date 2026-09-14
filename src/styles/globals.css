@@ -63,6 +63,11 @@
 
 html {
   scroll-behavior: auto;
+  /* Os reveals 3D (rotationX + perspective) e o parallax (scale) do GSAP
+   * estendem a área rolável horizontal em alguns pixels — no mobile isso
+   * habilitava pan lateral da página. clip (não hidden) impede o overflow
+   * SEM criar scroll container, preservando position:sticky do header. */
+  overflow-x: clip;
 }
 
 @media (prefers-reduced-motion: reduce) {

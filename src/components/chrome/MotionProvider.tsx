@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import { setActiveLenis } from "@/lib/lenis";
 
 /**
  * MotionProvider — motor de motion global do site (GSAP ScrollTrigger + Lenis).
@@ -72,6 +73,7 @@ export function MotionProvider() {
         try {
           lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
           lenis.on("scroll", ScrollTrigger.update);
+          setActiveLenis(lenis);
         } catch {
           lenis = null;
         }
@@ -239,8 +241,10 @@ export function MotionProvider() {
           // ── Parallax em imagens editoriais (mais profundo) ───────────────
           for (const el of gsap.utils.toArray<HTMLElement>("[data-parallax]")) {
             const trigger = el.closest("[data-parallax-root]") ?? el.parentElement ?? el;
-            // Escala 1.15 dá margem para o deslocamento de ±10% sem gaps.
-            gsap.set(el, { scale: 1.15, yPercent: -10 });
+            // Escala 1.25 dá margem de 12,5% para cada lado — maior que o
+            // deslocamento máximo de ±10% (yPercent é relativo à altura sem
+            // escala), garantindo que nunca apareça gap nas bordas do crop.
+            gsap.set(el, { scale: 1.25, yPercent: -10 });
             gsap.to(el, {
               yPercent: 10,
               ease: "none",
@@ -327,6 +331,7 @@ export function MotionProvider() {
           window.clearTimeout(failsafeTimer);
           ctx.revert();
           gsap.ticker.remove(onTick);
+          setActiveLenis(null);
           lenis?.destroy();
         };
       } catch {
