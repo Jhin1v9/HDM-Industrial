@@ -1,60 +1,40 @@
-"use client";
-
-import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 /**
- * Scroll reveal — revela o conteúdo com fade + translateY leve quando o
- * elemento entra na viewport (IntersectionObserver, threshold 0.12).
+ * Reveal — wrapper mínimo de motion: apenas marca o elemento com data-attributes
+ * processados pelo MotionProvider (GSAP ScrollTrigger). Zero lógica client-side
+ * aqui — Server Components podem usá-lo livremente.
  *
- * Sem JS (export estático / crawlers): a classe `js-reveal` NÃO existe no
- * <html>, então o CSS de ocultação não é aplicado e tudo permanece visível.
- * Com JS: o conteúdo só é escondido depois que o script inline adiciona
- * `js-reveal` (antes do primeiro paint), e este componente adiciona
- * `is-visible` ao entrar na viewport — permanente (unobserve, sem re-animar).
- * prefers-reduced-motion: revela imediatamente, sem animação.
+ * Contratos (SEO / no-JS / acessibilidade):
+ * - Sem JS (export estático / crawlers): nenhum estilo de ocultação é aplicado
+ *   (o CSS de gate só existe sob `.js-reveal`, adicionada por script inline),
+ *   então o conteúdo renderiza sempre visível.
+ * - prefers-reduced-motion: o MotionProvider desliga tudo — conteúdo visível
+ *   com scroll nativo.
  */
 export function Reveal({
   children,
   className = "",
   delay = 0,
+  hero = false,
+  zoom = false,
 }: {
   children: ReactNode;
   className?: string;
-  /** Stagger discreto em ms (atraso da transição). */
+  /** Atraso discreto em ms, respeitado como stagger pelo motor de motion. */
   delay?: number;
+  /** Elemento do hero (acima da dobra): timeline de entrada no load, não scroll. */
+  hero?: boolean;
+  /** Entrada de imagem do hero: fade + scale 1.04 → 1 (sem deslocamento). */
+  zoom?: boolean;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      el.classList.add("is-visible");
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        }
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  const style: CSSProperties | undefined = delay
-    ? ({ "--reveal-delay": `${delay}ms` } as CSSProperties)
-    : undefined;
-
   return (
-    <div ref={ref} className={`reveal ${className}`} style={style}>
+    <div
+      className={className}
+      data-reveal={hero ? "hero" : ""}
+      data-hero-zoom={zoom || undefined}
+      data-delay={delay || undefined}
+    >
       {children}
     </div>
   );

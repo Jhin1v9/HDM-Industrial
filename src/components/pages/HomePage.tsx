@@ -42,11 +42,14 @@ export function HomePage({ locale }: { locale: Locale }) {
       {/* HERO — Brand moment 01: "Opa, posso mexer" */}
       <section className="bg-ink-950 text-paper-50">
         <div className="mx-auto grid max-w-[76rem] gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.1fr_1fr] lg:py-20">
-          <Reveal className="flex flex-col justify-center">
+          <Reveal hero className="flex flex-col justify-center">
             <p className="mb-4 font-mono text-xs tracking-[0.22em] text-steel-400 uppercase">
               {h.heroEyebrow}
             </p>
-            <h1 className="text-[clamp(2.3rem,5.2vw,4.4rem)] leading-[1.02] font-extrabold tracking-tight text-balance">
+            <h1
+              data-split
+              className="text-[clamp(2.3rem,5.2vw,4.4rem)] leading-[1.02] font-extrabold tracking-tight text-balance"
+            >
               {h.heroTitle}
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-steel-300">{h.heroLead}</p>
@@ -76,7 +79,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           </Reveal>
 
           {/* Mini-composer: a mesma lógica do Request completo (§196) */}
-          <Reveal delay={120} className="border border-ink-700 bg-paper-50 p-5 text-ink-950 sm:p-6">
+          <Reveal hero delay={120} className="border border-ink-700 bg-paper-50 p-5 text-ink-950 sm:p-6">
             <p className="mb-1 font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase">
               {h.heroComposerTitle}
             </p>
@@ -92,11 +95,12 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
 
         {/* Hero editorial image — full HD verificada, com srcset mobile */}
-        <Reveal className="relative mx-auto max-w-[76rem] px-5 pb-14 sm:px-8" delay={160}>
-          <div className="relative overflow-hidden border border-ink-700">
+        <Reveal hero zoom className="relative mx-auto max-w-[76rem] px-5 pb-14 sm:px-8">
+          <div data-parallax-root="" className="relative overflow-hidden border border-ink-700">
             <picture>
               <source media="(max-width: 768px)" srcSet="/images/hero-mobile.jpg" />
-<img
+              <img
+                data-parallax=""
                 src="/images/hero-industrial.jpg"
                 alt={getMedia("PH-PHOTO-HERO-01")?.alt[locale] ?? ""}
                 width={1920}

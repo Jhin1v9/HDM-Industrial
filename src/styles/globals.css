@@ -62,13 +62,10 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
   *,
   *::before,
   *::after {
@@ -125,28 +122,19 @@ body {
   background-size: 28px 28px;
 }
 
-/* Scroll reveal — progressivo, discreto, industrial.
- * Só oculta quando JS está ativo (.js-reveal no <html>, adicionada por script
- * inline antes do primeiro paint). Sem JS / crawlers: conteúdo sempre visível. */
-.js-reveal .reveal {
+/* Motion gate — evita flash de conteúdo entre o primeiro paint e a hidratação,
+ * mas somente quando JS está ativo (.js-reveal no <html>, adicionada por script
+ * inline antes do primeiro paint — RevealInit). Sem JS / crawlers: a classe
+ * nunca existe e tudo permanece visível. O GSAP (MotionProvider) assume o
+ * controle após montar; se falhar, remove a classe e limpa estilos inline.
+ * prefers-reduced-motion: MotionProvider desliga tudo e remove o portão. */
+.js-reveal [data-reveal] {
   opacity: 0;
-  transform: translateY(14px);
-  transition:
-    opacity var(--duration-med) var(--ease-industrial),
-    transform var(--duration-med) var(--ease-industrial);
-  transition-delay: var(--reveal-delay, 0ms);
-}
-
-.js-reveal .reveal.is-visible {
-  opacity: 1;
-  transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .js-reveal .reveal {
+  .js-reveal [data-reveal] {
     opacity: 1;
-    transform: none;
-    transition: none;
   }
 }
 

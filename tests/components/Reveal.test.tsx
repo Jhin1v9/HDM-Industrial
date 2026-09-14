@@ -1,82 +1,61 @@
-import { describe, expect, it, vi, afterEach } from "vitest";
+import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { Reveal } from "@/components/ui/Reveal";
 
-afterEach(() => {
-  vi.unstubAllGlobals();
-});
-
-function mockMatchMedia(reducedMotion: boolean) {
-  vi.stubGlobal(
-    "matchMedia",
-    vi.fn().mockImplementation((query: string) => ({
-      matches: reducedMotion,
-      media: query,
-      addEventListener: vi.fn(),
-      removeEventListener: vi.fn(),
-    }))
-  );
-}
-
-class MockIntersectionObserver {
-  static instances: MockIntersectionObserver[] = [];
-  observed: Element[] = [];
-  constructor(private callback: IntersectionObserverCallback) {
-    MockIntersectionObserver.instances.push(this);
-  }
-  observe(target: Element) {
-    this.observed.push(target);
-  }
-  unobserve(target: Element) {
-    this.observed = this.observed.filter((el) => el !== target);
-  }
-  disconnect() {
-    this.observed = [];
-  }
-  trigger(entries: Partial<IntersectionObserverEntry>[]) {
-    this.callback(entries as IntersectionObserverEntry[], {} as IntersectionObserver);
-  }
-}
-
+/**
+ * Novo contrato do Reveal: wrapper mínimo que apenas marca data-attributes
+ * processados pelo MotionProvider (GSAP). Nenhuma lógica de observer/transição
+ * vive aqui — o motor de motion é client-side e testado separadamente.
+ */
 describe("Reveal", () => {
-  it("renders children without hiding anything (no-JS/crawler safe markup)", () => {
-    mockMatchMedia(false);
-    vi.stubGlobal("IntersectionObserver", MockIntersectionObserver);
+  it("renders children and marks the element with data-reveal", () => {
     render(
       <Reveal>
         <p>Sección visible</p>
       </Reveal>
     );
-    expect(screen.getByText("Sección visible")).toBeInTheDocument();
+    const wrapper = screen.getByText("Sección visible").parentElement as HTMLElement;
+    expect(wrapper).toHaveAttribute("data-reveal");
+    expect(wrapper.textContent).toBe("Sección visible");
   });
 
-  it("adds is-visible immediately when prefers-reduced-motion is set", () => {
-    mockMatchMedia(true);
+  it("never hides content in markup (no-JS / crawler safe)", () => {
     const { container } = render(<Reveal>contenido</Reveal>);
-    expect(container.firstElementChild?.classList.contains("is-visible")).toBe(true);
-  });
-
-  it("observes the element and reveals permanently once intersecting", () => {
-    mockMatchMedia(false);
-    vi.stubGlobal("IntersectionObserver", MockIntersectionObserver);
-    const { container } = render(<Reveal>contenido</Reveal>);
-    const el = container.firstElementChild as Element;
-
-    const instance = MockIntersectionObserver.instances.at(-1);
-    expect(instance?.observed).toContain(el);
-    expect(el.classList.contains("is-visible")).toBe(false);
-
-    instance?.trigger([{ target: el, isIntersecting: true }]);
-    expect(el.classList.contains("is-visible")).toBe(true);
-    // unobserve: revelado é permanente, sem re-animar no scroll
-    expect(instance?.observed).not.toContain(el);
-  });
-
-  it("applies stagger delay via --reveal-delay custom property", () => {
-    mockMatchMedia(false);
-    vi.stubGlobal("IntersectionObserver", MockIntersectionObserver);
-    const { container } = render(<Reveal delay={120}>contenido</Reveal>);
     const el = container.firstElementChild as HTMLElement;
-    expect(el.style.getPropertyValue("--reveal-delay")).toBe("120ms");
+    // Sem estilos inline de ocultação e sem classe .reveal do sistema antigo:
+    // sem JS, nada fica invisível.
+    expect(el.getAttribute("style")).toBeNull();
+    expect(el.className).not.toContain("reveal");
+    expect(el.textContent).toBe("contenido");
+  });
+
+  it("maps delay to data-delay in ms for the motion engine stagger", () => {
+    const { container } = render(<Reveal delay={120}>contenido</Reveal>);
+    expect(container.firstElementChild).toHaveAttribute("data-delay", "120");
+  });
+
+  it("omits data-delay when no delay is set", () => {
+    const { container } = render(<Reveal>contenido</Reveal>);
+    expect(container.firstElementChild).not.toHaveAttribute("data-delay");
+  });
+
+  it("marks hero entries with data-reveal='hero' (timeline de entrada no load)", () => {
+    const { container } = render(<Reveal hero>contenido</Reveal>);
+    expect(container.firstElementChild).toHaveAttribute("data-reveal", "hero");
+  });
+
+  it("marks hero image entries with data-hero-zoom (fade + scale 1.04 → 1)", () => {
+    const { container } = render(
+      <Reveal hero zoom>
+        imagen
+      </Reveal>
+    );
+    expect(container.firstElementChild).toHaveAttribute("data-reveal", "hero");
+    expect(container.firstElementChild).toHaveAttribute("data-hero-zoom");
+  });
+
+  it("keeps className passthrough", () => {
+    const { container } = render(<Reveal className="flex flex-col">contenido</Reveal>);
+    expect(container.firstElementChild).toHaveClass("flex", "flex-col");
   });
 });

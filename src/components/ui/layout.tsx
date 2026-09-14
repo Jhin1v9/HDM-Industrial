@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { Reveal } from "@/components/ui/Reveal";
 
 export function Container({
   children,
@@ -40,7 +39,7 @@ export function Section({
   return (
     <section id={id} className={`${tones[tone]} border-t border-line-200 first:border-t-0 ${className}`}>
       <Container className="py-14 sm:py-20">
-        <Reveal>{children}</Reveal>
+        <div data-reveal="">{children}</div>
       </Container>
     </section>
   );
