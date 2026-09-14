@@ -1,17 +1,24 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 /**
  * MotionProvider — motor de motion global do site (GSAP ScrollTrigger + Lenis).
  *
- * Roda 100% client-side pós-hidratação (export estático). Responsabilidades:
+ * Roda 100% client-side pós-hidratação (export estático). Re-executa a cada
+ * navegação interna (pathname): a página nova chega com elementos
+ * [data-reveal] novos, escondidos pelo portão .js-reveal, e precisam ser
+ * processados de novo — sem isso, navegação client-side deixava a página em
+ * branco até um reload completo.
+ *
+ * Responsabilidades:
  * - Lenis smooth scroll integrado ao ticker do GSAP (lerp 0.1, smoothWheel).
- * - [data-reveal]        → batch reveal no scroll (y:28 → 0, power3.out, once).
+ * - [data-reveal]        → batch reveal 3D no scroll (y:64 + rotationX, once).
  * - [data-reveal="hero"] → timeline de entrada no load (acima da dobra).
  * - [data-split]         → títulos do hero com máscara por linha (split próprio,
  *                          com fallback: se falhar, o título permanece visível).
- * - [data-parallax]      → parallax scrub sutil (-6% → 6%) em imagens editoriais.
+ * - [data-parallax]      → parallax scrub (±10%) em imagens editoriais.
  *
  * Contratos de segurança:
  * - Conteúdo NUNCA fica invisível sem JS: o CSS só oculta sob `.js-reveal`
@@ -19,9 +26,11 @@ import { useEffect } from "react";
  * - Se o GSAP/Lenis falhar ao carregar, o portão é removido e os estilos
  *   inline limpos — conteúdo volta a ficar visível.
  * - prefers-reduced-motion: nada é montado — scroll nativo, conteúdo visível.
- * - Cleanup completo no unmount (gsap.context().revert(), ticker, Lenis).
+ * - Cleanup completo a cada troca de rota (gsap.context().revert(), ticker, Lenis).
  */
 export function MotionProvider() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const root = document.documentElement;
     const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -329,7 +338,7 @@ export function MotionProvider() {
       disposed = true;
       teardown?.();
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }
