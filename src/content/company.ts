@@ -10,6 +10,11 @@ export const companyFacts = {
   phone: process.env.NEXT_PUBLIC_HDM_PHONE ?? null,
   whatsapp: process.env.NEXT_PUBLIC_HDM_WHATSAPP ?? null,
   email: process.env.NEXT_PUBLIC_HDM_EMAIL ?? null,
+  /**
+   * HR inbox for CV/applications — confirmed by the client (Matheus) on 21/09/2026
+   * via Nexo panel request cmub9zxnq0011k011dz4f8qso. Not a public commercial contact.
+   */
+  hrEmail: "rrhh@hdmindustrial.es" as string | null,
 } as const;
 
 /** WhatsApp link with contextual message. Never includes PII or attachments (§36). */

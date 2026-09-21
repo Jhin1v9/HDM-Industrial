@@ -45,6 +45,8 @@ export const pageRegistry: readonly PageDefinition[] = [
   // Request engine: noindex (Doc 09 §58 — transactional page, canonical is the home CTA).
   { path: "solicitar-personal", family: "request", indexable: false, dynamic: false },
   { path: "contacto", family: "company", indexable: true, dynamic: false },
+  // Careers/CV intake — client request 21/09/2026 (Matheus, Nexo panel cmub9zxnq0011k011dz4f8qso).
+  { path: "trabaja-con-nosotros", family: "company", indexable: true, dynamic: false },
   { path: "aviso-legal", family: "legal", indexable: false, dynamic: false },
   { path: "privacidad", family: "legal", indexable: false, dynamic: false },
   { path: "cookies", family: "legal", indexable: false, dynamic: false },
@@ -88,6 +90,12 @@ export const sectionSlugs = {
     ca: "sol-licitar-personal",
   },
   contacto: { es: "contacto", pt: "contacto", en: "contact", ca: "contacte" },
+  "trabaja-con-nosotros": {
+    es: "trabaja-con-nosotros",
+    pt: "trabalha-connosco",
+    en: "work-with-us",
+    ca: "treballa-amb-nosaltres",
+  },
   "aviso-legal": { es: "aviso-legal", pt: "aviso-legal", en: "legal-notice", ca: "avis-legal" },
   privacidad: { es: "privacidad", pt: "privacidade", en: "privacy", ca: "privacitat" },
   cookies: { es: "cookies", pt: "cookies", en: "cookies", ca: "cookies" },

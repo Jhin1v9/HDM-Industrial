@@ -20,6 +20,7 @@ export function Footer({ locale }: { locale: Locale }) {
     { href: localizedPath(locale, "proyectos"), label: dict.nav.projects },
     { href: localizedPath(locale, "empresa"), label: dict.nav.company },
     { href: localizedPath(locale, "contacto"), label: dict.nav.contact },
+    { href: localizedPath(locale, "trabaja-con-nosotros"), label: dict.nav.careers },
   ];
   const legal = [
     { href: localizedPath(locale, "aviso-legal"), label: f.legalNotice },

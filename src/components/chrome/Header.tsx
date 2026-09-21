@@ -10,7 +10,8 @@ import { RequestIndicator } from "@/features/request/chrome";
 import { mainAnchorId } from "@/lib/seo";
 
 /**
- * Navegação principal (Doc 05 §63): Personal · Soluciones · Sectores · Cobertura · HDM · [SOLICITAR PERSONAL]
+ * Navegação principal (Doc 05 §63 + decisão do cliente 21/09/2026): Personal · Soluciones ·
+ * Sectores · Cobertura · Trabaja con nosotros · HDM · [SOLICITAR PERSONAL]
  */
 export function Header({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
@@ -23,6 +24,7 @@ export function Header({ locale }: { locale: Locale }) {
     { href: localizedPath(locale, "soluciones"), label: dict.nav.solutions },
     { href: localizedPath(locale, "sectores"), label: dict.nav.sectors },
     { href: localizedPath(locale, "cobertura"), label: dict.nav.coverage },
+    { href: localizedPath(locale, "trabaja-con-nosotros"), label: dict.nav.careers },
   ];
   const hdmLinks = [
     { href: localizedPath(locale, "como-trabajamos"), label: dict.nav.howWeWork },

@@ -24,6 +24,7 @@ const en = {
     projects: "Projects",
     company: "Company",
     contact: "Contact",
+    careers: "Work with us",
     request: "Request personnel",
     myRequest: "My request",
     menu: "Menu",
@@ -624,6 +625,7 @@ const enPages = {
         { title: "What it is used for", body: "Solely to review availability, prepare a proposal and communicate with you about that request." },
         { title: "What we do not do", body: "We do not sell data, we do not use it for third-party advertising and we do not send personal data to analytics tools." },
         { title: "Attached documents", body: "Any documents you attach are treated privately and used only to evaluate your request." },
+        { title: "Applicant data", body: "If you send your CV from the Work with us section, your data and CV are used solely to assess your application against HDM personnel requirements. They are not shared with third parties or used for advertising." },
         { title: "Your rights", body: "You may request access to, rectification of or deletion of your data by contacting HDM through the contact channels." },
       ] as { title: string; body: string }[],
     },
@@ -644,4 +646,33 @@ const enPages = {
   },
 };
 
-export const enDictionary: Dictionary = { ...en, ...enRequest, ...enPages };
+export const enCareers = {
+  careers: {
+    eyebrow: "HDM Industrial",
+    title: "Work with us",
+    lead: "HDM supplies qualified industrial personnel for operations in Spain and Portugal. If you have experience in industrial profiles, send us your CV: we review it when a requirement arises that matches your profile.",
+    honestyTitle: "No jobs posted",
+    honestyBody: "This site does not list vacancies. Sending your CV does not guarantee a specific offer: your profile stays on file for when HDM needs to fill a personnel requirement, and we contact you if there is a match.",
+    profilesTitle: "The profiles HDM works with",
+    processTitle: "How it works",
+    processSteps: [
+      { title: "Send your CV", body: "Fill in the form: an email will be prepared addressed to rrhh@hdmindustrial.es. Attach your CV before sending." },
+      { title: "HDM reviews your profile", body: "The team reviews your experience and professional profile." },
+      { title: "Contact if there is a match", body: "If a requirement arises that matches your profile, HDM will contact you. If there is no match at that time, there will be no reply on this occasion." },
+    ] as { title: string; body: string }[],
+    formTitle: "Send your CV",
+    formLead: "Your mail client will open with the message prepared. Review the details and attach your CV before sending.",
+    nameLabel: "Name",
+    emailLabel: "Email",
+    phoneLabel: "Telephone",
+    profileLabel: "Profile",
+    profilePlaceholder: "Select your profile",
+    profileOther: "Other industrial profile",
+    zoneLabel: "Area / city (optional)",
+    messageLabel: "Message (optional)",
+    privacyNote: "Your data is used only to assess your application. See the privacy policy.",
+    send: "Prepare email with my CV",
+  },
+};
+
+export const enDictionary: Dictionary = { ...en, ...enRequest, ...enPages, ...enCareers };

@@ -31,7 +31,10 @@ Somente fatos seguros. Fontes: Formulário HDM (7/9/2026, Nível A), Discovery (
 - PRL; certificados de soldadura. SEM norma/número/validade específicos.
 
 ## Comercial
-- Prioridade V1: clientes B2B. Recrutamento NÃO é prioridade ("REC_ACTIVE: No por ahora").
+- Prioridade: clientes B2B. Área de candidaturas (envio de CV → rrhh@hdmindustrial.es) adicionada
+  a pedido do cliente em 21/09/2026 — supera o "REC_ACTIVE: No por ahora" anterior (hierarquia:
+  resposta mais recente do cliente).
+- Email de RH confirmado: rrhh@hdmindustrial.es (cliente, 21/09/2026). NÃO é contato comercial.
 - Objeção nº 1: DISPONIBILIDAD. Cliente configura a necessidade; HDM confirma disponibilidade depois.
 - CTA semântico: "Solicitar disponibilidad" (nunca comprar/reservar/confirmar).
 - Acompanhamento pós-venda valorizado pelos clientes (discovery, Nível B).
