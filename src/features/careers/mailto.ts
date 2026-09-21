@@ -92,3 +92,14 @@ export function buildCareersMailto(
     buildCareersBody(input, labels),
   )}`;
 }
+
+/**
+ * Relay response classification (VPS nexo_hdm_cv). Only a 2xx means the CV was
+ * actually received server-side; anything else falls back to mailto/Web Share
+ * so the candidate is never lost (§85 — never simulate success).
+ */
+export type CvSubmitOutcome = "sent" | "fallback";
+
+export function classifyCvResponse(status: number): CvSubmitOutcome {
+  return status >= 200 && status < 300 ? "sent" : "fallback";
+}

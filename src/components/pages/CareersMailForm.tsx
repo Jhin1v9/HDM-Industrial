@@ -8,6 +8,7 @@ import { companyFacts } from "@/content/company";
 import {
   buildCareersBody,
   buildCareersMailto,
+  classifyCvResponse,
   formatFileSize,
   isAcceptedCvFile,
   isCvSizeAllowed,
@@ -15,14 +16,13 @@ import {
 } from "@/features/careers/mailto";
 
 /**
- * Formulário de candidatura (Etapa A, sem backend).
- * O CV selecionado fica SÓ no navegador do candidato — nada é enviado a
- * servidor ou banco de dados. No submit:
- * 1. Se o aparelho suporta Web Share API com arquivos, o email sai com o CV
- *    anexado de verdade;
- * 2. Senão, abre o cliente de email com o nome do arquivo no corpo e a
- *    instrução de anexá-lo.
- * Nunca simula envio.
+ * Formulário de candidatura (sem banco de dados).
+ * Caminho principal: POST multipart pro relay na VPS (nexo_hdm_cv), que grava o
+ * CV em disco privado e envia o email com anexo para rrhh@hdmindustrial.es.
+ * Sucesso = só após 2xx do relay (nunca simula envio, §85). Se o relay estiver
+ * indisponível ou sem credencial de email (503), cai no caminho anterior:
+ * Web Share API (anexo real no mobile) ou mailto com metadados do arquivo.
+ * O CV selecionado nunca sai do aparelho sem ação de envio do candidato.
  */
 export function CareersMailForm({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
@@ -30,6 +30,7 @@ export function CareersMailForm({ locale }: { locale: Locale }) {
   const hrEmail = companyFacts.hrEmail;
   const [cv, setCv] = useState<File | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
+  const [sent, setSent] = useState(false);
 
   const handleFile = (file: File | undefined) => {
     if (!file) return;
@@ -50,7 +51,8 @@ export function CareersMailForm({ locale }: { locale: Locale }) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!hrEmail) return;
-    const data = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const data = new FormData(form);
     const input: CareersMailInput = {
       name: String(data.get("name") ?? ""),
       email: String(data.get("email") ?? ""),
@@ -69,27 +71,60 @@ export function CareersMailForm({ locale }: { locale: Locale }) {
       attachment: c.attachEmailLabel,
     };
 
-    // Caminho 1: Web Share API entrega o arquivo anexado de verdade
-    // (suportado em celulares modernos; AbortError = usuário cancelou).
-    if (cv && typeof navigator !== "undefined" && "canShare" in navigator) {
-      try {
-        if (navigator.canShare({ files: [cv] })) {
-          navigator
-            .share({ files: [cv], text: buildCareersBody(input, labels) })
-            .catch(() => undefined);
-          return;
+    void (async () => {
+      /* Caminho principal: relay VPS. Só 2xx conta como enviado. */
+      const endpoint = companyFacts.cvEndpoint;
+      if (endpoint) {
+        try {
+          const res = await fetch(`${endpoint}/submit`, { method: "POST", body: data });
+          if (classifyCvResponse(res.status) === "sent") {
+            setSent(true);
+            return;
+          }
+        } catch {
+          /* rede indisponível → fallback abaixo, o candidato não se perde */
         }
-      } catch {
-        // canShare indisponível/instável neste aparelho → cai no mailto
       }
-    }
 
-    // Caminho 2: mailto com metadados do CV no corpo (anexo é manual).
-    window.location.href = buildCareersMailto(input, hrEmail, labels);
+      /* Fallback 1: Web Share API entrega o arquivo anexado de verdade
+         (celulares modernos; AbortError = usuário cancelou). */
+      if (cv && typeof navigator !== "undefined" && "canShare" in navigator) {
+        try {
+          if (navigator.canShare({ files: [cv] })) {
+            await navigator
+              .share({ files: [cv], text: buildCareersBody(input, labels) })
+              .catch(() => undefined);
+            return;
+          }
+        } catch {
+          // canShare indisponível neste aparelho → cai no mailto
+        }
+      }
+
+      /* Fallback 2: mailto com metadados do CV no corpo (anexo é manual). */
+      window.location.href = buildCareersMailto(input, hrEmail, labels);
+    })();
   };
+
+  if (sent) {
+    return (
+      <p className="border border-line-200 bg-paper-100 p-4 text-base font-semibold text-ink-900">
+        {c.submitSuccess}
+      </p>
+    );
+  }
 
   return (
     <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+      {/* Honeypot — invisível para humanos, obrigatório para bots (§115). */}
+      <input
+        name="website"
+        type="text"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
       <label className="flex flex-col gap-1.5">
         <span className="text-sm font-bold text-ink-800">{c.nameLabel}</span>
         <input

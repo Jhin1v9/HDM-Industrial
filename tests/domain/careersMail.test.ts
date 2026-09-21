@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   buildCareersBody,
   buildCareersMailto,
+  classifyCvResponse,
   formatFileSize,
   isAcceptedCvFile,
   isCvSizeAllowed,
@@ -96,5 +97,21 @@ describe("formatFileSize", () => {
     expect(formatFileSize(2048)).toBe("2 KB");
     expect(formatFileSize(256 * 1024)).toBe("256 KB");
     expect(formatFileSize(25 * 1024 * 1024)).toBe("25.0 MB");
+  });
+});
+
+describe("classifyCvResponse", () => {
+  it("only 2xx counts as sent", () => {
+    expect(classifyCvResponse(200)).toBe("sent");
+    expect(classifyCvResponse(201)).toBe("sent");
+    expect(classifyCvResponse(299)).toBe("sent");
+  });
+
+  it("503 (email not configured) and any other status fall back", () => {
+    expect(classifyCvResponse(503)).toBe("fallback");
+    expect(classifyCvResponse(404)).toBe("fallback");
+    expect(classifyCvResponse(429)).toBe("fallback");
+    expect(classifyCvResponse(502)).toBe("fallback");
+    expect(classifyCvResponse(500)).toBe("fallback");
   });
 });

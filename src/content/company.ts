@@ -15,6 +15,13 @@ export const companyFacts = {
    * via Nexo panel request cmub9zxnq0011k011dz4f8qso. Not a public commercial contact.
    */
   hrEmail: "rrhh@hdmindustrial.es" as string | null,
+  /**
+   * CV relay endpoint (VPS nexo_hdm_cv). Public URL, not a secret. When the relay
+   * is unreachable/not configured, the form falls back to mailto/Web Share —
+   * production never simulates success (same invariant as the Request Engine).
+   */
+  cvEndpoint:
+    process.env.NEXT_PUBLIC_HDM_CV_ENDPOINT ?? "https://vps.nexo-digital.app/hdm-cv",
 } as const;
 
 /** WhatsApp link with contextual message. Never includes PII or attachments (§36). */

@@ -36,6 +36,12 @@ Nada aqui bloqueia o build. Atualizar quando o cliente confirmar.
       supabase/migrations/). Sem env: DevRequestRepository (persistência local, modo demo sinalizado).
 - [ ] Email transacional (notificação de nova solicitud): provider interface pronta; ativação via
       Supabase Edge Function / Resend — credential pendente.
+- [ ] **HDM CV relay** (VPS `nexo_hdm_cv`, porta 13475 — SEM banco de dados, decisão do
+      Abner 21/09/2026): serviço construído e no ar internamente (uploads em disco privado
+      + log JSONL). Falta: (1) rota Caddy `handle /hdm-cv/*` (exige sudo) e (2) credencial
+      `HDM_CV_SMTP_URL` ou `HDM_CV_RESEND_API_KEY` no `.env` do VPS + `docker compose up -d hdm-cv`.
+      Sem credencial: relay responde 503 `email_not_configured`, guarda o CV em disco e o site
+      cai no fluxo mailto/Web Share — nunca simula sucesso (§85).
 - [ ] Analytics (Vercel Web Analytics) — carregar só após consentimento de cookies.
 - [ ] Domínio final + redirect map OLD→NEW (documentado em docs/redirects.md; aplicar no deploy).
 
