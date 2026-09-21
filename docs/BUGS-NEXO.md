@@ -186,3 +186,28 @@ scroll ida/volta, back-nav, Request Engine):
 Além desses, antes da auditoria: **páginas internas ficavam brancas até F5**
 (navegação client-side não re-executava o motion). Corrigido com effect deps
 `[pathname]` no `MotionProvider` (commit `8c36622`).
+
+---
+
+## BUG-04 — Luna confirma "solicitação criada" mas não cria nada (roomId usado como projectId)
+
+**Sintoma:** no chat do cliente, a Luna executa a ação "Criar solicitação", exibe
+"a ação foi confirmada" ao cliente — e nenhuma solicitação aparece no dashboard admin.
+
+**Causa (verificada no código 21/09/2026):** `lib/luna-tools.ts` → case `create_request`
+passa `projectId: args.projectId || ctx.roomId`. Quando o chat não está vinculado a um
+projeto (ou o arg vem ausente), cai o **id da sala de chat** como projectId →
+`createRequestCore` não encontra projeto (`{ error: 'Projeto nao encontrado' }`) →
+a tool lança erro — mas a mensagem de confirmação já foi enviada ao cliente de qualquer
+jeito, e o pedido se perde.
+
+**Evidência:** pedido do Matheus (HDM) de 21/09/2026 — carrossel de imagens +
+profissões eletromecânico/mecânico industrial + logo própria. Confirmado no chat,
+inexistente na API. Registrado manualmente pela equipe (request
+`c6kjmmkugoa1h4gnviecd06lh`).
+
+**Correção sugerida:** (1) tool `create_request` deve exigir `projectId` explícito
+(a Luna pode listar os projetos da org e escolher — tool `list_my_requests` já filtra
+por projeto, então ela sabe o id); (2) a mensagem de confirmação ao cliente só deve ser
+enviada DEPOIS do retorno bem-sucedido da tool; em caso de erro, a Luna deve avisar que
+não conseguiu registrar e pedir pra tentar novamente.
