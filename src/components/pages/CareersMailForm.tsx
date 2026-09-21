@@ -1,47 +1,95 @@
 "use client";
 
+import { useState } from "react";
 import type { Locale } from "@/domain/types";
 import { getDictionary } from "@/i18n";
 import { professionalProfiles } from "@/content/profiles";
 import { companyFacts } from "@/content/company";
-import { buildCareersMailto } from "@/features/careers/mailto";
+import {
+  buildCareersBody,
+  buildCareersMailto,
+  formatFileSize,
+  isAcceptedCvFile,
+  isCvSizeAllowed,
+  type CareersMailInput,
+} from "@/features/careers/mailto";
 
 /**
- * Formulário de candidatura via mailto (Etapa A, sem backend).
- * Prepara o correio para rrhh@hdmindustrial.es; o candidato revisa e anexa o CV
- * no próprio cliente de email. Nunca simula envio.
+ * Formulário de candidatura (Etapa A, sem backend).
+ * O CV selecionado fica SÓ no navegador do candidato — nada é enviado a
+ * servidor ou banco de dados. No submit:
+ * 1. Se o aparelho suporta Web Share API com arquivos, o email sai com o CV
+ *    anexado de verdade;
+ * 2. Senão, abre o cliente de email com o nome do arquivo no corpo e a
+ *    instrução de anexá-lo.
+ * Nunca simula envio.
  */
 export function CareersMailForm({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
   const c = dict.careers;
   const hrEmail = companyFacts.hrEmail;
+  const [cv, setCv] = useState<File | null>(null);
+  const [fileError, setFileError] = useState<string | null>(null);
+
+  const handleFile = (file: File | undefined) => {
+    if (!file) return;
+    if (!isAcceptedCvFile(file)) {
+      setFileError(dict.request.attachmentBadType);
+      setCv(null);
+      return;
+    }
+    if (!isCvSizeAllowed(file.size)) {
+      setFileError(dict.request.attachmentTooLarge);
+      setCv(null);
+      return;
+    }
+    setFileError(null);
+    setCv(file);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!hrEmail) return;
+    const data = new FormData(e.currentTarget);
+    const input: CareersMailInput = {
+      name: String(data.get("name") ?? ""),
+      email: String(data.get("email") ?? ""),
+      phone: String(data.get("phone") ?? ""),
+      profile: String(data.get("profile") ?? ""),
+      zone: String(data.get("zone") ?? ""),
+      message: String(data.get("message") ?? ""),
+      attachment: cv ? { name: cv.name, sizeLabel: formatFileSize(cv.size) } : null,
+    };
+    const labels = {
+      name: c.nameLabel,
+      email: c.emailLabel,
+      phone: c.phoneLabel,
+      profile: c.profileLabel,
+      zone: c.zoneLabel,
+      attachment: c.attachEmailLabel,
+    };
+
+    // Caminho 1: Web Share API entrega o arquivo anexado de verdade
+    // (suportado em celulares modernos; AbortError = usuário cancelou).
+    if (cv && typeof navigator !== "undefined" && "canShare" in navigator) {
+      try {
+        if (navigator.canShare({ files: [cv] })) {
+          navigator
+            .share({ files: [cv], text: buildCareersBody(input, labels) })
+            .catch(() => undefined);
+          return;
+        }
+      } catch {
+        // canShare indisponível/instável neste aparelho → cai no mailto
+      }
+    }
+
+    // Caminho 2: mailto com metadados do CV no corpo (anexo é manual).
+    window.location.href = buildCareersMailto(input, hrEmail, labels);
+  };
 
   return (
-    <form
-      className="flex flex-col gap-4"
-      onSubmit={(e) => {
-        e.preventDefault();
-        if (!hrEmail) return;
-        const data = new FormData(e.currentTarget);
-        const name = String(data.get("name") ?? "");
-        const email = String(data.get("email") ?? "");
-        const phone = String(data.get("phone") ?? "");
-        const profile = String(data.get("profile") ?? "");
-        const zone = String(data.get("zone") ?? "");
-        const message = String(data.get("message") ?? "");
-        window.location.href = buildCareersMailto(
-          { name, email, phone, profile, zone, message },
-          hrEmail,
-          {
-            name: c.nameLabel,
-            email: c.emailLabel,
-            phone: c.phoneLabel,
-            profile: c.profileLabel,
-            zone: c.zoneLabel,
-          },
-        );
-      }}
-    >
+    <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
       <label className="flex flex-col gap-1.5">
         <span className="text-sm font-bold text-ink-800">{c.nameLabel}</span>
         <input
@@ -90,6 +138,21 @@ export function CareersMailForm({ locale }: { locale: Locale }) {
           <option value={c.profileOther}>{c.profileOther}</option>
         </select>
       </label>
+      <div className="flex flex-col gap-1.5">
+        <span className="text-sm font-bold text-ink-800">{c.attachLabel}</span>
+        <label className="flex h-12 cursor-pointer items-center justify-center gap-2 border border-dashed border-line-300 bg-paper-50 px-3 text-sm font-semibold text-ink-700 transition-colors hover:border-ink-600">
+          <span className="truncate">{cv ? `${c.attachSelected}: ${cv.name}` : c.attachCta}</span>
+          <input
+            name="cv"
+            type="file"
+            className="sr-only"
+            accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+            onChange={(e) => handleFile(e.target.files?.[0])}
+          />
+        </label>
+        {fileError ? <span className="text-sm font-semibold text-signal-600">{fileError}</span> : null}
+        <span className="text-xs text-steel-500">{c.attachPrivacy}</span>
+      </div>
       <label className="flex flex-col gap-1.5">
         <span className="text-sm font-bold text-ink-800">{c.zoneLabel}</span>
         <input
