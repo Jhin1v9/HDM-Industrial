@@ -1,5 +1,6 @@
 # Changelog — SYNAPSE
 
+- **2026-09-21 · `082c8f0` · feat** — envio de CV via relay na VPS — sem banco de dados ([análise](entries/2026-09-21-082c8f0.md))
 - **2026-09-21 · `da88617` · feat** — botão anexar CV no formulário de candidaturas ([análise](entries/2026-09-21-da88617.md))
 - **2026-09-21 · `5812804` · docs** — relatório HDM — seção currículos entregue e no ar (deploy verificado em hdm-six.vercel.app) ([análise](entries/2026-09-21-5812804.md))
 - **2026-09-21 · `75e3d08` · feat** — área de candidaturas (Trabaja con nosotros) — Etapa A + SYNAPSE pós-commit ([análise](entries/2026-09-21-75e3d08.md))
