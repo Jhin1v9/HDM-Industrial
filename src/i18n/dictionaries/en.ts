@@ -10,7 +10,7 @@ const en = {
     siteName: "HDM Industrial",
     defaultTitle: "HDM Industrial — Qualified industrial personnel, where you need them",
     defaultDescription:
-      "Supply of qualified industrial personnel: TIG, MIG/MAG and stick welders, boilermakers, structural fitters, industrial electricians and supervisors. Tell us what you need and HDM will review availability.",
+      "Supply of qualified industrial personnel: TIG, MIG/MAG and stick welders, boilermakers, structural fitters, industrial electricians, electromechanics, industrial mechanics and supervisors. Tell us what you need and HDM will review availability.",
     ogDescription:
       "Configure your industrial personnel requirement in minutes. HDM reviews availability and requirements before confirming the proposal.",
   },
@@ -66,7 +66,7 @@ const en = {
     heroEyebrow: "Supply of qualified industrial personnel",
     heroTitle: "The industrial personnel you need, where you need them.",
     heroLead:
-      "TIG, MIG/MAG and stick welders, boilermakers, structural fitters, industrial electricians and supervisors. Configure your requirement and HDM will review availability before confirming.",
+      "TIG, MIG/MAG and stick welders, boilermakers, structural fitters, industrial electricians, electromechanics, industrial mechanics and supervisors. Configure your requirement and HDM will review availability before confirming.",
     heroNote:
       "No obligation: your request does not confirm availability. HDM reviews it and responds.",
     heroStart: "Start my request",
@@ -181,6 +181,22 @@ const en = {
         description:
           "Supervisors and foremen to coordinate crews, control the execution of the work and act as the point of contact between your operation and the supplied personnel. Recommended for requests involving several profiles.",
         requirements: "Proven experience coordinating teams in industrial environments.",
+      },
+      eletromecanico: {
+        name: "Electromechanics",
+        singular: "Electromechanic",
+        short: "Installation, maintenance and repair of electric and mechanical machinery.",
+        description:
+          "Industrial electromechanics: they install, maintain and repair machines with electrical and mechanical components. They identify faults, replace parts, wire electrical connections and adjust motors.",
+        requirements: "PRL training. Proven experience in industrial electromechanical maintenance.",
+      },
+      "mecanico-industrial": {
+        name: "Industrial mechanics",
+        singular: "Industrial mechanic",
+        short: "Maintenance and repair of factory machinery.",
+        description:
+          "Industrial mechanics: they install, maintain and repair factory machinery. They identify faults, replace worn parts and adjust components to prevent production stoppages.",
+        requirements: "PRL training. Proven experience in industrial mechanics.",
       },
     } as Record<
       string,
@@ -565,7 +581,7 @@ const enPages = {
     lead:
       "HDM Industrial supplies qualified personnel for industrial operations in Spain and Portugal.",
     body1:
-      "Industry is the environment; people are the product. HDM places welders, boilermakers, structural fitters, electricians, labourers and supervisors inside the client's operation, with the documentation and logistics the project requires.",
+      "Industry is the environment; people are the product. HDM places welders, boilermakers, structural fitters, electricians, electromechanics, industrial mechanics, labourers and supervisors inside the client's operation, with the documentation and logistics the project requires.",
     body2:
       "Reliability, transparency and professionalism are the company's stated values. HDM's commitment goes beyond the placement: when a problem arises, HDM is still there.",
     body3:

@@ -16,6 +16,7 @@ import { OpenRequestButton } from "@/components/pages/OpenRequestButton";
 import { CoverageMap } from "@/features/coverage/CoverageMap";
 import { companyFacts } from "@/content/company";
 import { PhoneIcon } from "@/components/ui/icons";
+import { HeroRotator } from "@/components/chrome/HeroRotator";
 
 /**
  * HOME = interface comercial (§46). Primeiro viewport: entender HDM,
@@ -94,22 +95,33 @@ export function HomePage({ locale }: { locale: Locale }) {
           </Reveal>
         </div>
 
-        {/* Hero editorial image — full HD verificada, com srcset mobile */}
+        {/* Hero editorial — carrossel automático (Ken Burns) com as fotos
+            licenciadas registradas. Pedido do cliente Matheus 2026-09-24:
+            "as imagens passam automaticamente, só na primeira parte". */}
         <Reveal hero zoom className="relative mx-auto max-w-[76rem] px-5 pb-14 sm:px-8">
-          <div data-parallax-root="" className="relative overflow-hidden border border-ink-700">
-            <picture>
-              <source media="(max-width: 768px)" srcSet="/images/hero-mobile.jpg" />
-              <img
-                data-parallax=""
-                src="/images/hero-industrial.jpg"
-                alt={getMedia("PH-PHOTO-HERO-01")?.alt[locale] ?? ""}
-                width={1920}
-                height={1280}
-                fetchPriority="high"
-                decoding="async"
-                className="h-[38vh] w-full object-cover sm:h-[46vh]"
-              />
-            </picture>
+          <div className="relative h-[38vh] overflow-hidden border border-ink-700 sm:h-[46vh]">
+            <HeroRotator
+              slides={[
+                {
+                  src: "/images/hero-industrial.jpg",
+                  mobileSrc: "/images/hero-mobile.jpg",
+                  alt: getMedia("PH-PHOTO-HERO-01")?.alt[locale] ?? "",
+                },
+                {
+                  src: "/images/plant-industrial.jpg",
+                  alt: getMedia("PH-PHOTO-PLANT-01")?.alt[locale] ?? "",
+                },
+                {
+                  src: "/images/mobilization-logistics.jpg",
+                  alt: getMedia("PH-PHOTO-MOBILIZATION-01")?.alt[locale] ?? "",
+                },
+                {
+                  src: "/images/epi-safety.jpg",
+                  alt: getMedia("PH-PHOTO-EPI-01")?.alt[locale] ?? "",
+                },
+              ]}
+              className="absolute inset-0"
+            />
             <p className="absolute right-0 bottom-0 bg-ink-950/85 px-3 py-1.5 font-mono text-[10px] tracking-wider text-steel-400">
               {dict.common.editorialPhoto}
             </p>

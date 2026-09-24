@@ -47,6 +47,22 @@ export const professionalProfiles: readonly ProfessionalProfile[] = [
     mediaId: "PH-PHOTO-EPI-01",
     slug: "supervisores-industriales",
   },
+  {
+    // Texto oficial do cliente (Matheus, 2026-09-24, painel Nexo Workspace).
+    id: "eletromecanico",
+    specializations: [],
+    pictogram: "electromechanic",
+    mediaId: "PH-PHOTO-PLANT-01",
+    slug: "eletromecanicos-industriales",
+  },
+  {
+    // Texto oficial do cliente (Matheus, 2026-09-24, painel Nexo Workspace).
+    id: "mecanico-industrial",
+    specializations: [],
+    pictogram: "industrialmechanic",
+    mediaId: "PH-PHOTO-MOBILIZATION-01",
+    slug: "mecanicos-industriales",
+  },
 ] as const;
 
 export function getProfile(id: string): ProfessionalProfile | undefined {

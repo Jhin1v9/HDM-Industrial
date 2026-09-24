@@ -9,7 +9,7 @@ const ca = {
     siteName: "HDM Industrial",
     defaultTitle: "HDM Industrial — Personal industrial qualificat, on el necessita",
     defaultDescription:
-      "Subministrament de personal industrial qualificat: soldadors TIG, MIG/MAG i elèctrode, calderers, muntadors, electricistes industrials i supervisors. Digui-nos què necessita i HDM revisa la disponibilitat.",
+      "Subministrament de personal industrial qualificat: soldadors TIG, MIG/MAG i elèctrode, calderers, muntadors, electricistes, electromecànics, mecànics industrials i supervisors. Digui-nos què necessita i HDM revisa la disponibilitat.",
     ogDescription:
       "Configuri la seva necessitat de personal industrial en minuts. HDM revisa disponibilitat i requisits abans de confirmar la proposta.",
   },
@@ -180,6 +180,22 @@ const ca = {
         description:
           "Supervisors i encarregats per coordinar quadrilles, controlar l'execució del treball i servir d'interlocutor entre la seva operació i el personal subministrat. Recomanable en sol·licituds de diversos perfils.",
         requirements: "Experiència demostrable coordinant equips en entorn industrial.",
+      },
+      eletromecanico: {
+        name: "Electromecànics",
+        singular: "Electromecànic",
+        short: "Instal·lació, manteniment i reparació de màquines elèctriques i mecàniques.",
+        description:
+          "Electromecànics industrials: instal·len, mantenen i reparen màquines amb components elèctrics i mecànics. Identifiquen avaries, substitueixen peces, fan connexions elèctriques i ajusten motors.",
+        requirements: "Formació PRL. Experiència demostrable en manteniment electromecànic industrial.",
+      },
+      "mecanico-industrial": {
+        name: "Mecànics industrials",
+        singular: "Mecànic industrial",
+        short: "Manteniment i reparació de maquinària de fàbriques.",
+        description:
+          "Mecànics industrials: instal·len, mantenen i reparen maquinària de fàbriques. Identifiquen avaries, substitueixen peces desgastades i ajusten components per evitar aturades a la producció.",
+        requirements: "Formació PRL. Experiència demostrable en mecànica industrial.",
       },
     } as Record<
       string,
@@ -564,7 +580,7 @@ const caPages = {
     lead:
       "HDM Industrial subministra personal qualificat per a operacions industrials a Espanya i Portugal.",
     body1:
-      "La indústria és l'entorn; les persones són el producte. HDM posa soldadors, calderers, muntadors, electricistes, ajudants i supervisors dins de l'operació del client, amb la documentació i la logística que el projecte exigeix.",
+      "La indústria és l'entorn; les persones són el producte. HDM posa soldadors, calderers, muntadors, electricistes, electromecànics, mecànics industrials, ajudants i supervisors dins de l'operació del client, amb la documentació i la logística que el projecte exigeix.",
     body2:
       "Serietat, transparència i professionalisme són els valors declarats de l'empresa. El compromís d'HDM va més enllà de la incorporació: quan sorgeix un problema, HDM continua aquí.",
     body3:

@@ -64,6 +64,25 @@ const paths: Record<string, JSX.Element> = {
       <path d="M18 34h12" />
     </g>
   ),
+  // Eletromecânico: motor + rotor + faísca de comando
+  electromechanic: (
+    <g {...stroke}>
+      <circle cx="20" cy="22" r="11" />
+      <circle cx="20" cy="22" r="4" />
+      <path d="M31 22h9M36 17l4 5-4 5" />
+      <path d="M20 11V6M14 13l-3-3M26 13l3-3" />
+      <path d="M13 40h14" />
+    </g>
+  ),
+  // Mecânico industrial: engrenagem + chave combinada
+  industrialmechanic: (
+    <g {...stroke}>
+      <circle cx="19" cy="20" r="9" />
+      <circle cx="19" cy="20" r="3.5" />
+      <path d="M19 8v4M19 28v4M7 20h4M27 20h4M10.5 11.5l2.8 2.8M24.7 25.7l2.8 2.8M27.5 11.5l-2.8 2.8M13.3 25.7l-2.8 2.8" />
+      <path d="M32 30l10 10M36 26l6 6-3 3-6-6" />
+    </g>
+  ),
 };
 
 export function Pictogram({

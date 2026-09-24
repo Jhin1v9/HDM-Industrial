@@ -7,7 +7,7 @@ export const es = {
     siteName: "HDM Industrial",
     defaultTitle: "HDM Industrial — Personal industrial cualificado, donde lo necesita",
     defaultDescription:
-      "Suministro de personal industrial cualificado: soldadores TIG, MIG/MAG y electrodo, caldereros, montadores, electricistas industriales y supervisores. Díganos qué necesita y HDM revisa la disponibilidad.",
+      "Suministro de personal industrial cualificado: soldadores TIG, MIG/MAG y electrodo, caldereros, montadores, electricistas, electromecánicos, mecánicos industriales y supervisores. Díganos qué necesita y HDM revisa la disponibilidad.",
     ogDescription:
       "Configure su necesidad de personal industrial en minutos. HDM revisa disponibilidad y requisitos antes de confirmar la propuesta.",
   },
@@ -178,6 +178,22 @@ export const es = {
         description:
           "Supervisores y encargados para coordinar cuadrillas, controlar la ejecución del trabajo y servir de interlocutor entre su operación y el personal suministrado. Recomendable en solicitudes de varios perfiles.",
         requirements: "Experiencia demostrable coordinando equipos en entorno industrial.",
+      },
+      eletromecanico: {
+        name: "Electromecánicos",
+        singular: "Electromecánico",
+        short: "Instalación, mantenimiento y reparación de máquinas eléctricas y mecánicas.",
+        description:
+          "Electromecánicos industriales: instalan, mantienen y reparan máquinas con componentes eléctricos y mecánicos. Identifican averías, sustituyen piezas, realizan conexiones eléctricas y ajustan motores.",
+        requirements: "Formación PRL. Experiencia demostrable en mantenimiento electromecánico industrial.",
+      },
+      "mecanico-industrial": {
+        name: "Mecánicos industriales",
+        singular: "Mecánico industrial",
+        short: "Mantenimiento y reparación de maquinaria de fábricas.",
+        description:
+          "Mecánicos industriales: instalan, mantienen y reparan maquinaria de fábricas. Identifican averías, sustituyen piezas desgastadas y ajustan componentes para evitar paradas en la producción.",
+        requirements: "Formación PRL. Experiencia demostrable en mecánica industrial.",
       },
     } as Record<
       string,
@@ -562,7 +578,7 @@ export const esPages = {
     lead:
       "HDM Industrial suministra personal cualificado para operaciones industriales en España y Portugal.",
     body1:
-      "La industria es el entorno; las personas son el producto. HDM pone soldadores, caldereros, montadores, electricistas, ayudantes y supervisores dentro de la operación del cliente, con la documentación y la logística que el proyecto exige.",
+      "La industria es el entorno; las personas son el producto. HDM pone soldadores, caldereros, montadores, electricistas, electromecánicos, mecánicos industriales, ayudantes y supervisores dentro de la operación del cliente, con la documentación y la logística que el proyecto exige.",
     body2:
       "Seriedad, transparencia y profesionalismo son los valores declarados de la empresa. El compromiso de HDM va más allá de la incorporación: cuando surge un problema, HDM sigue ahí.",
     body3:

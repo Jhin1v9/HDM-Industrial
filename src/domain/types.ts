@@ -18,7 +18,9 @@ export type ProfessionId =
   | "montador"
   | "electricista"
   | "constructor"
-  | "supervisor";
+  | "supervisor"
+  | "eletromecanico"
+  | "mecanico-industrial";
 
 export type WeldingSpecialization = "tig" | "mig-mag" | "electrodo";
 

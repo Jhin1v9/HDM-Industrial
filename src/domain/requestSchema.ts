@@ -12,6 +12,8 @@ export const professionSchema = z.enum([
   "electricista",
   "constructor",
   "supervisor",
+  "eletromecanico",
+  "mecanico-industrial",
 ]);
 
 export const weldingSpecializationSchema = z.enum(["tig", "mig-mag", "electrodo"]);
