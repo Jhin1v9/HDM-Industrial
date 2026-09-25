@@ -113,6 +113,29 @@ export function HomePage({ locale }: { locale: Locale }) {
 
       </section>
 
+
+      {/* Cómo funciona — 3 passos (Fase 1 do plano mobile+SEO) */}
+      <section className="border-b border-line-200 bg-paper-100">
+        <div className="mx-auto max-w-[76rem] px-5 py-14 sm:px-8">
+          <SectionHeader eyebrow={h.comoTitle} title={h.comoSub} />
+          <div className="mt-8 grid gap-5 sm:grid-cols-3">
+            {[
+              { n: '01', t: h.como1t, d: h.como1d, icon: 'welder' },
+              { n: '02', t: h.como2t, d: h.como2d, icon: 'supervisor' },
+              { n: '03', t: h.como3t, d: h.como3d, icon: 'builder' },
+            ].map((passo, i) => (
+              <Reveal key={passo.n} delay={i * 90} className="border border-line-200 bg-paper-50 p-6">
+                <div className="flex items-center gap-3">
+                  <Pictogram name={passo.icon} className="h-9 w-9 text-signal-600" />
+                  <span className="font-mono text-xs tracking-[0.2em] text-steel-500">{passo.n}</span>
+                </div>
+                <h3 className="mt-4 text-lg font-extrabold tracking-tight text-ink-950">{passo.t}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-steel-500">{passo.d}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Escala por estrutura (§23): números derivados de registries */}
       <section className="border-b border-line-200 bg-paper-100">
         <Reveal className="mx-auto max-w-[76rem] px-5 py-10 sm:px-8">
@@ -243,7 +266,42 @@ export function HomePage({ locale }: { locale: Locale }) {
       </Section>
 
       {/* CTA final — reabre o Request (Brand moment 04 acontece no resumen) */}
-      <Section tone="ink">
+            {/* FAQ (Fase 1) — acordeão simples + FAQPage schema */}
+      <section className="border-b border-line-200 bg-paper-100">
+        <div className="mx-auto max-w-[52rem] px-5 py-14 sm:px-8">
+          <SectionHeader eyebrow={h.faqTitle} title="" />
+          <div className="mt-6 divide-y divide-line-200 border border-line-200 bg-paper-50">
+            {[
+              { q: h.faq1q, a: h.faq1a },
+              { q: h.faq2q, a: h.faq2a },
+              { q: h.faq3q, a: h.faq3a },
+            ].map((f) => (
+              <details key={f.q} className="group px-5 py-4">
+                <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-bold text-ink-950">
+                  {f.q}
+                  <span className="text-signal-600 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-2 text-sm leading-relaxed text-steel-500">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                { '@type': 'Question', name: h.faq1q, acceptedAnswer: { '@type': 'Answer', text: h.faq1a } },
+                { '@type': 'Question', name: h.faq2q, acceptedAnswer: { '@type': 'Answer', text: h.faq2a } },
+                { '@type': 'Question', name: h.faq3q, acceptedAnswer: { '@type': 'Answer', text: h.faq3a } },
+              ],
+            }),
+          }}
+        />
+      </section>
+<Section tone="ink">
         <div className="flex flex-col items-start gap-6">
           <h2 className="max-w-2xl text-[clamp(1.9rem,4vw,3.2rem)] leading-[1.05] font-extrabold tracking-tight text-balance">
             {h.finalCtaTitle}
@@ -260,3 +318,5 @@ export function HomePage({ locale }: { locale: Locale }) {
     </>
   );
 }
+
+
