@@ -63,7 +63,7 @@ export const es = {
     heroEyebrow: "Suministro de personal industrial cualificado",
     heroTitle: "El personal industrial que necesita, donde lo necesita.",
     heroLead:
-      "Soldadores TIG, MIG/MAG y electrodo, caldereros, montadores, electricistas industriales y supervisores. Configure su necesidad y HDM revisa la disponibilidad antes de confirmar.",
+      "Soldadores TIG, MIG/MAG y electrodo, caldereros, montadores, electricistas, electromecánicos, mecánicos industriales y supervisores. Configure su necesidad y HDM revisa la disponibilidad antes de confirmar.",
     heroNote:
       "Sin compromiso: su solicitud no confirma disponibilidad. HDM la revisa y responde.",
     heroStart: "Empezar mi solicitud",

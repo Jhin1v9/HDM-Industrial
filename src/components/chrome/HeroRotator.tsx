@@ -71,6 +71,27 @@ export function HeroRotator({ slides, className }: { slides: HeroSlide[]; classN
           </div>
         );
       })}
+      {/* Gradiente inferior: legibilidade da legenda editorial + dots */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-ink-950/80 to-transparent" />
+      {/* Dots + contador — nível do site, discreto */}
+      <div className="absolute bottom-4 left-5 flex items-center gap-2 sm:left-8">
+        {slides.map((s, i) => (
+          <button
+            key={s.src}
+            type="button"
+            aria-label={`Imagem ${i + 1}`}
+            onClick={() => setIndex(i)}
+            className="h-1.5 transition-all duration-300"
+            style={{
+              width: i === index ? 28 : 10,
+              background: i === index ? "#fff" : "rgba(255,255,255,0.45)",
+            }}
+          />
+        ))}
+        <span className="ml-2 font-mono text-[11px] tracking-wider text-white/70">
+          {String(index + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
+        </span>
+      </div>
       <style jsx>{`
         @keyframes hdm-kenburns {
           from {

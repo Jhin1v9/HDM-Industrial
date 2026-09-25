@@ -95,11 +95,13 @@ export function HomePage({ locale }: { locale: Locale }) {
           </Reveal>
         </div>
 
-        {/* Hero editorial — carrossel automático (Ken Burns) com as fotos
-            licenciadas registradas. Pedido do cliente Matheus 2026-09-24:
-            "as imagens passam automaticamente, só na primeira parte". */}
-        <Reveal hero zoom className="relative mx-auto max-w-[76rem] px-5 pb-14 sm:px-8">
-          <div className="relative h-[38vh] overflow-hidden border border-ink-700 sm:h-[46vh]">
+        {/* Hero editorial — carrossel automático FULL-BLEED (Ken Burns) com as
+            fotos licenciadas registradas. Pedido do cliente Matheus
+            2026-09-24: "as imagens passam automaticamente, só na primeira
+            parte". Nível do site: borda nenhuma, altura generosa, dots
+            discretos + legenda editorial. */}
+        <Reveal hero zoom className="relative pb-16">
+          <div className="relative h-[52vh] overflow-hidden sm:h-[64vh]">
             <HeroRotator
               slides={[
                 {

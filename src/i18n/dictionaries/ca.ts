@@ -65,7 +65,7 @@ const ca = {
     heroEyebrow: "Subministrament de personal industrial qualificat",
     heroTitle: "El personal industrial que necessita, on el necessita.",
     heroLead:
-      "Soldadors TIG, MIG/MAG i elèctrode, calderers, muntadors, electricistes industrials i supervisors. Configuri la seva necessitat i HDM revisa la disponibilitat abans de confirmar.",
+      "Soldadors TIG, MIG/MAG i elèctrode, calderers, muntadors, electricistes, electromecànics, mecànics industrials i supervisors. Configuri la seva necessitat i HDM revisa la disponibilitat abans de confirmar.",
     heroNote:
       "Sense compromís: la seva sol·licitud no confirma disponibilitat. HDM la revisa i respon.",
     heroStart: "Començar la meva sol·licitud",
