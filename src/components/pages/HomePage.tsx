@@ -41,8 +41,24 @@ export function HomePage({ locale }: { locale: Locale }) {
   return (
     <>
       {/* HERO — Brand moment 01: "Opa, posso mexer" */}
-      <section className="bg-ink-950 text-paper-50">
-        <div className="mx-auto grid max-w-[76rem] gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.1fr_1fr] lg:py-20">
+      <section className="relative overflow-hidden bg-ink-950 text-paper-50">
+        {/* Wallpaper: carrossel automático (Ken Burns) no FUNDO do hero —
+            pedido do cliente Matheus 2026-09-25: fotos passando atrás do
+            conteúdo. Overlay escuro mantém o texto impecável. */}
+        <div className="absolute inset-0" aria-hidden="true">
+          <HeroRotator
+            slides={[
+              { src: "/images/hero-industrial.jpg", mobileSrc: "/images/hero-mobile.jpg", alt: "" },
+              { src: "/images/plant-industrial.jpg", alt: "" },
+              { src: "/images/mobilization-logistics.jpg", alt: "" },
+              { src: "/images/epi-safety.jpg", alt: "" },
+            ]}
+            className="absolute inset-0"
+          />
+          <div className="absolute inset-0 bg-ink-950/72" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink-950/60 via-transparent to-ink-950/30" />
+        </div>
+        <div className="relative mx-auto grid max-w-[76rem] gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.1fr_1fr] lg:py-24">
           <Reveal hero className="flex flex-col justify-center">
             <p className="mb-4 font-mono text-xs tracking-[0.22em] text-steel-400 uppercase">
               {h.heroEyebrow}
@@ -95,40 +111,6 @@ export function HomePage({ locale }: { locale: Locale }) {
           </Reveal>
         </div>
 
-        {/* Hero editorial — carrossel automático FULL-BLEED (Ken Burns) com as
-            fotos licenciadas registradas. Pedido do cliente Matheus
-            2026-09-24: "as imagens passam automaticamente, só na primeira
-            parte". Nível do site: borda nenhuma, altura generosa, dots
-            discretos + legenda editorial. */}
-        <Reveal hero zoom className="relative pb-16">
-          <div className="relative h-[52vh] overflow-hidden sm:h-[64vh]">
-            <HeroRotator
-              slides={[
-                {
-                  src: "/images/hero-industrial.jpg",
-                  mobileSrc: "/images/hero-mobile.jpg",
-                  alt: getMedia("PH-PHOTO-HERO-01")?.alt[locale] ?? "",
-                },
-                {
-                  src: "/images/plant-industrial.jpg",
-                  alt: getMedia("PH-PHOTO-PLANT-01")?.alt[locale] ?? "",
-                },
-                {
-                  src: "/images/mobilization-logistics.jpg",
-                  alt: getMedia("PH-PHOTO-MOBILIZATION-01")?.alt[locale] ?? "",
-                },
-                {
-                  src: "/images/epi-safety.jpg",
-                  alt: getMedia("PH-PHOTO-EPI-01")?.alt[locale] ?? "",
-                },
-              ]}
-              className="absolute inset-0"
-            />
-            <p className="absolute right-0 bottom-0 bg-ink-950/85 px-3 py-1.5 font-mono text-[10px] tracking-wider text-steel-400">
-              {dict.common.editorialPhoto}
-            </p>
-          </div>
-        </Reveal>
       </section>
 
       {/* Escala por estrutura (§23): números derivados de registries */}
