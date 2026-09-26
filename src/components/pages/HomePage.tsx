@@ -269,7 +269,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             {/* FAQ (Fase 1) — acordeão simples + FAQPage schema */}
       <section className="border-b border-line-200 bg-paper-100">
         <div className="mx-auto max-w-[52rem] px-5 py-14 sm:px-8">
-          <SectionHeader eyebrow={h.faqTitle} title="" />
+          <SectionHeader title={h.faqTitle} />
           <div className="mt-6 divide-y divide-line-200 border border-line-200 bg-paper-50">
             {[
               { q: h.faq1q, a: h.faq1a },
