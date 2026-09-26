@@ -140,6 +140,10 @@ const en = {
   },
   profiles: {
     title: "Industrial personnel",
+    queHacenTitle: "What they do",
+    cuandoTitle: "When you need them",
+    verificaTitle: "What HDM verifies",
+    faqTitle: "Frequently asked questions",
     lead:
       "Confirmed professional profiles that HDM supplies for industrial operations in Spain and Portugal.",
     pageTitleSuffix: "industrial",
@@ -156,6 +160,10 @@ const en = {
           "Industrial welders for workshop, site and plant work. State the welding process you need — TIG, MIG/MAG or stick welding (SMAW) — and the project requirements: HDM will review the availability of profiles with the appropriate welding certification.",
         requirements:
           "Welding certificate for the required process. Risk prevention training (PRL). Experience in industrial environments.",
+        queHacen: "The industrial welder joins, repairs and reinforces metal structures in workshops, job sites and production plants. Depending on the process —TIG, MIG/MAG or stick electrode— they work from fine precision finishes to high-productivity welds on thick sections. During a plant shutdown, welders are among the profiles that most determine the schedule: a weld done right the first time avoids rework that costs hours. That is why HDM verifies the exact process each professional masters before proposing them for a project.",
+        cuando: ["Plant shutdowns or turnarounds, where every welding hour is counted.", "Production peaks that exceed your regular crew's capacity.", "Industrial construction with schedules that admit no delays (structures, supports, piping).", "Urgent repairs on stopped equipment or production lines."],
+        verifica: "HDM verifies before proposing: welding certificate for the required process (TIG, MIG/MAG or electrode), up-to-date PRL training and proven experience in industrial environments. No verified data, no proposal.",
+        faq: [{ q: "Can I request only TIG welders for a one-week shutdown?", a: "Yes. Configure the request with the process (TIG), volume and dates; HDM checks crews with that certificate and confirms real availability before you decide." }, { q: "Do they work at height or in confined spaces?", a: "When the project requires it, state the conditions (height, confined space, shift) in the request. HDM takes them into account when verifying profiles and certifications." }, { q: "How fast can I have welders available?", a: "It depends on process, volume and location. HDM answers every request within business hours with real availability, with no commitment on your side." }],
       },
       calderero: {
         name: "Boilermakers",
@@ -215,7 +223,7 @@ const en = {
       },
     } as Record<
       string,
-      { name: string; singular: string; short: string; description: string; requirements: string }
+      { name: string; singular: string; short: string; description: string; requirements: string; queHacen?: string; cuando?: string[]; verifica?: string; faq?: Array<{ q: string; a: string }> }
     >,
     specializations: {
       tig: { name: "TIG", description: "Precision welding, fine finishes and thin materials." },

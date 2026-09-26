@@ -137,6 +137,10 @@ export const es = {
   },
   profiles: {
     title: "Personal industrial",
+    queHacenTitle: "Qué hacen",
+    cuandoTitle: "Cuándo lo necesitas",
+    verificaTitle: "Qué verifica HDM",
+    faqTitle: "Preguntas frecuentes",
     lead:
       "Perfiles profesionales confirmados que HDM suministra para operaciones industriales en España y Portugal.",
     pageTitleSuffix: "industriales",
@@ -153,6 +157,10 @@ export const es = {
           "Soldadores industriales para trabajos en taller, obra y planta. Indique el proceso de soldadura que necesita —TIG, MIG/MAG o electrodo revestido— y los requisitos del proyecto: HDM revisa la disponibilidad de perfiles con la certificación de soldadura adecuada.",
         requirements:
           "Certificado de soldadura según proceso requerido. Formación PRL. Experiencia en entorno industrial.",
+        queHacen: "El soldador industrial une, repara y refuerza estructuras metálicas en taller, obra y planta de producción. Según el proceso —TIG, MIG/MAG o electrodo revestido— trabaja desde acabados finos de precisión hasta cordones de alta productividad en espesores gruesos. En una parada de planta, el soldador es de los perfiles que más condicionan el plazo: un cordón bien ejecutado a la primera evita retrabajos que cuestan horas. Por eso HDM verifica el proceso exacto que domina cada profesional antes de proponérselo a un proyecto.",
+        cuando: ["Paradas de planta o turnaround, donde cada hora de soldadura está contada.", "Picos de producción que superan la capacidad de la cuadrilla habitual.", "Obra industrial con plazos que no admiten retrasos (estructura, soportación, tubería).", "Reparaciones urgentes de equipos o líneas de producción detenidas."],
+        verifica: "HDM verifica antes de proponer: certificado de soldadura según el proceso requerido (TIG, MIG/MAG o electrodo), formación PRL al día y experiencia contrastada en entorno industrial. Sin datos verificados, no hay propuesta.",
+        faq: [{ q: "¿Puedo pedir solo soldadores TIG para una parada de una semana?", a: "Sí. Configure la solicitud con el proceso (TIG), el volumen y las fechas; HDM revisa cuadrillas con ese certificado y le confirma disponibilidad real antes de que decida." }, { q: "¿Trabajan en altura o en espacios confinados?", a: "Cuando el proyecto lo requiere, se indican en la solicitud las condiciones (altura, confinado, turno). HDM lo tiene en cuenta al verificar perfiles y certificaciones." }, { q: "¿En cuánto tiempo puedo tener soldadores disponibles?", a: "Depende del proceso, volumen y ubicación. HDM responde cada solicitud en horas laborables con disponibilidad real, sin compromiso por su parte." }],
       },
       calderero: {
         name: "Caldereros",
@@ -212,7 +220,7 @@ export const es = {
       },
     } as Record<
       string,
-      { name: string; singular: string; short: string; description: string; requirements: string }
+      { name: string; singular: string; short: string; description: string; requirements: string; queHacen?: string; cuando?: string[]; verifica?: string; faq?: Array<{ q: string; a: string }> }
     >,
     specializations: {
       tig: { name: "TIG", description: "Soldadura de precisión, acabados finos y materiales finos." },
