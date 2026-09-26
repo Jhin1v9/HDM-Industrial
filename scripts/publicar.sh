@@ -13,29 +13,24 @@
 # autenticada (team nexodigitalsys-ctrls-projects). Ver BUG-03 nos docs internos.
 set -euo pipefail
 
-cd "$(git rev-parse --show-toplevel)"
+# Garante node/npm/vercel no PATH mesmo em shells enxutas (Git Bash da Kimi,
+# cron, background tasks). Caminhos Windows são inócuos no Linux e vice-versa.
+for p in "/c/Program Files/nodejs" "$HOME/AppData/Roaming/npm" "$HOME/.local/bin" "/usr/local/bin"; do
+  [ -d "$p" ] && export PATH="$p:$PATH"
+done
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
 
 echo "==> 1/3 verify (se falhar, nada é publicado)"
 npm run verify
 
-echo "==> 2/3 deploy do export estático"
-TMP="$(mktemp -d)"
-cp -r out "$TMP/out"
-cat > "$TMP/vercel.json" <<'EOF'
-{
-  "cleanUrls": true,
-  "buildCommand": "echo static deploy",
-  "outputDirectory": ".",
-  "installCommand": "echo no install",
-  "framework": null
-}
-EOF
-# o vercel.json precisa estar ao lado do conteúdo servido (raiz do deploy)
-mv "$TMP/out" "$TMP/dist" 2>/dev/null || true
-cd "$TMP/dist"
-cp ../vercel.json .
-vercel deploy --prod --yes
-cd - >/dev/null
+echo "==> 2/3 deploy (source → build no servidor da Vercel, ~2-4 min)"
+# Deploy da raiz do repo, vinculado ao projeto hdm pelo .vercel local.
+# O .vercelignore restringe o upload a ~42KB. O upload de export estático
+# (out/) para o projeto hdm aborta na rede (testado 26/09) — source-deploy
+# builda no servidor e é o caminho robusto.
+vercel deploy --prod --yes --archive=tgz
 
 echo "==> 3/3 validação ao vivo"
 ok=true
@@ -49,5 +44,4 @@ for route in "/" "/trabaja-con-nosotros" "/personal-industrial" "/cookies" "/en"
   [ "$CODE" = "200" ] || ok=false
 done
 
-rm -rf "$TMP"
 $ok && echo "PUBLICADO E VALIDADO ✅" || { echo "PUBLICADO COM ROTAS QUEBRADAS — investigue"; exit 1; }
