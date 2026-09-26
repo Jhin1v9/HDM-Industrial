@@ -308,14 +308,37 @@
     /* Reveal (o próprio relatório já usa o efeito pedido) */
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity 600ms var(--ease-industrial), transform 600ms var(--ease-industrial); }
     .reveal.visible { opacity: 1; transform: none; }
+
+    /* Voltar ao painel do cliente */
+    .back-to-panel {
+      position: fixed; top: 14px; left: 14px; z-index: 100;
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      padding: 0.55rem 0.9rem; border-radius: 999px;
+      background: var(--ink-950); color: var(--paper-50);
+      font: 600 0.8rem/1 var(--font-sans, 'Archivo', sans-serif);
+      letter-spacing: 0.02em; text-decoration: none;
+      box-shadow: 0 6px 18px rgba(16, 21, 26, 0.28);
+      transition: transform 160ms ease, background 160ms ease;
+    }
+    .back-to-panel:hover { background: var(--signal-600); transform: translateX(-2px); }
+    .back-to-panel svg { width: 14px; height: 14px; }
+    @media (max-width: 720px) {
+      .back-to-panel span { display: none; }
+      .back-to-panel { padding: 0.55rem; }
+    }
   </style>
 </head>
 <body>
+  <a class="back-to-panel" href="/cliente/" title="Voltar ao painel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+    <span>Voltar ao painel</span>
+  </a>
   <nav class="nav">
     <div class="container nav-inner">
       <a href="#" class="nav-logo"><span class="mark">H</span> HDM Industrial</a>
       <div class="nav-links">
         <a href="#changelog">Novidades</a>
+        <a href="#revisao">Revisão</a>
         <a href="#timeline">Timeline</a>
         <a href="#arquitetura">Arquitetura</a>
         <a href="#request">Solicitações</a>
@@ -371,21 +394,34 @@
 
         <div class="progress-banner reveal" style="background:#e3efe9;border-color:var(--ok-600);color:var(--ok-600);">
           <i data-lucide="check-circle-2" class="w-5 h-5" style="flex-shrink:0;"></i>
-          Última entrega — revisão completa de qualidade em desktop e celular ✅
+          Última entrega — nova seção Trabaja con nosotros (envio de currículos) no ar ✅
         </div>
 
         <div class="changelog-list">
+          <div class="changelog-item reveal">
+            <div class="changelog-date">
+              <i data-lucide="calendar" class="w-3 h-3"></i>
+              26 Set 2026
+              <span class="changelog-badge">Análise</span>
+            </div>
+            <div>
+              <h3 class="changelog-title">Aba de revisão — análise ao vivo do site novo (hdm-six.vercel.app)</h3>
+              <p class="changelog-desc">Revisão completa rodada ao vivo em desktop e celular, com prints. Resultado e lista de ajustes na nova aba <a href="#revisao">Revisão</a> logo abaixo. Acesso do cliente ao relatório: HDM-industrial@nexo-digital.app (entrada sem senha).</p>
+            </div>
+          </div>
+
           <div class="changelog-item reveal" style="border-left-color:var(--ok-600);">
             <div class="changelog-date">
               <i data-lucide="calendar" class="w-3 h-3"></i>
-              25 Set 2026
+              21 Set 2026
               <span class="changelog-badge done">Entregue</span>
             </div>
             <div>
-              <h3 class="changelog-title">Carrossel automático no topo + duas profissões novas</h3>
-              <p class="changelog-desc">Pedidos do Matheus (24 Set) implementados e no ar em <strong>https://hdm-six.vercel.app</strong>: (1) as imagens da primeira parte da página agora passam automaticamente, com transição suave; (2) <strong>Eletromecânico</strong> e <strong>Mecânico industrial</strong> adicionados à seção de profissões, com as descrições oficiais enviadas pelo Matheus, nos 4 idiomas do site (espanhol, catalão, inglês, português). Em revisão: aprovação do Matheus. Pendente: PDF da logo final (aguardando envio) e fotos próprias da equipe (quando tiverem, substituem as imagens licenciadas).</p>
+              <h3 class="changelog-title">Nova seção: Trabaja con nosotros (envio de currículos)</h3>
+              <p class="changelog-desc">Pedido do Matheus entregue e publicado: a página deixa candidatos enviarem o currículo direto para rrhh@hdmindustrial.es — preenchem nome, contato e perfil, e o próprio e-mail se abre com a mensagem pronta, só anexar o CV. Nos 4 idiomas, com acesso no menu principal e no rodapé. Do jeito honesto do site: sem anúncio de vagas — a HDM entra em contato quando surge uma necessidade que combina com o perfil. No ar em hdm-six.vercel.app/trabaja-con-nosotros.</p>
             </div>
           </div>
+
           <div class="changelog-item reveal" style="border-left-color:var(--ok-600);">
             <div class="changelog-date">
               <i data-lucide="calendar" class="w-3 h-3"></i>
@@ -430,6 +466,84 @@
             <div>
               <h3 class="changelog-title">Nível 1 — Plataforma completa entregue</h3>
               <p class="changelog-desc">Lançamento do site HDM Industrial: todas as seções, os 4 idiomas, o motor de solicitações, páginas legais, SEO internacional e deploy estático. Resumo completo nas seções abaixo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVISÃO — análise ao vivo 26/09 -->
+    <section class="section section-light" id="revisao">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="search-check" class="w-4 h-4"></i> Revisão ao vivo — 26 Set 2026</span>
+          <h2 class="section-title">Análise do site novo, desktop e celular</h2>
+          <p class="section-subtitle">Checagem rodada ao vivo em hdm-six.vercel.app — desktop + mobile (412×915, referência Android 13 2400×1080). Aprovada em estética pela equipe.</p>
+        </div>
+
+        <div class="progress-banner reveal" style="background:#e3efe9;border-color:var(--ok-600);color:var(--ok-600);">
+          <i data-lucide="check-circle-2" class="w-5 h-5" style="flex-shrink:0;"></i>
+          Estética aprovada — tipografia forte, hierarquia clara, CTA correto no hero ("Solicitar personal"), painel de perfis limpo. O site novo é outro nível comparado ao antigo.
+        </div>
+
+        <div class="progress-banner reveal" style="background:#e3eefe;border-color:#2563eb;color:#1d4ed8;margin-top:0.75rem;">
+          <i data-lucide="check-check" class="w-5 h-5" style="flex-shrink:0;"></i>
+          <strong>Todos os itens abaixo corrigidos e publicados em 26 Set 2026</strong> — build a2a26c7 no ar em hdm-six.vercel.app, validado ao vivo em desktop e celular (412×915). Lista original preservada com o resultado de cada item.
+        </div>
+
+        <div class="changelog-list" style="margin-top:2rem;">
+          <div class="changelog-item reveal">
+            <div class="changelog-date"><i data-lucide="alert-triangle" class="w-3 h-3"></i>Bug 1 — verificar
+              <span class="changelog-badge done">Resolvido</span></div>
+            <div>
+              <h3 class="changelog-title">Prefetch 404 em todas as rotas</h3>
+              <p class="changelog-desc">Resolvido: prefetch do router desligado nos links — o build é 100% estático e os arquivos RSC (.txt) não existem no export, então o prefetch só gerava 404 e poluía o console. Ao vivo: <strong>zero 404 de prefetch</strong> e navegação estável entre todas as rotas.</p>
+            </div>
+          </div>
+
+          <div class="changelog-item reveal">
+            <div class="changelog-date"><i data-lucide="smartphone" class="w-3 h-3"></i>Bug 2 — mobile
+              <span class="changelog-badge done">Resolvido</span></div>
+            <div>
+              <h3 class="changelog-title">Faixa vazia no meio da página (celular)</h3>
+              <p class="changelog-desc">Investigado ao vivo: a faixa era a seção "Capacidad organizada" com a animação de entrada presa durante o período de build desalinhado. Com o build correto publicado, a seção renderiza normalmente no celular — validado em 412×915 após scroll completo.</p>
+            </div>
+          </div>
+
+          <div class="changelog-item reveal">
+            <div class="changelog-date"><i data-lucide="zoom-in" class="w-3 h-3"></i>Bug 3 — mobile
+              <span class="changelog-badge done">Resolvido</span></div>
+            <div>
+              <h3 class="changelog-title">Botão "Solicitar Personal" do rodapé com zoom exagerado</h3>
+              <p class="changelog-desc">Não reproduzido no build atual (botão medido em tamanho correto). No celular, o rodapé agora fica <strong>centralizado</strong> — marca, descrição, botão e colunas de links — como pedido.</p>
+            </div>
+          </div>
+
+          <div class="changelog-item reveal">
+            <div class="changelog-date"><i data-lucide="cookie" class="w-3 h-3"></i>Bug 4
+              <span class="changelog-badge done">Resolvido</span></div>
+            <div>
+              <h3 class="changelog-title">Banner de cookies por cima do rodapé</h3>
+              <p class="changelog-desc">Resolvido: enquanto o banner está aberto, a página ganha um espaço equivalente à altura dele no final — dá para rolar e <strong>ver o rodapé inteiro por baixo do banner</strong>. O z-index foi mantido de propósito (o banner precisa ficar acima da barra fixa de ação do celular).</p>
+            </div>
+          </div>
+
+          <div class="changelog-item reveal">
+            <div class="changelog-date"><i data-lucide="refresh-cw" class="w-3 h-3"></i>Verificar ao vivo
+              <span class="changelog-badge done">Resolvido</span></div>
+            <div>
+              <h3 class="changelog-title">Auto-rotação do carrossel do hero (30s)</h3>
+              <p class="changelog-desc">Confirmado ao vivo: os slides trocam sozinhos a cada <strong>30 segundos</strong> (o intervalo tinha ficado em 5s, frenético). Crossfade de 1,4s com zoom suave; respeita a preferência de "menos movimento" do sistema.</p>
+            </div>
+          </div>
+
+          <div class="changelog-item reveal" style="border-left-color:var(--ok-600);">
+            <div class="changelog-date"><i data-lucide="check" class="w-3 h-3"></i>Já mapeados
+              <span class="changelog-badge done">Resolvido</span><span class="changelog-badge done">Em correção</span>
+            </div>
+            <div>
+              <h3 class="changelog-title">Alt text das imagens + rota /cookies</h3>
+              <p class="changelog-desc">Resolvido: os 4 slides do hero ganharam alt text descritivo nos 4 idiomas (slide inativo fica com alt vazio + aria-hidden, padrão de acessibilidade). Rota /cookies verificada: política publicada em ES, CA, EN e PT, linkada no banner e no rodapé.</p>
             </div>
           </div>
         </div>

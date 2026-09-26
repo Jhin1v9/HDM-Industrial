@@ -23,6 +23,7 @@ const ca = {
     projects: "Projectes",
     company: "Empresa",
     contact: "Contacte",
+    careers: "Treballa amb nosaltres",
     request: "Sol·licitar personal",
     myRequest: "La meva sol·licitud",
     menu: "Menú",
@@ -662,6 +663,7 @@ const caPages = {
         { title: "Per a què s'usen", body: "Únicament per revisar la disponibilitat, preparar una proposta i comunicar-nos amb vostè sobre aquesta sol·licitud." },
         { title: "El que no fem", body: "No venem dades, no les usem per a publicitat de tercers i no enviem dades personals a eines d'analítica." },
         { title: "Documents adjunts", body: "Els documents que adjunti es tracten de forma privada i s'usen només per avaluar la seva sol·licitud." },
+        { title: "Dades de candidats", body: "Si envies el teu currículum des de la secció Treballa amb nosaltres, les teves dades i el teu CV s'usen únicament per valorar la teva candidatura davant necessitats de personal d'HDM. No es cedeixen a tercers ni s'usen per a publicitat." },
         { title: "Els seus drets", body: "Pot sol·licitar accés, rectificació o eliminació de les seves dades contactant amb HDM pels canals de contacte." },
       ] as { title: string; body: string }[],
     },
@@ -682,4 +684,39 @@ const caPages = {
   },
 };
 
-export const caDictionary: Dictionary = { ...ca, ...caRequest, ...caPages };
+export const caCareers = {
+  careers: {
+    eyebrow: "HDM Industrial",
+    title: "Treballa amb nosaltres",
+    lead: "HDM subministra personal industrial qualificat per a operacions a Espanya i Portugal. Si tens experiència en perfils industrials, envia'ns el teu currículum: el revisem quan sorgeix una necessitat que encaixi amb el teu perfil.",
+    honestyTitle: "Sense ofertes publicades",
+    honestyBody: "Aquest lloc no publica ofertes. Enviar el teu CV no garanteix una oferta concreta: el teu perfil queda disponible per quan HDM necessiti cobrir una necessitat de personal, i et contacta si encaixa.",
+    profilesTitle: "Perfils en què opera HDM",
+    processTitle: "Com funciona",
+    processSteps: [
+      { title: "Envia el teu currículum", body: "Completa el formulari: es prepararà un correu dirigit a rrhh@hdmindustrial.es. Adjunta el teu CV abans d'enviar." },
+      { title: "HDM revisa el teu perfil", body: "L'equip revisa la teva experiència i el teu perfil professional." },
+      { title: "Contacte si encaixa", body: "Si sorgeix una necessitat que encaixi amb el teu perfil, HDM et contacta. Si no hi ha encaix en aquell moment, no hi ha resposta en aquesta ocasió." },
+    ] as { title: string; body: string }[],
+    formTitle: "Envia el teu currículum",
+    formLead: "S'obrirà el teu client de correu amb el missatge preparat. Revisa les dades i adjunta el teu currículum abans d'enviar.",
+    nameLabel: "Nom",
+    emailLabel: "Correu electrònic",
+    phoneLabel: "Telèfon",
+    profileLabel: "Perfil",
+    profilePlaceholder: "Selecciona el teu perfil",
+    profileOther: "Altre perfil industrial",
+    attachLabel: "Currículum (PDF, Word o imatge)",
+    attachCta: "Seleccionar fitxer",
+    attachSelected: "Fitxer seleccionat",
+    attachPrivacy: "El teu CV es tracta de forma privada i s'usa només per valorar la teva candidatura.",
+    attachEmailLabel: "Currículum",
+    submitSuccess: "Currículum enviat — gràcies. HDM revisarà el teu perfil i et contactarà si encaixa amb una necessitat.",
+    zoneLabel: "Zona / ciutat (opcional)",
+    messageLabel: "Missatge (opcional)",
+    privacyNote: "Les teves dades s'usen únicament per valorar la teva candidatura. Consulta la política de privacitat.",
+    send: "Preparar correu amb el meu CV",
+  },
+};
+
+export const caDictionary: Dictionary = { ...ca, ...caRequest, ...caPages, ...caCareers };

@@ -9,7 +9,10 @@
   nunca legendá-las como equipe/projetos/instalações reais da HDM.
 - HDM SUMINISTRA PERSONAL. Nunca posicionar como fabricante/oficina/executora de obra.
 - CTA principal: "Solicitar disponibilidad". Nunca "Comprar/Reservar/Contratar ahora".
-- Cliente B2B é o usuário primário. Sem CTA de recrutamento competindo.
+- Cliente B2B é o usuário primário. Área de candidaturas (decisão do cliente 21/09/2026):
+  link "Trabaja con nosotros" no header E no footer; SEM banner/popup/CTA de recrutamento
+  dentro de fluxos B2B (hero, cards de perfil, drawer do Request). Envio de CV via mailto
+  para rrhh@hdmindustrial.es (confirmado); sem anúncio de vagas e sem promessa de oferta.
 
 ## Engenharia
 - Preserve Request state: navegação e troca de idioma NÃO podem apagar a solicitud.

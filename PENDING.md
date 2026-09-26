@@ -4,6 +4,15 @@ Fatos não confirmados, assets pendentes, claims amber/red, integrações sem cr
 Nada aqui bloqueia o build. Atualizar quando o cliente confirmar.
 
 ## Fatos pendentes de confirmação
+- [ ] Perfis **eletromecânico** e **mecânico industrial** — solicitados pelo cliente em
+      21/09/2026 (solicitação c6kjmmkugoa1h4gnviecd06lh). AGUARDANDO descrição das funções
+      antes de criar páginas (Regra Zero). Enquanto isso, os 6 perfis confirmados seguem.
+- [ ] Logo própria: PDF recebido em 21/09/2026 via chat (wordmark "HDM INDUSTRIAL",
+      engrenagens, PB) — guardado em `documentos/brand/hdm-logo-recebido-20260921.pdf`.
+      Pendente: confirmação de versão final + onde aplicar (header/footer/favicon).
+      ATENÇÃO: extrair PNG/SVG vetor limpo antes de usar no site.
+- [ ] Carrossel de imagens: pendente respostas do cliente (hero vs outras seções;
+      autoplay vs manual; fotos próprias vs editoriais) — ver solicitação acima.
 - [ ] Headcount real e significado de 54 vs 70 (BLOQUEIO DE PRODUÇÃO — não publicar total).
 - [ ] Endereço fiscal completo em Portugal (rua, CP, cidade, NIF).
 - [ ] Dados de contacto definitivos: telefone, WhatsApp, email público. O formulário de 7/9/2026
@@ -36,6 +45,12 @@ Nada aqui bloqueia o build. Atualizar quando o cliente confirmar.
       supabase/migrations/). Sem env: DevRequestRepository (persistência local, modo demo sinalizado).
 - [ ] Email transacional (notificação de nova solicitud): provider interface pronta; ativação via
       Supabase Edge Function / Resend — credential pendente.
+- [ ] **HDM CV relay** (VPS `nexo_hdm_cv`, porta 13475 — SEM banco de dados, decisão do
+      Abner 21/09/2026): serviço construído e no ar internamente (uploads em disco privado
+      + log JSONL). Falta: (1) rota Caddy `handle /hdm-cv/*` (exige sudo) e (2) credencial
+      `HDM_CV_SMTP_URL` ou `HDM_CV_RESEND_API_KEY` no `.env` do VPS + `docker compose up -d hdm-cv`.
+      Sem credencial: relay responde 503 `email_not_configured`, guarda o CV em disco e o site
+      cai no fluxo mailto/Web Share — nunca simula sucesso (§85).
 - [ ] Analytics (Vercel Web Analytics) — carregar só após consentimento de cookies.
 - [ ] Domínio final + redirect map OLD→NEW (documentado em docs/redirects.md; aplicar no deploy).
 
