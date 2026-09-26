@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Locale, ProfessionalProfile } from "@/domain/types";
 import { getDictionary } from "@/i18n";
 import { localizedPath } from "@/content/pages";
+import { PROFESSION_EXTRA } from "@/content/profession-extra";
 import { professionalProfiles } from "@/content/profiles";
 import { sectors } from "@/content/sectors";
 import { Section, SectionHeader } from "@/components/ui/layout";
@@ -74,6 +75,7 @@ export function ProfileDetailPage({
   const dict = getDictionary(locale);
   const p = dict.profiles;
   const item = p.items[profile.id];
+  const extra = PROFESSION_EXTRA[profile.id];
   if (!item) return null;
 
   return (
@@ -165,6 +167,59 @@ export function ProfileDetailPage({
               </h2>
               <p className="mt-2 text-base leading-relaxed text-ink-700">{item.requirements}</p>
             </div>
+
+            {extra && (
+              <>
+                <div className="mt-8">
+                  <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
+                    {p.cuandoTitle}
+                  </h2>
+                  <ul className="mt-3 space-y-2">
+                    {extra.when.map((w) => (
+                      <li key={w} className="border-l-2 border-signal-500 pl-4 text-base leading-relaxed text-ink-700">{w}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-8 border border-line-200 bg-paper-100 p-5">
+                  <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
+                    {p.verificaTitle}
+                  </h2>
+                  <ul className="mt-3 space-y-2">
+                    {extra.verify.map((v) => (
+                      <li key={v} className="flex gap-2 text-sm leading-relaxed text-ink-700">
+                        <span className="text-ok-600">✓</span>{v}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-8">
+                  <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
+                    {p.faqTitle}
+                  </h2>
+                  <div className="mt-3 divide-y divide-line-200 border border-line-200 bg-paper-50">
+                    {extra.faq.map((f) => (
+                      <details key={f.q} className="group px-5 py-4">
+                        <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-bold text-ink-950">
+                          {f.q}
+                          <span className="text-signal-600 transition-transform group-open:rotate-45">+</span>
+                        </summary>
+                        <p className="mt-2 text-sm leading-relaxed text-steel-500">{f.a}</p>
+                      </details>
+                    ))}
+                  </div>
+                </div>
+                <script
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                      "@context": "https://schema.org",
+                      "@type": "FAQPage",
+                      mainEntity: extra.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+                    }),
+                  }}
+                />
+              </>
+            )}
 
             <div className="mt-8">
               <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
