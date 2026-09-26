@@ -64,3 +64,15 @@ Regras de escrita: gatilhos de confiança naturais — *disponibilidad real*, *s
 - [ ] Cada profissão ≥ 450 palavras + FAQ + schema
 - [ ] Title/description únicos por página (já verificado pelo check:seo — manter)
 - [ ] verify completo + 0 regras AGENTS.md violadas (sem cifras/clientes inventados)
+
+---
+## REVISÃO 26/09 — status real
+- Fase 0 ✅ EXISTIA da build original (overflow-x: clip, composer 2col, CTAs 52px) — confirmado.
+- Fase 1 ✅ ENTREGUE (Como funciona + FAQ+schema home, 4 idiomas).
+- Fase 2 ✅ ENTREGUE + reconciliada (duas sessões: dicionário queHacen/cuando/verifica/faq + registry CA/EN/PT; FAQ híbrido com fallback; sem duplicação).
+- Fase 3 ✅ EXISTIA da build original (MobileRequestBar: fixed bottom, safe-area, contador vivo, h-48px; RequestDrawer com focus-trap) — auditado, nada a fazer.
+- Fase 4 — RESTANTE:
+  1. [ ] Search Console (AÇÃO OWNER: verificação do domínio + sitemap)
+  2. [ ] Google Business Profile (AÇÃO OWNER: criar/ficha HDM)
+  3. [ ] Blog: 4 artigos-pilares (próxima sessão técnica)
+  4. [ ] Backlinks iniciais (diretórios sectoriais)
