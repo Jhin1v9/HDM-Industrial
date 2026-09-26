@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { L as Link } from "@/components/ui/L";
 import { usePathname } from "next/navigation";
 import { LOCALES, type Locale } from "@/domain/types";
 import { getDictionary } from "@/i18n";

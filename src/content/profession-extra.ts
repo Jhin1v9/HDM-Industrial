@@ -122,7 +122,7 @@ export const PROFESSION_EXTRA: Record<string, ProfessionExtra> = {
     ],
     verify: [
       "Formación PRL básica según el entorno de trabajo, vigente.",
-      "Oficio verificado y disponibilidad inmediata en su zona.",
+      "Oficio verificado y respuesta de HDM en horas laborables.",
       "Disponibilidad real confirmada por HDM antes de que decida.",
     ],
     faq: [

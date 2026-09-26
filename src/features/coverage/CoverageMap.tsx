@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { L as Link } from "@/components/ui/L";
 import type { Locale, CoverageAreaId } from "@/domain/types";
 import { coverageAreas } from "@/content/coverage";
 import { getDictionary } from "@/i18n";

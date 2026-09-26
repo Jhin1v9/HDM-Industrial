@@ -8,7 +8,7 @@ import { RequestPanel } from "@/features/request/panel";
 import { OpenRequestButton } from "./OpenRequestButton";
 import { PhoneIcon, MailIcon, WhatsAppIcon } from "@/components/ui/icons";
 import { ContactMailForm } from "./ContactMailForm";
-import Link from "next/link";
+import { L as Link } from "@/components/ui/L";
 
 /* ---------------------------- SOLICITAR PERSONAL ----------------------------- */
 

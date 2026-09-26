@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { L as Link } from "@/components/ui/L";
 import type { Locale } from "@/domain/types";
 import { localizedPath } from "@/content/pages";
 

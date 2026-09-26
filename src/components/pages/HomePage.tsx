@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { L as Link } from "@/components/ui/L";
 import type { Locale } from "@/domain/types";
 import { getDictionary } from "@/i18n";
 import { localizedPath } from "@/content/pages";
@@ -48,10 +48,10 @@ export function HomePage({ locale }: { locale: Locale }) {
         <div className="absolute inset-0" aria-hidden="true">
           <HeroRotator
             slides={[
-              { src: "/images/hero-industrial.jpg", mobileSrc: "/images/hero-mobile.jpg", alt: "" },
-              { src: "/images/plant-industrial.jpg", alt: "" },
-              { src: "/images/mobilization-logistics.jpg", alt: "" },
-              { src: "/images/epi-safety.jpg", alt: "" },
+              { src: "/images/hero-industrial.jpg", mobileSrc: "/images/hero-mobile.jpg", alt: getMedia("PH-PHOTO-HERO-01")?.alt[locale] ?? "" },
+              { src: "/images/plant-industrial.jpg", alt: getMedia("PH-PHOTO-PLANT-01")?.alt[locale] ?? "" },
+              { src: "/images/mobilization-logistics.jpg", alt: getMedia("PH-PHOTO-MOBILIZATION-01")?.alt[locale] ?? "" },
+              { src: "/images/epi-safety.jpg", alt: getMedia("PH-PHOTO-EPI-01")?.alt[locale] ?? "" },
             ]}
             className="absolute inset-0"
           />

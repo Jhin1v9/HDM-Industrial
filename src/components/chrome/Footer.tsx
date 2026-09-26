@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { L as Link } from "@/components/ui/L";
 import type { Locale } from "@/domain/types";
 import { getDictionary } from "@/i18n";
 import { localizedPath } from "@/content/pages";
@@ -28,7 +28,7 @@ export function Footer({ locale }: { locale: Locale }) {
   ];
 
   return (
-    <footer className="border-t border-ink-800 bg-ink-950 pb-24 text-paper-50 lg:pb-0">
+    <footer className="border-t border-ink-800 bg-ink-950 pb-24 text-center text-paper-50 lg:pb-0 lg:text-left">
       <div className="mx-auto grid max-w-[76rem] gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <p className="text-xl font-extrabold tracking-tight">
