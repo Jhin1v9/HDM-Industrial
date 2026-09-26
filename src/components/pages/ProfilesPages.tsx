@@ -97,37 +97,6 @@ export function ProfileDetailPage({
               </h1>
             </div>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-700">{item.description}</p>
-            {item.queHacen ? (
-              <>
-                <h2 className="mt-10 text-xl font-extrabold tracking-tight text-ink-950">
-                  {p.queHacenTitle}
-                </h2>
-                <p className="mt-3 max-w-2xl text-base leading-relaxed text-ink-700">{item.queHacen}</p>
-              </>
-            ) : null}
-            {item.cuando && item.cuando.length > 0 ? (
-              <>
-                <h2 className="mt-10 text-xl font-extrabold tracking-tight text-ink-950">
-                  {p.cuandoTitle}
-                </h2>
-                <ul className="mt-3 max-w-2xl space-y-2">
-                  {item.cuando.map((c) => (
-                    <li key={c} className="flex gap-2 text-base leading-relaxed text-ink-700">
-                      <span className="mt-2 h-1.5 w-1.5 flex-none bg-signal-600" />
-                      {c}
-                    </li>
-                  ))}
-                </ul>
-              </>
-            ) : null}
-            {item.verifica ? (
-              <div className="mt-10 max-w-2xl border border-ok-600/40 bg-paper-50 p-5">
-                <p className="font-mono text-[11px] tracking-[0.18em] text-ok-600 uppercase">
-                  {p.verificaTitle}
-                </p>
-                <p className="mt-2 text-base leading-relaxed text-ink-700">{item.verifica}</p>
-              </div>
-            ) : null}
 
 
             {profile.specializations.length > 0 ? (
@@ -170,28 +139,6 @@ export function ProfileDetailPage({
 
             {extra && (
               <>
-                <div className="mt-8">
-                  <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
-                    {p.cuandoTitle}
-                  </h2>
-                  <ul className="mt-3 space-y-2">
-                    {extra.when.map((w) => (
-                      <li key={w} className="border-l-2 border-signal-500 pl-4 text-base leading-relaxed text-ink-700">{w}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-8 border border-line-200 bg-paper-100 p-5">
-                  <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
-                    {p.verificaTitle}
-                  </h2>
-                  <ul className="mt-3 space-y-2">
-                    {extra.verify.map((v) => (
-                      <li key={v} className="flex gap-2 text-sm leading-relaxed text-ink-700">
-                        <span className="text-ok-600">✓</span>{v}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
                 <div className="mt-8">
                   <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
                     {p.faqTitle}
@@ -268,36 +215,6 @@ export function ProfileDetailPage({
           </aside>
         </div>
       </Section>
-      {item.faq && item.faq.length > 0 ? (
-        <Section>
-          <SectionHeader title={p.faqTitle} />
-          <div className="mt-2 max-w-2xl divide-y divide-line-200 border border-line-200 bg-paper-50">
-            {item.faq.map((f) => (
-              <details key={f.q} className="group px-5 py-4">
-                <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-bold text-ink-950">
-                  {f.q}
-                  <span className="text-signal-600 transition-transform group-open:rotate-45">+</span>
-                </summary>
-                <p className="mt-2 text-sm leading-relaxed text-steel-500">{f.a}</p>
-              </details>
-            ))}
-          </div>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                mainEntity: item.faq.map((f) => ({
-                  "@type": "Question",
-                  name: f.q,
-                  acceptedAnswer: { "@type": "Answer", text: f.a },
-                })),
-              }),
-            }}
-          />
-        </Section>
-      ) : null}
     </>
   );
 
