@@ -169,6 +169,10 @@ export const es = {
         description:
           "Caldereros para trabajos de calderería, trazado, conformado y montaje de chapa, tubería y estructuras metálicas en entorno industrial. Adecuados para paradas, mantenimiento y proyectos de fabricación.",
         requirements: "Formación PRL. Experiencia demostrable en calderería industrial.",
+        queHacen: "El calderero industrial trabaja la chapa, la tubería y la estructura metálica pesada: trazado, conformado, montaje y reparación en taller, obra y planta. Es el perfil que sostiene paradas de planta, mantenimiento de depósitos y proyectos de fabricación donde la precisión del trazado condiciona todo lo demás. HDM propone caldereros con experiencia demostrable en calderería industrial y formación PRL al día, verificados antes de cada propuesta.",
+        cuando: ["Paradas de planta: depósitos, intercambiadores y líneas de proceso.", "Fabricación y montaje de estructura metálica pesada.", "Mantenimiento industrial con plazos cerrados."],
+        verifica: "HDM verifica: formación PRL al día y experiencia demostrable en calderería industrial (trazado, conformado y montaje). Sin datos verificados, no hay propuesta.",
+        faq: [{ q: "¿Caldereros para trabajos en altura o depósitos?", a: "Indique las condiciones en la solicitud (altura, confinado, interior de depósito); HDM lo tiene en cuenta al verificar perfiles y certificaciones." }, { q: "¿Puedo combinar caldereros con soldadores en la misma solicitud?", a: "Sí. Configure varios perfiles en la misma solicitud; HDM revisa la disponibilidad de cada cuadrilla y le responde con el conjunto." }],
       },
       montador: {
         name: "Montadores de estructuras",
@@ -177,6 +181,10 @@ export const es = {
         description:
           "Montadores de estructuras para levantado, ajuste y montaje de estructura metálica, soportación y equipos en obra e industria. Perfil habituado a trabajo en altura y coordinación de izajes.",
         requirements: "Formación PRL. Experiencia en montaje de estructuras y trabajo en altura.",
+        queHacen: "El montador de estructuras levanta, ajusta y fija estructura metálica, soportación y equipos industriales en obra y planta. Trabaja coordinado con grúa, habituado a altura y con lectura precisa de planos de montaje. Cuando el plazo de obra no admite retrasos, un montador experimentado es la diferencia entre mantener la línea crítica o no. HDM verifica experiencia en montaje y trabajo en altura antes de proponer.",
+        cuando: ["Montaje de estructura metálica en obra industrial.", "Levantado y ajuste de equipos y soportación en planta.", "Fases críticas de obra con secuencias que no admiten retrasos."],
+        verifica: "HDM verifica: formación PRL y experiencia en montaje de estructuras y trabajo en altura. Sin datos verificados, no hay propuesta.",
+        faq: [{ q: "¿Los montadores leen planos de montaje?", a: "Sí, es parte habitual del perfil. Si su proyecto exige lectura de planos concreta, indíquelo en la solicitud para afinar la verificación." }, { q: "¿Trabajan coordinados con nuestra grúa?", a: "Sí, el montador está habituado a trabajar coordinado con el equipo de izaje del proyecto." }],
       },
       electricista: {
         name: "Electricistas industriales",
@@ -185,6 +193,10 @@ export const es = {
         description:
           "Electricistas industriales para instalación, cableado, cuadros eléctricos y mantenimiento eléctrico en planta y obra industrial. Indique tensión de trabajo y tipo de instalación al configurar su solicitud.",
         requirements: "Formación PRL. Cualificación eléctrica acorde al trabajo a realizar.",
+        queHacen: "El electricista industrial instala, cablea y mantiene cuadros eléctricos, líneas y equipos en planta y obra industrial. Trabaja con tensión según cualificación, en mantenimiento preventivo, paradas y nuevas instalaciones. Un fallo eléctrico puede detener toda una línea: por eso la cualificación eléctrica se verifica con especial cuidado. HDM propone electricistas con cualificación acorde al trabajo a realizar y formación PRL al día.",
+        cuando: ["Paradas de planta con intervención eléctrica programada.", "Nuevas instalaciones y ampliaciones de cuadros y líneas.", "Mantenimiento correctivo urgente que detiene producción."],
+        verifica: "HDM verifica: formación PRL y cualificación eléctrica acorde al trabajo a realizar (tensión, tipo de instalación). Sin datos verificados, no hay propuesta.",
+        faq: [{ q: "¿Puedo pedir electricistas para trabajar con tensión?", a: "Indique la tensión de trabajo y el tipo de instalación en la solicitud; HDM verifica la cualificación eléctrica acorde antes de proponer." }, { q: "¿También para mantenimiento preventivo programado?", a: "Sí, tanto preventivo como correctivo; configure las fechas y el alcance en la solicitud." }],
       },
       constructor: {
         name: "Constructores y ayudantes",
@@ -193,6 +205,10 @@ export const es = {
         description:
           "Constructores y ayudantes para apoyo en obra, preparación, auxilio a oficios y tareas operativas generales en proyectos industriales. La forma más directa de reforzar una cuadrilla.",
         requirements: "Formación PRL básica según el entorno de trabajo.",
+        queHacen: "El constructor y ayudante industrial refuerza cuadrillas en obra y planta: preparación de materiales, apoyo a oficios y tareas operativas generales. Es la forma más directa y ágil de ganar capacidad cuando la obra lo exige, sin compromisos de largo plazo. HDM propone perfiles con formación PRL básica según el entorno de trabajo, verificados para su proyecto concreto.",
+        cuando: ["Refuerzo de cuadrilla en fases puntuales de obra.", "Preparación y apoyo logístico en planta.", "Tareas operativas generales con arranque inmediato."],
+        verifica: "HDM verifica: formación PRL básica según el entorno de trabajo (obra, planta, altura). Sin datos verificados, no hay propuesta.",
+        faq: [{ q: "¿Cuántos ayudantes puedo solicitar?", a: "El volumen lo define usted en la solicitud; HDM revisa la disponibilidad real y le confirma sin compromiso." }, { q: "¿Sirven como apoyo a soldadores y caldereros?", a: "Sí, es uno de sus usos más habituales: apoyo directo a oficios en obra y taller." }],
       },
       supervisor: {
         name: "Supervisores y encargados",
@@ -201,6 +217,10 @@ export const es = {
         description:
           "Supervisores y encargados para coordinar cuadrillas, controlar la ejecución del trabajo y servir de interlocutor entre su operación y el personal suministrado. Recomendable en solicitudes de varios perfiles.",
         requirements: "Experiencia demostrable coordinando equipos en entorno industrial.",
+        queHacen: "El supervisor o encargado coordina cuadrillas, controla la ejecución del trabajo y es el interlocutor entre su operación y el personal suministrado. En solicitudes de varios perfiles o de varios días, un encargado da seguimiento real a horarios, seguridad y calidad. HDM propone supervisores con experiencia demostrable coordinando equipos en entorno industrial.",
+        cuando: ["Solicitudes de varios perfiles que necesitan coordinación diaria.", "Obras largas con seguimiento de ejecución y seguridad.", "Proyectos donde necesita un interlocutor único sobre el terreno."],
+        verifica: "HDM verifica: experiencia demostrable coordinando equipos en entorno industrial y formación PRL. Sin datos verificados, no hay propuesta.",
+        faq: [{ q: "¿El supervisor sustituye a mi propio encargado?", a: "No lo sustituye: coordina al personal suministrado y le reporta. La dirección del proyecto sigue siendo suya." }, { q: "¿Puedo pedir supervisor más cuadrilla en la misma solicitud?", a: "Sí, y es lo recomendable en solicitudes de varios perfiles; HDM revisa la disponibilidad conjunta." }],
       },
       eletromecanico: {
         name: "Electromecánicos",
@@ -209,6 +229,10 @@ export const es = {
         description:
           "Electromecánicos industriales: instalan, mantienen y reparan máquinas con componentes eléctricos y mecánicos. Identifican averías, sustituyen piezas, realizan conexiones eléctricas y ajustan motores.",
         requirements: "Formación PRL. Experiencia demostrable en mantenimiento electromecánico industrial.",
+        queHacen: "El electromecánico industrial instala, mantiene y repara máquinas con componentes eléctricos y mecánicos: identifica averías, sustituye piezas, realiza conexiones eléctricas y ajusta motores. Es el perfil puente entre electricidad y mecánica, clave en mantenimiento de planta donde una avería mezcla ambas disciplinas. HDM verifica su experiencia en mantenimiento electromecánico antes de proponerlo.",
+        cuando: ["Mantenimiento de planta con averías mixtas eléctrico-mecánicas.", "Sustitución y ajuste de motores y componentes.", "Paradas con revisión de máquinas de proceso."],
+        verifica: "HDM verifica: formación PRL y experiencia demostrable en mantenimiento electromecánico industrial (máquinas, motores, conexiones). Sin datos verificados, no hay propuesta.",
+        faq: [{ q: "¿Un electromecánico cubre electricista y mecánico?", a: "Cubre el cruce de ambas disciplinas en máquinas; para instalaciones eléctricas puras o mecánica pesada, consulte los perfiles específicos." }, { q: "¿Puedo pedirlo para diagnóstico de averías?", a: "Sí, la identificación de averías es parte central de su trabajo; descríbala en la solicitud." }],
       },
       "mecanico-industrial": {
         name: "Mecánicos industriales",
@@ -217,6 +241,10 @@ export const es = {
         description:
           "Mecánicos industriales: instalan, mantienen y reparan maquinaria de fábricas. Identifican averías, sustituyen piezas desgastadas y ajustan componentes para evitar paradas en la producción.",
         requirements: "Formación PRL. Experiencia demostrable en mecánica industrial.",
+        queHacen: "El mecánico industrial instala, mantiene y repara maquinaria de fábricas: identifica averías, sustituye piezas desgastadas y ajusta componentes para evitar paradas en la producción. Su trabajo directo sobre la disponibilidad de la línea lo convierte en uno de los perfiles más solicitados en mantenimiento. HDM verifica su experiencia en mecánica industrial antes de cada propuesta.",
+        cuando: ["Mantenimiento preventivo y correctivo de maquinaria de producción.", "Sustitución de piezas desgastadas con la línea detenida.", "Ajustes y alineaciones para evitar paradas repetidas."],
+        verifica: "HDM verifica: formación PRL y experiencia demostrable en mecánica industrial (maquinaria de fábricas, ajustes y reparación). Sin datos verificados, no hay propuesta.",
+        faq: [{ q: "¿Trabajan con maquinaria de proceso específica?", a: "Indique el tipo de maquinaria en la solicitud; HDM lo tiene en cuenta al verificar la experiencia de cada perfil." }, { q: "¿Puedo pedir mecánico junto a electromecánico?", a: "Sí, son perfiles complementarios en mantenimiento de planta; configure ambos en la misma solicitud." }],
       },
     } as Record<
       string,

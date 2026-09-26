@@ -1,4 +1,6 @@
 import { PT } from './profession-extra-pt';
+import { EN } from './profession-extra-en';
+import { CA } from './profession-extra-ca';
 
 /**
  * Conteúdo GORDO das páginas de profissão (Fase 2 do plano mobile+SEO).
@@ -157,7 +159,7 @@ const ES: Record<string, ProfessionExtra> = {
 /** Conteúdo gordo por locale — fallback ES enquanto a tradução não existe. */
 export const PROFESSION_EXTRA: Record<string, Record<string, ProfessionExtra>> = {
   es: ES,
-  ca: ES,
-  en: ES,
+  ca: CA,
+  en: EN,
   pt: PT,
 };
