@@ -1,3 +1,5 @@
+import { PT } from './profession-extra-pt';
+
 /**
  * Conteúdo GORDO das páginas de profissão (Fase 2 do plano mobile+SEO).
  * ES é o idioma primário do site (locale `/`) — Google indexa principalmente
@@ -11,7 +13,7 @@ export interface ProfessionExtra {
   faq: Array<{ q: string; a: string }>; // 3 perguntas com schema
 }
 
-export const PROFESSION_EXTRA: Record<string, ProfessionExtra> = {
+const ES: Record<string, ProfessionExtra> = {
   soldador: {
     when: [
       "Parada de planta o mantenimiento mayor con plazos cerrados: necesita soldadores que empiecen esta misma semana.",
@@ -148,4 +150,14 @@ export const PROFESSION_EXTRA: Record<string, ProfessionExtra> = {
       { q: "¿Habla con mi equipo en mi idioma?", a: "Los perfiles se asignan según el idioma de trabajo que indique en la solicitud." },
     ],
   },
+};
+
+
+
+/** Conteúdo gordo por locale — fallback ES enquanto a tradução não existe. */
+export const PROFESSION_EXTRA: Record<string, Record<string, ProfessionExtra>> = {
+  es: ES,
+  ca: ES,
+  en: ES,
+  pt: PT,
 };

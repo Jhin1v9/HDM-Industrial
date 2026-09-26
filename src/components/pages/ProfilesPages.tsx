@@ -75,7 +75,7 @@ export function ProfileDetailPage({
   const dict = getDictionary(locale);
   const p = dict.profiles;
   const item = p.items[profile.id];
-  const extra = PROFESSION_EXTRA[profile.id];
+  const extra = PROFESSION_EXTRA[locale]?.[profile.id] ?? PROFESSION_EXTRA.es?.[profile.id];
   if (!item) return null;
 
   return (
