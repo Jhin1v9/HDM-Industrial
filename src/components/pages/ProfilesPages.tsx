@@ -134,6 +134,38 @@ export function ProfileDetailPage({
               </div>
             )}
 
+            {item.queHacen ? (
+              <>
+                <h2 className="mt-10 text-xl font-extrabold tracking-tight text-ink-950">
+                  {p.queHacenTitle}
+                </h2>
+                <p className="mt-3 max-w-2xl text-base leading-relaxed text-ink-700">{item.queHacen}</p>
+              </>
+            ) : null}
+            {item.cuando && item.cuando.length > 0 ? (
+              <>
+                <h2 className="mt-10 text-xl font-extrabold tracking-tight text-ink-950">
+                  {p.cuandoTitle}
+                </h2>
+                <ul className="mt-3 max-w-2xl space-y-2">
+                  {item.cuando.map((c) => (
+                    <li key={c} className="flex gap-2 text-base leading-relaxed text-ink-700">
+                      <span className="mt-2 h-1.5 w-1.5 flex-none bg-signal-600" />
+                      {c}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
+            {item.verifica ? (
+              <div className="mt-10 max-w-2xl border border-ok-600/40 bg-paper-50 p-5">
+                <p className="font-mono text-[11px] tracking-[0.18em] text-ok-600 uppercase">
+                  {p.verificaTitle}
+                </p>
+                <p className="mt-2 text-base leading-relaxed text-ink-700">{item.verifica}</p>
+              </div>
+            ) : null}
+
             <div className="mt-8 border-l-2 border-ink-950 pl-5">
               <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
                 {p.requirements}
