@@ -76,6 +76,10 @@ export function ProfileDetailPage({
   const p = dict.profiles;
   const item = p.items[profile.id];
   const extra = PROFESSION_EXTRA[locale]?.[profile.id] ?? PROFESSION_EXTRA.es?.[profile.id];
+  const faqs: Array<{ q: string; a: string }> =
+    (item as { faq?: Array<{ q: string; a: string }> }).faq?.length
+      ? (item as { faq?: Array<{ q: string; a: string }> }).faq!
+      : (extra?.faq ?? []);
   if (!item) return null;
 
   return (
@@ -137,14 +141,14 @@ export function ProfileDetailPage({
               <p className="mt-2 text-base leading-relaxed text-ink-700">{item.requirements}</p>
             </div>
 
-            {extra && (
+            {faqs.length > 0 && (
               <>
                 <div className="mt-8">
                   <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
                     {p.faqTitle}
                   </h2>
                   <div className="mt-3 divide-y divide-line-200 border border-line-200 bg-paper-50">
-                    {extra.faq.map((f) => (
+                    {faqs.map((f) => (
                       <details key={f.q} className="group px-5 py-4">
                         <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-bold text-ink-950">
                           {f.q}
@@ -161,7 +165,7 @@ export function ProfileDetailPage({
                     __html: JSON.stringify({
                       "@context": "https://schema.org",
                       "@type": "FAQPage",
-                      mainEntity: extra.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+                      mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
                     }),
                   }}
                 />
