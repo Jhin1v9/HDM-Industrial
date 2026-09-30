@@ -172,6 +172,10 @@ const ca = {
         description:
           "Calderers per a treballs de caldereria, traçat, conformat i muntatge de xapa, canonada i estructures metàl·liques en entorn industrial. Adequats per a aturades, manteniment i projectes de fabricació.",
         requirements: "Formació PRL. Experiència demostrable en caldereria industrial.",
+        queHacen: "El calderer industrial treballa la xapa, la tuberia i l'estructura metàl·lica pesada: traçat, conformament, muntatge i reparació en taller, obra i planta. És el perfil que sosté aturades de planta, manteniment de dipòsits i projectes de fabricació on la precisió del traçat condiciona tota la resta. HDM proposa calderers amb experiència demostrable en caldereria industrial i formació PRL al dia, verificats abans de cada proposta.",
+        cuando: ["Aturades de planta: dipòsits, intercanviadors i línies de procés.", "Fabricació i muntatge d'estructura metàl·lica pesada.", "Manteniment industrial amb terminis tancats."],
+        verifica: "HDM verifica: formació PRL al dia i experiència demostrable en caldereria industrial (traçat, conformament i muntatge). Sense dades verificades, no hi ha proposta.",
+        faq: [{ q: "Calderers per a treballs en alçada o dipòsits?", a: "Indiqui les condicions a la sol·licitud (alçada, confinat, interior de dipòsit); HDM ho té en compte en verificar perfils i certificacions." }, { q: "Puc combinar calderers amb soldadors a la mateixa sol·licitud?", a: "Sí. Configuri diversos perfils a la mateixa sol·licitud; HDM revisa la disponibilitat de cada quadrilla i li respon amb el conjunt." }],
       },
       montador: {
         name: "Muntadors d'estructures",
@@ -180,6 +184,10 @@ const ca = {
         description:
           "Muntadors d'estructures per a aixecament, ajust i muntatge d'estructura metàl·lica, suportació i equips en obra i indústria. Perfil acostumat a treball en alçada i coordinació d'aixecaments.",
         requirements: "Formació PRL. Experiència en muntatge d'estructures i treball en alçada.",
+        queHacen: "El muntador d'estructures aixeca, ajusta i fixa estructura metàl·lica, suportació i equips industrials en obra i planta. Treballa coordinat amb grua, acostumat a l'alçada i amb lectura precisa de planols de muntatge. Quan el termini d'obra no admet retards, un muntador experimentat és la diferència entre mantenir la línia crítica o no. HDM verifica experiència en muntatge i treball en alçada abans de proposar.",
+        cuando: ["Muntatge d'estructura metàl·lica en obra industrial.", "Aixecament i ajust d'equips i suportació en planta.", "Fases crítiques d'obra amb seqüències que no admeten retards."],
+        verifica: "HDM verifica: formació PRL i experiència en muntatge d'estructures i treball en alçada. Sense dades verificades, no hi ha proposta.",
+        faq: [{ q: "Els muntadors llegeixen planols de muntatge?", a: "Sí, és part habitual del perfil. Si el projecte exigeix una lectura de planols concreta, indiqui-ho a la sol·licitud per afinar la verificació." }, { q: "Treballen coordinats amb la nostra grua?", a: "Sí, el muntador està acostumat a treballar coordinat amb l'equip d'izatge del projecte." }],
       },
       electricista: {
         name: "Electricistes industrials",
@@ -188,6 +196,10 @@ const ca = {
         description:
           "Electricistes industrials per a instal·lació, cablejat, quadres elèctrics i manteniment elèctric en planta i obra industrial. Indiqui tensió de treball i tipus d'instal·lació en configurar la seva sol·licitud.",
         requirements: "Formació PRL. Qualificació elèctrica d'acord amb el treball a realitzar.",
+        queHacen: "L'electricista industrial instal·la, cableja i manté quadres elèctrics, línies i equips en planta i obra industrial. Treballa amb tensió segons la qualificació, en manteniment preventiu, aturades i noves instal·lacions. Una fallada elèctrica pot aturar tota una línia: per això la qualificació elèctrica es verifica amb especial cura. HDM proposa electricistes amb qualificació conforme al treball a realitzar i formació PRL al dia.",
+        cuando: ["Aturades de planta amb intervenció elèctrica programada.", "Noves instal·lacions i ampliacions de quadres i línies.", "Manteniment correctiu urgent que atura la producció."],
+        verifica: "HDM verifica: formació PRL i qualificació elèctrica conforme al treball a realitzar (tensió, tipus d'instal·lació). Sense dades verificades, no hi ha proposta.",
+        faq: [{ q: "Puc demanar electricistes per treballar amb tensió?", a: "Indiqui la tensió de treball i el tipus d'instal·lació a la sol·licitud; HDM verifica la qualificació elèctrica conforme abans de proposar." }, { q: "També per a manteniment preventiu programat?", a: "Sí, tant preventiu com correctiu; configuri les dates i l'abast a la sol·licitud." }],
       },
       constructor: {
         name: "Constructors i ajudants",
@@ -196,6 +208,10 @@ const ca = {
         description:
           "Constructors i ajudants per a suport en obra, preparació, auxili a oficis i tasques operatives generals en projectes industrials. La forma més directa de reforçar una quadrilla.",
         requirements: "Formació PRL bàsica segons l'entorn de treball.",
+        queHacen: "El constructor i ajudant industrial reforça quadrilles en obra i planta: preparació de materials, suport a oficis i tasques operatives generals. És la forma més directa i àgil de guanyar capacitat quan l'obra ho exigeix, sense compromisos de llarg termini. HDM proposa perfils amb formació PRL bàsica segons l'entorn de treball, verificats per al projecte concret.",
+        cuando: ["Reforç de quadrilla en fases puntuals d'obra.", "Preparació i suport logístic en planta.", "Tasques operatives generals d'arrencada immediata."],
+        verifica: "HDM verifica: formació PRL bàsica segons l'entorn de treball (obra, planta, alçada). Sense dades verificades, no hi ha proposta.",
+        faq: [{ q: "Quants ajudants puc sol·licitar?", a: "El volum el defineixi vostè a la sol·licitud; HDM revisa la disponibilitat real i li confirma sense compromís." }, { q: "Serveixen com a suport a soldadors i calderers?", a: "Sí, és un dels seus usos més habituals: suport directe a oficis en obra i taller." }],
       },
       supervisor: {
         name: "Supervisors i encarregats",
@@ -204,6 +220,10 @@ const ca = {
         description:
           "Supervisors i encarregats per coordinar quadrilles, controlar l'execució del treball i servir d'interlocutor entre la seva operació i el personal subministrat. Recomanable en sol·licituds de diversos perfils.",
         requirements: "Experiència demostrable coordinant equips en entorn industrial.",
+        queHacen: "El supervisor o encarregat coordina quadrilles, controla l'execució del treball i és l'interlocutor entre la seva operació i el personal subministrat. En sol·licituds de diversos perfils o de diversos dies, un encarregat fa un seguiment real d'horaris, seguretat i qualitat. HDM proposa supervisors amb experiència demostrable coordinant equips en entorn industrial.",
+        cuando: ["Sol·licituds de diversos perfils que necessiten coordinació diària.", "Obres llargues amb seguiment d'execució i seguretat.", "Projectes on necessita un interlocutor únic sobre el terreny."],
+        verifica: "HDM verifica: experiència demostrable coordinant equips en entorn industrial i formació PRL. Sense dades verificades, no hi ha proposta.",
+        faq: [{ q: "El supervisor substitueix el meu propi encarregat?", a: "No el substitueix: coordina el personal subministrat i li reporta. La direcció del projecte continua sent seva." }, { q: "Puc demanar supervisor més quadrilla a la mateixa sol·licitud?", a: "Sí, i és el recomanable en sol·licituds de diversos perfils; HDM revisa la disponibilitat conjunta." }],
       },
       eletromecanico: {
         name: "Electromecànics",
@@ -212,6 +232,10 @@ const ca = {
         description:
           "Electromecànics industrials: instal·len, mantenen i reparen màquines amb components elèctrics i mecànics. Identifiquen avaries, substitueixen peces, fan connexions elèctriques i ajusten motors.",
         requirements: "Formació PRL. Experiència demostrable en manteniment electromecànic industrial.",
+        queHacen: "L'electromecànic industrial instal·la, manté i repara màquines amb components elèctrics i mecànics: identifica avaries, substitueix peces, fa connexions elèctriques i ajusta motors. És el perfil pont entre electricitat i mecànica, clau en manteniment de planta on una avaria barreja les dues disciplines. HDM verifica la seva experiència en manteniment electromecànic abans de proposar-lo.",
+        cuando: ["Manteniment de planta amb avaries mixtes elèctrico-mecàniques.", "Substitució i ajust de motors i components.", "Aturades amb revisió de màquines de procés."],
+        verifica: "HDM verifica: formació PRL i experiència demostrable en manteniment electromecànic industrial (màquines, motors, connexions). Sense dades verificades, no hi ha proposta.",
+        faq: [{ q: "Un electromecànic cobreix electricista i mecànic?", a: "Cobreix el creuament de les dues disciplines en màquines; per a instal·lacions elèctriques pures o mecànica pesada, consulti els perfils específics." }, { q: "El puc demanar per a diagnòstic d'avaries?", a: "Sí, la identificació d'avaries és part central del seu treball; descrigui-la a la sol·licitud." }],
       },
       "mecanico-industrial": {
         name: "Mecànics industrials",
@@ -220,6 +244,10 @@ const ca = {
         description:
           "Mecànics industrials: instal·len, mantenen i reparen maquinària de fàbriques. Identifiquen avaries, substitueixen peces desgastades i ajusten components per evitar aturades a la producció.",
         requirements: "Formació PRL. Experiència demostrable en mecànica industrial.",
+        queHacen: "El mecànic industrial instal·la, manté i repara maquinària de fàbriques: identifica avaries, substitueix peces desgastades i ajusta components per evitar aturades a la producció. El seu treball directe sobre la disponibilitat de la línia el converteix en un dels perfils més sol·licitats en manteniment. HDM verifica la seva experiència en mecànica industrial abans de cada proposta.",
+        cuando: ["Manteniment preventiu i correctiu de maquinària de producció.", "Substitució de peces desgastades amb la línia aturada.", "Ajustos i alineaments per evitar aturades repetides."],
+        verifica: "HDM verifica: formació PRL i experiència demostrable en mecànica industrial (maquinària de fàbriques, ajustos i reparació). Sense dades verificades, no hi ha proposta.",
+        faq: [{ q: "Treballen amb maquinària de procés específica?", a: "Indiqui el tipus de maquinària a la sol·licitud; HDM ho té en compte en verificar l'experiència de cada perfil." }, { q: "El puc demanar juntament amb un electromecànic?", a: "Sí, són perfils complementaris en manteniment de planta; configuri tots dos a la mateixa sol·licitud." }],
       },
     } as Record<
       string,

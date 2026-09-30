@@ -160,6 +160,10 @@ export const pt = {
           "Soldadores industriais para trabalhos em oficina, obra e planta. Indique o processo de soldadura de que precisa — TIG, MIG/MAG ou eletrodo revestido — e os requisitos do projeto: a HDM revê a disponibilidade de perfis com a certificação de soldadura adequada.",
         requirements:
           "Certificado de soldadura conforme o processo requerido. Formação PRL. Experiência em ambiente industrial.",
+        queHacen: "O soldador industrial une, repara e reforça estruturas metálicas em oficina, obra e planta de produção. Consoante o processo — TIG, MIG/MAG ou eletrodo revestido — trabalha desde acabamentos finos de precisão até cordões de alta produtividade em espessuras grossas. Numa paragem de planta, o soldador está entre os perfis que mais condicionam o prazo: um cordão bem executado à primeira evita retrabalhos que custam horas. Por isso a HDM verifica o processo exato que cada profissional domina antes de o propor a um projeto.",
+        cuando: ["Paragens de planta ou turnarounds, onde cada hora de soldadura está contada.", "Picos de produção que ultrapassam a capacidade da equipa habitual.", "Obra industrial com prazos que não admitem atrasos (estrutura, suportação, tubagem).", "Reparações urgentes de equipamentos ou linhas de produção paradas."],
+        verifica: "A HDM verifica antes de propor: certificado de soldadura conforme o processo requerido (TIG, MIG/MAG ou eletrodo), formação PRL atualizada e experiência comprovada em ambiente industrial. Sem dados verificados, não há proposta.",
+        faq: [{ q: "Posso pedir apenas soldadores TIG para uma paragem de uma semana?", a: "Sim. Configure a solicitação com o processo (TIG), o volume e as datas; a HDM revê equipas com essa certificação e confirma a disponibilidade real antes de decidir." }, { q: "Trabalham em altura ou em espaços confinados?", a: "Quando o projeto o exige, indique as condições (altura, confinado, turno) na solicitação. A HDM tem isso em conta ao verificar perfis e certificações." }, { q: "Em quanto tempo posso ter soldadores disponíveis?", a: "Depende do processo, do volume e da localização. A HDM responde a cada solicitação em horas laboráveis com disponibilidade real, sem compromisso da sua parte." }],
       },
       calderero: {
         name: "Caldeireiros",
@@ -168,6 +172,10 @@ export const pt = {
         description:
           "Caldeireiros para trabalhos de caldeiraria, traçagem, conformação e montagem de chapa, tubagem e estruturas metálicas em ambiente industrial. Adequados para paragens, manutenção e projetos de fabrico.",
         requirements: "Formação PRL. Experiência comprovável em caldeiraria industrial.",
+        queHacen: "O caldeireiro industrial trabalha a chapa, a tubagem e a estrutura metálica pesada: traçagem, conformação, montagem e reparação em oficina, obra e planta. É o perfil que sustenta paragens de planta, manutenção de depósitos e projetos de fabrico onde a precisão da traçagem condiciona tudo o resto. A HDM propõe caldeireiros com experiência comprovável em caldeiraria industrial e formação PRL atualizada, verificados antes de cada proposta.",
+        cuando: ["Paragens de planta: depósitos, permutadores e linhas de processo.", "Fabrico e montagem de estrutura metálica pesada.", "Manutenção industrial com prazos fechados."],
+        verifica: "A HDM verifica: formação PRL atualizada e experiência comprovável em caldeiraria industrial (traçagem, conformação e montagem). Sem dados verificados, não há proposta.",
+        faq: [{ q: "Caldeireiros para trabalhos em altura ou dentro de depósitos?", a: "Indique as condições na solicitação (altura, confinado, interior de depósito); a HDM tem isso em conta ao verificar perfis e certificações." }, { q: "Posso combinar caldeireiros com soldadores na mesma solicitação?", a: "Sim. Configure vários perfis na mesma solicitação; a HDM revê a disponibilidade de cada equipa e responde com o conjunto." }],
       },
       montador: {
         name: "Montadores de estruturas",
@@ -176,6 +184,10 @@ export const pt = {
         description:
           "Montadores de estruturas para levantamento, ajuste e montagem de estrutura metálica, suportação e equipamentos em obra e indústria. Perfil habituado a trabalho em altura e coordenação de içamentos.",
         requirements: "Formação PRL. Experiência em montagem de estruturas e trabalho em altura.",
+        queHacen: "O montador de estruturas levanta, ajusta e fixa estrutura metálica, suportação e equipamentos industriais em obra e planta. Trabalha coordenado com a grua, habituado à altura e com leitura precisa de plantas de montagem. Quando o prazo da obra não admite atrasos, um montador experiente é a diferença entre manter a linha crítica ou não. A HDM verifica experiência em montagem e trabalho em altura antes de propor.",
+        cuando: ["Montagem de estrutura metálica em obra industrial.", "Levantamento e ajuste de equipamentos e suportação em planta.", "Fases críticas de obra com sequências que não admitem atrasos."],
+        verifica: "A HDM verifica: formação PRL e experiência em montagem de estruturas e trabalho em altura. Sem dados verificados, não há proposta.",
+        faq: [{ q: "Os montadores leem plantas de montagem?", a: "Sim, faz parte do perfil habitual. Se o projeto exigir leitura específica de plantas, indique-o na solicitação para afinar a verificação." }, { q: "Trabalham coordenados com a nossa grua?", a: "Sim, o montador está habituado a trabalhar coordenado com a equipa de içamento do projeto." }],
       },
       electricista: {
         name: "Eletricistas industriais",
@@ -184,6 +196,10 @@ export const pt = {
         description:
           "Eletricistas industriais para instalação, cablagem, quadros elétricos e manutenção elétrica em planta e obra industrial. Indique a tensão de trabalho e o tipo de instalação ao configurar o seu pedido.",
         requirements: "Formação PRL. Qualificação elétrica adequada ao trabalho a realizar.",
+        queHacen: "O eletricista industrial instala, cabela e mantém quadros elétricos, linhas e equipamentos em planta e obra industrial. Trabalha com tensão conforme a qualificação, em manutenção preventiva, paragens e novas instalações. Uma falha elétrica pode parar uma linha inteira: por isso a qualificação elétrica é verificada com especial cuidado. A HDM propõe eletricistas com qualificação conforme o trabalho a realizar e formação PRL atualizada.",
+        cuando: ["Paragens de planta com intervenção elétrica programada.", "Novas instalações e ampliações de quadros e linhas.", "Manutenção corretiva urgente que para a produção."],
+        verifica: "A HDM verifica: formação PRL e qualificação elétrica conforme o trabalho a realizar (tensão, tipo de instalação). Sem dados verificados, não há proposta.",
+        faq: [{ q: "Posso pedir eletricistas para trabalhar com tensão?", a: "Indique a tensão de trabalho e o tipo de instalação na solicitação; a HDM verifica a qualificação elétrica conforme antes de propor." }, { q: "Também para manutenção preventiva programada?", a: "Sim, tanto preventiva como corretiva; configure as datas e o âmbito na solicitação." }],
       },
       constructor: {
         name: "Construtores e ajudantes",
@@ -192,6 +208,10 @@ export const pt = {
         description:
           "Construtores e ajudantes para apoio em obra, preparação, auxílio aos ofícios e tarefas operativas gerais em projetos industriais. A forma mais direta de reforçar uma equipa.",
         requirements: "Formação PRL básica conforme o ambiente de trabalho.",
+        queHacen: "O constructor e ajudante industrial reforça equipas em obra e planta: preparação de materiais, apoio a ofícios e tarefas operativas gerais. É a forma mais direta e ágil de ganhar capacidade quando a obra o exige, sem compromissos de longo prazo. A HDM propõe perfis com formação PRL básica conforme o ambiente de trabalho, verificados para o projeto concreto.",
+        cuando: ["Reforço de equipa em fases pontuais de obra.", "Preparação e apoio logístico em planta.", "Tarefas operativas gerais com arranque imediato."],
+        verifica: "A HDM verifica: formação PRL básica conforme o ambiente de trabalho (obra, planta, altura). Sem dados verificados, não há proposta.",
+        faq: [{ q: "Quantos ajudantes posso solicitar?", a: "O volume define-o na solicitação; a HDM revê a disponibilidade real e confirma sem compromisso." }, { q: "Servem como apoio a soldadores e caldeireiros?", a: "Sim, é um dos usos mais habituais: apoio direto a ofícios em obra e oficina." }],
       },
       supervisor: {
         name: "Supervisores e encarregados",
@@ -200,6 +220,10 @@ export const pt = {
         description:
           "Supervisores e encarregados para coordenar equipas, controlar a execução do trabalho e servir de interlocutor entre a sua operação e o pessoal fornecido. Recomendável em pedidos de vários perfis.",
         requirements: "Experiência comprovável a coordenar equipas em ambiente industrial.",
+        queHacen: "O supervisor ou encarregado coordena equipas, controla a execução do trabalho e é o interlocutor entre a sua operação e o pessoal fornecido. Em solicitações de vários perfis ou de vários dias, um encarregado faz acompanhamento real de horários, segurança e qualidade. A HDM propõe supervisores com experiência comprovável a coordenar equipas em ambiente industrial.",
+        cuando: ["Solicitações de vários perfis que precisam de coordenação diária.", "Obras longas com acompanhamento de execução e segurança.", "Projetos em que precisa de um interlocutor único no terreno."],
+        verifica: "A HDM verifica: experiência comprovável a coordenar equipas em ambiente industrial e formação PRL. Sem dados verificados, não há proposta.",
+        faq: [{ q: "O supervisor substitui o meu próprio encarregado?", a: "Não o substitui: coordena o pessoal fornecido e reporta-lhe. A direção do projeto continua a ser sua." }, { q: "Posso pedir supervisor mais equipa na mesma solicitação?", a: "Sim, e é o recomendável em solicitações de vários perfis; a HDM revê a disponibilidade conjunta." }],
       },
       eletromecanico: {
         name: "Eletromecânicos",
@@ -208,6 +232,10 @@ export const pt = {
         description:
           "Eletromecânicos industriais: instalam, fazem a manutenção e reparam máquinas com componentes elétricos e mecânicos. Identificam avarias, trocam peças, fazem ligações elétricas e ajustam motores.",
         requirements: "Formação PRL. Experiência comprovável em manutenção eletromecânica industrial.",
+        queHacen: "O eletromecânico industrial instala, mantém e repara máquinas com componentes elétricos e mecânicos: identifica avarias, substitui peças, faz ligações elétricas e ajusta motores. É o perfil ponte entre eletricidade e mecânica, chave na manutenção de planta onde uma avaria mistura as duas disciplinas. A HDM verifica a sua experiência em manutenção eletromecânica antes de o propor.",
+        cuando: ["Manutenção de planta com avarias mistas eletro-mecânicas.", "Substituição e ajuste de motores e componentes.", "Paragens com revisão de máquinas de processo."],
+        verifica: "A HDM verifica: formação PRL e experiência comprovável em manutenção eletromecânica industrial (máquinas, motores, ligações). Sem dados verificados, não há proposta.",
+        faq: [{ q: "Um eletromecânico cobre eletricista e mecânico?", a: "Cobre o cruzamento das duas disciplinas nas máquinas; para instalações elétricas puras ou mecânica pesada, consulte os perfis específicos." }, { q: "Posso pedi-lo para diagnóstico de avarias?", a: "Sim, a identificação de avarias é parte central do seu trabalho; descreva-a na solicitação." }],
       },
       "mecanico-industrial": {
         name: "Mecânicos industriais",
@@ -216,6 +244,10 @@ export const pt = {
         description:
           "Mecânicos industriais: instalam, fazem a manutenção e reparam máquinas de fábricas. Identificam avarias, trocam peças desgastadas e ajustam componentes para evitar paragens na produção.",
         requirements: "Formação PRL. Experiência comprovável em mecânica industrial.",
+        queHacen: "O mecânico industrial instala, mantém e repara maquinaria de fábricas: identifica avarias, substitui peças desgastadas e ajusta componentes para evitar paragens na produção. O seu trabalho direto sobre a disponibilidade da linha torna-o um dos perfis mais solicitados em manutenção. A HDM verifica a sua experiência em mecânica industrial antes de cada proposta.",
+        cuando: ["Manutenção preventiva e corretiva de maquinaria de produção.", "Substituição de peças desgastadas com a linha parada.", "Ajustes e alinhamentos para evitar paragens repetidas."],
+        verifica: "A HDM verifica: formação PRL e experiência comprovável em mecânica industrial (maquinaria de fábricas, ajustes e reparação). Sem dados verificados, não há proposta.",
+        faq: [{ q: "Trabalham com maquinaria de processo específica?", a: "Indique o tipo de maquinaria na solicitação; a HDM tem isso em conta ao verificar a experiência de cada perfil." }, { q: "Posso pedir mecânico junto com eletromecânico?", a: "Sim, são perfis complementares na manutenção de planta; configure ambos na mesma solicitação." }],
       },
     } as Record<
       string,

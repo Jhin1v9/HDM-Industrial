@@ -173,6 +173,10 @@ const en = {
         description:
           "Boilermakers for boilermaking work, marking out, forming and assembly of plate, pipework and steel structures in industrial environments. Well suited to shutdowns, maintenance and fabrication projects.",
         requirements: "Risk prevention training (PRL). Proven experience in industrial boilermaking.",
+        queHacen: "The industrial boilermaker works plate, pipework and heavy steel structures: marking out, forming, assembly and repair in workshops, on job sites and in plants. It is the profile that underpins plant shutdowns, tank maintenance and fabrication projects where layout precision conditions everything else. HDM proposes boilermakers with proven industrial boilermaking experience and up-to-date PRL training, verified before every proposal.",
+        cuando: ["Plant shutdowns: tanks, heat exchangers and process lines.", "Fabrication and erection of heavy steel structures.", "Industrial maintenance with fixed deadlines."],
+        verifica: "HDM verifies: up-to-date PRL training and proven experience in industrial boilermaking (layout, forming and assembly). No verified data, no proposal.",
+        faq: [{ q: "Boilermakers for work at height or inside tanks?", a: "State the conditions in the request (height, confined space, tank interior); HDM takes them into account when verifying profiles and certifications." }, { q: "Can I combine boilermakers with welders in one request?", a: "Yes. Configure several profiles in the same request; HDM checks each crew's availability and answers with the complete package." }],
       },
       montador: {
         name: "Structural fitters",
@@ -181,6 +185,10 @@ const en = {
         description:
           "Structural fitters for lifting, aligning and erecting steel structures, supports and equipment on construction sites and in industry. Profiles accustomed to working at height and coordinating lifts.",
         requirements: "Risk prevention training (PRL). Experience in structural erection and working at height.",
+        queHacen: "The structural fitter lifts, aligns and secures steel structures, supports and industrial equipment on job sites and in plants. They work coordinated with the crane, accustomed to height and with precise reading of erection drawings. When the job schedule admits no delays, an experienced fitter is the difference between holding the critical path or not. HDM verifies erection and work-at-height experience before proposing.",
+        cuando: ["Erection of steel structures on industrial sites.", "Lifting and alignment of equipment and supports in plants.", "Critical job phases with sequences that admit no delays."],
+        verifica: "HDM verifies: PRL training and experience in structural erection and working at height. No verified data, no proposal.",
+        faq: [{ q: "Do structural fitters read erection drawings?", a: "Yes, it is a standard part of the profile. If your project requires specific drawing literacy, state it in the request to fine-tune verification." }, { q: "Do they work coordinated with our crane?", a: "Yes, the fitter is accustomed to working coordinated with the project's lifting crew." }],
       },
       electricista: {
         name: "Industrial electricians",
@@ -189,6 +197,10 @@ const en = {
         description:
           "Industrial electricians for installation, cabling, electrical switchboards and electrical maintenance in industrial plants and sites. State the working voltage and type of installation when configuring your request.",
         requirements: "Risk prevention training (PRL). Electrical qualification appropriate to the work to be carried out.",
+        queHacen: "The industrial electrician installs, wires and maintains switchboards, lines and equipment in plants and on industrial sites. They work with voltage according to their qualification, on preventive maintenance, shutdowns and new installations. An electrical failure can stop an entire line: that is why electrical qualification is verified with special care. HDM proposes electricians with qualification appropriate to the work and up-to-date PRL training.",
+        cuando: ["Plant shutdowns with scheduled electrical work.", "New installations and extensions of switchboards and lines.", "Urgent corrective maintenance that stops production."],
+        verifica: "HDM verifies: PRL training and electrical qualification appropriate to the work (voltage, installation type). No verified data, no proposal.",
+        faq: [{ q: "Can I request electricians to work on energised systems?", a: "State the working voltage and installation type in the request; HDM verifies the matching electrical qualification before proposing." }, { q: "Also for scheduled preventive maintenance?", a: "Yes, both preventive and corrective; configure dates and scope in the request." }],
       },
       constructor: {
         name: "Construction workers and labourers",
@@ -197,6 +209,10 @@ const en = {
         description:
           "Construction workers and labourers for site support, preparation, assistance to the trades and general operational tasks on industrial projects. The most direct way to reinforce a crew.",
         requirements: "Basic risk prevention training (PRL) appropriate to the working environment.",
+        queHacen: "The industrial construction worker and labourer reinforces crews on job sites and in plants: material preparation, assistance to the trades and general operational tasks. It is the most direct and agile way to gain capacity when the job demands it, with no long-term commitments. HDM proposes profiles with basic PRL training appropriate to the working environment, verified for your specific project.",
+        cuando: ["Crew reinforcement during specific job phases.", "Preparation and logistics support in plants.", "General operational tasks with immediate start."],
+        verifica: "HDM verifies: basic PRL training according to the working environment (site, plant, height). No verified data, no proposal.",
+        faq: [{ q: "How many labourers can I request?", a: "You set the volume in the request; HDM checks real availability and confirms with no commitment." }, { q: "Do they support welders and boilermakers?", a: "Yes, that is one of their most common uses: direct support to the trades on site and in the workshop." }],
       },
       supervisor: {
         name: "Supervisors and foremen",
@@ -205,6 +221,10 @@ const en = {
         description:
           "Supervisors and foremen to coordinate crews, control the execution of the work and act as the point of contact between your operation and the supplied personnel. Recommended for requests involving several profiles.",
         requirements: "Proven experience coordinating teams in industrial environments.",
+        queHacen: "The supervisor or foreman coordinates crews, monitors the execution of the work and is the single point of contact between your operation and the supplied personnel. In requests with several profiles or lasting several days, a foreman provides real follow-up of schedules, safety and quality. HDM proposes supervisors with proven experience coordinating teams in industrial environments.",
+        cuando: ["Requests with several profiles that need daily coordination.", "Long jobs with execution and safety follow-up.", "Projects where you need a single on-site contact."],
+        verifica: "HDM verifies: proven experience coordinating teams in industrial environments and PRL training. No verified data, no proposal.",
+        faq: [{ q: "Does the supervisor replace my own foreman?", a: "No: they coordinate the supplied personnel and report to you. Project direction remains yours." }, { q: "Can I request a supervisor plus crew in the same request?", a: "Yes, and it is recommended for multi-profile requests; HDM checks joint availability." }],
       },
       eletromecanico: {
         name: "Electromechanics",
@@ -213,6 +233,10 @@ const en = {
         description:
           "Industrial electromechanics: they install, maintain and repair machines with electrical and mechanical components. They identify faults, replace parts, wire electrical connections and adjust motors.",
         requirements: "PRL training. Proven experience in industrial electromechanical maintenance.",
+        queHacen: "The industrial electromechanic installs, maintains and repairs machines with electrical and mechanical components: they identify faults, replace parts, make electrical connections and adjust motors. They are the bridge profile between electricity and mechanics, key in plant maintenance where a failure mixes both disciplines. HDM verifies their electromechanical maintenance experience before proposing them.",
+        cuando: ["Plant maintenance with mixed electro-mechanical failures.", "Replacement and adjustment of motors and components.", "Shutdowns with process machinery inspections."],
+        verifica: "HDM verifies: PRL training and proven experience in industrial electromechanical maintenance (machines, motors, connections). No verified data, no proposal.",
+        faq: [{ q: "Does an electromechanic cover electrician and mechanic?", a: "They cover the crossover of both disciplines on machines; for pure electrical installations or heavy mechanics, see the specific profiles." }, { q: "Can I request one for fault diagnosis?", a: "Yes, fault identification is a central part of their work; describe it in the request." }],
       },
       "mecanico-industrial": {
         name: "Industrial mechanics",
@@ -221,6 +245,10 @@ const en = {
         description:
           "Industrial mechanics: they install, maintain and repair factory machinery. They identify faults, replace worn parts and adjust components to prevent production stoppages.",
         requirements: "PRL training. Proven experience in industrial mechanics.",
+        queHacen: "The industrial mechanic installs, maintains and repairs factory machinery: they identify faults, replace worn parts and adjust components to prevent production stoppages. Their direct impact on line availability makes them one of the most requested profiles in maintenance. HDM verifies their industrial mechanics experience before every proposal.",
+        cuando: ["Preventive and corrective maintenance of production machinery.", "Replacement of worn parts with the line stopped.", "Adjustments and alignments to prevent repeat stoppages."],
+        verifica: "HDM verifies: PRL training and proven experience in industrial mechanics (factory machinery, adjustments and repair). No verified data, no proposal.",
+        faq: [{ q: "Do they work with specific process machinery?", a: "State the machinery type in the request; HDM takes it into account when verifying each profile's experience." }, { q: "Can I request a mechanic together with an electromechanic?", a: "Yes, they are complementary profiles in plant maintenance; configure both in the same request." }],
       },
     } as Record<
       string,
