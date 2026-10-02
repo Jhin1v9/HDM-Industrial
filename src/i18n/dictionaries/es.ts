@@ -259,87 +259,87 @@ export const es = {
   },
   sectors: {
     title: "Sectores",
-    lead: "Entornos donde trabaja el personal suministrado por HDM.",
+    lead: "Entornos donde trabaja el personal suministrado por HDM. Cada sector industrial tiene sus propios ritmos, requisitos documentales y perfiles críticos: HDM suministra personal cualificado adaptado a cada entorno, en España y Portugal. Indique su sector en la solicitud y la propuesta llega con perfiles verificados para ese contexto concreto.",
     items: {
       industria: {
         name: "Industria general",
         intro:
-          "Personal para plantas y operaciones industriales de todo tipo: refuerzos de producción, picos de trabajo y necesidades puntuales de mano de obra cualificada.",
+          "Personal para plantas y operaciones industriales de todo tipo: refuerzos de producción, picos de trabajo y necesidades puntuales de mano de obra cualificada. En industria general, el suministro de personal industrial exige adaptarse rápido a líneas, turnos y procesos distintos: HDM verifica la experiencia de cada perfil en entornos de producción reales antes de proponerlo. Desde un refuerzo de una semana hasta cuadrillas estables, la disponibilidad se confirma en horas laborables.",
       },
       construccion: {
         name: "Construcción",
         intro:
-          "Montadores, soldadores y ayudantes para obra: estructura metálica, instalaciones y trabajos con plazos que no admiten retrasos.",
+          "Montadores, soldadores y ayudantes para obra: estructura metálica, instalaciones y trabajos con plazos que no admiten retrasos. La construcción industrial vive de secuencias: cuando un oficio se retrasa, toda la obra paga el retraso. Por eso HDM suministra perfiles habituados a obra con secuencia crítica —alturas, izajes, coordinación con otras cuadrillas— y lo confirma antes de la incorporación. Solicite el refuerzo con fechas y volumen, y decida con disponibilidad real.",
       },
       "mantenimiento-industrial": {
         name: "Mantenimiento industrial",
         intro:
-          "Perfiles técnicos para mantenimiento preventivo y correctivo en planta, con la documentación y la especialidad que cada intervención exige.",
+          "Perfiles técnicos para mantenimiento preventivo y correctivo en planta, con la documentación y la especialidad que cada intervención exige. El mantenimiento industrial no admite improvisación: un mecánico o electricista sin la cualificación exacta puede convertir una parada corta en una avería larga. HDM verifica especialidad, cualificación y experiencia antes de cada propuesta, tanto para preventivo programado como para correctivo urgente con la línea parada.",
       },
       energia: {
         name: "Energía",
         intro:
-          "Personal industrial para proyectos del sector energético, donde la cualificación del perfil y la documentación son condiciones de entrada.",
+          "Personal industrial para proyectos del sector energético, donde la cualificación del perfil y la documentación son condiciones de entrada. En energía —renovable, térmica o redes— cada proyecto exige certificaciones, formación específica y experiencia demostrable en entornos regulados. HDM lo sabe y verifica la documentación de cada perfil antes de proponerlo, para que la incorporación no retrase su calendario de obra ni su ventana de intervención.",
       },
       fabricacion: {
         name: "Fabricación",
         intro:
-          "Personal para empresas de fabricación que necesitan reforzar sus equipos: soldadores, caldereros y montadores integrados en la operación del cliente.",
+          "Personal para empresas de fabricación que necesitan reforzar sus equipos: soldadores, caldereros y montadores integrados en la operación del cliente. En fabricación, la integración importa tanto como la cualificación: el perfil suministrado debe entrar en su línea, sus estándares y sus ritmos sin fricción. HDM suministra personal habituado a trabajar en planta de cliente, con seguimiento durante toda la colaboración y comunicación directa con su equipo.",
       },
       petroquimica: {
         name: "Petroquímica",
         intro:
-          "Perfiles industriales para entornos exigentes de petroquímica, con requisitos documentales y de seguridad específicos que se revisan en cada solicitud.",
+          "Perfiles industriales para entornos exigentes de petroquímica, con requisitos documentales y de seguridad específicos que se revisan en cada solicitud. La petroquímica y el entorno químico tienen estándares de acceso estrictos: formación específica, documentación al día y experiencia contrastada en planta de proceso. HDM revisa esos requisitos en cada solicitud y solo propone perfiles que los cumplen, para que la incorporación sea inmediata y segura.",
       },
     } as Record<string, { name: string; intro: string }>,
   },
   coverage: {
     title: "Cobertura",
     lead:
-      "Zonas de proyecto donde HDM suministra personal industrial. La cobertura no implica oficinas locales ni disponibilidad en tiempo real: indique su zona y HDM confirma.",
+      "Zonas de proyecto donde HDM suministra personal industrial en España y Portugal. La cobertura indica área de trabajo, no oficinas locales ni disponibilidad en tiempo real: indique su zona en la solicitud y HDM le confirma disponibilidad real de perfiles para su proyecto, con desplazamiento y logística acordados en la propuesta.",
     mapLabel: "Mapa de zonas de proyecto en España y Portugal",
     listLabel: "Lista de zonas",
     items: {
       barcelona: {
         name: "Barcelona",
         intro:
-          "Suministro de personal industrial para proyectos en el área de Barcelona y su corredor industrial: soldadores, montadores, electricistas y perfiles de apoyo.",
+          "Suministro de personal industrial para proyectos en el área de Barcelona y su corredor industrial: soldadores, montadores, electricistas y perfiles de apoyo. Es la zona con mayor rotación de HDM, con respuesta ágil para paradas, obra y mantenimiento en el corredor del Besòs, el Puerto y la zona franca industrial.",
       },
       tarragona: {
         name: "Tarragona",
         intro:
-          "Personal para el polo industrial de Tarragona: paradas, mantenimiento y proyectos en entorno químico y de proceso, con perfiles habituados a sus requisitos.",
+          "Personal para el polo industrial de Tarragona: paradas, mantenimiento y proyectos en entorno químico y de proceso, con perfiles habituados a sus requisitos. La experiencia en entorno químico se verifica siempre antes de la propuesta, porque allí la documentación y la seguridad son condición de entrada, no un detalle.",
       },
       valencia: {
         name: "Valencia",
         intro:
-          "Refuerzo de cuadrillas industriales para proyectos en Valencia: obra, planta y trabajos programados con perfiles confirmados por HDM.",
+          "Refuerzo de cuadrillas industriales para proyectos en Valencia: obra, planta y trabajos programados con perfiles confirmados por HDM. Con capacidad de desplazamiento desde el corredor catalán, la propuesta incluye logística y calendario acordados para que el refuerzo llegue cuando su proyecto lo necesita.",
       },
       madrid: {
         name: "Madrid",
         intro:
-          "Suministro de personal industrial en Madrid para obra, mantenimiento y proyectos de fabricación, con coordinación directa con su equipo.",
+          "Suministro de personal industrial en Madrid para obra, mantenimiento y proyectos de fabricación, con coordinación directa con su equipo. Desde perfiles técnicos hasta cuadrillas completas con supervisión, HDM cubre la comunidad de Madrid con la misma verificación documental y de experiencia que en su zona principal de operación.",
       },
       "pais-vasco": {
         name: "País Vasco",
         intro:
-          "Personal cualificado para el tejido industrial del País Vasco: caldereros, soldadores y montadores para proyectos con exigencia técnica.",
+          "Personal cualificado para el tejido industrial del País Vasco: caldereros, soldadores y montadores para proyectos con exigencia técnica. El tejido industrial vasco exige oficio contrastado; HDM lo verifica antes de proponer y coordina el desplazamiento con la logística declarada en cada propuesta.",
       },
       portugal: {
         name: "Portugal",
         intro:
-          "HDM opera también en Portugal, con capacidad de desplazamiento y logística declarada para proyectos en territorio portugués.",
+          "HDM opera también en Portugal, con capacidad de desplazamiento y logística declarada para proyectos en territorio portugués. O Porto, Lisboa e o corredor industrial português contam com a mesma verificação de perfis e o mesmo compromiso de confirmação antes de decidir.",
       },
     } as Record<string, { name: string; intro: string }>,
   },
   solutions: {
     title: "Soluciones",
-    lead: "Formas concretas de resolver una necesidad de personal industrial.",
+    lead: "Formas concretas de resolver una necesidad de personal industrial. Cada situación operativa tiene su fórmula: una parada con ventana corta, un refuerzo continuado, una baja inesperada o una obra con fecha de fin. Elija la solución que describe su caso, configure perfiles y fechas, y HDM le responde con disponibilidad real — sin compromiso por su parte.",
     items: {
       "paradas-industriales": {
         name: "Paradas industriales",
         intro:
-          "Paradas programadas y urgentes concentran mucho trabajo en poco tiempo. Configure perfiles, cantidades y turnos: HDM revisa qué equipo puede movilizar para su ventana de parada.",
+          "Paradas programadas y urgentes concentran mucho trabajo en poco tiempo: toda la diferencia está en llegar con la cuadrilla correcta el primer día. Configure perfiles, cantidades y turnos; HDM revisa qué equipo puede movilizar para su ventana de parada y se lo confirma antes de que decida. La planificación de personal de parada admite cero improvisación: cada soldador, calderero o montador propuesto llega con certificación y experiencia verificadas para su intervención concreta.",
         points: [
           "Equipos multiperfil: soldadores, caldereros, montadores y supervisión.",
           "Indique turnos y duración estimada de la parada.",
@@ -349,7 +349,7 @@ export const es = {
       "refuerzo-de-personal": {
         name: "Refuerzo de personal",
         intro:
-          "Cuando la plantilla no llega: refuerzo continuado de su operación con personal industrial cualificado integrado en sus equipos y sus horarios.",
+          "Cuando la plantilla no llega: refuerzo continuado de su operación con personal industrial cualificado integrado en sus equipos y sus horarios. El refuerzo de personal no es una medida puntual: es una forma estable de sostener la producción cuando la demanda supera su plantilla. HDM suministra perfiles técnicos y de apoyo que trabajan con su calendario y sus estándares, con seguimiento continuo y comunicación directa, en España y Portugal.",
         points: [
           "Trabajo continuado o fijo en cliente.",
           "Perfiles técnicos y de apoyo, combinables.",
@@ -359,7 +359,7 @@ export const es = {
       "sustitucion-temporal": {
         name: "Sustitución temporal",
         intro:
-          "Bajas, vacaciones o ausencias que no pueden frenar la producción. Solicite sustituciones temporales del perfil exacto que necesita cubrir.",
+          "Bajas, vacaciones o ausencias que no pueden frenar la producción. Solicite sustituciones temporales del perfil exacto que necesita cubrir: misma especialidad, misma cualificación, documentación preparada antes de la incorporación. La duración es flexible —desde días hasta meses— y la sustitución se integra en su equipo sin fricción. HDM confirma la disponibilidad en horas laborables para que el hueco en su cuadrilla dure lo mínimo posible.",
         points: [
           "Mismo perfil y especialidad que la persona a sustituir.",
           "Duración flexible según la situación.",
@@ -369,7 +369,7 @@ export const es = {
       "trabajos-puntuales": {
         name: "Trabajos puntuales y obra",
         intro:
-          "Un proyecto concreto con una fecha de fin. Suministro de personal para trabajos puntuales y obra: montaje, soldadura, estructura y apoyo operativo.",
+          "Un proyecto concreto con una fecha de fin. Suministro de personal para trabajos puntuales y obra: montaje, soldadura, estructura y apoyo operativo. Dimensionamos el equipo al trabajo real —desde una persona hasta cuadrillas completas con supervisión opcional— y usted marca fechas y duración. Es la forma más directa de cubrir una fase concreta sin compromisos de largo plazo: la propuesta llega en horas laborables, con disponibilidad confirmada para sus fechas.",
         points: [
           "Equipos dimensionados al trabajo: desde 1 persona a cuadrillas completas.",
           "Fechas y duración definidas por usted.",
