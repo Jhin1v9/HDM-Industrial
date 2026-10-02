@@ -45,13 +45,18 @@ export function Header({ locale }: { locale: Locale }) {
       <div className="mx-auto flex h-16 max-w-[76rem] items-center gap-4 px-5 sm:px-8">
         <Link
           href={localizedPath(locale, "")}
-          className="flex items-baseline gap-2 font-extrabold tracking-tight"
+          className="flex items-center"
           aria-label="HDM Industrial"
         >
-          <span className="text-xl">HDM</span>
-          <span className="font-mono text-[10px] tracking-[0.25em] text-steel-400 uppercase">
-            Industrial
-          </span>
+          {/* Logo oficial fornecida pelo cliente (Matheus, 21/09) — PDF em documentos/brand/ */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/brand/hdm-logo-light.png"
+            alt="HDM Industrial"
+            width={771}
+            height={330}
+            className="h-8 w-auto"
+          />
         </Link>
 
         <nav aria-label={dict.common.navPrimary} className="ml-6 hidden items-center gap-1 lg:flex">

@@ -32,9 +32,15 @@ export function Footer({ locale }: { locale: Locale }) {
     <footer className="border-t border-ink-800 bg-ink-950 pb-24 text-center text-paper-50 lg:pb-0 lg:text-left">
       <div className="mx-auto grid max-w-[76rem] gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
-          <p className="text-xl font-extrabold tracking-tight">
-            HDM <span className="font-mono text-[10px] tracking-[0.25em] text-steel-400 uppercase">Industrial</span>
-          </p>
+          {/* Logo oficial do cliente — mesma marca do header */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/brand/hdm-logo-light.png"
+            alt="HDM Industrial"
+            width={771}
+            height={330}
+            className="mx-auto h-9 w-auto lg:mx-0"
+          />
           <p className="mt-3 max-w-xs text-sm text-steel-300">{f.tagline}</p>
           <Link
             href={localizedPath(locale, "solicitar-personal")}
