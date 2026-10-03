@@ -190,5 +190,53 @@
     "license": "Unsplash License",
     "width": 1920,
     "height": 2880
+  },
+  {
+    "id": "PH-CLIENTE-TALLER-01",
+    "file": "/images/cliente/hdm-taller-montaje.jpg",
+    "alt": {
+      "es": "Profesional de HDM Industrial trabajando el montaje de un conjunto de acero inoxidable en taller",
+      "ca": "Professional de HDM Industrial treballant el muntatge d'un conjunt d'acer inoxidable a taller",
+      "en": "HDM Industrial professional assembling a stainless steel unit in the workshop",
+      "pt": "Profissional da HDM Industrial a montar um conjunto em aço inoxidável na oficina"
+    },
+    "context": "Foto real enviada pelo cliente (Matheus, out/2026): trabalhador HDM em escada montando gabinete de inox, empilhadeira ao fundo.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio privado 02/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1920,
+    "height": 864
+  },
+  {
+    "id": "PH-CLIENTE-TIG-01",
+    "file": "/images/cliente/hdm-soldadura-tig.jpg",
+    "alt": {
+      "es": "Soldador TIG de HDM Industrial soldando en el interior de un depósito de acero inoxidable",
+      "ca": "Soldador TIG de HDM Industrial soldant a l'interior d'un dipòsit d'acer inoxidable",
+      "en": "HDM Industrial TIG welder welding inside a stainless steel tank",
+      "pt": "Soldador TIG da HDM Industrial a soldar no interior de um depósito em aço inoxidável"
+    },
+    "context": "Foto real enviada pelo cliente: soldador com capacete dentro de tanque de inox, soldagem TIG.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio privado 02/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1400,
+    "height": 1867
+  },
+  {
+    "id": "PH-CLIENTE-INOX-01",
+    "file": "/images/cliente/hdm-equipo-inox.jpg",
+    "alt": {
+      "es": "Detalle de equipamiento industrial de acero inoxidable con bomba y conexiones instaladas",
+      "ca": "Detall d'equipament industrial d'acer inoxidable amb bomba i connexions instal·lades",
+      "en": "Detail of stainless steel industrial equipment with installed pump and connections",
+      "pt": "Detalhe de equipamento industrial em aço inoxidável com bomba e ligações instaladas"
+    },
+    "context": "Foto real enviada pelo cliente: equipamento de inox com bomba azul e mangueiras trançadas.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio privado 02/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1600,
+    "height": 1200
   }
 ]

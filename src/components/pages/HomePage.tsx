@@ -48,10 +48,14 @@ export function HomePage({ locale }: { locale: Locale }) {
         <div className="absolute inset-0" aria-hidden="true">
           <HeroRotator
             slides={[
+              // Fotos REAIS do cliente (Matheus, envio 02/10/2026) — substituem
+              // o wallpaper editorial como pedido: "assim que tivermos imagens
+              // nossas, enviamos". Alt registrado no mediaManifest.
+              { src: "/images/cliente/hdm-taller-montaje.jpg", alt: getMedia("PH-CLIENTE-TALLER-01")?.alt[locale] ?? "" },
+              { src: "/images/cliente/hdm-soldadura-tig.jpg", alt: getMedia("PH-CLIENTE-TIG-01")?.alt[locale] ?? "" },
+              { src: "/images/cliente/hdm-equipo-inox.jpg", alt: getMedia("PH-CLIENTE-INOX-01")?.alt[locale] ?? "" },
               { src: "/images/hero-industrial.jpg", mobileSrc: "/images/hero-mobile.jpg", alt: getMedia("PH-PHOTO-HERO-01")?.alt[locale] ?? "" },
               { src: "/images/plant-industrial.jpg", alt: getMedia("PH-PHOTO-PLANT-01")?.alt[locale] ?? "" },
-              { src: "/images/mobilization-logistics.jpg", alt: getMedia("PH-PHOTO-MOBILIZATION-01")?.alt[locale] ?? "" },
-              { src: "/images/epi-safety.jpg", alt: getMedia("PH-PHOTO-EPI-01")?.alt[locale] ?? "" },
             ]}
             className="absolute inset-0"
           />

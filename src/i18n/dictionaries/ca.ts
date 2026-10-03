@@ -389,8 +389,8 @@ const ca = {
         ],
       },
           "guia-soldadores-tig-barcelona": {
-        name: "Guia: com trobar soldadors TIG a Barcelona en 24 hores",
-        intro: "Trobar soldadors TIG qualificats a Barcelona amb urgència és un dels problemes operatius més comuns de la indústria catalana. Aquesta guia explica, pas a pas, com cobrir aquesta necessitat en 24 hores sense comprometre la qualitat del cordó.",
+        name: "Guia: com trobar soldadors TIG a Barcelona amb terminis ajustats",
+        intro: "Trobar soldadors TIG qualificats a Barcelona amb urgència és un dels problemes operatius més comuns de la indústria catalana. Aquesta guia explica, pas a pas, com cobrir aquesta necessitat amb la màxima celeritat possible sense comprometre la qualitat del cordó.",
         points: ["Defineixi procés, volum i dates abans de demanar.", "Exigeixi certificat de soldadura segons procés.", "La disponibilitat es confirma en hores laborables.", "Un perfil verificat arriba produint des del primer dia."],
       },
       "guia-ett-industrial-vs-cuadrilla": {

@@ -390,8 +390,8 @@ const en = {
         ],
       },
           "guia-soldadores-tig-barcelona": {
-        name: "Guide: how to find TIG welders in Barcelona within 24 hours",
-        intro: "Finding qualified TIG welders in Barcelona at short notice is one of the most common operational problems in Catalan industry. This guide explains, step by step, how to cover that need within 24 hours without compromising weld quality.",
+        name: "Guide: how to find TIG welders in Barcelona on tight timelines",
+        intro: "Finding qualified TIG welders in Barcelona at short notice is one of the most common operational problems in Catalan industry. This guide explains, step by step, how to cover that need as quickly as possible without compromising weld quality.",
         points: ["Define process, volume and dates before requesting.", "Require a welding certificate for the specific process.", "Availability is confirmed within business hours.", "A verified profile is productive from day one."],
       },
       "guia-ett-industrial-vs-cuadrilla": {
