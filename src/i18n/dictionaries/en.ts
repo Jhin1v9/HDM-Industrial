@@ -262,44 +262,44 @@ const en = {
   },
   sectors: {
     title: "Sectors",
-    lead: "Environments in which the personnel supplied by HDM work.",
+    lead: "Environments in which the personnel supplied by HDM work. Every industrial sector has its own rhythms, documentary requirements and critical profiles: HDM supplies qualified personnel adapted to each environment, across Spain and Portugal. State your sector in the request and the proposal arrives with profiles verified for that specific context.",
     items: {
       industria: {
         name: "General industry",
         intro:
-          "Personnel for industrial plants and operations of all kinds: production reinforcement, workload peaks and one-off needs for qualified labour.",
+          "Personnel for industrial plants and operations of all kinds: production reinforcement, workload peaks and one-off needs for qualified labour. In general industry, supply demands adapting quickly to different lines, shifts and processes: HDM verifies each profile's experience in real production environments before proposing them. From a one-week reinforcement to stable crews, availability is confirmed within business hours.",
       },
       construccion: {
         name: "Construction",
         intro:
-          "Structural fitters, welders and labourers for construction sites: steel structures, installations and work with deadlines that allow no delays.",
+          "Structural fitters, welders and labourers for construction sites: steel structures, installations and work with deadlines that allow no delays. Industrial construction lives on sequences: when one trade falls behind, the whole job pays for it. HDM supplies profiles used to critical-sequence work —heights, lifting, coordination with other crews— and confirms it before onboarding.",
       },
       "mantenimiento-industrial": {
         name: "Industrial maintenance",
         intro:
-          "Technical profiles for preventive and corrective plant maintenance, with the documentation and speciality each intervention requires.",
+          "Technical profiles for preventive and corrective plant maintenance, with the documentation and speciality each intervention requires. Industrial maintenance admits no improvisation: a mechanic or electrician without the exact qualification can turn a short stop into a long breakdown. HDM verifies speciality, qualification and experience before every proposal, for scheduled preventive and urgent corrective work alike.",
       },
       energia: {
         name: "Energy",
         intro:
-          "Industrial personnel for energy sector projects, where profile qualification and documentation are conditions of entry.",
+          "Industrial personnel for energy sector projects, where profile qualification and documentation are conditions of entry. In energy —renewables, thermal or grids— every project demands certifications, specific training and demonstrable experience in regulated environments. HDM verifies each profile's documentation before proposing them, so onboarding does not delay your schedule.",
       },
       fabricacion: {
         name: "Manufacturing",
         intro:
-          "Personnel for manufacturing companies that need to reinforce their teams: welders, boilermakers and structural fitters integrated into the client's operation.",
+          "Personnel for manufacturing companies that need to reinforce their teams: welders, boilermakers and structural fitters integrated into the client's operation. In manufacturing, integration matters as much as qualification: the supplied profile must slot into your line, your standards and your rhythms without friction. HDM supplies personnel used to working on client sites, with follow-up throughout the collaboration.",
       },
       petroquimica: {
         name: "Petrochemicals",
         intro:
-          "Industrial profiles for demanding petrochemical environments, with specific documentary and safety requirements that are reviewed for each request.",
+          "Industrial profiles for demanding petrochemical environments, with specific documentary and safety requirements that are reviewed for each request. Petrochemical and chemical environments have strict access standards: specific training, documentation in date and proven experience in process plants. HDM reviews these requirements in every request and only proposes profiles who meet them.",
       },
     } as Record<string, { name: string; intro: string }>,
   },
   coverage: {
     title: "Coverage",
     lead:
-      "Project areas where HDM supplies industrial personnel. Coverage does not imply local offices or real-time availability: state your area and HDM will confirm.",
+      "Project areas where HDM supplies industrial personnel. Coverage does not imply local offices or real-time availability: state your area and HDM will confirm. Coverage indicates a work area across Spain and Portugal, not local offices or real-time availability: state your area in the request and HDM confirms real profile availability for your project, with travel and logistics agreed in the proposal.",
     mapLabel: "Map of project areas in Spain and Portugal",
     listLabel: "List of areas",
     items: {
@@ -337,12 +337,12 @@ const en = {
   },
   solutions: {
     title: "Solutions",
-    lead: "Concrete ways to resolve an industrial personnel requirement.",
+    lead: "Concrete ways to resolve an industrial personnel requirement. Every operational situation has its formula: a shutdown with a short window, sustained reinforcement, an unexpected absence or a job with an end date. Choose the solution that matches your case, configure profiles and dates, and HDM replies with real availability — with no commitment on your side.",
     items: {
       "paradas-industriales": {
         name: "Industrial shutdowns",
         intro:
-          "Scheduled and urgent shutdowns concentrate a great deal of work into a short time. Configure profiles, quantities and shifts: HDM will review which team it can mobilise for your shutdown window.",
+          "Scheduled and urgent shutdowns concentrate a great deal of work into a short time. Configure profiles, quantities and shifts: HDM will review which team it can mobilise for your shutdown window. The whole difference lies in arriving with the right crew on day one. HDM confirms which crew it can mobilise for your window before you decide; every proposed profile arrives with certificate and experience verified for your specific intervention.",
         points: [
           "Multi-profile teams: welders, boilermakers, structural fitters and supervision.",
           "State the shifts and estimated duration of the shutdown.",
@@ -352,7 +352,7 @@ const en = {
       "refuerzo-de-personal": {
         name: "Personnel reinforcement",
         intro:
-          "When your own workforce is not enough: ongoing reinforcement of your operation with qualified industrial personnel integrated into your teams and your schedules.",
+          "When your own workforce is not enough: ongoing reinforcement of your operation with qualified industrial personnel integrated into your teams and your schedules. Reinforcement is not a one-off measure: it is a stable way to sustain production when demand exceeds your headcount. HDM supplies technical and support profiles that work with your calendar and your standards, with continuous follow-up and direct communication, across Spain and Portugal.",
         points: [
           "Ongoing or fixed-term work at the client's site.",
           "Technical and support profiles, combinable.",
@@ -362,7 +362,7 @@ const en = {
       "sustitucion-temporal": {
         name: "Temporary replacement",
         intro:
-          "Sick leave, holidays or absences that cannot slow production down. Request temporary replacements for the exact profile you need to cover.",
+          "Sick leave, holidays or absences that cannot slow production down. Request temporary replacements for the exact profile you need to cover. Same speciality, same qualification, documentation prepared before onboarding. Duration is flexible —from days to months— and HDM confirms availability within business hours so the gap in your crew lasts as little as possible.",
         points: [
           "Same profile and speciality as the person being replaced.",
           "Flexible duration according to the situation.",
@@ -372,7 +372,7 @@ const en = {
       "trabajos-puntuales": {
         name: "One-off jobs and site work",
         intro:
-          "A specific project with an end date. Supply of personnel for one-off jobs and site work: erection, welding, structures and operational support.",
+          "A specific project with an end date. Supply of personnel for one-off jobs and site work: erection, welding, structures and operational support. We size the crew to the real work —from one person to full crews with optional supervision— and you set dates and duration. The proposal arrives within business hours, with availability confirmed for your dates.",
         points: [
           "Teams sized to the job: from 1 person to complete crews.",
           "Dates and duration defined by you.",
@@ -382,7 +382,7 @@ const en = {
       "personal-con-desplazamiento": {
         name: "Personnel with travel",
         intro:
-          "Your project is not where the personnel are. HDM declares the capacity to manage travel within Spain and Portugal, including accommodation, transport and allowances.",
+          "Your project is not where the personnel are. HDM declares the capacity to manage travel within Spain and Portugal, including accommodation, transport and allowances. State the logistics needed in the request and the proposal includes agreed travel, so personnel arrive where the project needs them, when it needs them.",
         points: [
           "Travel within Spain and Portugal.",
           "Accommodation, transport and allowance management declared by HDM.",
@@ -393,21 +393,49 @@ const en = {
         name: "Guide: how to find TIG welders in Barcelona on tight timelines",
         intro: "Finding qualified TIG welders in Barcelona at short notice is one of the most common operational problems in Catalan industry. This guide explains, step by step, how to cover that need as quickly as possible without compromising weld quality.",
         points: ["Define process, volume and dates before requesting.", "Require a welding certificate for the specific process.", "Availability is confirmed within business hours.", "A verified profile is productive from day one."],
+        article: [
+          "The first step is specification. The more concrete the request, the faster and more precise the response: state the process —TIG for roots and fine finishes, MIG/MAG for productivity on thick sections, electrode for site work and outdoor—, the estimated weld volume, exact dates, site conditions —height, confined space, shift— and location. A request that says I need welders allows no verification; one that specifies process, dates, volume and conditions allows certificates, experience and availability to be checked in a single pass.",
+          "The second step is verification. A TIG welder is not interchangeable with an electrode welder: the welding certificate for the specific process is the minimum proof that the person masters the process your project needs. To that certificate add PRL training in date and proven experience in the specific type of work: process piping is not the same as naval structures, and a weld that passes inspection first time saves hours of rework that cost more than the welder himself during a plant shutdown.",
+          "The third step is availability, which is never assumed: it is confirmed. Send the request with the full specification, the team reviews which profiles with that certificate and experience are available for your dates, and you receive a proposal with real availability within business hours, with no commitment. A fast answer with verified data lets you decide with criteria; a generic promise of speed only shifts the risk onto your shutdown. And mind the calendar: demand for TIG welders in Barcelona comes in waves —spring and autumn shutdowns, naval campaigns— and anticipating beats rushing.",
+          "The fourth step is onboarding: the verified welder arrives with documentation prepared before starting —certificate for the process, PRL in date, experience summarised in the proposal— with no improvised trial period. Also distinguish between shutdown welders and production welders: the former work against the clock in demanding conditions, the latter at sustained pace; they are not interchangeable profiles. HDM supplies TIG, MIG/MAG and electrode welders for projects in Barcelona, Catalonia and the rest of Spain and Portugal: concrete specification, certificate and experience verification, availability confirmation and onboarding with prepared documentation.",
+        ],
+        
       },
       "guia-ett-industrial-vs-cuadrilla": {
         name: "Guide: industrial temp agency vs own crew — when each option makes sense",
         intro: "One of the most important operational decisions for a plant is how to cover industrial staffing needs: with an in-house crew, through an industrial temp agency, or a combination. This guide analyses both options honestly.",
         points: ["An in-house crew gives full control but costs even when not fully busy.", "A temp agency turns fixed cost into variable cost.", "Profile verification is where suppliers differ most.", "Combining both is the most common setup in mature plants."],
+        article: [
+          "An in-house crew has one structural advantage: control. The workers know the plant, its standards and its routines. But that control has a cost that does not disappear when workload drops: wages, social security, training, equipment and management. When demand is stable, the cost amortises; when there are peaks, troughs or projects with an end date, the in-house crew becomes a fixed cost working at variable occupancy.",
+          "An industrial temp agency turns that fixed cost into a variable one: you pay for the hours worked by the profile you need, when you need it, with no permanent structure behind it. It is also speed: hiring your own person takes selection, contracting and paperwork; a supplier with verified profiles can confirm availability within business hours. For shutdowns with a short window, production peaks or urgent cover, that speed is the real operational difference.",
+          "Where temp agencies differ most is verification. Always ask three things: what certificate the profile holds for the specific process, what PRL training is in date, and what demonstrable experience they have in this type of work. There are situations where the agency is not the right answer: needs that are permanent and stable for years, work requiring accumulated proprietary knowledge, or workloads that do not justify the flexibility. The most common setup in mature plants is the combination: an in-house base for continuous work and external supply to absorb variability.",
+          "The calculation is simple: compare the full cost of an in-house crew hour —including the cost of the hour with no work— with the cost of a verified supplied profile hour. And when something goes wrong, the asymmetry is clear: a selection mistake with your own staff costs months; with verified external supply, days. HDM supplies qualified industrial personnel for plants and works across Spain and Portugal, with verification before every proposal: describe your situation in a request and receive a response with real data, no commitment.",
+        ],
+        
       },
       "guia-planificar-parada-planta": {
         name: "Guide: plant shutdowns — how to plan shutdown staffing",
         intro: "A plant shutdown concentrates months of work into days or weeks. Staffing planning is the variable that most determines success. This guide covers the criteria that separate a shutdown that meets its window from one that pays for it twice.",
         points: ["The shutdown window rules everything.", "Critical profiles are reserved first.", "Shifts are defined before the shutdown.", "Daily supervision catches deviations in time."],
+        article: [
+          "All shutdown staffing planning starts with one question: how many hours does the window have? The shutdown window is the constraint that rules everything: against it you calculate workload per trade, headcount per shift and the intervention sequence. The common mistake is planning backwards —starting from the available crew and fitting the work to it—; correct planning starts from the work: what must be welded, dismantled and assembled, how many trade hours each task takes and in what sequence.",
+          "The second criterion is prioritising critical profiles. Welders —especially TIG for process piping— and boilermakers most constrain the schedule because their work usually sits on the critical path: until the piping is welded it cannot be pressurised; until the tank is closed it cannot be filled. These profiles are reserved first, with more lead time and the strictest verification. Support profiles turn over faster and close later, but also with a date.",
+          "The third criterion: shifts are defined before the shutdown, not during. How many shifts, how many hours, what overlaps and who covers each are planning decisions; the typical mistake is underestimating the second and third shifts, because the reality of long shutdowns is played out at night. The fourth criterion is daily supervision: a foreman who coordinates crews, controls execution and delivers an end-of-shift report turns supplied personnel into a team; without that layer, deviations are detected late.",
+          "Dimension with margin: calculate trade hours divided by window hours minus a realistic contingency margin —twenty percent is an honest reference—, and round up on critical trades. Agree beforehand the reporting channel and frequency, the single point of contact on the supplier side and the deviation protocol. And after the shutdown, close the loop: fifteen minutes of review turns experience into criteria for the next one. HDM supplies multi-profile crews for shutdowns across Spain and Portugal, with availability confirmed before the window and follow-up throughout.",
+        ],
+        
       },
       "guia-certificaciones-soldadura": {
         name: "Guide: welding certifications — which ones to require for the job",
         intro: "Asking for a qualified welder is not enough: every process, material and standard requires a specific certification. This guide explains which certificates exist and how to verify they are real and current.",
         points: ["Certification is requested per process: TIG, MIG/MAG and electrode are not interchangeable.", "EN ISO 9606 is the core European reference.", "PRL training is mandatory and separate.", "A real certificate is verified before the proposal."],
+        article: [
+          "The first concept is the process. TIG welding is a different discipline from MIG/MAG, and both differ from electrode welding: each process has its technique, parameters and certification. An excellent electrode welder may not master TIG. The right first question is not do they hold a welding certificate?, but do they hold a certificate for the process I need? A certificate without a specified process is, in practice, a certificate without content.",
+          "The core European reference is EN ISO 9606, which certifies the welder for a specific process, material and positions. Where the work requires it —pressure, critical structures, naval or rail— qualified procedures under standards such as EN ISO 15614 are added. The second certification, separate and mandatory, is PRL training: it does not certify that someone can weld, it certifies they can work in an industrial environment safely. A welding certificate without PRL does not serve for onboarding, just as PRL without a welding certificate does not serve for welding.",
+          "Certain environments have additional requirements: petrochemical and chemical sites demand their own access training and demonstrable track records; construction and steel structures require welders qualified under the fabricator's procedures; height work requires a specific authorisation. Each is a documentary layer mapped before day one. And a certificate is verified before the proposal: by viewing it, checking its validity and confirming it covers the process, material and positions of the actual work — never at the workplace, where the discovery comes too late.",
+          "It also pays to read what a certificate does not say: it proves the person welded a test piece on a specific date, not years of experience or current validity —certificates expire and are renewed by test or extension under conditions—. That is why serious verification combines the certificate with two questions: how long has this profile worked with this process and on which projects. Three questions evaluate any supplier in five minutes: can I see the certificate before deciding, what happens if the profile does not fit, and who manages renewals. HDM verifies before proposing, with documentation prepared before every onboarding.",
+        ],
+        
       },
     } as Record<string, { name: string; intro: string; points: string[] }>,
   },

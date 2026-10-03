@@ -261,44 +261,44 @@ const ca = {
   },
   sectors: {
     title: "Sectors",
-    lead: "Entorns on treballa el personal subministrat per HDM.",
+    lead: "Entorns on treballa el personal subministrat per HDM. Cada sector industrial té els seus propis ritmes, requisits documentals i perfils crítics: HDM subministra personal qualificat adaptat a cada entorn, a Espanya i Portugal. Indiqui el seu sector a la sol·licitud i la proposta arriba amb perfils verificats per a aquest context concret.",
     items: {
       industria: {
         name: "Indústria general",
         intro:
-          "Personal per a plantes i operacions industrials de tot tipus: reforços de producció, pics de treball i necessitats puntuals de mà d'obra qualificada.",
+          "Personal per a plantes i operacions industrials de tot tipus: reforços de producció, pics de treball i necessitats puntuals de mà d'obra qualificada. En indústria general, el subministrament exigeix adaptar-se ràpid a línies, torns i processos diferents: HDM verifica l'experiència de cada perfil en entorns de producció reals abans de proposar-lo. Des d'un reforç d'una setmana fins a quadrilles estables, la disponibilitat es confirma en hores laborables.",
       },
       construccion: {
         name: "Construcció",
         intro:
-          "Muntadors, soldadors i ajudants per a obra: estructura metàl·lica, instal·lacions i treballs amb terminis que no admeten retards.",
+          "Muntadors, soldadors i ajudants per a obra: estructura metàl·lica, instal·lacions i treballs amb terminis que no admeten retards. La construcció industrial viu de seqüències: quan un ofici es retarda, tota l'obra paga el retard. HDM subministra perfils habituats a obra amb seqüència crítica —alçades, izatges, coordinació amb altres quadrilles— i ho confirma abans de la incorporació.",
       },
       "mantenimiento-industrial": {
         name: "Manteniment industrial",
         intro:
-          "Perfils tècnics per a manteniment preventiu i correctiu en planta, amb la documentació i l'especialitat que cada intervenció exigeix.",
+          "Perfils tècnics per a manteniment preventiu i correctiu en planta, amb la documentació i l'especialitat que cada intervenció exigeix. El manteniment industrial no admet improvisació: un mecànic o electricista sense la qualificació exacta pot convertir una aturada curta en una avaria llarga. HDM verifica especialitat, qualificació i experiència abans de cada proposta, tant per a preventiu programat com per a correctiu urgent.",
       },
       energia: {
         name: "Energia",
         intro:
-          "Personal industrial per a projectes del sector energètic, on la qualificació del perfil i la documentació són condicions d'entrada.",
+          "Personal industrial per a projectes del sector energètic, on la qualificació del perfil i la documentació són condicions d'entrada. En energia —renovable, tèrmica o xarxes— cada projecte exigeix certificacions, formació específica i experiència demostrable en entorns regulats. HDM verifica la documentació de cada perfil abans de proposar-lo, perquè la incorporació no retardi el seu calendari.",
       },
       fabricacion: {
         name: "Fabricació",
         intro:
-          "Personal per a empreses de fabricació que necessiten reforçar els seus equips: soldadors, calderers i muntadors integrats en l'operació del client.",
+          "Personal per a empreses de fabricació que necessiten reforçar els seus equips: soldadors, calderers i muntadors integrats en l'operació del client. En fabricació, la integració importa tant com la qualificació: el perfil subministrat ha d'entrar en la seva línia, els seus estàndards i els seus ritmes sense fricció. HDM subministra personal habituat a treballar en planta de client, amb seguiment durant tota la col·laboració.",
       },
       petroquimica: {
         name: "Petroquímica",
         intro:
-          "Perfils industrials per a entorns exigents de petroquímica, amb requisits documentals i de seguretat específics que es revisen en cada sol·licitud.",
+          "Perfils industrials per a entorns exigents de petroquímica, amb requisits documentals i de seguretat específics que es revisen en cada sol·licitud. La petroquímica i l'entorn químic tenen estàndards d'accés estrictes: formació específica, documentació al dia i experiència contrastada en planta de procés. HDM revisa aquests requisits en cada sol·licitud i només proposa perfils que els compleixen.",
       },
     } as Record<string, { name: string; intro: string }>,
   },
   coverage: {
     title: "Cobertura",
     lead:
-      "Zones de projecte on HDM subministra personal industrial. La cobertura no implica oficines locals ni disponibilitat en temps real: indiqui la seva zona i HDM confirma.",
+      "Zones de projecte on HDM subministra personal industrial. La cobertura no implica oficines locals ni disponibilitat en temps real: indiqui la seva zona i HDM confirma. La cobertura indica àrea de treball a Espanya i Portugal, no oficines locals ni disponibilitat en temps real: indiqui la seva zona a la sol·licitud i HDM li confirma disponibilitat real de perfils per al seu projecte, amb desplaçament i logística acordats a la proposta.",
     mapLabel: "Mapa de zones de projecte a Espanya i Portugal",
     listLabel: "Llista de zones",
     items: {
@@ -336,12 +336,12 @@ const ca = {
   },
   solutions: {
     title: "Solucions",
-    lead: "Formes concretes de resoldre una necessitat de personal industrial.",
+    lead: "Formes concretes de resoldre una necessitat de personal industrial. Cada situació operativa té la seva fórmula: una aturada amb finestra curta, un reforç continuat, una baixa inesperada o una obra amb data de fi. Trieu la solució que descriu el seu cas, configuri perfils i dates, i HDM li respon amb disponibilitat real, sense compromís.",
     items: {
       "paradas-industriales": {
         name: "Aturades industrials",
         intro:
-          "Les aturades programades i urgents concentren molta feina en poc temps. Configuri perfils, quantitats i torns: HDM revisa quin equip pot mobilitzar per a la seva finestra d'aturada.",
+          "Les aturades programades i urgents concentren molta feina en poc temps. Configuri perfils, quantitats i torns: HDM revisa quin equip pot mobilitzar per a la seva finestra d'aturada. Tota la diferència està en arribar amb la quadrilla correcta el primer dia. HDM li confirma quin equip pot mobilitzar per a la seva finestra abans que decideixi; cada perfil proposat arriba amb certificat i experiència verificades per a la seva intervenció concreta.",
         points: [
           "Equips multiperfil: soldadors, calderers, muntadors i supervisió.",
           "Indiqui torns i durada estimada de l'aturada.",
@@ -351,7 +351,7 @@ const ca = {
       "refuerzo-de-personal": {
         name: "Reforç de personal",
         intro:
-          "Quan la plantilla no hi arriba: reforç continuat de la seva operació amb personal industrial qualificat integrat en els seus equips i els seus horaris.",
+          "Quan la plantilla no hi arriba: reforç continuat de la seva operació amb personal industrial qualificat integrat en els seus equips i els seus horaris. El reforç no és una mesura puntual: és una forma estable de sostenir la producció quan la demanda supera la plantilla. HDM subministra perfils tècnics i d'ajuda que treballen amb el seu calendari i els seus estàndards, amb seguiment continu i comunicació directa, a Espanya i Portugal.",
         points: [
           "Treball continuat o fix en client.",
           "Perfils tècnics i de suport, combinables.",
@@ -361,7 +361,7 @@ const ca = {
       "sustitucion-temporal": {
         name: "Substitució temporal",
         intro:
-          "Baixes, vacances o absències que no poden frenar la producció. Sol·liciti substitucions temporals del perfil exacte que necessita cobrir.",
+          "Baixes, vacances o absències que no poden frenar la producció. Sol·liciti substitucions temporals del perfil exacte que necessita cobrir. Mateixa especialitat, mateixa qualificació, documentació preparada abans de la incorporació. La durada és flexible —de dies a mesos— i HDM confirma la disponibilitat en hores laborables perquè el forat en la seva quadrilla duri el mínim possible.",
         points: [
           "Mateix perfil i especialitat que la persona a substituir.",
           "Durada flexible segons la situació.",
@@ -371,7 +371,7 @@ const ca = {
       "trabajos-puntuales": {
         name: "Treballs puntuals i obra",
         intro:
-          "Un projecte concret amb una data de fi. Subministrament de personal per a treballs puntuals i obra: muntatge, soldadura, estructura i suport operatiu.",
+          "Un projecte concret amb una data de fi. Subministrament de personal per a treballs puntuals i obra: muntatge, soldadura, estructura i suport operatiu. Dimensionem l'equip al treball real —d'una persona a quadrilles completes amb supervisió opcional— i vostè marca dates i durada. La proposta arriba en hores laborables, amb disponibilitat confirmada per a les seves dates.",
         points: [
           "Equips dimensionats al treball: des d'1 persona fins a quadrilles completes.",
           "Dates i durada definides per vostè.",
@@ -381,7 +381,7 @@ const ca = {
       "personal-con-desplazamiento": {
         name: "Personal amb desplaçament",
         intro:
-          "El seu projecte no és on és el personal. HDM declara capacitat de gestionar desplaçament a Espanya i Portugal, incloent-hi allotjament, transport i dietes.",
+          "El seu projecte no és on és el personal. HDM declara capacitat de gestionar desplaçament a Espanya i Portugal, incloent-hi allotjament, transport i dietes. Indiqui la logística necessària a la sol·licitud i la proposta inclou el desplaçament acordat, perquè el personal arribi on el projecte ho necessita, quan ho necessita.",
         points: [
           "Desplaçaments a Espanya i Portugal.",
           "Gestió d'allotjament, transport i dietes declarada per HDM.",

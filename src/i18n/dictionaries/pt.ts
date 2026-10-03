@@ -261,44 +261,44 @@ export const pt = {
   },
   sectors: {
     title: "Setores",
-    lead: "Ambientes onde trabalha o pessoal fornecido pela HDM.",
+    lead: "Ambientes onde trabalha o pessoal fornecido pela HDM. Cada setor industrial tem os seus próprios ritmos, requisitos documentais e perfis críticos: a HDM fornece pessoal qualificado adaptado a cada ambiente, em Espanha e Portugal. Indique o seu setor no pedido e a proposta chega com perfis verificados para esse contexto concreto. Cada setor industrial tem os seus próprios ritmos, requisitos documentais e perfis críticos: a HDM fornece pessoal qualificado adaptado a cada ambiente, em Espanha e Portugal. Indique o seu setor no pedido e a proposta chega com perfis verificados para esse contexto concreto.",
     items: {
       industria: {
         name: "Indústria geral",
         intro:
-          "Pessoal para plantas e operações industriais de todo o tipo: reforços de produção, picos de trabalho e necessidades pontuais de mão de obra qualificada.",
+          "Pessoal para plantas e operações industriais de todo o tipo: reforços de produção, picos de trabalho e necessidades pontuais de mão de obra qualificada. Na indústria geral, o fornecimento exige adaptar-se depressa a linhas, turnos e processos diferentes: a HDM verifica a experiência de cada perfil em ambientes de produção reais antes de o propor. De um reforço de uma semana a quadrilhas estáveis, a disponibilidade confirma-se em horas laborais. Na indústria geral, o fornecimento exige adaptar-se depressa a linhas, turnos e processos diferentes: a HDM verifica a experiência de cada perfil em ambientes de produção reais antes de o propor. De um reforço de uma semana a quadrilhas estáveis, a disponibilidade confirma-se em horas laborais."
       },
       construccion: {
         name: "Construção",
         intro:
-          "Montadores, soldadores e ajudantes para obra: estrutura metálica, instalações e trabalhos com prazos que não admitem atrasos.",
+          "Montadores, soldadores e ajudantes para obra: estrutura metálica, instalações e trabalhos com prazos que não admitem atrasos. A construção industrial vive de sequências: quando um ofício se atrasa, toda a obra paga o atraso. A HDM fornece perfis habituados a obra com sequência crítica —alturas, içagens, coordenação com outras quadrilhas— e confirma-o antes da incorporação. Peça o reforço com datas e volume, e decida com disponibilidade real. A construção industrial vive de sequências: quando um ofício se atrasa, toda a obra paga o atraso. A HDM fornece perfis habituados a obra com sequência crítica —alturas, içagens, coordenação com outras quadrilhas— e confirma-o antes da incorporação."
       },
       "mantenimiento-industrial": {
         name: "Manutenção industrial",
         intro:
-          "Perfis técnicos para manutenção preventiva e corretiva em planta, com a documentação e a especialidade que cada intervenção exige.",
+          "Perfis técnicos para manutenção preventiva e corretiva em planta, com a documentação e a especialidade que cada intervenção exige. A manutenção industrial não admite improvisação: um mecânico ou eletricista sem a qualificação exata pode converter uma paragem curta numa avaria longa. A HDM verifica especialidade, qualificação e experiência antes de cada proposta, tanto para preventivo programado como para corretivo urgente com a linha parada. A manutenção industrial não admite improvisação: um mecânico ou eletricista sem a qualificação exata pode converter uma paragem curta numa avaria longa. A HDM verifica especialidade, qualificação e experiência antes de cada proposta, tanto para preventivo programado como para corretivo urgente."
       },
       energia: {
         name: "Energia",
         intro:
-          "Pessoal industrial para projetos do setor energético, onde a qualificação do perfil e a documentação são condições de entrada.",
+          "Pessoal industrial para projetos do setor energético, onde a qualificação do perfil e a documentação são condições de entrada. Em energia —renovável, térmica ou redes— cada projeto exige certificações, formação específica e experiência comprovável em ambientes regulados. A HDM sabe-o e verifica a documentação de cada perfil antes de o propor, para que a incorporação não atrase o seu calendário de obra nem a sua janela de intervenção. Em energia —renovável, térmica ou redes— cada projeto exige certificações, formação específica e experiência comprovável em ambientes regulados. A HDM verifica a documentação de cada perfil antes de o propor, para que a incorporação não atrase o seu calendário."
       },
       fabricacion: {
         name: "Fabrico",
         intro:
-          "Pessoal para empresas de fabrico que precisam de reforçar as suas equipas: soldadores, caldeireiros e montadores integrados na operação do cliente.",
+          "Pessoal para empresas de fabrico que precisam de reforçar as suas equipas: soldadores, caldeireiros e montadores integrados na operação do cliente. Na fabricação, a integração importa tanto como a qualificação: o perfil fornecido tem de entrar na sua linha, nos seus padrões e nos seus ritmos sem fricção. A HDM fornece pessoal habituado a trabalhar em planta de cliente, com acompanhamento durante toda a colaboração.",
       },
       petroquimica: {
         name: "Petroquímica",
         intro:
-          "Perfis industriais para ambientes exigentes de petroquímica, com requisitos documentais e de segurança específicos que são revistos em cada pedido.",
+          "Perfis industriais para ambientes exigentes de petroquímica, com requisitos documentais e de segurança específicos que são revistos em cada pedido. A petroquímica e o ambiente químico têm padrões de acesso estritos: formação específica, documentação em dia e experiência comprovada em planta de processo. A HDM revê esses requisitos em cada pedido e só propõe perfis que os cumprem.",
       },
     } as Record<string, { name: string; intro: string }>,
   },
   coverage: {
     title: "Cobertura",
     lead:
-      "Zonas de projeto onde a HDM fornece pessoal industrial. A cobertura não implica escritórios locais nem disponibilidade em tempo real: indique a sua zona e a HDM confirma.",
+      "Zonas de projeto onde a HDM fornece pessoal industrial em Espanha e Portugal. A cobertura indica área de trabalho, não escritórios locais nem disponibilidade em tempo real: indique a sua zona no pedido e a HDM confirma disponibilidade real de perfis para o seu projeto, com deslocação e logística acordadas na proposta. A cobertura indica área de trabalho em Espanha e Portugal, não escritórios locais nem disponibilidade em tempo real: indique a sua zona no pedido e a HDM confirma disponibilidade real de perfis para o seu projeto, com deslocação e logística acordadas na proposta.",
     mapLabel: "Mapa de zonas de projeto em Espanha e Portugal",
     listLabel: "Lista de zonas",
     items: {
@@ -336,12 +336,12 @@ export const pt = {
   },
   solutions: {
     title: "Soluções",
-    lead: "Formas concretas de resolver uma necessidade de pessoal industrial.",
+    lead: "Formas concretas de resolver uma necessidade de pessoal industrial. Cada situação operativa tem a sua fórmula: uma paragem com janela curta, um reforço continuado, uma baixa inesperada ou uma obra com data de fim. Escolha a solução que descreve o seu caso, configure perfis e datas, e a HDM responde com disponibilidade real — sem compromisso por sua parte. Cada situação operativa tem a sua fórmula: uma paragem com janela curta, um reforço continuado, uma baixa inesperada ou uma obra com data de fim. Escolha a solução que descreve o seu caso, configure perfis e datas, e a HDM responde com disponibilidade real — sem compromisso por sua parte.",
     items: {
       "paradas-industriales": {
         name: "Paragens industriais",
         intro:
-          "Paragens programadas e urgentes concentram muito trabalho em pouco tempo. Configure perfis, quantidades e turnos: a HDM revê que equipa pode mobilizar para a sua janela de paragem.",
+          "Paragens programadas e urgentes concentram muito trabalho em pouco tempo: toda a diferença está em chegar com a quadrilha certa no primeiro dia. Configure perfis, quantidades e turnos; a HDM revê que equipa pode mobilizar para a sua janela de paragem e confirma antes de decidir. Cada soldador, caldeireiro ou montador proposto chega com certificado e experiência verificados para a sua intervenção concreta. Toda a diferença está em chegar com a quadrilha certa no primeiro dia. A HDM confirma que equipa pode mobilizar para a sua janela antes de decidir; cada perfil proposto chega com certificado e experiência verificados para a sua intervenção concreta.",
         points: [
           "Equipas multiperfil: soldadores, caldeireiros, montadores e supervisão.",
           "Indique os turnos e a duração estimada da paragem.",
@@ -351,7 +351,7 @@ export const pt = {
       "refuerzo-de-personal": {
         name: "Reforço de pessoal",
         intro:
-          "Quando o quadro de pessoal não chega: reforço continuado da sua operação com pessoal industrial qualificado integrado nas suas equipas e nos seus horários.",
+          "Quando o quadro de pessoal não chega: reforço continuado da sua operação com pessoal industrial qualificado integrado nas suas equipas e nos seus horários. O reforço não é uma medida pontual: é uma forma estável de sustentar a produção quando a procura supera a sua equipa. A HDM fornece perfis técnicos e de apoio que trabalham com o seu calendário e os seus padrões, com acompanhamento contínuo e comunicação direta, em Espanha e Portugal.",
         points: [
           "Trabalho continuado ou fixo no cliente.",
           "Perfis técnicos e de apoio, combináveis.",
@@ -361,7 +361,7 @@ export const pt = {
       "sustitucion-temporal": {
         name: "Substituição temporária",
         intro:
-          "Baixas, férias ou ausências que não podem travar a produção. Solicite substituições temporárias do perfil exato que precisa de cobrir.",
+          "Baixas, férias ou ausências que não podem travar a produção. Solicite substituições temporárias do perfil exato que precisa de cobrir. Mesma especialidade, mesma qualificação, documentação preparada antes da incorporação. A duração é flexível —de dias a meses— e a HDM confirma a disponibilidade em horas laborais para que o vazio na sua quadrilha dure o mínimo possível.",
         points: [
           "Mesmo perfil e especialidade da pessoa a substituir.",
           "Duração flexível conforme a situação.",
@@ -371,7 +371,7 @@ export const pt = {
       "trabajos-puntuales": {
         name: "Trabalhos pontuais e obra",
         intro:
-          "Um projeto concreto com uma data de fim. Fornecimento de pessoal para trabalhos pontuais e obra: montagem, soldadura, estrutura e apoio operativo.",
+          "Um projeto concreto com uma data de fim. Fornecimento de pessoal para trabalhos pontuais e obra: montagem, soldadura, estrutura e apoio operativo. Dimensionamos a equipa ao trabalho real —de uma pessoa a quadrilhas completas com supervisão opcional— e o senhor marca datas e duração. É a forma mais direta de cobrir uma fase concreta sem compromissos de longo prazo: a proposta chega em horas laborais, com disponibilidade confirmada para as suas datas. Dimensionamos a equipa ao trabalho real —de uma pessoa a quadrilhas completas com supervisão opcional— e o senhor marca datas e duração. A proposta chega em horas laborais, com disponibilidade confirmada para as suas datas.",
         points: [
           "Equipas dimensionadas para o trabalho: de 1 pessoa a equipas completas.",
           "Datas e duração definidas por si.",
@@ -381,7 +381,7 @@ export const pt = {
       "personal-con-desplazamiento": {
         name: "Pessoal com deslocação",
         intro:
-          "O seu projeto não está onde está o pessoal. A HDM declara capacidade de gerir deslocações em Espanha e Portugal, incluindo alojamento, transporte e ajudas de custo.",
+          "O seu projeto não está onde está o pessoal. A HDM declara capacidade de gerir deslocações em Espanha e Portugal, incluindo alojamento, transporte e ajudas de custo. Indique a logística necessária no pedido e a proposta inclui a deslocação acordada, para que o pessoal chegue onde o projeto precisa, quando precisa.",
         points: [
           "Deslocações em Espanha e Portugal.",
           "Gestão de alojamento, transporte e ajudas de custo declarada pela HDM.",
@@ -392,21 +392,49 @@ export const pt = {
         name: "Guia: como encontrar soldadores TIG em Barcelona com prazos apertados",
         intro: "Encontrar soldadores TIG qualificados em Barcelona com urgência é um dos problemas operativos mais comuns da indústria catalã. Este guia explica, passo a passo, como cobrir essa necessidade com a maior celeridade possível, sem comprometer a qualidade do cordão.",
         points: ["Defina processo, volume e datas antes de pedir.", "Exija certificado de soldadura segundo o processo.", "A disponibilidade confirma-se em horas laborais.", "Um perfil verificado chega a produzir desde o primeiro dia."],
+        article: [
+          "O primeiro passo é a especificação. Quanto mais concreto o pedido, mais rápida e precisa a resposta: indique o processo —TIG para raízes e acabamentos finos, MIG/MAG para produtividade em espessores grossos, eletrodo para obra e exterior—, o volume de cordão estimado, as datas exatas, as condições do posto —altura, espaço confinado, turno— e a localização. Um pedido que diz preciso de soldadores não permite verificar nada; um que especifica processo, datas, volume e condições permite verificar certificados, experiência e disponibilidade numa só passagem.",
+          "O segundo passo é a verificação. Um soldador TIG não é intercambiável com um de eletrodo: o certificado de soldadura segundo o processo é a prova mínima de que a pessoa domina o processo que o seu projeto precisa. A esse certificado somam-se a formação PRL em dia e a experiência comprovada no tipo de trabalho concreto: tubagem de processo não é o mesmo que estrutura naval, e um cordão que passa na inspeção à primeira poupa horas de retrabalho que custam mais que o próprio soldador numa paragem de planta.",
+          "O terceiro passo é a disponibilidade, que nunca se dá por suposta: confirma-se. Envie o pedido com a especificação completa, a equipa revê quais os perfis com esse certificado e experiência disponíveis para as suas datas, e recebe uma proposta com disponibilidade real em horas laborais, sem compromisso. Uma resposta rápida com dados verificados permite decidir com critério; uma promessa genérica de rapidez apenas lhe transfere o risco para a paragem. E tenha presente o calendário: a procura de soldadores TIG em Barcelona concentra-se em vagas —paragens de primavera e outono, campanhas navais— e antecipar vale mais que apressar.",
+          "O quarto passo é a incorporação: o soldador verificado chega com a documentação preparada antes de começar —certificado segundo o processo, PRL em vigor, experiência resumida na proposta—, sem período de experiência improvisado. Distinga também entre soldador de paragem e de produção: o primeiro trabalha contra o relógio em condições exigentes, o segundo a ritmo sustentado; não são perfis intercambiáveis. A HDM fornece soldadores TIG, MIG/MAG e eletrodo para projetos em Barcelona, Catalunha e resto de Espanha e Portugal: especificação concreta, verificação de certificado e experiência, confirmação de disponibilidade e incorporação com documentação preparada.",
+        ],
+        
       },
       "guia-ett-industrial-vs-cuadrilla": {
         name: "Guia: ETT industrial vs quadrilha própria — quando convém cada opção",
         intro: "Uma das decisões operativas mais importantes de uma planta é como cobrir a necessidade de pessoal industrial: com quadrilha própria, através de uma ETT industrial, ou com uma combinação. Este guia analisa as duas opções com honestidade.",
         points: ["A quadrilha própria dá controlo total mas custa mesmo sem trabalhar a cem por cento.", "A ETT industrial converte o custo fixo em variável.", "A verificação de perfis é onde mais se separam os fornecedores.", "A combinação das duas fórmulas é a opção mais habitual."],
+        article: [
+          "A quadrilha própria tem uma vantagem estrutural: controlo. Os trabalhadores conhecem a planta, os seus padrões e as suas rotinas. Mas esse controlo tem um custo que não desaparece quando a carga baixa: salários, segurança social, formação, equipamento e gestão. Quando a procura é estável, o custo amortiza-se; quando há picos, vales ou projetos com data de fim, a quadrilha própria torna-se um custo fixo a trabalhar a ocupações variáveis.",
+          "A ETT industrial converte esse custo fixo em variável: paga pelas horas trabalhadas do perfil que precisa, quando precisa, sem estrutura permanente. E é também velocidade: incorporar uma pessoa por conta própria implica seleção, contratação e documentação; um fornecedor com perfis verificados pode confirmar disponibilidade em horas laborais. Para paragens com janela curta, picos de produção ou substituições urgentes, essa velocidade é a diferença operativa real.",
+          "O ponto onde as ETT industriais mais se separam é a verificação. Pergunte sempre três coisas: que certificado tem o perfil para o processo concreto, que formação PRL tem em vigor e que experiência comprovável tem neste tipo de trabalho. Há situações onde a ETT não é a resposta certa: necessidades permanentes e estáveis durante anos, trabalho com conhecimento proprietário acumulado, ou cargas que não justificam a flexibilidade. A fórmula mais habitual em plantas maduras é a combinação: base própria para o trabalho continuado e fornecimento externo para absorver a variabilidade.",
+          "O cálculo é simples: compare o custo completo de uma hora de quadrilha própria —incluído o custo da hora sem trabalho— com o custo de uma hora de perfil fornecido verificado. E quando algo falha, a assimetria é clara: um erro de seleção com pessoal próprio paga-se em meses; com fornecimento externo verificado, em dias. A HDM fornece pessoal industrial qualificado para plantas e obras em Espanha e Portugal, com verificação antes de cada proposta: descreva a sua situação num pedido e receba uma resposta com dados reais, sem compromisso.",
+        ],
+        
       },
       "guia-planificar-parada-planta": {
         name: "Guia: paragens de planta — como planificar o pessoal de uma paragem",
         intro: "Uma paragem de planta concentra em dias ou semanas o trabalho de meses. A planificação do pessoal é a variável que mais condiciona o sucesso. Este guia reúne os critérios que separam uma paragem que cumpre a sua janela de uma que a paga duas vezes.",
         points: ["A janela de paragem manda sobre tudo.", "Os perfis críticos reservam-se primeiro.", "Os turnos definem-se antes da paragem.", "A supervisão diária deteta desvios a tempo."],
+        article: [
+          "Toda a planificação de pessoal de paragem começa com uma pergunta: quantas horas tem a janela? A janela de paragem é a restrição que domina tudo: contra ela se calcula o volume de trabalho por ofício, o número de pessoas por turno e a sequência de intervenção. O erro frequente é planificar ao contrário —partir da quadrilha disponível e ajustar o trabalho a ela—; a planificação correta parte do trabalho: o que há que soldar, desmontar e montar, quantas horas de ofício exige cada tarefa e em que sequência.",
+          "O segundo critério é priorizar os perfis críticos. Os soldadores —especialmente TIG para tubagem de processo— e os caldeireiros são os perfis que mais condicionam o prazo porque o seu trabalho costuma estar no caminho crítico: até a tubagem estar soldada não se pode pressurizar; até o depósito estar fechado não se pode encher. Esses perfis reservam-se primeiro, com mais antecedência e verificação mais estrita. Os perfis de apoio têm maior rotação e fecham-se depois, mas também com data.",
+          "O terceiro critério: os turnos definem-se antes da paragem, não durante. Quantos turnos, de quantas horas, com que sobreposições e quem cobre cada um são decisões de planificação; o erro típico é subestimar o segundo e terceiro turnos, porque a realidade das paragens longas joga-se de noite. O quarto critério é a supervisão diária: um encarregado que coordena quadrilhas, controla a execução e entrega parte de jornada converte o pessoal fornecido numa equipa; sem essa camada, os desvios detetam-se tarde.",
+          "Dimensione com margem: calcule horas de ofício divididas por horas de janela menos uma margem realista de imprevistos —vinte por cento é uma referência honesta— e arredonde para cima nos ofícios críticos. Acorde antes o canal e a frequência de acompanhamento, o interlocutor único do lado do fornecedor e o protocolo de desvio. E depois da paragem, feche o ciclo: quinze minutos de revisão convertem a experiência em critério para a próxima. A HDM fornece equipas multiperfil para paragens em Espanha e Portugal, com disponibilidade confirmada antes da janela e acompanhamento durante toda a paragem.",
+        ],
+        
       },
       "guia-certificaciones-soldadura": {
         name: "Guia: certificações de soldadura — quais exigir segundo o trabalho",
         intro: "Pedir um soldador qualificado não chega: cada processo, cada material e cada norma exige uma certificação concreta. Este guia explica que certificados existem e como verificar que são reais e estão em vigor.",
         points: ["A certificação pede-se segundo o processo: TIG, MIG/MAG e eletrodo não são intercambiáveis.", "A EN ISO 9606 é a referência europeia base.", "A formação PRL é obrigatória e independente.", "Um certificado real verifica-se antes da proposta."],
+        article: [
+          "O primeiro conceito é o de processo. Soldar com TIG é uma disciplina distinta de soldar com MIG/MAG, e ambas diferentes do eletrodo revestido: cada processo tem a sua técnica, parâmetros e certificação. Um excelente soldador de eletrodo pode não dominar o TIG. A primeira pergunta correta não é tem certificado de soldadura?, mas tem certificado para o processo de que preciso? Um certificado sem processo especificado é, na prática, um certificado sem conteúdo.",
+          "A referência europeia base é a norma EN ISO 9606, que certifica o soldador para um processo, um material e umas posições concretas. Quando o trabalho exige —pressão, estruturas críticas, naval ou ferroviário— somam-se procedimentos qualificados sob normas como a EN ISO 15614. A segunda certificação, independente e obrigatória, é a formação PRL: não certifica que alguém saiba soldar, certifica que pode trabalhar em ambiente industrial com segurança. Certificado de soldadura sem PRL não serve para incorporar, tal como PRL sem certificado não serve para soldar.",
+          "Certos ambientes têm requisitos adicionais: petroquímica e ambiente químico exigem formações próprias de acesso e históricos comprováveis; obra e estrutura metálica requerem soldadores qualificados segundo os procedimentos do fabricante; trabalho em altura exige autorização específica. Cada uma é uma camada documental mapeada antes do primeiro dia. E um certificado verifica-se antes da proposta: vendo-o, comprovando a sua vigência e contrastando que cobre o processo, o material e as posições do trabalho concreto — nunca no posto de trabalho, onde a descoberta chega tarde demais.",
+          "Convenha saber ler o que um certificado não diz: prova que a pessoa soldou uma peça de ensaio numa data concreta, não os anos de experiência nem a vigência atual —os certificados caducam e renovam-se por prova ou por prorrogação sob condições—. Por isso a verificação séria combina o certificado com duas perguntas: quanto tempo trabalhou este perfil com este processo e em que projetos. Três perguntas avaliam qualquer fornecedor em cinco minutos: posso ver o certificado antes de decidir, o que acontece se o perfil não encaixar, e quem gere as renovações. A HDM verifica antes de propor, com a documentação preparada antes de cada incorporação.",
+        ],
+        
       },
     } as Record<string, { name: string; intro: string; points: string[] }>,
   },
