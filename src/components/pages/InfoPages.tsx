@@ -70,6 +70,15 @@ export function SolutionDetailPage({ locale, solution }: { locale: Locale; solut
             {item.name}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-700">{item.intro}</p>
+          {(item as { article?: string[] }).article?.length ? (
+            <div className="mt-6 flex max-w-2xl flex-col gap-4">
+              {(item as { article?: string[] }).article!.map((paragraph, i) => (
+                <p key={i} className="text-base leading-relaxed text-ink-700">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          ) : null}
           <ul className="mt-8 flex flex-col gap-3">
             {item.points.map((point) => (
               <li key={point} className="flex items-start gap-3 border-l-2 border-signal-600 pl-4 text-base text-ink-800">

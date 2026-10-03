@@ -14,7 +14,11 @@ export type SolutionId =
   | "refuerzo-de-personal"
   | "sustitucion-temporal"
   | "trabajos-puntuales"
-  | "personal-con-desplazamiento";
+  | "personal-con-desplazamiento"
+  | "guia-soldadores-tig-barcelona"
+  | "guia-ett-industrial-vs-cuadrilla"
+  | "guia-planificar-parada-planta"
+  | "guia-certificaciones-soldadura";
 
 export interface Solution {
   id: SolutionId;
@@ -32,6 +36,11 @@ export const solutions: readonly Solution[] = [
   { id: "sustitucion-temporal", slug: "sustitucion-temporal", relatedNeedType: "sustitucion-temporal", impliesDisplacement: false },
   { id: "trabajos-puntuales", slug: "trabajos-puntuales", relatedNeedType: "trabajo-puntual", impliesDisplacement: false },
   { id: "personal-con-desplazamiento", slug: "personal-con-desplazamiento", relatedNeedType: null, impliesDisplacement: true },
+  // Guías editoriales (Fase 4 del plano SEO — artigos-pilares, 1.000+ palavras ES).
+  { id: "guia-soldadores-tig-barcelona", slug: "guia-soldadores-tig-barcelona", relatedNeedType: null, impliesDisplacement: false },
+  { id: "guia-ett-industrial-vs-cuadrilla", slug: "guia-ett-industrial-vs-cuadrilla", relatedNeedType: null, impliesDisplacement: false },
+  { id: "guia-planificar-parada-planta", slug: "guia-planificar-parada-planta", relatedNeedType: null, impliesDisplacement: false },
+  { id: "guia-certificaciones-soldadura", slug: "guia-certificaciones-soldadura", relatedNeedType: null, impliesDisplacement: false },
 ] as const;
 
 export function getSolutionBySlug(slug: string): Solution | undefined {

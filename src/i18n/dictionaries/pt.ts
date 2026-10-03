@@ -388,6 +388,26 @@ export const pt = {
           "Indique a logística necessária ao configurar o pedido.",
         ],
       },
+          "guia-soldadores-tig-barcelona": {
+        name: "Guia: como encontrar soldadores TIG em Barcelona em 24 horas",
+        intro: "Encontrar soldadores TIG qualificados em Barcelona com urgência é um dos problemas operativos mais comuns da indústria catalã. Este guia explica, passo a passo, como cobrir essa necessidade em 24 horas sem comprometer a qualidade do cordão.",
+        points: ["Defina processo, volume e datas antes de pedir.", "Exija certificado de soldadura segundo o processo.", "A disponibilidade confirma-se em horas laborais.", "Um perfil verificado chega a produzir desde o primeiro dia."],
+      },
+      "guia-ett-industrial-vs-cuadrilla": {
+        name: "Guia: ETT industrial vs quadrilha própria — quando convém cada opção",
+        intro: "Uma das decisões operativas mais importantes de uma planta é como cobrir a necessidade de pessoal industrial: com quadrilha própria, através de uma ETT industrial, ou com uma combinação. Este guia analisa as duas opções com honestidade.",
+        points: ["A quadrilha própria dá controlo total mas custa mesmo sem trabalhar a cem por cento.", "A ETT industrial converte o custo fixo em variável.", "A verificação de perfis é onde mais se separam os fornecedores.", "A combinação das duas fórmulas é a opção mais habitual."],
+      },
+      "guia-planificar-parada-planta": {
+        name: "Guia: paragens de planta — como planificar o pessoal de uma paragem",
+        intro: "Uma paragem de planta concentra em dias ou semanas o trabalho de meses. A planificação do pessoal é a variável que mais condiciona o sucesso. Este guia reúne os critérios que separam uma paragem que cumpre a sua janela de uma que a paga duas vezes.",
+        points: ["A janela de paragem manda sobre tudo.", "Os perfis críticos reservam-se primeiro.", "Os turnos definem-se antes da paragem.", "A supervisão diária deteta desvios a tempo."],
+      },
+      "guia-certificaciones-soldadura": {
+        name: "Guia: certificações de soldadura — quais exigir segundo o trabalho",
+        intro: "Pedir um soldador qualificado não chega: cada processo, cada material e cada norma exige uma certificação concreta. Este guia explica que certificados existem e como verificar que são reais e estão em vigor.",
+        points: ["A certificação pede-se segundo o processo: TIG, MIG/MAG e eletrodo não são intercambiáveis.", "A EN ISO 9606 é a referência europeia base.", "A formação PRL é obrigatória e independente.", "Um certificado real verifica-se antes da proposta."],
+      },
     } as Record<string, { name: string; intro: string; points: string[] }>,
   },
 };

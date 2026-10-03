@@ -389,6 +389,26 @@ const en = {
           "State the required logistics when configuring the request.",
         ],
       },
+          "guia-soldadores-tig-barcelona": {
+        name: "Guide: how to find TIG welders in Barcelona within 24 hours",
+        intro: "Finding qualified TIG welders in Barcelona at short notice is one of the most common operational problems in Catalan industry. This guide explains, step by step, how to cover that need within 24 hours without compromising weld quality.",
+        points: ["Define process, volume and dates before requesting.", "Require a welding certificate for the specific process.", "Availability is confirmed within business hours.", "A verified profile is productive from day one."],
+      },
+      "guia-ett-industrial-vs-cuadrilla": {
+        name: "Guide: industrial temp agency vs own crew — when each option makes sense",
+        intro: "One of the most important operational decisions for a plant is how to cover industrial staffing needs: with an in-house crew, through an industrial temp agency, or a combination. This guide analyses both options honestly.",
+        points: ["An in-house crew gives full control but costs even when not fully busy.", "A temp agency turns fixed cost into variable cost.", "Profile verification is where suppliers differ most.", "Combining both is the most common setup in mature plants."],
+      },
+      "guia-planificar-parada-planta": {
+        name: "Guide: plant shutdowns — how to plan shutdown staffing",
+        intro: "A plant shutdown concentrates months of work into days or weeks. Staffing planning is the variable that most determines success. This guide covers the criteria that separate a shutdown that meets its window from one that pays for it twice.",
+        points: ["The shutdown window rules everything.", "Critical profiles are reserved first.", "Shifts are defined before the shutdown.", "Daily supervision catches deviations in time."],
+      },
+      "guia-certificaciones-soldadura": {
+        name: "Guide: welding certifications — which ones to require for the job",
+        intro: "Asking for a qualified welder is not enough: every process, material and standard requires a specific certification. This guide explains which certificates exist and how to verify they are real and current.",
+        points: ["Certification is requested per process: TIG, MIG/MAG and electrode are not interchangeable.", "EN ISO 9606 is the core European reference.", "PRL training is mandatory and separate.", "A real certificate is verified before the proposal."],
+      },
     } as Record<string, { name: string; intro: string; points: string[] }>,
   },
 };
