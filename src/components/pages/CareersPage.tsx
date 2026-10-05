@@ -21,34 +21,49 @@ export function CareersPage({ locale }: { locale: Locale }) {
       <Breadcrumbs locale={locale} items={[{ label: c.title }]} />
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
         <div>
-          <p className="font-mono text-xs tracking-[0.22em] text-steel-500 uppercase">
+          <p
+            data-cms={`${locale}:careers.eyebrow`}
+            className="font-mono text-xs tracking-[0.22em] text-steel-500 uppercase"
+          >
             {c.eyebrow}
           </p>
-          <h1 className="mt-3 text-[clamp(2rem,4vw,3.4rem)] leading-none font-extrabold tracking-tight text-ink-950">
+          <h1
+            data-cms={`${locale}:careers.title`}
+            className="mt-3 text-[clamp(2rem,4vw,3.4rem)] leading-none font-extrabold tracking-tight text-ink-950"
+          >
             {c.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-700">{c.lead}</p>
+          <p data-cms={`${locale}:careers.lead`} className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-700">{c.lead}</p>
 
           <div className="mt-6 border-l-2 border-signal-600 pl-4">
-            <p className="text-base font-extrabold text-ink-950">{c.honestyTitle}</p>
-            <p className="mt-1 text-sm leading-relaxed text-ink-600">{c.honestyBody}</p>
+            <p data-cms={`${locale}:careers.honestyTitle`} className="text-base font-extrabold text-ink-950">{c.honestyTitle}</p>
+            <p data-cms={`${locale}:careers.honestyBody`} className="mt-1 text-sm leading-relaxed text-ink-600">{c.honestyBody}</p>
           </div>
 
-          <h2 className="mt-10 font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
+          <h2
+            data-cms={`${locale}:careers.profilesTitle`}
+            className="mt-10 font-mono text-xs tracking-[0.2em] text-steel-500 uppercase"
+          >
             {c.profilesTitle}
           </h2>
           <ul className="mt-4 grid gap-px border border-line-200 bg-line-200 sm:grid-cols-2">
             {professionalProfiles.map((profile) => (
               <li key={profile.id} className="flex items-center gap-2.5 bg-paper-50 p-3">
                 <Pictogram name={profile.pictogram} className="h-7 w-7 text-ink-800" />
-                <span className="text-sm font-bold text-ink-950">
+                <span
+                  data-cms={`${locale}:profiles.items.${profile.id}.name`}
+                  className="text-sm font-bold text-ink-950"
+                >
                   {dict.profiles.items[profile.id]?.name}
                 </span>
               </li>
             ))}
           </ul>
 
-          <h2 className="mt-10 font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
+          <h2
+            data-cms={`${locale}:careers.processTitle`}
+            className="mt-10 font-mono text-xs tracking-[0.2em] text-steel-500 uppercase"
+          >
             {c.processTitle}
           </h2>
           <ol className="mt-4 flex flex-col gap-px border border-line-200 bg-line-200">
@@ -58,8 +73,8 @@ export function CareersPage({ locale }: { locale: Locale }) {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className="text-lg font-extrabold tracking-tight text-ink-950">{step.title}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-ink-600">{step.body}</p>
+                  <h3 data-cms={`${locale}:careers.processSteps.${i}.title`} className="text-lg font-extrabold tracking-tight text-ink-950">{step.title}</h3>
+                  <p data-cms={`${locale}:careers.processSteps.${i}.body`} className="mt-1 text-sm leading-relaxed text-ink-600">{step.body}</p>
                 </div>
               </li>
             ))}
@@ -72,20 +87,23 @@ export function CareersPage({ locale }: { locale: Locale }) {
               className="border border-line-200"
               imgClassName="aspect-[4/3] w-full object-cover"
             />
-            <p className="mt-2 text-xs text-steel-500">{dict.common.editorialPhoto}</p>
+            <p data-cms={`${locale}:common.editorialPhoto`} className="mt-2 text-xs text-steel-500">{dict.common.editorialPhoto}</p>
           </div>
         </div>
 
         <aside className="h-fit border border-ink-950 bg-paper-50 lg:sticky lg:top-24">
           <div className="border-b border-line-200 p-5">
-            <p className="font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase">
+            <p
+              data-cms={`${locale}:careers.formTitle`}
+              className="font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase"
+            >
               {c.formTitle}
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-ink-600">{c.formLead}</p>
+            <p data-cms={`${locale}:careers.formLead`} className="mt-2 text-sm leading-relaxed text-ink-600">{c.formLead}</p>
           </div>
           <div className="p-5">
             <CareersMailForm locale={locale} />
-            <p className="mt-4 text-xs text-steel-500">{c.privacyNote}</p>
+            <p data-cms={`${locale}:careers.privacyNote`} className="mt-4 text-xs text-steel-500">{c.privacyNote}</p>
           </div>
         </aside>
       </div>

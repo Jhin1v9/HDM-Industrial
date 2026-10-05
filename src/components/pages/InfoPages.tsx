@@ -27,7 +27,14 @@ export function SolutionsIndexPage({ locale }: { locale: Locale }) {
   return (
     <Section>
       <Breadcrumbs locale={locale} items={[{ label: dict.nav.solutions }]} />
-      <SectionHeader eyebrow="HDM Industrial" title={s.title} lead={s.lead} as="h1" />
+      <SectionHeader
+        eyebrow="HDM Industrial"
+        title={s.title}
+        lead={s.lead}
+        as="h1"
+        cmsTitle={`${locale}:solutions.title`}
+        cmsLead={`${locale}:solutions.lead`}
+      />
       <ul className="grid gap-px border border-line-200 bg-line-200 md:grid-cols-2">
         {solutions.map((solution) => {
           const item = s.items[solution.id];
@@ -35,11 +42,12 @@ export function SolutionsIndexPage({ locale }: { locale: Locale }) {
             <li key={solution.id} className="bg-paper-50">
               <a
                 href={localizedPath(locale, `soluciones/${solution.slug}`)}
+                data-cms={`${locale}:solutions.items.${solution.id}.name`}
                 className="flex h-full flex-col gap-2 p-6 transition-colors duration-150 hover:bg-paper-100"
               >
-                <span className="text-xl font-extrabold tracking-tight text-ink-950">{item?.name}</span>
-                <span className="text-sm leading-relaxed text-ink-600 line-clamp-3">{item?.intro}</span>
-                <span className="mt-auto pt-2 text-sm font-bold text-signal-600">
+                <span data-cms={`${locale}:solutions.items.${solution.id}.name`} className="text-xl font-extrabold tracking-tight text-ink-950">{item?.name}</span>
+                <span data-cms={`${locale}:solutions.items.${solution.id}.intro`} className="text-sm leading-relaxed text-ink-600 line-clamp-3">{item?.intro}</span>
+                <span data-cms={`${locale}:common.readMore`} className="mt-auto pt-2 text-sm font-bold text-signal-600">
                   {dict.common.readMore} →
                 </span>
               </a>
@@ -66,22 +74,33 @@ export function SolutionDetailPage({ locale, solution }: { locale: Locale; solut
       />
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
         <div>
-          <h1 className="text-[clamp(2rem,4vw,3.4rem)] leading-none font-extrabold tracking-tight text-ink-950">
+          <h1
+            data-cms={`${locale}:solutions.items.${solution.id}.name`}
+            className="text-[clamp(2rem,4vw,3.4rem)] leading-none font-extrabold tracking-tight text-ink-950"
+          >
             {item.name}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-700">{item.intro}</p>
+          <p data-cms={`${locale}:solutions.items.${solution.id}.intro`} className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-700">{item.intro}</p>
           {(item as { article?: string[] }).article?.length ? (
             <div className="mt-6 flex max-w-2xl flex-col gap-4">
               {(item as { article?: string[] }).article!.map((paragraph, i) => (
-                <p key={i} className="text-base leading-relaxed text-ink-700">
+                <p
+                  key={i}
+                  data-cms={`${locale}:solutions.items.${solution.id}.article.${i}`}
+                  className="text-base leading-relaxed text-ink-700"
+                >
                   {paragraph}
                 </p>
               ))}
             </div>
           ) : null}
           <ul className="mt-8 flex flex-col gap-3">
-            {item.points.map((point) => (
-              <li key={point} className="flex items-start gap-3 border-l-2 border-signal-600 pl-4 text-base text-ink-800">
+            {item.points.map((point, i) => (
+              <li
+                key={point}
+                data-cms={`${locale}:solutions.items.${solution.id}.points.${i}`}
+                className="flex items-start gap-3 border-l-2 border-signal-600 pl-4 text-base text-ink-800"
+              >
                 {point}
               </li>
             ))}
@@ -97,16 +116,20 @@ export function SolutionDetailPage({ locale, solution }: { locale: Locale; solut
         </div>
         <aside className="h-fit border border-ink-950 bg-paper-50 lg:sticky lg:top-24">
           <div className="border-b border-line-200 p-5">
-            <p className="font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase">
+            <p
+              data-cms={`${locale}:common.requestCta`}
+              className="font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase"
+            >
               {dict.common.requestCta}
             </p>
-            <p className="mt-2 text-sm text-ink-600">{dict.home.heroNote}</p>
+            <p data-cms={`${locale}:home.heroNote`} className="mt-2 text-sm text-ink-600">{dict.home.heroNote}</p>
           </div>
           <div className="p-5">
             <PrefillNeedTypeButton
               locale={locale}
               needType={solution.relatedNeedType}
               displacement={solution.impliesDisplacement}
+              cmsKey={`${locale}:common.startRequestSolution`}
               className="flex h-12 w-full items-center justify-center border border-signal-500 bg-signal-600 px-5 text-sm font-extrabold tracking-wide text-white uppercase hover:bg-signal-700"
             >
               {dict.common.startRequestSolution}
@@ -135,21 +158,29 @@ export function SectorsIndexPage({ locale }: { locale: Locale }) {
   return (
     <Section>
       <Breadcrumbs locale={locale} items={[{ label: dict.nav.sectors }]} />
-      <SectionHeader eyebrow="HDM Industrial" title={s.title} lead={s.lead} as="h1" />
+      <SectionHeader
+        eyebrow="HDM Industrial"
+        title={s.title}
+        lead={s.lead}
+        as="h1"
+        cmsTitle={`${locale}:sectors.title`}
+        cmsLead={`${locale}:sectors.lead`}
+      />
       <ul className="grid gap-px border border-line-200 bg-line-200 sm:grid-cols-2 lg:grid-cols-3">
         {sectors.map((sector) => (
           <li key={sector.id}>
             <a
               href={localizedPath(locale, `sectores/${sector.slug}`)}
+              data-cms={`${locale}:sectors.items.${sector.id}.name`}
               className="flex h-full flex-col gap-2 bg-paper-50 p-6 transition-colors duration-150 hover:bg-paper-100"
             >
-              <span className="text-xl font-extrabold tracking-tight text-ink-950">
+              <span data-cms={`${locale}:sectors.items.${sector.id}.name`} className="text-xl font-extrabold tracking-tight text-ink-950">
                 {s.items[sector.id]?.name}
               </span>
-              <span className="text-sm leading-relaxed text-ink-600 line-clamp-3">
+              <span data-cms={`${locale}:sectors.items.${sector.id}.intro`} className="text-sm leading-relaxed text-ink-600 line-clamp-3">
                 {s.items[sector.id]?.intro}
               </span>
-              <span className="mt-auto pt-2 text-sm font-bold text-signal-600">
+              <span data-cms={`${locale}:common.readMore`} className="mt-auto pt-2 text-sm font-bold text-signal-600">
                 {dict.common.readMore} →
               </span>
             </a>
@@ -175,10 +206,13 @@ export function SectorDetailPage({ locale, sector }: { locale: Locale; sector: S
       />
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
         <div>
-          <h1 className="text-[clamp(2rem,4vw,3.4rem)] leading-none font-extrabold tracking-tight text-ink-950">
+          <h1
+            data-cms={`${locale}:sectors.items.${sector.id}.name`}
+            className="text-[clamp(2rem,4vw,3.4rem)] leading-none font-extrabold tracking-tight text-ink-950"
+          >
             {item.name}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-700">{item.intro}</p>
+          <p data-cms={`${locale}:sectors.items.${sector.id}.intro`} className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-700">{item.intro}</p>
           <div className="mt-8">
             <Media
               locale={locale}
@@ -188,7 +222,10 @@ export function SectorDetailPage({ locale, sector }: { locale: Locale; sector: S
             />
           </div>
           <div className="mt-10">
-            <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
+            <h2
+              data-cms={`${locale}:nav.profiles`}
+              className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase"
+            >
               {dict.nav.profiles}
             </h2>
             <ul className="mt-4 grid gap-2 sm:grid-cols-2">
@@ -196,13 +233,17 @@ export function SectorDetailPage({ locale, sector }: { locale: Locale; sector: S
                 <li key={profile.id} className="flex items-center justify-between gap-3 border border-line-200 bg-paper-50 p-3">
                   <span className="flex items-center gap-2.5">
                     <Pictogram name={profile.pictogram} className="h-7 w-7 text-ink-800" />
-                    <span className="text-sm font-bold text-ink-950">
+                    <span
+                      data-cms={`${locale}:profiles.items.${profile.id}.name`}
+                      className="text-sm font-bold text-ink-950"
+                    >
                       {dict.profiles.items[profile.id]?.name}
                     </span>
                   </span>
                   <PrefillProfessionButton
                     locale={locale}
                     profession={profile.id}
+                    cmsKey={`${locale}:common.addToRequest`}
                     className="shrink-0 border border-signal-600 px-2.5 py-1 font-mono text-[11px] font-bold tracking-wide text-signal-600 uppercase hover:bg-signal-100"
                   >
                     + {dict.common.addToRequest}
@@ -214,15 +255,19 @@ export function SectorDetailPage({ locale, sector }: { locale: Locale; sector: S
         </div>
         <aside className="h-fit border border-ink-950 bg-paper-50 lg:sticky lg:top-24">
           <div className="border-b border-line-200 p-5">
-            <p className="font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase">
+            <p
+              data-cms={`${locale}:common.requestCta`}
+              className="font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase"
+            >
               {dict.common.requestCta}
             </p>
-            <p className="mt-2 text-sm text-ink-600">{dict.home.heroNote}</p>
+            <p data-cms={`${locale}:home.heroNote`} className="mt-2 text-sm text-ink-600">{dict.home.heroNote}</p>
           </div>
           <div className="p-5">
             <PrefillProfessionButton
               locale={locale}
               profession="soldador"
+              cmsKey={`${locale}:common.requestPersonal`}
               className="flex h-12 w-full items-center justify-center border border-signal-500 bg-signal-600 px-5 text-sm font-extrabold tracking-wide text-white uppercase hover:bg-signal-700"
             >
               {dict.common.requestPersonal}
@@ -242,7 +287,14 @@ export function CoverageIndexPage({ locale }: { locale: Locale }) {
   return (
     <Section>
       <Breadcrumbs locale={locale} items={[{ label: dict.nav.coverage }]} />
-      <SectionHeader eyebrow="HDM Industrial" title={c.title} lead={c.lead} as="h1" />
+      <SectionHeader
+        eyebrow="HDM Industrial"
+        title={c.title}
+        lead={c.lead}
+        as="h1"
+        cmsTitle={`${locale}:coverage.title`}
+        cmsLead={`${locale}:coverage.lead`}
+      />
       <CoverageMap locale={locale} mode="link" />
     </Section>
   );
@@ -264,28 +316,38 @@ export function CoverageAreaPage({ locale, area }: { locale: Locale; area: Cover
         />
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
           <div>
-            <p className="font-mono text-xs tracking-[0.22em] text-steel-500 uppercase">
+            <p
+              data-cms={`${locale}:nav.coverage`}
+              className="font-mono text-xs tracking-[0.22em] text-steel-500 uppercase"
+            >
               {area.country === "PT" ? dict.common.portugal : dict.common.spain} · {dict.nav.coverage}
             </p>
-            <h1 className="mt-3 text-[clamp(2rem,4vw,3.4rem)] leading-none font-extrabold tracking-tight text-ink-950">
+            <h1
+              data-cms={`${locale}:coverage.items.${area.id}.name`}
+              className="mt-3 text-[clamp(2rem,4vw,3.4rem)] leading-none font-extrabold tracking-tight text-ink-950"
+            >
               {item.name}
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-700">{item.intro}</p>
-            <p className="mt-4 max-w-2xl border-l-2 border-signal-600 pl-4 text-sm leading-relaxed text-ink-600">
+            <p data-cms={`${locale}:coverage.items.${area.id}.intro`} className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-700">{item.intro}</p>
+            <p data-cms={`${locale}:coverage.lead`} className="mt-4 max-w-2xl border-l-2 border-signal-600 pl-4 text-sm leading-relaxed text-ink-600">
               {dict.coverage.lead}
             </p>
           </div>
           <aside className="h-fit border border-ink-950 bg-paper-50 lg:sticky lg:top-24">
             <div className="border-b border-line-200 p-5">
-              <p className="font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase">
+              <p
+                data-cms={`${locale}:common.requestCta`}
+                className="font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase"
+              >
                 {dict.common.requestCta}
               </p>
-              <p className="mt-2 text-sm text-ink-600">{dict.home.heroNote}</p>
+              <p data-cms={`${locale}:home.heroNote`} className="mt-2 text-sm text-ink-600">{dict.home.heroNote}</p>
             </div>
             <div className="p-5">
               <PrefillAreaButton
                 locale={locale}
                 area={area.id}
+                cmsKey={`${locale}:common.startRequestArea`}
                 className="flex h-12 w-full items-center justify-center border border-signal-500 bg-signal-600 px-5 text-sm font-extrabold tracking-wide text-white uppercase hover:bg-signal-700"
               >
                 {dict.common.startRequestArea}
@@ -295,19 +357,23 @@ export function CoverageAreaPage({ locale, area }: { locale: Locale; area: Cover
         </div>
       </Section>
       <Section tone="paper-100">
-        <SectionHeader title={dict.nav.profiles} />
+        <SectionHeader title={dict.nav.profiles} cmsTitle={`${locale}:nav.profiles`} />
         <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {professionalProfiles.map((profile) => (
             <li key={profile.id} className="flex items-center justify-between gap-3 border border-line-300 bg-paper-50 p-3">
               <span className="flex items-center gap-2.5">
                 <Pictogram name={profile.pictogram} className="h-7 w-7 text-ink-800" />
-                <span className="text-sm font-bold text-ink-950">
+                <span
+                  data-cms={`${locale}:profiles.items.${profile.id}.name`}
+                  className="text-sm font-bold text-ink-950"
+                >
                   {dict.profiles.items[profile.id]?.name}
                 </span>
               </span>
               <PrefillProfessionButton
                 locale={locale}
                 profession={profile.id}
+                cmsKey={`${locale}:common.addToRequest`}
                 className="shrink-0 border border-signal-600 px-2.5 py-1 font-mono text-[11px] font-bold tracking-wide text-signal-600 uppercase hover:bg-signal-100"
               >
                 + {dict.common.addToRequest}
@@ -328,19 +394,26 @@ export function HowWeWorkPage({ locale }: { locale: Locale }) {
   return (
     <Section>
       <Breadcrumbs locale={locale} items={[{ label: dict.nav.howWeWork }]} />
-      <SectionHeader eyebrow="HDM Industrial" title={h.title} lead={h.lead} as="h1" />
+      <SectionHeader
+        eyebrow="HDM Industrial"
+        title={h.title}
+        lead={h.lead}
+        as="h1"
+        cmsTitle={`${locale}:howWeWork.title`}
+        cmsLead={`${locale}:howWeWork.lead`}
+      />
       <ol className="flex flex-col gap-px border border-line-200 bg-line-200">
         {h.sections.map((section, i) => (
           <li key={section.title} className="grid gap-3 bg-paper-50 p-6 sm:grid-cols-[5rem_1fr]">
             <span className="tnum text-4xl font-black text-steel-300">{String(i + 1).padStart(2, "0")}</span>
             <div>
-              <h2 className="text-xl font-extrabold tracking-tight text-ink-950">{section.title}</h2>
-              <p className="mt-2 max-w-2xl text-base leading-relaxed text-ink-600">{section.body}</p>
+              <h2 data-cms={`${locale}:howWeWork.sections.${i}.title`} className="text-xl font-extrabold tracking-tight text-ink-950">{section.title}</h2>
+              <p data-cms={`${locale}:howWeWork.sections.${i}.body`} className="mt-2 max-w-2xl text-base leading-relaxed text-ink-600">{section.body}</p>
             </div>
           </li>
         ))}
       </ol>
-      <p className="mt-6 text-sm text-steel-500">{dict.request.summaryDisclaimer}</p>
+      <p data-cms={`${locale}:request.summaryDisclaimer`} className="mt-6 text-sm text-steel-500">{dict.request.summaryDisclaimer}</p>
     </Section>
   );
 }
@@ -351,21 +424,28 @@ export function CertificationsPage({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
   const c = dict.certifications;
   const blocks = [
-    { title: c.prlTitle, body: c.prlBody, placeholderId: "PH-CERT-PRL-01" },
-    { title: c.weldingTitle, body: c.weldingBody, placeholderId: "PH-CERT-WELDING-01" },
-    { title: c.docsTitle, body: c.docsBody, placeholderId: null },
-    { title: c.honestyTitle, body: c.honestyBody, placeholderId: null },
+    { title: c.prlTitle, body: c.prlBody, placeholderId: "PH-CERT-PRL-01", cmsT: "certifications.prlTitle", cmsB: "certifications.prlBody" },
+    { title: c.weldingTitle, body: c.weldingBody, placeholderId: "PH-CERT-WELDING-01", cmsT: "certifications.weldingTitle", cmsB: "certifications.weldingBody" },
+    { title: c.docsTitle, body: c.docsBody, placeholderId: null, cmsT: "certifications.docsTitle", cmsB: "certifications.docsBody" },
+    { title: c.honestyTitle, body: c.honestyBody, placeholderId: null, cmsT: "certifications.honestyTitle", cmsB: "certifications.honestyBody" },
   ];
   return (
     <Section>
       <Breadcrumbs locale={locale} items={[{ label: dict.nav.certifications }]} />
-      <SectionHeader eyebrow="HDM Industrial" title={c.title} lead={c.lead} as="h1" />
+      <SectionHeader
+        eyebrow="HDM Industrial"
+        title={c.title}
+        lead={c.lead}
+        as="h1"
+        cmsTitle={`${locale}:certifications.title`}
+        cmsLead={`${locale}:certifications.lead`}
+      />
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
         <ol className="flex flex-col gap-px border border-line-200 bg-line-200">
           {blocks.map((block) => (
             <li key={block.title} className="bg-paper-50 p-6">
-              <h2 className="text-xl font-extrabold tracking-tight text-ink-950">{block.title}</h2>
-              <p className="mt-2 text-base leading-relaxed text-ink-600">{block.body}</p>
+              <h2 data-cms={`${locale}:${block.cmsT}`} className="text-xl font-extrabold tracking-tight text-ink-950">{block.title}</h2>
+              <p data-cms={`${locale}:${block.cmsB}`} className="mt-2 text-base leading-relaxed text-ink-600">{block.body}</p>
               {block.placeholderId ? (
                 <div className="mt-4">
                   <Media id={block.placeholderId} locale={locale} />
@@ -376,7 +456,7 @@ export function CertificationsPage({ locale }: { locale: Locale }) {
         </ol>
         <div className="h-fit lg:sticky lg:top-24">
           <Media id="PH-PHOTO-EPI-01" locale={locale} className="border border-line-200" imgClassName="aspect-[4/3] w-full object-cover" />
-          <p className="mt-2 text-xs text-steel-500">{dict.common.editorialPhoto}</p>
+          <p data-cms={`${locale}:common.editorialPhoto`} className="mt-2 text-xs text-steel-500">{dict.common.editorialPhoto}</p>
         </div>
       </div>
     </Section>
@@ -391,14 +471,24 @@ export function ProjectsPage({ locale }: { locale: Locale }) {
   return (
     <Section>
       <Breadcrumbs locale={locale} items={[{ label: dict.nav.projects }]} />
-      <SectionHeader eyebrow="HDM Industrial" title={p.title} lead={p.lead} as="h1" />
+      <SectionHeader
+        eyebrow="HDM Industrial"
+        title={p.title}
+        lead={p.lead}
+        as="h1"
+        cmsTitle={`${locale}:projects.title`}
+        cmsLead={`${locale}:projects.lead`}
+      />
       <div className="grid gap-10 lg:grid-cols-2">
         <div className="border border-dashed border-steel-300 bg-paper-100 p-8">
-          <p className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
+          <p
+            data-cms={`${locale}:projects.confidentialLabel`}
+            className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase"
+          >
             {p.confidentialLabel}
           </p>
-          <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-ink-950">{p.emptyTitle}</h2>
-          <p className="mt-3 text-base leading-relaxed text-ink-600">{p.emptyBody}</p>
+          <h2 data-cms={`${locale}:projects.emptyTitle`} className="mt-3 text-2xl font-extrabold tracking-tight text-ink-950">{p.emptyTitle}</h2>
+          <p data-cms={`${locale}:projects.emptyBody`} className="mt-3 text-base leading-relaxed text-ink-600">{p.emptyBody}</p>
           <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3">
             {["PH-PROJECT-01", "PH-PROJECT-02", "PH-PROJECT-03"].map((id) => (
               <Media key={id} id={id} locale={locale} />
@@ -406,11 +496,11 @@ export function ProjectsPage({ locale }: { locale: Locale }) {
           </div>
         </div>
         <div className="border border-line-200 bg-paper-50 p-8">
-          <h2 className="text-2xl font-extrabold tracking-tight text-ink-950">{p.modelTitle}</h2>
+          <h2 data-cms={`${locale}:projects.modelTitle`} className="text-2xl font-extrabold tracking-tight text-ink-950">{p.modelTitle}</h2>
           <ul className="mt-4 flex flex-col divide-y divide-line-200 border-y border-line-200">
-            {p.modelFields.map((field) => (
+            {p.modelFields.map((field, i) => (
               <li key={field} className="flex items-center justify-between py-2.5">
-                <span className="font-mono text-[11px] tracking-widest text-steel-500 uppercase">{field}</span>
+                <span data-cms={`${locale}:projects.modelFields.${i}`} className="font-mono text-[11px] tracking-widest text-steel-500 uppercase">{field}</span>
                 <span className="text-xs text-steel-400">—</span>
               </li>
             ))}
@@ -429,19 +519,31 @@ export function EmpresaPage({ locale }: { locale: Locale }) {
   return (
     <Section>
       <Breadcrumbs locale={locale} items={[{ label: dict.nav.company }]} />
-      <SectionHeader eyebrow="HDM Industrial" title={e.title} lead={e.lead} as="h1" />
+      <SectionHeader
+        eyebrow="HDM Industrial"
+        title={e.title}
+        lead={e.lead}
+        as="h1"
+        cmsTitle={`${locale}:company.title`}
+        cmsLead={`${locale}:company.lead`}
+      />
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
         <div className="flex max-w-2xl flex-col gap-5 text-lg leading-relaxed text-ink-700">
-          <p>{e.body1}</p>
-          <p>{e.body2}</p>
-          <p>{e.body3}</p>
+          <p data-cms={`${locale}:company.body1`}>{e.body1}</p>
+          <p data-cms={`${locale}:company.body2`}>{e.body2}</p>
+          <p data-cms={`${locale}:company.body3`}>{e.body3}</p>
           <div className="mt-4">
-            <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">{e.valuesTitle}</h2>
+            <h2
+              data-cms={`${locale}:company.valuesTitle`}
+              className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase"
+            >
+              {e.valuesTitle}
+            </h2>
             <ul className="mt-4 flex flex-col gap-px border border-line-200 bg-line-200">
-              {e.values.map((value) => (
+              {e.values.map((value, i) => (
                 <li key={value.name} className="bg-paper-50 p-5">
-                  <p className="text-base font-extrabold text-ink-950">{value.name}</p>
-                  <p className="mt-1 text-base text-ink-600">{value.body}</p>
+                  <p data-cms={`${locale}:company.values.${i}.name`} className="text-base font-extrabold text-ink-950">{value.name}</p>
+                  <p data-cms={`${locale}:company.values.${i}.body`} className="mt-1 text-base text-ink-600">{value.body}</p>
                 </li>
               ))}
             </ul>

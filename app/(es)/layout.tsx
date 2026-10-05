@@ -19,8 +19,18 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const cmsApi = process.env.NEXT_PUBLIC_CMS_API;
   return (
     <html lang={LOCALE} className={fontVariables}>
+      <head>
+        {cmsApi ? (
+          <>
+            <meta name="cms-api" content={cmsApi} />
+            {/* /cms-runtime.js é servido pela infra do nexo-cms (editor visual em overlay) */}
+            <script src="/cms-runtime.js" defer />
+          </>
+        ) : null}
+      </head>
       <body className="min-h-dvh bg-paper-50 font-sans text-ink-900 antialiased">
         <RevealInit />
         <MotionProvider />

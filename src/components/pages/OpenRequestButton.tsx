@@ -11,16 +11,20 @@ export function OpenRequestButton({
   className,
   children,
   source,
+  cmsKey,
 }: {
   locale: Locale;
   className?: string;
   children: ReactNode;
   source?: string;
+  /** nexo-cms editmode: data-cms keypath ("<locale>:<dotted.keypath>") do label. */
+  cmsKey?: string;
 }) {
   const { openRequest } = useRequestUi();
   return (
     <button
       type="button"
+      data-cms={cmsKey}
       className={className}
       onClick={() => {
         trackEvent("request_started", { locale, source: source ?? "cta" });

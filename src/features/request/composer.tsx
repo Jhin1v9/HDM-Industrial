@@ -28,7 +28,7 @@ export function TeamComposer({
   return (
     <div className="flex flex-col gap-4">
       {request.profiles.length === 0 ? (
-        <p className="border border-dashed border-line-300 bg-paper-100 p-4 text-sm text-ink-600">
+        <p data-cms={`${locale}:request.emptyBody`} className="border border-dashed border-line-300 bg-paper-100 p-4 text-sm text-ink-600">
           {t.emptyBody}
         </p>
       ) : (
@@ -41,7 +41,7 @@ export function TeamComposer({
 
       {/* Añadir perfil */}
       <div>
-        <p className="mb-2 text-sm font-bold text-ink-800">{t.addProfile}</p>
+        <p data-cms={`${locale}:request.addProfile`} className="mb-2 text-sm font-bold text-ink-800">{t.addProfile}</p>
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
           {professionalProfiles.map((profile) => {
             const name = dict.profiles.items[profile.id]?.name ?? profile.id;
@@ -54,6 +54,7 @@ export function TeamComposer({
                   trackEvent("profile_added", { profession: profile.id, locale });
                   onProfilesFocus?.();
                 }}
+                data-cms={`${locale}:profiles.items.${profile.id}.name`}
                 className="flex items-center gap-2 border border-line-300 bg-paper-50 p-3 text-left text-sm font-semibold text-ink-800 transition-colors duration-150 hover:border-ink-600 hover:bg-paper-100"
               >
                 <Pictogram name={profile.pictogram} className="h-6 w-6 shrink-0 text-steel-500" />
@@ -96,7 +97,7 @@ function ProfileLineRow({ line, locale }: { line: RequestProfile; locale: Locale
       <div className="flex flex-wrap items-center gap-3 p-3">
         <Pictogram name={def?.pictogram ?? "builder"} className="h-8 w-8 shrink-0 text-ink-800" />
         <div className="min-w-0 flex-1">
-          <p className="truncate text-base font-bold text-ink-950">{name}</p>
+          <p data-cms={`${locale}:profiles.items.${line.profession}.singular`} className="truncate text-base font-bold text-ink-950">{name}</p>
           {specializations.length > 0 ? (
             <div className="mt-1 flex flex-wrap gap-1.5" role="radiogroup" aria-label={t.specialization}>
               {specializations.map((spec) => {
@@ -114,6 +115,7 @@ function ProfileLineRow({ line, locale }: { line: RequestProfile; locale: Locale
                         specialization: selected ? null : spec,
                       })
                     }
+                    data-cms={`${locale}:profiles.specializations.${spec}.name`}
                     className={`h-8 border px-2.5 font-mono text-xs font-bold tracking-wide transition-colors duration-150 ${
                       selected
                         ? "border-signal-500 bg-ink-900 text-paper-50"
@@ -142,6 +144,7 @@ function ProfileLineRow({ line, locale }: { line: RequestProfile; locale: Locale
             dispatch({ type: "removeProfile", lineId: line.lineId });
             trackEvent("profile_removed", { profession: line.profession });
           }}
+          data-cms={`${locale}:common.remove`}
           className="h-10 border border-line-300 px-3 text-sm font-semibold text-ink-600 transition-colors duration-150 hover:border-signal-600 hover:text-signal-600"
         >
           {dict.common.remove}

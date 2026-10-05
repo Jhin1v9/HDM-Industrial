@@ -19,7 +19,14 @@ export function ProfilesIndexPage({ locale }: { locale: Locale }) {
     <>
       <Section>
         <Breadcrumbs locale={locale} items={[{ label: dict.nav.profiles }]} />
-        <SectionHeader eyebrow="HDM Industrial" title={p.title} lead={p.lead} as="h1" />
+        <SectionHeader
+          eyebrow="HDM Industrial"
+          title={p.title}
+          lead={p.lead}
+          as="h1"
+          cmsTitle={`${locale}:profiles.title`}
+          cmsLead={`${locale}:profiles.lead`}
+        />
         <ul className="grid gap-px border border-line-200 bg-line-200 sm:grid-cols-2">
           {professionalProfiles.map((profile) => {
             const item = p.items[profile.id];
@@ -31,18 +38,23 @@ export function ProfilesIndexPage({ locale }: { locale: Locale }) {
                     {profile.specializations.length > 0 ? (
                       <span className="flex gap-1.5">
                         {profile.specializations.map((s) => (
-                          <span key={s} className="border border-line-300 px-2 py-0.5 font-mono text-[10px] font-bold tracking-wide text-steel-500 uppercase">
+                          <span
+                            key={s}
+                            data-cms={`${locale}:profiles.specializations.${s}.name`}
+                            className="border border-line-300 px-2 py-0.5 font-mono text-[10px] font-bold tracking-wide text-steel-500 uppercase"
+                          >
                             {p.specializations[s]?.name}
                           </span>
                         ))}
                       </span>
                     ) : null}
                   </div>
-                  <h2 className="text-2xl font-extrabold tracking-tight text-ink-950">{item?.name}</h2>
-                  <p className="text-base leading-relaxed text-ink-600">{item?.short}</p>
+                  <h2 data-cms={`${locale}:profiles.items.${profile.id}.name`} className="text-2xl font-extrabold tracking-tight text-ink-950">{item?.name}</h2>
+                  <p data-cms={`${locale}:profiles.items.${profile.id}.short`} className="text-base leading-relaxed text-ink-600">{item?.short}</p>
                   <div className="mt-auto flex flex-wrap gap-3 pt-2">
                     <Link
                       href={localizedPath(locale, `personal-industrial/${profile.slug}`)}
+                      data-cms={`${locale}:common.readMore`}
                       className="flex h-11 items-center border border-ink-950 px-4 text-sm font-bold text-ink-950 hover:bg-paper-100"
                     >
                       {dict.common.readMore}
@@ -50,6 +62,7 @@ export function ProfilesIndexPage({ locale }: { locale: Locale }) {
                     <PrefillProfessionButton
                       locale={locale}
                       profession={profile.id}
+                      cmsKey={`${locale}:common.addToRequest`}
                       className="flex h-11 items-center border border-signal-600 px-4 text-sm font-bold text-signal-600 hover:bg-signal-100"
                     >
                       {dict.common.addToRequest}
@@ -76,10 +89,10 @@ export function ProfileDetailPage({
   const p = dict.profiles;
   const item = p.items[profile.id];
   const extra = PROFESSION_EXTRA[locale]?.[profile.id] ?? PROFESSION_EXTRA.es?.[profile.id];
-  const faqs: Array<{ q: string; a: string }> =
-    (item as { faq?: Array<{ q: string; a: string }> }).faq?.length
-      ? (item as { faq?: Array<{ q: string; a: string }> }).faq!
-      : (extra?.faq ?? []);
+  const fromItemFaq = Boolean((item as { faq?: Array<{ q: string; a: string }> }).faq?.length);
+  const faqs: Array<{ q: string; a: string }> = fromItemFaq
+    ? (item as { faq?: Array<{ q: string; a: string }> }).faq!
+    : (extra?.faq ?? []);
   if (!item) return null;
 
   return (
@@ -96,16 +109,22 @@ export function ProfileDetailPage({
           <div>
             <div className="flex items-center gap-4">
               <Pictogram name={profile.pictogram} className="h-14 w-14 text-ink-800" />
-              <h1 className="text-[clamp(2rem,4vw,3.4rem)] leading-none font-extrabold tracking-tight text-ink-950">
+              <h1
+                data-cms={`${locale}:profiles.items.${profile.id}.name`}
+                className="text-[clamp(2rem,4vw,3.4rem)] leading-none font-extrabold tracking-tight text-ink-950"
+              >
                 {item.name}
               </h1>
             </div>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-700">{item.description}</p>
+            <p data-cms={`${locale}:profiles.items.${profile.id}.description`} className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-700">{item.description}</p>
 
 
             {profile.specializations.length > 0 ? (
               <div className="mt-8">
-                <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
+                <h2
+                  data-cms={`${locale}:profiles.specializationLabel`}
+                  className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase"
+                >
                   {p.specializationLabel}
                 </h2>
                 <ul className="mt-3 grid gap-px border border-line-200 bg-line-200 sm:grid-cols-3">
@@ -113,8 +132,8 @@ export function ProfileDetailPage({
                     const spec = p.specializations[s];
                     return (
                       <li key={s} className="bg-paper-50 p-4">
-                        <p className="font-mono text-sm font-bold text-ink-950">{spec?.name}</p>
-                        <p className="mt-1 text-sm text-ink-600">{spec?.description}</p>
+                        <p data-cms={`${locale}:profiles.specializations.${s}.name`} className="font-mono text-sm font-bold text-ink-950">{spec?.name}</p>
+                        <p data-cms={`${locale}:profiles.specializations.${s}.description`} className="mt-1 text-sm text-ink-600">{spec?.description}</p>
                       </li>
                     );
                   })}
@@ -136,20 +155,35 @@ export function ProfileDetailPage({
 
             {item.queHacen ? (
               <>
-                <h2 className="mt-10 text-xl font-extrabold tracking-tight text-ink-950">
+                <h2
+                  data-cms={`${locale}:profiles.queHacenTitle`}
+                  className="mt-10 text-xl font-extrabold tracking-tight text-ink-950"
+                >
                   {p.queHacenTitle}
                 </h2>
-                <p className="mt-3 max-w-2xl text-base leading-relaxed text-ink-700">{item.queHacen}</p>
+                <p
+                  data-cms={`${locale}:profiles.items.${profile.id}.queHacen`}
+                  className="mt-3 max-w-2xl text-base leading-relaxed text-ink-700"
+                >
+                  {item.queHacen}
+                </p>
               </>
             ) : null}
             {item.cuando && item.cuando.length > 0 ? (
               <>
-                <h2 className="mt-10 text-xl font-extrabold tracking-tight text-ink-950">
+                <h2
+                  data-cms={`${locale}:profiles.cuandoTitle`}
+                  className="mt-10 text-xl font-extrabold tracking-tight text-ink-950"
+                >
                   {p.cuandoTitle}
                 </h2>
                 <ul className="mt-3 max-w-2xl space-y-2">
-                  {item.cuando.map((c) => (
-                    <li key={c} className="flex gap-2 text-base leading-relaxed text-ink-700">
+                  {item.cuando.map((c, i) => (
+                    <li
+                      key={c}
+                      data-cms={`${locale}:profiles.items.${profile.id}.cuando.${i}`}
+                      className="flex gap-2 text-base leading-relaxed text-ink-700"
+                    >
                       <span className="mt-2 h-1.5 w-1.5 flex-none bg-signal-600" />
                       {c}
                     </li>
@@ -159,34 +193,61 @@ export function ProfileDetailPage({
             ) : null}
             {item.verifica ? (
               <div className="mt-10 max-w-2xl border border-ok-600/40 bg-paper-50 p-5">
-                <p className="font-mono text-[11px] tracking-[0.18em] text-ok-600 uppercase">
+                <p
+                  data-cms={`${locale}:profiles.verificaTitle`}
+                  className="font-mono text-[11px] tracking-[0.18em] text-ok-600 uppercase"
+                >
                   {p.verificaTitle}
                 </p>
-                <p className="mt-2 text-base leading-relaxed text-ink-700">{item.verifica}</p>
+                <p
+                  data-cms={`${locale}:profiles.items.${profile.id}.verifica`}
+                  className="mt-2 text-base leading-relaxed text-ink-700"
+                >
+                  {item.verifica}
+                </p>
               </div>
             ) : null}
 
             <div className="mt-8 border-l-2 border-ink-950 pl-5">
-              <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
+              <h2
+                data-cms={`${locale}:profiles.requirements`}
+                className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase"
+              >
                 {p.requirements}
               </h2>
-              <p className="mt-2 text-base leading-relaxed text-ink-700">{item.requirements}</p>
+              <p
+                data-cms={`${locale}:profiles.items.${profile.id}.requirements`}
+                className="mt-2 text-base leading-relaxed text-ink-700"
+              >
+                {item.requirements}
+              </p>
             </div>
 
             {faqs.length > 0 && (
               <>
                 <div className="mt-8">
-                  <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
+                  <h2
+                    data-cms={`${locale}:profiles.faqTitle`}
+                    className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase"
+                  >
                     {p.faqTitle}
                   </h2>
                   <div className="mt-3 divide-y divide-line-200 border border-line-200 bg-paper-50">
-                    {faqs.map((f) => (
+                    {faqs.map((f, i) => (
                       <details key={f.q} className="group px-5 py-4">
-                        <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-bold text-ink-950">
+                        <summary
+                          data-cms={`${locale}:${fromItemFaq ? `profiles.items.${profile.id}.faq.${i}.q` : `profileextra.${profile.id}.faq.${i}.q`}`}
+                          className="flex cursor-pointer list-none items-center justify-between text-sm font-bold text-ink-950"
+                        >
                           {f.q}
                           <span className="text-signal-600 transition-transform group-open:rotate-45">+</span>
                         </summary>
-                        <p className="mt-2 text-sm leading-relaxed text-steel-500">{f.a}</p>
+                        <p
+                          data-cms={`${locale}:${fromItemFaq ? `profiles.items.${profile.id}.faq.${i}.a` : `profileextra.${profile.id}.faq.${i}.a`}`}
+                          className="mt-2 text-sm leading-relaxed text-steel-500"
+                        >
+                          {f.a}
+                        </p>
                       </details>
                     ))}
                   </div>
@@ -205,7 +266,10 @@ export function ProfileDetailPage({
             )}
 
             <div className="mt-8">
-              <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
+              <h2
+                data-cms={`${locale}:profiles.relatedSectors`}
+                className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase"
+              >
                 {p.relatedSectors}
               </h2>
               <ul className="mt-3 flex flex-wrap gap-2">
@@ -213,6 +277,7 @@ export function ProfileDetailPage({
                   <li key={s.id}>
                     <Link
                       href={localizedPath(locale, `sectores/${s.slug}`)}
+                      data-cms={`${locale}:sectors.items.${s.id}.name`}
                       className="inline-flex h-9 items-center border border-line-300 px-3 text-sm font-semibold text-ink-700 hover:border-ink-600"
                     >
                       {dict.sectors.items[s.id]?.name}
@@ -226,10 +291,16 @@ export function ProfileDetailPage({
           {/* Card de ação — perfil é objeto (§61) */}
           <aside className="h-fit border border-ink-950 bg-paper-50 lg:sticky lg:top-24">
             <div className="border-b border-line-200 p-5">
-              <p className="font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase">
+              <p
+                data-cms={`${locale}:common.requestCta`}
+                className="font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase"
+              >
                 {dict.common.requestCta}
               </p>
-              <p className="mt-2 text-sm leading-relaxed text-ink-600">
+              <p
+                data-cms={`${locale}:home.heroNote`}
+                className="mt-2 text-sm leading-relaxed text-ink-600"
+              >
                 {dict.home.heroNote}
               </p>
             </div>
@@ -237,12 +308,14 @@ export function ProfileDetailPage({
               <PrefillProfessionButton
                 locale={locale}
                 profession={profile.id}
+                cmsKey={`${locale}:common.startRequestHere`}
                 className="flex h-12 items-center justify-center border border-signal-500 bg-signal-600 px-5 text-sm font-extrabold tracking-wide text-white uppercase hover:bg-signal-700"
               >
                 {dict.common.startRequestHere}
               </PrefillProfessionButton>
               <OpenRequestButton
                 locale={locale}
+                cmsKey={`${locale}:common.viewRequest`}
                 className="flex h-12 items-center justify-center border border-ink-950 px-5 text-sm font-bold text-ink-950 hover:bg-paper-100"
               >
                 {dict.common.viewRequest}

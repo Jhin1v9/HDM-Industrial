@@ -35,6 +35,14 @@ export function RequestPanel({ locale }: { locale: Locale }) {
     summary: t.stepSummary,
     contact: t.stepContact,
   };
+  const stepCms: Record<Step, string> = {
+    need: "request.stepNeed",
+    profiles: "request.stepProfiles",
+    project: "request.stepProject",
+    logistics: "request.stepLogistics",
+    summary: "request.stepSummary",
+    contact: "request.stepContact",
+  };
 
   useEffect(() => {
     headingRef.current?.focus();
@@ -63,6 +71,7 @@ export function RequestPanel({ locale }: { locale: Locale }) {
             onClick={() => i <= stepIndex && setStep(s)}
             aria-current={s === step ? "step" : undefined}
             disabled={i > stepIndex}
+            data-cms={`${locale}:${stepCms[s]}`}
             className={`h-8 border px-2.5 font-mono text-[11px] tracking-wide uppercase transition-colors duration-150 ${
               s === step
                 ? "border-ink-950 bg-ink-950 text-paper-50"
@@ -79,6 +88,7 @@ export function RequestPanel({ locale }: { locale: Locale }) {
       <h2
         ref={headingRef}
         tabIndex={-1}
+        data-cms={`${locale}:${step === "summary" ? "request.summaryTitle" : stepCms[step]}`}
         className="text-2xl font-extrabold tracking-tight text-ink-950 focus:outline-none"
       >
         {step === "summary" ? t.summaryTitle : stepTitles[step]}
@@ -97,6 +107,7 @@ export function RequestPanel({ locale }: { locale: Locale }) {
             type="button"
             onClick={() => setStep(STEPS[Math.max(0, stepIndex - 1)] ?? "need")}
             disabled={stepIndex === 0}
+            data-cms={`${locale}:common.back`}
             className="h-11 border border-line-300 px-4 text-sm font-bold text-ink-800 disabled:opacity-40 hover:border-ink-600"
           >
             {dict.common.back}
@@ -110,6 +121,7 @@ export function RequestPanel({ locale }: { locale: Locale }) {
             <button
               type="button"
               onClick={() => canContinue && setStep(STEPS[Math.min(STEPS.length - 1, stepIndex + 1)] ?? "summary")}
+              data-cms={`${locale}:common.next`}
               className="h-11 border border-ink-950 bg-ink-950 px-6 text-sm font-bold text-paper-50 transition-colors duration-150 hover:bg-ink-800 disabled:opacity-40"
               disabled={!canContinue}
             >
@@ -129,17 +141,20 @@ function SummaryRow({
   value,
   onEdit,
   editLabel,
+  cmsLabel,
 }: {
   label: string;
   value: string | null;
   onEdit: () => void;
   editLabel: string;
+  /** nexo-cms editmode: data-cms keypath ("<locale>:<dotted.keypath>") do label. */
+  cmsLabel?: string;
 }) {
   if (!value) return null;
   return (
     <div className="flex items-start justify-between gap-4 border-b border-line-200 py-2.5">
       <div>
-        <dt className="font-mono text-[11px] tracking-widest text-steel-500 uppercase">{label}</dt>
+        <dt data-cms={cmsLabel} className="font-mono text-[11px] tracking-widest text-steel-500 uppercase">{label}</dt>
         <dd className="mt-0.5 text-base font-semibold text-ink-950">{value}</dd>
       </div>
       <button
@@ -176,19 +191,23 @@ export function SummaryView({ locale, goTo }: { locale: Locale; goTo: (s: Step) 
 
   return (
     <div className="flex flex-col gap-5">
-      <p className="text-sm text-ink-600">{t.summaryLead}</p>
+      <p data-cms={`${locale}:request.summaryLead`} className="text-sm text-ink-600">{t.summaryLead}</p>
       <dl>
         <SummaryRow
           label={t.summaryNeed}
           value={need ? (t.needTypes[need.id]?.name ?? null) : null}
           onEdit={() => goTo("need")}
           editLabel={dict.common.editRequest}
+          cmsLabel={`${locale}:request.summaryNeed`}
         />
         {request.profiles.length > 0 ? (
           <div className="border-b border-line-200 py-2.5">
             <div className="flex items-start justify-between gap-4">
               <div className="w-full">
-                <dt className="font-mono text-[11px] tracking-widest text-steel-500 uppercase">
+                <dt
+                  data-cms={`${locale}:request.summaryProfiles`}
+                  className="font-mono text-[11px] tracking-widest text-steel-500 uppercase"
+                >
                   {t.summaryProfiles}
                 </dt>
                 <dd className="mt-1">
@@ -200,7 +219,10 @@ export function SummaryView({ locale, goTo }: { locale: Locale; goTo: (s: Step) 
                           : "";
                       return (
                         <li key={p.lineId} className="flex items-baseline justify-between gap-3">
-                          <span className="text-base font-semibold text-ink-950">
+                          <span
+                            data-cms={`${locale}:profiles.items.${p.profession}.singular`}
+                            className="text-base font-semibold text-ink-950"
+                          >
                             {dict.profiles.items[p.profession]?.singular ?? p.profession}
                             {spec}
                           </span>
@@ -210,13 +232,15 @@ export function SummaryView({ locale, goTo }: { locale: Locale; goTo: (s: Step) 
                     })}
                   </ul>
                   <p className="mt-2 border-t-2 border-ink-950 pt-2 text-sm font-bold">
-                    <span className="tnum text-lg">{total}</span> {t.summaryTotal}
+                    <span className="tnum text-lg">{total}</span>{" "}
+                    <span data-cms={`${locale}:request.summaryTotal`}>{t.summaryTotal}</span>
                   </p>
                 </dd>
               </div>
               <button
                 type="button"
                 onClick={() => goTo("profiles")}
+                data-cms={`${locale}:common.editRequest`}
                 className="shrink-0 text-sm font-bold text-signal-600 underline-offset-2 hover:underline"
               >
                 {dict.common.editRequest}
@@ -230,6 +254,7 @@ export function SummaryView({ locale, goTo }: { locale: Locale; goTo: (s: Step) 
             value={request.jobDescription.slice(0, 180)}
             onEdit={() => goTo("profiles")}
             editLabel={dict.common.editRequest}
+            cmsLabel={`${locale}:request.assistedTitle`}
           />
         ) : null}
         <SummaryRow
@@ -237,6 +262,7 @@ export function SummaryView({ locale, goTo }: { locale: Locale; goTo: (s: Step) 
           value={area ? (dict.coverage.items[area.id]?.name ?? null) : request.project.city}
           onEdit={() => goTo("project")}
           editLabel={dict.common.editRequest}
+          cmsLabel={`${locale}:request.summaryLocation`}
         />
         <SummaryRow
           label={t.summaryStart}
@@ -247,30 +273,35 @@ export function SummaryView({ locale, goTo }: { locale: Locale; goTo: (s: Step) 
           }
           onEdit={() => goTo("project")}
           editLabel={dict.common.editRequest}
+          cmsLabel={`${locale}:request.summaryStart`}
         />
         <SummaryRow
           label={t.summaryDuration}
           value={formatDuration(request.project.duration, dict)}
           onEdit={() => goTo("project")}
           editLabel={dict.common.editRequest}
+          cmsLabel={`${locale}:request.summaryDuration`}
         />
         <SummaryRow
           label={t.summaryShift}
           value={request.project.shift}
           onEdit={() => goTo("project")}
           editLabel={dict.common.editRequest}
+          cmsLabel={`${locale}:request.summaryShift`}
         />
         <SummaryRow
           label={t.summarySector}
           value={sector ? (dict.sectors.items[sector.id]?.name ?? null) : null}
           onEdit={() => goTo("project")}
           editLabel={dict.common.editRequest}
+          cmsLabel={`${locale}:request.summarySector`}
         />
         <SummaryRow
           label={t.summaryLogistics}
           value={logisticsItems.length > 0 ? logisticsItems.join(" · ") : null}
           onEdit={() => goTo("logistics")}
           editLabel={dict.common.editRequest}
+          cmsLabel={`${locale}:request.summaryLogistics`}
         />
         <SummaryRow
           label={t.summaryDocs}
@@ -281,21 +312,29 @@ export function SummaryView({ locale, goTo }: { locale: Locale; goTo: (s: Step) 
           }
           onEdit={() => goTo("logistics")}
           editLabel={dict.common.editRequest}
+          cmsLabel={`${locale}:request.summaryDocs`}
         />
       </dl>
 
       {/* Trust panel (Doc 07 §93) */}
       <ul className="flex flex-col gap-1.5 border border-line-300 bg-paper-100 p-4">
-        <li className="font-mono text-[11px] tracking-widest text-steel-500 uppercase">
+        <li
+          data-cms={`${locale}:request.summaryTitle`}
+          className="font-mono text-[11px] tracking-widest text-steel-500 uppercase"
+        >
           {t.summaryTitle}
         </li>
-        {t.trustPanel.map((item) => (
-          <li key={item} className="flex items-center gap-2 text-sm text-ink-800">
+        {t.trustPanel.map((item, i) => (
+          <li
+            key={item}
+            data-cms={`${locale}:request.trustPanel.${i}`}
+            className="flex items-center gap-2 text-sm text-ink-800"
+          >
             <span aria-hidden="true" className="font-bold text-ok-600">✓</span> {item}
           </li>
         ))}
       </ul>
-      <p className="text-sm text-ink-600">{t.summaryDisclaimer}</p>
+      <p data-cms={`${locale}:request.summaryDisclaimer`} className="text-sm text-ink-600">{t.summaryDisclaimer}</p>
     </div>
   );
 }
@@ -363,10 +402,11 @@ function ContactStep({ locale }: { locale: Locale }) {
 
   return (
     <div className="flex flex-col gap-5">
-      <p className="text-sm text-ink-600">{t.contactLead}</p>
+      <p data-cms={`${locale}:request.contactLead`} className="text-sm text-ink-600">{t.contactLead}</p>
       <div className="grid gap-4 sm:grid-cols-2">
         <TextInput
           label={t.contactCompany}
+          cmsLabel={`${locale}:request.contactCompany`}
           required
           autoComplete="organization"
           maxLength={160}
@@ -376,6 +416,7 @@ function ContactStep({ locale }: { locale: Locale }) {
         />
         <TextInput
           label={t.contactName}
+          cmsLabel={`${locale}:request.contactName`}
           required
           autoComplete="name"
           maxLength={160}
@@ -385,6 +426,7 @@ function ContactStep({ locale }: { locale: Locale }) {
         />
         <TextInput
           label={t.contactPhone}
+          cmsLabel={`${locale}:request.contactPhone`}
           required
           type="tel"
           inputMode="tel"
@@ -396,6 +438,7 @@ function ContactStep({ locale }: { locale: Locale }) {
         />
         <TextInput
           label={t.contactEmail}
+          cmsLabel={`${locale}:request.contactEmail`}
           required
           type="email"
           inputMode="email"
@@ -422,14 +465,15 @@ function ContactStep({ locale }: { locale: Locale }) {
         </label>
       </div>
 
-      <p className="text-xs text-steel-500">{t.privacyNote}</p>
+      <p data-cms={`${locale}:request.privacyNote`} className="text-xs text-steel-500">{t.privacyNote}</p>
 
       <div className="flex items-center justify-between gap-3 border-t border-line-200 pt-4">
-        <span className="text-sm text-ink-600">{t.summaryDisclaimer}</span>
+        <span data-cms={`${locale}:request.summaryDisclaimer`} className="text-sm text-ink-600">{t.summaryDisclaimer}</span>
         <button
           type="button"
           onClick={onSubmit}
           disabled={submitting || (touched && !valid)}
+          data-cms={`${locale}:request.submit`}
           className="h-12 border border-signal-600 bg-signal-600 px-8 text-base font-extrabold tracking-wide text-white uppercase transition-colors duration-150 hover:bg-signal-700 disabled:opacity-50"
         >
           {submitting ? t.submitting : t.submit}
@@ -450,19 +494,25 @@ function SuccessView({ locale }: { locale: Locale }) {
   return (
     <div className="flex flex-col gap-6" role="status">
       <div className="border-2 border-ok-600 bg-paper-50 p-6">
-        <p className="font-mono text-xs tracking-[0.2em] text-ok-600 uppercase">{t.successTitle}</p>
-        <p className="mt-3 font-mono text-sm text-steel-500">{t.successReference}</p>
+        <p
+          data-cms={`${locale}:request.successTitle`}
+          className="font-mono text-xs tracking-[0.2em] text-ok-600 uppercase"
+        >
+          {t.successTitle}
+        </p>
+        <p data-cms={`${locale}:request.successReference`} className="mt-3 font-mono text-sm text-steel-500">{t.successReference}</p>
         <p className="tnum text-3xl font-black tracking-tight text-ink-950">{request.reference}</p>
       </div>
-      <p className="text-base text-ink-800">{t.successBody}</p>
+      <p data-cms={`${locale}:request.successBody`} className="text-base text-ink-800">{t.successBody}</p>
       {submissionDemo ? (
-        <p className="text-xs text-steel-500">{t.successDemoNote}</p>
+        <p data-cms={`${locale}:request.successDemoNote`} className="text-xs text-steel-500">{t.successDemoNote}</p>
       ) : null}
       <SummaryStatic locale={locale} />
       <div>
         <button
           type="button"
           onClick={() => reset(locale)}
+          data-cms={`${locale}:request.successNew`}
           className="h-11 border border-ink-950 px-5 text-sm font-bold text-ink-950 hover:bg-paper-100"
         >
           {t.successNew}
@@ -486,7 +536,10 @@ function SummaryStatic({ locale }: { locale: Locale }) {
             : "";
         return (
           <li key={p.lineId} className="flex justify-between gap-3 text-sm">
-            <span className="font-semibold text-ink-800">
+            <span
+              data-cms={`${locale}:profiles.items.${p.profession}.singular`}
+              className="font-semibold text-ink-800"
+            >
               {dict.profiles.items[p.profession]?.singular ?? p.profession}
               {spec}
             </span>
@@ -495,7 +548,8 @@ function SummaryStatic({ locale }: { locale: Locale }) {
         );
       })}
       <li className="mt-1 border-t-2 border-ink-950 pt-2 text-sm font-bold">
-        <span className="tnum">{total}</span> {dict.request.summaryTotal}
+        <span className="tnum">{total}</span>{" "}
+        <span data-cms={`${locale}:request.summaryTotal`}>{dict.request.summaryTotal}</span>
       </li>
     </ul>
   );
@@ -521,8 +575,11 @@ function FailureView({
   return (
     <div className="flex flex-col gap-5" role="alert">
       <div className="border-2 border-signal-600 bg-paper-50 p-6">
-        <p className="text-xl font-extrabold text-ink-950">{t.failureTitle}</p>
-        <p className="mt-2 text-base text-ink-800">
+        <p data-cms={`${locale}:request.failureTitle`} className="text-xl font-extrabold text-ink-950">{t.failureTitle}</p>
+        <p
+          data-cms={`${locale}:request.failureBody`}
+          className="mt-2 text-base text-ink-800"
+        >
           {reason === "no_backend"
             ? t.errors.no_backend
             : validationIssue && validationIssue in t.errors
@@ -534,6 +591,7 @@ function FailureView({
         <button
           type="button"
           onClick={onRetry}
+          data-cms={`${locale}:request.failureRetry`}
           className="h-12 border border-ink-950 bg-ink-950 px-6 text-sm font-bold text-paper-50 hover:bg-ink-800"
         >
           {t.failureRetry}
@@ -544,6 +602,7 @@ function FailureView({
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent("whatsapp_handoff", { locale })}
+            data-cms={`${locale}:request.failureWhatsapp`}
             className="flex h-12 items-center border border-ok-600 px-6 text-sm font-bold text-ok-600 hover:bg-paper-100"
           >
             {t.failureWhatsapp}
@@ -553,6 +612,7 @@ function FailureView({
           <a
             href={`tel:${companyFacts.phone.replace(/[^+0-9]/g, "")}`}
             onClick={() => trackEvent("phone_click", { locale })}
+            data-cms={`${locale}:request.failureCall`}
             className="flex h-12 items-center border border-line-300 px-6 text-sm font-bold text-ink-800 hover:border-ink-600"
           >
             {t.failureCall}

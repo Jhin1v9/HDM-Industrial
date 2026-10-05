@@ -36,6 +36,7 @@ export function NeedStep({ locale }: { locale: Locale }) {
               }}
               title={label?.name ?? need.id}
               hint={label?.hint}
+              cmsTitle={`${locale}:request.needTypes.${need.id}.name`}
             />
           );
         })}
@@ -48,6 +49,7 @@ export function NeedStep({ locale }: { locale: Locale }) {
             role="radio"
             aria-checked={request.mode === "expert"}
             onClick={() => dispatch({ type: "setMode", mode: "expert" })}
+            data-cms={`${locale}:request.modeExpert`}
             className={`h-10 border px-4 text-sm font-semibold ${
               request.mode === "expert"
                 ? "border-signal-500 bg-ink-900 text-paper-50"
@@ -61,6 +63,7 @@ export function NeedStep({ locale }: { locale: Locale }) {
             role="radio"
             aria-checked={request.mode === "assisted"}
             onClick={() => dispatch({ type: "setMode", mode: "assisted" })}
+            data-cms={`${locale}:request.modeAssisted`}
             className={`h-10 border px-4 text-sm font-semibold ${
               request.mode === "assisted"
                 ? "border-signal-500 bg-ink-900 text-paper-50"
@@ -71,7 +74,7 @@ export function NeedStep({ locale }: { locale: Locale }) {
           </button>
         </div>
         {request.mode === "assisted" ? (
-          <p className="text-sm text-ink-600">{t.assistedLead}</p>
+          <p data-cms={`${locale}:request.assistedLead`} className="text-sm text-ink-600">{t.assistedLead}</p>
         ) : null}
       </div>
     </div>
@@ -91,6 +94,7 @@ export function ProfilesStep({ locale }: { locale: Locale }) {
         <TextArea
           maxLength={4000}
           label={t.assistedTitle}
+          cmsLabel={`${locale}:request.assistedTitle`}
           value={request.jobDescription ?? ""}
           onChange={(v) => dispatch({ type: "setJobDescription", jobDescription: v || null })}
           placeholder={t.assistedPlaceholder}
@@ -99,6 +103,7 @@ export function ProfilesStep({ locale }: { locale: Locale }) {
         />
         <TextInput
           label={t.assistedQuantity}
+          cmsLabel={`${locale}:request.assistedQuantity`}
           value={request.approximateQuantity != null ? String(request.approximateQuantity) : ""}
           onChange={(v) => {
             const n = Number(v.replace(/[^0-9]/g, ""));
@@ -110,7 +115,7 @@ export function ProfilesStep({ locale }: { locale: Locale }) {
           inputMode="numeric"
           placeholder="Ej.: 12"
         />
-        <p className="text-sm text-ink-600">
+        <p data-cms={`${locale}:request.profilesLead`} className="text-sm text-ink-600">
           {t.profilesLead}
         </p>
         <TeamComposer locale={locale} />
@@ -136,7 +141,7 @@ export function ProjectStep({ locale }: { locale: Locale }) {
 
   return (
     <div className="flex flex-col gap-6">
-      <Field label={t.timingLabel}>
+      <Field label={t.timingLabel} cmsLabel={`${locale}:request.timingLabel`}>
         <div className="flex flex-wrap gap-2" role="radiogroup" aria-label={t.timingLabel}>
           {timingOptions.map((option) => {
             const selected = p.timing === option;
@@ -147,6 +152,7 @@ export function ProjectStep({ locale }: { locale: Locale }) {
                 role="radio"
                 aria-checked={selected}
                 onClick={() => dispatch({ type: "setTiming", timing: selected ? null : option })}
+                data-cms={`${locale}:request.timing.${option}`}
                 className={`h-11 border px-4 text-sm font-semibold transition-colors duration-150 ${
                   selected
                     ? "border-signal-500 bg-ink-900 text-paper-50"
@@ -161,7 +167,7 @@ export function ProjectStep({ locale }: { locale: Locale }) {
       </Field>
 
       {p.timing === "fecha-concreta" ? (
-        <Field label={t.startDateLabel} error={dateError ?? undefined}>
+        <Field label={t.startDateLabel} error={dateError ?? undefined} cmsLabel={`${locale}:request.startDateLabel`}>
           <input
             type="date"
             min={todayIso}
@@ -182,7 +188,7 @@ export function ProjectStep({ locale }: { locale: Locale }) {
         </Field>
       ) : null}
 
-      <Field label={t.durationLabel}>
+      <Field label={t.durationLabel} cmsLabel={`${locale}:request.durationLabel`}>
         <div className="flex flex-wrap items-stretch gap-2">
           <input
             inputMode="numeric"
@@ -220,6 +226,7 @@ export function ProjectStep({ locale }: { locale: Locale }) {
                           : { value: p.duration.value, unit },
                     })
                   }
+                  data-cms={`${locale}:request.durationUnits.${unit}`}
                   className={`h-12 border px-3 text-sm font-semibold transition-colors duration-150 ${
                     selected
                       ? "border-signal-500 bg-ink-900 text-paper-50"
@@ -234,7 +241,7 @@ export function ProjectStep({ locale }: { locale: Locale }) {
         </div>
       </Field>
 
-      <Field label={t.locationLabel} hint={t.locationHint}>
+      <Field label={t.locationLabel} hint={t.locationHint} cmsLabel={`${locale}:request.locationLabel`}>
         <div className="grid gap-2 sm:grid-cols-2" role="radiogroup" aria-label={t.locationLabel}>
           {coverageAreas.map((area) => {
             const selected = p.coverageArea === area.id;
@@ -251,6 +258,7 @@ export function ProjectStep({ locale }: { locale: Locale }) {
                   trackEvent("location_selected", { area: area.id, locale });
                 }}
                 title={dict.coverage.items[area.id]?.name ?? area.id}
+                cmsTitle={`${locale}:coverage.items.${area.id}.name`}
               />
             );
           })}
@@ -261,18 +269,20 @@ export function ProjectStep({ locale }: { locale: Locale }) {
         <TextInput
           maxLength={120}
           label={t.cityLabel}
+          cmsLabel={`${locale}:request.cityLabel`}
           value={p.city ?? ""}
           onChange={(v) => dispatch({ type: "setCity", city: v || null })}
         />
         <TextInput
           maxLength={255}
           label={t.addressLabel}
+          cmsLabel={`${locale}:request.addressLabel`}
           value={p.address ?? ""}
           onChange={(v) => dispatch({ type: "setAddress", address: v || null })}
         />
       </div>
 
-      <Field label={t.sectorLabel}>
+      <Field label={t.sectorLabel} cmsLabel={`${locale}:request.sectorLabel`}>
         <div className="flex flex-wrap gap-2" role="radiogroup" aria-label={t.sectorLabel}>
           {sectors.map((sector) => {
             const selected = request.sector === sector.id;
@@ -283,6 +293,7 @@ export function ProjectStep({ locale }: { locale: Locale }) {
                 role="radio"
                 aria-checked={selected}
                 onClick={() => dispatch({ type: "setSector", sector: selected ? null : sector.id })}
+                data-cms={`${locale}:sectors.items.${sector.id}.name`}
                 className={`h-11 border px-4 text-sm font-semibold transition-colors duration-150 ${
                   selected
                     ? "border-signal-500 bg-ink-900 text-paper-50"
@@ -299,6 +310,7 @@ export function ProjectStep({ locale }: { locale: Locale }) {
       <TextInput
         maxLength={120}
         label={t.shiftLabel}
+        cmsLabel={`${locale}:request.shiftLabel`}
         value={p.shift ?? ""}
         onChange={(v) => dispatch({ type: "setShift", shift: v || null })}
         placeholder={t.shiftPlaceholder}
@@ -307,6 +319,7 @@ export function ProjectStep({ locale }: { locale: Locale }) {
       <TextArea
         maxLength={4000}
         label={t.descriptionLabel}
+        cmsLabel={`${locale}:request.descriptionLabel`}
         value={p.description ?? ""}
         onChange={(v) => dispatch({ type: "setDescription", description: v || null })}
         rows={4}
@@ -324,14 +337,14 @@ export function LogisticsStep({ locale }: { locale: Locale }) {
   const l = request.logistics;
 
   const triOptions = [
-    { value: "required" as const, label: t.logisticsYes },
-    { value: "not_required" as const, label: t.logisticsNo },
-    { value: "to_be_defined" as const, label: t.logisticsTbd },
+    { value: "required" as const, label: t.logisticsYes, cms: `${locale}:request.logisticsYes` },
+    { value: "not_required" as const, label: t.logisticsNo, cms: `${locale}:request.logisticsNo` },
+    { value: "to_be_defined" as const, label: t.logisticsTbd, cms: `${locale}:request.logisticsTbd` },
   ];
 
   return (
     <div className="flex flex-col gap-6">
-      <Field label={t.displacement}>
+      <Field label={t.displacement} cmsLabel={`${locale}:request.displacement`}>
         <TriStateRadio
           groupLabel={t.displacement}
           value={l.displacement}
@@ -351,18 +364,18 @@ export function LogisticsStep({ locale }: { locale: Locale }) {
 
       {l.displacement === "required" ? (
         <>
-          <Field label={t.displacementScope}>
+          <Field label={t.displacementScope} cmsLabel={`${locale}:request.displacementScope`}>
             <TriStateRadio
               groupLabel={t.displacementScope}
               value={l.displacementScope}
               onChange={(v) => dispatch({ type: "setLogistics", logistics: { displacementScope: v } })}
               options={[
-                { value: "espana", label: t.displacementEspana },
-                { value: "portugal", label: t.displacementPortugal },
+                { value: "espana", label: t.displacementEspana, cms: `${locale}:request.displacementEspana` },
+                { value: "portugal", label: t.displacementPortugal, cms: `${locale}:request.displacementPortugal` },
               ]}
             />
           </Field>
-          <Field label={t.accommodation}>
+          <Field label={t.accommodation} cmsLabel={`${locale}:request.accommodation`}>
             <TriStateRadio
               groupLabel={t.accommodation}
               value={l.accommodation}
@@ -370,7 +383,7 @@ export function LogisticsStep({ locale }: { locale: Locale }) {
               options={triOptions}
             />
           </Field>
-          <Field label={t.transport}>
+          <Field label={t.transport} cmsLabel={`${locale}:request.transport`}>
             <TriStateRadio
               groupLabel={t.transport}
               value={l.transport}
@@ -378,7 +391,7 @@ export function LogisticsStep({ locale }: { locale: Locale }) {
               options={triOptions}
             />
           </Field>
-          <Field label={t.allowances}>
+          <Field label={t.allowances} cmsLabel={`${locale}:request.allowances`}>
             <TriStateRadio
               groupLabel={t.allowances}
               value={l.allowances}
@@ -389,6 +402,7 @@ export function LogisticsStep({ locale }: { locale: Locale }) {
           <TextArea
             maxLength={1000}
             label={t.logisticsNotes}
+            cmsLabel={`${locale}:request.logisticsNotes`}
             value={l.notes ?? ""}
             onChange={(v) => dispatch({ type: "setLogistics", logistics: { notes: v || null } })}
             rows={3}
@@ -396,15 +410,15 @@ export function LogisticsStep({ locale }: { locale: Locale }) {
         </>
       ) : null}
 
-      <Field label={t.certsQuestion}>
+      <Field label={t.certsQuestion} cmsLabel={`${locale}:request.certsQuestion`}>
         <TriStateRadio
           groupLabel={t.certsQuestion}
           value={request.certificationRequired}
           onChange={(v) => dispatch({ type: "setCertificationRequired", required: v })}
           options={[
-            { value: "si", label: t.certsYes },
-            { value: "no", label: t.certsNo },
-            { value: "no-se", label: t.certsUnknown },
+            { value: "si", label: t.certsYes, cms: `${locale}:request.certsYes` },
+            { value: "no", label: t.certsNo, cms: `${locale}:request.certsNo` },
+            { value: "no-se", label: t.certsUnknown, cms: `${locale}:request.certsUnknown` },
           ]}
         />
       </Field>
@@ -412,6 +426,7 @@ export function LogisticsStep({ locale }: { locale: Locale }) {
       {request.certificationRequired === "si" ? (
         <TextArea
           label={t.certsLabel}
+          cmsLabel={`${locale}:request.certsLabel`}
           value={request.certificationRequirements.join("\n")}
           onChange={(v) =>
             dispatch({
@@ -451,8 +466,8 @@ export function AttachmentsBlock({ locale }: { locale: Locale }) {
   return (
     <div className="flex flex-col gap-3 border-t border-line-200 pt-5">
       <div>
-        <p className="text-sm font-bold text-ink-800">{t.attachmentsTitle}</p>
-        <p className="mt-1 text-sm text-ink-600">{t.attachmentsLead}</p>
+        <p data-cms={`${locale}:request.attachmentsTitle`} className="text-sm font-bold text-ink-800">{t.attachmentsTitle}</p>
+        <p data-cms={`${locale}:request.attachmentsLead`} className="mt-1 text-sm text-ink-600">{t.attachmentsLead}</p>
       </div>
       <input
         ref={inputRef}
@@ -501,13 +516,14 @@ export function AttachmentsBlock({ locale }: { locale: Locale }) {
           type="button"
           tabIndex={-1}
           onClick={() => inputRef.current?.click()}
+          data-cms={`${locale}:request.attachmentsCta`}
           className={`h-11 border border-ink-800 bg-paper-50 px-4 text-sm font-bold text-ink-900 transition-colors duration-150 hover:bg-paper-100 ${
             inputFocused ? "outline-2 outline-offset-2 outline-ink-950" : ""
           }`}
         >
           {t.attachmentsCta}
         </button>
-        <p className="text-xs text-steel-500">{t.attachmentsNote}</p>
+        <p data-cms={`${locale}:request.attachmentsNote`} className="text-xs text-steel-500">{t.attachmentsNote}</p>
       </div>
       {error ? (
         <p role="alert" className="text-sm font-semibold text-signal-600">
@@ -527,6 +543,7 @@ export function AttachmentsBlock({ locale }: { locale: Locale }) {
               <button
                 type="button"
                 onClick={() => dispatch({ type: "removeAttachment", id: a.id })}
+                data-cms={`${locale}:request.attachmentRemove`}
                 className="text-sm font-semibold text-ink-600 hover:text-signal-600"
                 aria-label={`${t.attachmentRemove}: ${a.name}`}
               >

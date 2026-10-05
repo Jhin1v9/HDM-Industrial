@@ -68,6 +68,7 @@ export function Media({
         {/* eslint-disable-next-line @next/next/no-img-element -- static export, dimensões conhecidas */}
         <img
           data-parallax
+          data-cms-media={id}
           src={entry.file}
           alt={entry.alt[locale] ?? entry.alt.es}
           width={entry.width}
@@ -88,9 +89,10 @@ export function Media({
     <div
       role="img"
       aria-label={dict.common.pendingAsset}
+      data-cms-media={id}
       className={`tech-grid relative flex ${ratioClass} flex-col items-center justify-center gap-2 border border-dashed border-steel-300 bg-paper-100 p-6 text-center ${className}`}
     >
-      <span className="max-w-xs text-sm text-steel-500">{dict.common.pendingAsset}</span>
+      <span data-cms={`${locale}:common.pendingAsset`} className="max-w-xs text-sm text-steel-500">{dict.common.pendingAsset}</span>
     </div>
   );
 }

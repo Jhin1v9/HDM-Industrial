@@ -11,17 +11,21 @@ export function PrefillProfessionButton({
   profession,
   className,
   children,
+  cmsKey,
 }: {
   locale: Locale;
   profession: ProfessionId;
   className?: string;
   children: ReactNode;
+  /** nexo-cms editmode: data-cms keypath ("<locale>:<dotted.keypath>") do label. */
+  cmsKey?: string;
 }) {
   const prefill = usePrefillRequest();
   const { openRequest } = useRequestUi();
   return (
     <button
       type="button"
+      data-cms={cmsKey}
       className={className}
       onClick={() => {
         prefill.addProfession(profession);
@@ -40,18 +44,22 @@ export function PrefillNeedTypeButton({
   displacement = false,
   className,
   children,
+  cmsKey,
 }: {
   locale: Locale;
   needType: NeedTypeId | null;
   displacement?: boolean;
   className?: string;
   children: ReactNode;
+  /** nexo-cms editmode: data-cms keypath ("<locale>:<dotted.keypath>") do label. */
+  cmsKey?: string;
 }) {
   const prefill = usePrefillRequest();
   const { openRequest } = useRequestUi();
   return (
     <button
       type="button"
+      data-cms={cmsKey}
       className={className}
       onClick={() => {
         if (needType) prefill.setNeedType(needType);
@@ -70,17 +78,21 @@ export function PrefillAreaButton({
   area,
   className,
   children,
+  cmsKey,
 }: {
   locale: Locale;
   area: CoverageAreaId;
   className?: string;
   children: ReactNode;
+  /** nexo-cms editmode: data-cms keypath ("<locale>:<dotted.keypath>") do label. */
+  cmsKey?: string;
 }) {
   const prefill = usePrefillRequest();
   const { openRequest } = useRequestUi();
   return (
     <button
       type="button"
+      data-cms={cmsKey}
       className={className}
       onClick={() => {
         prefill.setCoverageArea(area);

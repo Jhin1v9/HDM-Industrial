@@ -77,6 +77,7 @@ export function RequestIndicator({ locale }: { locale: Locale }) {
     <button
       type="button"
       onClick={openRequest}
+      data-cms={`${locale}:request.indicatorEmpty`}
       className={`flex h-11 items-center gap-2 border px-4 font-mono text-xs font-bold tracking-widest uppercase transition-colors duration-150 ${
         hasContent
           ? "border-signal-500 bg-signal-600 text-white hover:bg-signal-700"
@@ -112,6 +113,7 @@ export function MobileRequestBar({ locale }: { locale: Locale }) {
       <button
         type="button"
         onClick={openRequest}
+        data-cms={`${locale}:request.indicatorEmpty`}
         className="flex h-12 w-full items-center justify-center gap-2 border border-signal-500 bg-signal-600 font-mono text-sm font-bold tracking-widest text-white uppercase active:bg-signal-700"
       >
         {hydrated && hasContent ? (
@@ -222,7 +224,10 @@ export function RequestDrawer({ locale }: { locale: Locale }) {
         className="relative h-full w-full max-w-2xl overflow-y-auto bg-paper-50 shadow-[0_0_40px_rgba(16,21,26,0.4)]"
       >
         <div className="sticky top-0 z-10 flex items-center justify-between border-b border-line-200 bg-paper-50 px-5 py-4 sm:px-8">
-          <p className="font-mono text-xs font-bold tracking-[0.2em] text-ink-800 uppercase">
+          <p
+            data-cms={`${locale}:request.title`}
+            className="font-mono text-xs font-bold tracking-[0.2em] text-ink-800 uppercase"
+          >
             {dict.request.title}
           </p>
           <button

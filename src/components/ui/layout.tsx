@@ -51,6 +51,9 @@ export function SectionHeader({
   lead,
   dark = false,
   as: Heading = "h2",
+  cmsEyebrow,
+  cmsTitle,
+  cmsLead,
 }: {
   eyebrow?: string;
   title: string;
@@ -58,11 +61,16 @@ export function SectionHeader({
   dark?: boolean;
   /** Use "h1" for the page's primary header (exactly one per page). */
   as?: "h1" | "h2";
+  /** nexo-cms editmode: data-cms keypaths ("<locale>:<dotted.keypath>") por nó. */
+  cmsEyebrow?: string;
+  cmsTitle?: string;
+  cmsLead?: string;
 }) {
   return (
     <header className="mb-10 max-w-3xl">
       {eyebrow ? (
         <p
+          data-cms={cmsEyebrow}
           className={`mb-3 font-mono text-xs tracking-[0.18em] uppercase ${
             dark ? "text-steel-300" : "text-steel-500"
           }`}
@@ -70,11 +78,17 @@ export function SectionHeader({
           {eyebrow}
         </p>
       ) : null}
-      <Heading className="text-[clamp(1.7rem,3.2vw,2.6rem)] leading-[1.05] font-extrabold tracking-tight text-balance">
+      <Heading
+        data-cms={cmsTitle}
+        className="text-[clamp(1.7rem,3.2vw,2.6rem)] leading-[1.05] font-extrabold tracking-tight text-balance"
+      >
         {title}
       </Heading>
       {lead ? (
-        <p className={`mt-4 text-lg leading-relaxed ${dark ? "text-steel-300" : "text-ink-600"}`}>
+        <p
+          data-cms={cmsLead}
+          className={`mt-4 text-lg leading-relaxed ${dark ? "text-steel-300" : "text-ink-600"}`}
+        >
           {lead}
         </p>
       ) : null}

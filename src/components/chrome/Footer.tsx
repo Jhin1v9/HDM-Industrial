@@ -9,23 +9,23 @@ export function Footer({ locale }: { locale: Locale }) {
   const f = dict.footer;
 
   const explore = [
-    { href: localizedPath(locale, "personal-industrial"), label: dict.nav.profiles },
-    { href: localizedPath(locale, "soluciones"), label: dict.nav.solutions },
-    { href: localizedPath(locale, "sectores"), label: dict.nav.sectors },
-    { href: localizedPath(locale, "cobertura"), label: dict.nav.coverage },
+    { href: localizedPath(locale, "personal-industrial"), label: dict.nav.profiles, cms: "nav.profiles" },
+    { href: localizedPath(locale, "soluciones"), label: dict.nav.solutions, cms: "nav.solutions" },
+    { href: localizedPath(locale, "sectores"), label: dict.nav.sectors, cms: "nav.sectors" },
+    { href: localizedPath(locale, "cobertura"), label: dict.nav.coverage, cms: "nav.coverage" },
   ];
   const company = [
-    { href: localizedPath(locale, "como-trabajamos"), label: dict.nav.howWeWork },
-    { href: localizedPath(locale, "certificaciones-y-seguridad"), label: dict.nav.certifications },
-    { href: localizedPath(locale, "proyectos"), label: dict.nav.projects },
-    { href: localizedPath(locale, "empresa"), label: dict.nav.company },
-    { href: localizedPath(locale, "contacto"), label: dict.nav.contact },
-    { href: localizedPath(locale, "trabaja-con-nosotros"), label: dict.nav.careers },
+    { href: localizedPath(locale, "como-trabajamos"), label: dict.nav.howWeWork, cms: "nav.howWeWork" },
+    { href: localizedPath(locale, "certificaciones-y-seguridad"), label: dict.nav.certifications, cms: "nav.certifications" },
+    { href: localizedPath(locale, "proyectos"), label: dict.nav.projects, cms: "nav.projects" },
+    { href: localizedPath(locale, "empresa"), label: dict.nav.company, cms: "nav.company" },
+    { href: localizedPath(locale, "contacto"), label: dict.nav.contact, cms: "nav.contact" },
+    { href: localizedPath(locale, "trabaja-con-nosotros"), label: dict.nav.careers, cms: "nav.careers" },
   ];
   const legal = [
-    { href: localizedPath(locale, "aviso-legal"), label: f.legalNotice },
-    { href: localizedPath(locale, "privacidad"), label: f.privacy },
-    { href: localizedPath(locale, "cookies"), label: f.cookies },
+    { href: localizedPath(locale, "aviso-legal"), label: f.legalNotice, cms: "footer.legalNotice" },
+    { href: localizedPath(locale, "privacidad"), label: f.privacy, cms: "footer.privacy" },
+    { href: localizedPath(locale, "cookies"), label: f.cookies, cms: "footer.cookies" },
   ];
 
   return (
@@ -41,9 +41,10 @@ export function Footer({ locale }: { locale: Locale }) {
             height={330}
             className="mx-auto h-9 w-auto lg:mx-0"
           />
-          <p className="mt-3 max-w-xs text-sm text-steel-300">{f.tagline}</p>
+          <p data-cms={`${locale}:footer.tagline`} className="mt-3 max-w-xs text-sm text-steel-300">{f.tagline}</p>
           <Link
             href={localizedPath(locale, "solicitar-personal")}
+            data-cms={`${locale}:common.requestPersonal`}
             className="mt-5 inline-flex h-11 items-center border border-signal-500 bg-signal-600 px-5 font-mono text-xs font-bold tracking-widest text-white uppercase hover:bg-signal-700"
           >
             {dict.common.requestPersonal}
@@ -62,11 +63,11 @@ export function Footer({ locale }: { locale: Locale }) {
           </div>
         </div>
         <nav aria-label={f.explore}>
-          <p className="mb-3 font-mono text-[11px] tracking-[0.2em] text-steel-400 uppercase">{f.explore}</p>
+          <p data-cms={`${locale}:footer.explore`} className="mb-3 font-mono text-[11px] tracking-[0.2em] text-steel-400 uppercase">{f.explore}</p>
           <ul className="flex flex-col gap-2 text-sm">
             {explore.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="text-paper-50/85 hover:text-white hover:underline underline-offset-4">
+                <Link href={l.href} data-cms={`${locale}:${l.cms}`} className="text-paper-50/85 hover:text-white hover:underline underline-offset-4">
                   {l.label}
                 </Link>
               </li>
@@ -74,11 +75,11 @@ export function Footer({ locale }: { locale: Locale }) {
           </ul>
         </nav>
         <nav aria-label={f.companyCol}>
-          <p className="mb-3 font-mono text-[11px] tracking-[0.2em] text-steel-400 uppercase">{f.companyCol}</p>
+          <p data-cms={`${locale}:footer.companyCol`} className="mb-3 font-mono text-[11px] tracking-[0.2em] text-steel-400 uppercase">{f.companyCol}</p>
           <ul className="flex flex-col gap-2 text-sm">
             {company.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="text-paper-50/85 hover:text-white hover:underline underline-offset-4">
+                <Link href={l.href} data-cms={`${locale}:${l.cms}`} className="text-paper-50/85 hover:text-white hover:underline underline-offset-4">
                   {l.label}
                 </Link>
               </li>
@@ -86,11 +87,11 @@ export function Footer({ locale }: { locale: Locale }) {
           </ul>
         </nav>
         <nav aria-label={f.legal}>
-          <p className="mb-3 font-mono text-[11px] tracking-[0.2em] text-steel-400 uppercase">{f.legal}</p>
+          <p data-cms={`${locale}:footer.legal`} className="mb-3 font-mono text-[11px] tracking-[0.2em] text-steel-400 uppercase">{f.legal}</p>
           <ul className="flex flex-col gap-2 text-sm">
             {legal.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="text-paper-50/85 hover:text-white hover:underline underline-offset-4">
+                <Link href={l.href} data-cms={`${locale}:${l.cms}`} className="text-paper-50/85 hover:text-white hover:underline underline-offset-4">
                   {l.label}
                 </Link>
               </li>
@@ -100,8 +101,8 @@ export function Footer({ locale }: { locale: Locale }) {
       </div>
       <div className="border-t border-ink-800">
         <div className="mx-auto flex max-w-[76rem] flex-col gap-2 px-5 py-5 text-xs text-steel-400 sm:px-8">
-          <p>{f.fiscalNote}</p>
-          <p>{f.editorialNote}</p>
+          <p data-cms={`${locale}:footer.fiscalNote`}>{f.fiscalNote}</p>
+          <p data-cms={`${locale}:footer.editorialNote`}>{f.editorialNote}</p>
         </div>
       </div>
     </footer>

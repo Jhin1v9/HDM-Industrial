@@ -6,6 +6,8 @@ export interface HeroSlide {
   src: string;
   mobileSrc?: string;
   alt: string;
+  /** nexo-cms editmode: id do slot no mediaManifest (data-cms-media no <img>). */
+  mediaId?: string;
 }
 
 const INTERVAL_MS = 30000;
@@ -58,6 +60,7 @@ export function HeroRotator({ slides, className }: { slides: HeroSlide[]; classN
               <img
                 src={s.src}
                 alt={active ? s.alt : ""}
+                data-cms-media={s.mediaId}
                 width={1920}
                 height={1280}
                 decoding="async"

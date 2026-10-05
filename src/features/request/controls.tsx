@@ -76,12 +76,15 @@ export function OptionCard({
   title,
   hint,
   name,
+  cmsTitle,
 }: {
   selected: boolean;
   onSelect: () => void;
   title: string;
   hint?: string;
   name: string;
+  /** nexo-cms editmode: data-cms keypath ("<locale>:<dotted.keypath>") do título. */
+  cmsTitle?: string;
 }) {
   return (
     <button
@@ -96,7 +99,7 @@ export function OptionCard({
           : "border-line-300 bg-paper-50 text-ink-950 hover:border-ink-600"
       }`}
     >
-      <span className="text-base font-bold">{title}</span>
+      <span data-cms={cmsTitle} className="text-base font-bold">{title}</span>
       {hint ? (
         <span className={`text-sm ${selected ? "text-steel-300" : "text-ink-600"}`}>{hint}</span>
       ) : null}
@@ -111,16 +114,19 @@ export function Field({
   hint,
   error,
   children,
+  cmsLabel,
 }: {
   label: string;
   hint?: string;
   error?: string;
   children: ReactNode;
+  /** nexo-cms editmode: data-cms keypath ("<locale>:<dotted.keypath>") do label. */
+  cmsLabel?: string;
 }) {
   const id = useId();
   return (
     <div className="flex flex-col gap-1.5">
-      <span id={`${id}-label`} className="text-sm font-bold text-ink-800">
+      <span id={`${id}-label`} data-cms={cmsLabel} className="text-sm font-bold text-ink-800">
         {label}
       </span>
       <div aria-labelledby={`${id}-label`}>{children}</div>
@@ -145,6 +151,7 @@ export function TextInput({
   autoComplete,
   inputMode,
   maxLength,
+  cmsLabel,
 }: {
   label: string;
   value: string;
@@ -156,11 +163,13 @@ export function TextInput({
   autoComplete?: string;
   inputMode?: "text" | "email" | "tel" | "numeric";
   maxLength?: number;
+  /** nexo-cms editmode: data-cms keypath ("<locale>:<dotted.keypath>") do label. */
+  cmsLabel?: string;
 }) {
   const id = useId();
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor={id} className="text-sm font-bold text-ink-800">
+      <label htmlFor={id} data-cms={cmsLabel} className="text-sm font-bold text-ink-800">
         {label}
         {required ? <span aria-hidden="true" className="text-signal-600"> *</span> : null}
       </label>
@@ -194,6 +203,7 @@ export function TextArea({
   rows = 4,
   hint,
   maxLength,
+  cmsLabel,
 }: {
   label: string;
   value: string;
@@ -202,11 +212,13 @@ export function TextArea({
   rows?: number;
   hint?: string;
   maxLength?: number;
+  /** nexo-cms editmode: data-cms keypath ("<locale>:<dotted.keypath>") do label. */
+  cmsLabel?: string;
 }) {
   const id = useId();
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor={id} className="text-sm font-bold text-ink-800">
+      <label htmlFor={id} data-cms={cmsLabel} className="text-sm font-bold text-ink-800">
         {label}
       </label>
       <textarea
@@ -233,7 +245,7 @@ export function TriStateRadio<T extends string>({
 }: {
   value: T | null;
   onChange: (value: T) => void;
-  options: { value: T; label: string }[];
+  options: { value: T; label: string; cms?: string }[];
   groupLabel: string;
 }) {
   return (
@@ -247,6 +259,7 @@ export function TriStateRadio<T extends string>({
             role="radio"
             aria-checked={selected}
             onClick={() => onChange(option.value)}
+            data-cms={option.cms}
             className={`h-11 border px-4 text-sm font-semibold transition-colors duration-150 ${
               selected
                 ? "border-signal-500 bg-ink-900 text-paper-50"

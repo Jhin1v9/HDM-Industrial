@@ -20,18 +20,18 @@ export function Header({ locale }: { locale: Locale }) {
   const [hdmOpen, setHdmOpen] = useState(false);
 
   const links = [
-    { href: localizedPath(locale, "personal-industrial"), label: dict.nav.profiles },
-    { href: localizedPath(locale, "soluciones"), label: dict.nav.solutions },
-    { href: localizedPath(locale, "sectores"), label: dict.nav.sectors },
-    { href: localizedPath(locale, "cobertura"), label: dict.nav.coverage },
-    { href: localizedPath(locale, "trabaja-con-nosotros"), label: dict.nav.careers },
+    { href: localizedPath(locale, "personal-industrial"), label: dict.nav.profiles, cms: "nav.profiles" },
+    { href: localizedPath(locale, "soluciones"), label: dict.nav.solutions, cms: "nav.solutions" },
+    { href: localizedPath(locale, "sectores"), label: dict.nav.sectors, cms: "nav.sectors" },
+    { href: localizedPath(locale, "cobertura"), label: dict.nav.coverage, cms: "nav.coverage" },
+    { href: localizedPath(locale, "trabaja-con-nosotros"), label: dict.nav.careers, cms: "nav.careers" },
   ];
   const hdmLinks = [
-    { href: localizedPath(locale, "como-trabajamos"), label: dict.nav.howWeWork },
-    { href: localizedPath(locale, "certificaciones-y-seguridad"), label: dict.nav.certifications },
-    { href: localizedPath(locale, "proyectos"), label: dict.nav.projects },
-    { href: localizedPath(locale, "empresa"), label: dict.nav.company },
-    { href: localizedPath(locale, "contacto"), label: dict.nav.contact },
+    { href: localizedPath(locale, "como-trabajamos"), label: dict.nav.howWeWork, cms: "nav.howWeWork" },
+    { href: localizedPath(locale, "certificaciones-y-seguridad"), label: dict.nav.certifications, cms: "nav.certifications" },
+    { href: localizedPath(locale, "proyectos"), label: dict.nav.projects, cms: "nav.projects" },
+    { href: localizedPath(locale, "empresa"), label: dict.nav.company, cms: "nav.company" },
+    { href: localizedPath(locale, "contacto"), label: dict.nav.contact, cms: "nav.contact" },
   ];
 
   // Language switcher preserva a rota atual (com slugs localizados) e NUNCA apaga o request (§39).
@@ -64,6 +64,7 @@ export function Header({ locale }: { locale: Locale }) {
             <Link
               key={link.href}
               href={link.href}
+              data-cms={`${locale}:${link.cms}`}
               className="px-3 py-2 text-sm font-semibold text-paper-50/90 transition-colors duration-150 hover:text-white hover:underline underline-offset-4"
             >
               {link.label}
@@ -99,6 +100,7 @@ export function Header({ locale }: { locale: Locale }) {
                 <Link
                   key={link.href}
                   href={link.href}
+                  data-cms={`${locale}:${link.cms}`}
                   className="block px-4 py-2.5 text-sm text-paper-50/90 hover:bg-ink-800 hover:text-white"
                 >
                   {link.label}
@@ -147,6 +149,7 @@ export function Header({ locale }: { locale: Locale }) {
                 <Link
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
+                  data-cms={`${locale}:${link.cms}`}
                   className="block py-2.5 text-lg font-semibold text-paper-50"
                 >
                   {link.label}

@@ -23,6 +23,8 @@ export function SolicitarPersonalPage({ locale }: { locale: Locale }) {
           title={dict.request.title}
           lead={dict.home.heroNote}
           as="h1"
+          cmsTitle={`${locale}:request.title`}
+          cmsLead={`${locale}:home.heroNote`}
         />
         <div className="border border-line-300 bg-paper-50 p-5 sm:p-8">
           <RequestPanel locale={locale} />
@@ -42,17 +44,28 @@ export function ContactoPage({ locale }: { locale: Locale }) {
     <Section>
       <Container narrow>
         <Breadcrumbs locale={locale} items={[{ label: dict.nav.contact }]} />
-        <SectionHeader eyebrow="HDM Industrial" title={c.title} lead={c.lead} as="h1" />
+        <SectionHeader
+          eyebrow="HDM Industrial"
+          title={c.title}
+          lead={c.lead}
+          as="h1"
+          cmsTitle={`${locale}:contact.title`}
+          cmsLead={`${locale}:contact.lead`}
+        />
         <div className="flex flex-col gap-8">
           <OpenRequestButton
             locale={locale}
+            cmsKey={`${locale}:common.requestCta`}
             className="flex h-14 items-center justify-center border border-signal-500 bg-signal-600 px-8 text-base font-extrabold tracking-wide text-white uppercase hover:bg-signal-700"
           >
             {dict.common.requestCta}
           </OpenRequestButton>
 
           <div className="border border-line-200 bg-paper-50 p-6">
-            <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
+            <h2
+              data-cms={`${locale}:contact.directTitle`}
+              className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase"
+            >
               {c.directTitle}
             </h2>
             {companyFacts.phone || companyFacts.email || companyFacts.whatsapp ? (
@@ -91,17 +104,17 @@ export function ContactoPage({ locale }: { locale: Locale }) {
                 ) : null}
               </ul>
             ) : (
-              <p className="mt-4 border-l-2 border-signal-600 pl-4 text-base text-ink-600">
+              <p data-cms={`${locale}:contact.pendingData`} className="mt-4 border-l-2 border-signal-600 pl-4 text-base text-ink-600">
                 {c.pendingData}
               </p>
             )}
-            <p className="mt-6 text-xs text-steel-500">{dict.footer.fiscalNote}</p>
+            <p data-cms={`${locale}:footer.fiscalNote`} className="mt-6 text-xs text-steel-500">{dict.footer.fiscalNote}</p>
           </div>
 
           {companyFacts.email ? (
             <div className="border border-line-200 bg-paper-50 p-6">
-              <h2 className="text-lg font-extrabold text-ink-950">{c.formTitle}</h2>
-              <p className="mt-1 text-sm text-ink-600">{c.formNote}</p>
+              <h2 data-cms={`${locale}:contact.formTitle`} className="text-lg font-extrabold text-ink-950">{c.formTitle}</h2>
+              <p data-cms={`${locale}:contact.formNote`} className="mt-1 text-sm text-ink-600">{c.formNote}</p>
               <ContactMailForm locale={locale} />
             </div>
           ) : null}
@@ -133,16 +146,22 @@ export function LegalPage({
     <Section>
       <Container narrow>
         <Breadcrumbs locale={locale} items={[{ label: labels[kind] }]} />
-        <SectionHeader eyebrow={dict.footer.legal} title={content.title} as="h1" />
+        <SectionHeader
+          eyebrow={dict.footer.legal}
+          title={content.title}
+          as="h1"
+          cmsEyebrow={`${locale}:footer.legal`}
+          cmsTitle={`${locale}:legal.${kind}.title`}
+        />
         {"body" in content ? (
-          <p className="max-w-2xl text-base leading-relaxed text-ink-700">{content.body}</p>
+          <p data-cms={`${locale}:legal.${kind}.body`} className="max-w-2xl text-base leading-relaxed text-ink-700">{content.body}</p>
         ) : (
           <div className="flex flex-col gap-6">
-            <p className="max-w-2xl text-base leading-relaxed text-ink-700">{content.intro}</p>
-            {content.sections.map((s) => (
+            <p data-cms={`${locale}:legal.${kind}.intro`} className="max-w-2xl text-base leading-relaxed text-ink-700">{content.intro}</p>
+            {content.sections.map((s, i) => (
               <div key={s.title} className="border-l-2 border-ink-950 pl-5">
-                <h2 className="text-lg font-extrabold text-ink-950">{s.title}</h2>
-                <p className="mt-1 max-w-2xl text-base leading-relaxed text-ink-600">{s.body}</p>
+                <h2 data-cms={`${locale}:legal.${kind}.sections.${i}.title`} className="text-lg font-extrabold text-ink-950">{s.title}</h2>
+                <p data-cms={`${locale}:legal.${kind}.sections.${i}.body`} className="mt-1 max-w-2xl text-base leading-relaxed text-ink-600">{s.body}</p>
               </div>
             ))}
           </div>
@@ -161,17 +180,19 @@ export function NotFoundContent({ locale }: { locale: Locale }) {
     <Section>
       <Container narrow className="text-center">
         <p className="tnum text-7xl font-black text-steel-300">404</p>
-        <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-ink-950">{nf.title}</h1>
-        <p className="mx-auto mt-3 max-w-md text-base text-ink-600">{nf.body}</p>
+        <h1 data-cms={`${locale}:notFound.title`} className="mt-4 text-3xl font-extrabold tracking-tight text-ink-950">{nf.title}</h1>
+        <p data-cms={`${locale}:notFound.body`} className="mx-auto mt-3 max-w-md text-base text-ink-600">{nf.body}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link
             href={localizedPath(locale, "")}
+            data-cms={`${locale}:notFound.cta`}
             className="flex h-12 items-center border border-ink-950 bg-ink-950 px-6 text-sm font-bold text-paper-50 hover:bg-ink-800"
           >
             {nf.cta}
           </Link>
           <OpenRequestButton
             locale={locale}
+            cmsKey={`${locale}:common.viewRequest`}
             className="flex h-12 items-center border border-signal-600 px-6 text-sm font-bold text-signal-600 hover:bg-signal-100"
           >
             {dict.common.viewRequest}
