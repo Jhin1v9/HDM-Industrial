@@ -28,6 +28,16 @@ Nada aqui bloqueia o build. Atualizar quando o cliente confirmar.
   NO del sitio). OJO: usar la URL **raíz** `/previas/hdm-matheus-v2/` en los
   tests — el español va SIN prefijo (`app/(es)`), `/es/` es un 404 (era el
   error que hizo fallar el primer test, no el sitio).
+- **Timing nuevo del rotador (19/10 tarde, revisión del usuario)**: el
+  decreto de Matheus de **30s/foto** hacía que el vídeo (slide 1) tardara
+  2,5 min en llegar al girar y — peor — **se viera repetir en loop** dentro
+  de su propia slide ("tarda bastante o repite el vídeo"). Ahora:
+  `durationMs` por slide — **vídeo 19s = 1 clipe completo (18,4s) y pasa,
+  sin attribute `loop`** (al re-activarse con `active` hace `currentTime=0`
+  y vuelve a empezar limpio) + **fotos 8s** (`PHOTO_MS`) → ciclo completo
+  ~75s. Rotación por `setTimeout` reiniciado según la slide activa (los
+  clicks de dots reinician también su countdown). Verificado con Playwright:
+  ct 3→12→18 sin salto (no loop), 01→02@19s→03@27s→04@35s.
 - **Caddy — caché del mp4 (19/10)**: `/videos/*` en el bloque del preview pasa
   de `no-store` (general) a `public, max-age=86400` — si no, cada visita
   re-descargaba los 4MB. HTML sigue `no-store`, `/_next/static` immutable.

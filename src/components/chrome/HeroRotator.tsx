@@ -8,24 +8,30 @@ export interface HeroSlide {
   mobileSrc?: string;
   videoSrc?: string;
   alt: string;
+  /** Duração da slide em ms (default PHOTO_MS). Vídeo usa a duração do clipe. */
+  durationMs?: number;
 }
 
-const INTERVAL_MS = 30000;
+const PHOTO_MS = 8000;
 const FADE_MS = 1400;
 
 /**
  * Hero rotator - pedido do cliente (Matheus, 2026-09-24): "as imagens passam
- * automaticamente, só na primeira parte". TROCA A CADA 30s (decreto do
- * Matheus; antes estava 5s, frenético - corrigido na revisão de 26/09).
- * Crossfade com leve zoom (Ken Burns)
+ * automaticamente, só na primeira parte". Crossfade com leve zoom (Ken Burns)
  * sobre as fotos editoriais licenciadas já registradas (mediaManifest).
  * Respeita prefers-reduced-motion (imagem fixa, sem rotação) - acessibilidade.
  * A legenda editorial e a borda do bloco ficam no HomePage (sem fake proof).
  *
+ * TIMING (19/10/2026 tarde, pedido do utilizador na revisão): o decreto
+ * antigo de Matheus de 30s/foto fazia o vídeo (slide 1) demorar 2,5 min a
+ * aparecer e REPETIR-SE em loop dentro da sua própria slide ("tarda
+ * bastante o repite o vídeo"). Agora: **vídeo 19s = 1 clip completo e passa
+ * (sem loop)**, fotos 8s cada → ciclo completo ~75s. durationMs por slide.
+ *
  * Vídeo hero: REMOVIDO 12/10/2026 (autoplay bloqueado em móveis),
  * RECUPERADO 19/10/2026 SÓ EM DESKTOP e ATIVADO EM TODOS OS VIEWPORTS
  * 19/10/2026 tarde (pedido do utilizador: "como tínhamos antes" - verificar
- * primeiro no desktop e depois no móvel). muted+loop+playsInline com
+ * primeiro no desktop e depois no móvel). muted+playsInline com
  * poster=póster; se o autoplay falhar num device real, fica o póster
  * (mesmo resultado visual de hoje). prefers-reduced-motion também fica
  * só com imagem. PH-VIDEO-HERO-01 segue no manifest (proveniência).
@@ -37,8 +43,10 @@ function HeroVideo({ slide, active }: { slide: HeroSlide; active: boolean }) {
   useEffect(() => {
     const v = ref.current;
     if (!v) return;
-    if (active) void v.play().catch(() => undefined);
-    else v.pause();
+    if (active) {
+      v.currentTime = 0;
+      void v.play().catch(() => undefined);
+    } else v.pause();
   }, [active]);
 
   return (
@@ -47,7 +55,6 @@ function HeroVideo({ slide, active }: { slide: HeroSlide; active: boolean }) {
       src={asset(slide.videoSrc ?? "")}
       poster={asset(slide.src)}
       muted
-      loop
       playsInline
       preload="metadata"
       aria-hidden={!active}
@@ -71,9 +78,10 @@ export function HeroRotator({ slides, className }: { slides: HeroSlide[]; classN
 
   useEffect(() => {
     if (reduced || slides.length <= 1) return;
-    const t = setInterval(() => setIndex((i) => (i + 1) % slides.length), INTERVAL_MS);
-    return () => clearInterval(t);
-  }, [reduced, slides.length]);
+    const duration = slides[index]?.durationMs ?? PHOTO_MS;
+    const t = setTimeout(() => setIndex((i) => (i + 1) % slides.length), duration);
+    return () => clearTimeout(t);
+  }, [reduced, slides, index]);
 
   const current = slides[index] ?? slides[0];
   if (!current) return null;
@@ -104,7 +112,7 @@ export function HeroRotator({ slides, className }: { slides: HeroSlide[]; classN
                   className="h-full w-full object-cover"
                   style={
                     active && !reduced
-                      ? { animation: `hdm-kenburns ${INTERVAL_MS + FADE_MS}ms ease-out forwards` }
+                      ? { animation: `hdm-kenburns ${(s.durationMs ?? PHOTO_MS) + FADE_MS}ms ease-out forwards` }
                       : undefined
                   }
                 />

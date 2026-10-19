@@ -50,15 +50,18 @@ export function HomePage({ locale }: { locale: Locale }) {
             slides={[
               // Vídeo real do cliente (envio 11/10/2026, PH-VIDEO-HERO-01; 1280×720).
               // PRIMEIRA diapositiva desde 19/10/2026 tarde (pedido do utilizador
-              // para revisão): muted+loop+playsInline em TODOS os viewports;
-              // poster = fotograma se o autoplay falhar num device; reduced-motion
-              // fica só com a imagem. As fotos seguem abaixo.
+              // para revisão): muted+playsInline em TODOS os viewports; poster =
+              // fotograma se o autoplay falhar num device; reduced-motion fica só
+              // com a imagem. durationMs 19s = 1 clipe completo (18,4s) e passa,
+              // SEM loop — decretado 19/10: antes com 30s/foto o vídeo repetia-se.
               {
                 src: "/images/cliente/hdm-video-hero-poster.jpg",
                 videoSrc: "/videos/hdm-hero-obra.mp4",
+                durationMs: 19000,
                 alt: getMedia("PH-VIDEO-HERO-01")?.alt[locale] ?? "",
               },
               // Fotos REAIS do cliente (Matheus, envio 02/10/2026 + lote 11/10/2026)
+              // — rodam a PHOTO_MS (8s) cada (timing novo 19/10, ver HeroRotator).
               { src: "/images/cliente/hdm-taller-montaje.jpg", alt: getMedia("PH-CLIENTE-TALLER-01")?.alt[locale] ?? "" },
               { src: "/images/cliente/hdm-soldadura-tig.jpg", alt: getMedia("PH-CLIENTE-TIG-01")?.alt[locale] ?? "" },
               { src: "/images/cliente/hdm-obra-gondola.jpg", alt: getMedia("PH-CLIENTE-GONDOLA-01")?.alt[locale] ?? "" },
