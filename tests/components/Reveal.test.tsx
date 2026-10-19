@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 /**
  * Novo contrato do Reveal: wrapper mínimo que apenas marca data-attributes
  * processados pelo MotionProvider (GSAP). Nenhuma lógica de observer/transição
- * vive aqui — o motor de motion é client-side e testado separadamente.
+ * vive aqui - o motor de motion é client-side e testado separadamente.
  */
 describe("Reveal", () => {
   it("renders children and marks the element with data-reveal", () => {

@@ -6,14 +6,16 @@ import { RequestUiProvider, RequestDrawer, MobileRequestBar } from "@/features/r
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { CookieConsent } from "./CookieConsent";
+import { WhatsappFloat } from "./WhatsappFloat";
+import { BackToTop } from "./BackToTop";
 import { mainAnchorId, jsonLdScript, siteUrl } from "@/lib/seo";
-import { companyFacts } from "@/content/company";
+import { contactData } from "@/content/company";
 import { coverageAreas } from "@/content/coverage";
 
 /**
  * Organization JSON-LD (Doc 09 §100): only verified facts.
- * NO LocalBusiness, NO aggregateRating, NO invented address beyond the
- * confirmed fiscal country (Portugal). Contact data only when configured.
+ * NO LocalBusiness, NO aggregateRating. Addresses/contact from company.ts
+ * (confirmed by client 09/10/2026). Opening hours confirmed PT office.
  */
 function OrganizationJsonLd({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
@@ -27,14 +29,35 @@ function OrganizationJsonLd({ locale }: { locale: Locale }) {
       "@type": "Place",
       name: dict.coverage.items[a.id]?.name ?? a.id,
     })),
-  };
-  if (companyFacts.email || companyFacts.phone) {
-    data.contactPoint = {
+    contactPoint: contactData.phones.map((phone, i) => ({
       "@type": "ContactPoint",
-      contactType: "sales",
-      ...(companyFacts.email ? { email: companyFacts.email } : {}),
-      ...(companyFacts.phone ? { telephone: companyFacts.phone } : {}),
-    };
+      contactType: i === 0 ? "sales" : "customer service",
+      telephone: phone.label,
+      areaServed: ["ES", "PT"],
+    })),
+    address: [
+      {
+        "@type": "PostalAddress",
+        streetAddress: "Calle José Santos Alves",
+        addressLocality: "Pombal",
+        addressCountry: "PT",
+      },
+      {
+        "@type": "PostalAddress",
+        streetAddress: "Avinguda de Francesc Macià",
+        addressLocality: "Barcelona",
+        addressCountry: "ES",
+      },
+    ],
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "17:00",
+    },
+  };
+  if (contactData.emails.length > 0) {
+    data.email = contactData.emails[0];
   }
   return (
     <script
@@ -59,11 +82,13 @@ export function SiteShell({
     <RequestProvider locale={locale}>
       <RequestUiProvider>
         <Header locale={locale} />
-        <main id={mainAnchorId(locale)}>{children}</main>
+        <main id={mainAnchorId(locale)} className="overflow-x-clip">{children}</main>
         <Footer locale={locale} />
         <MobileRequestBar locale={locale} />
         <RequestDrawer locale={locale} />
         <CookieConsent locale={locale} />
+        <WhatsappFloat locale={locale} />
+        <BackToTop />
         <OrganizationJsonLd locale={locale} />
       </RequestUiProvider>
     </RequestProvider>

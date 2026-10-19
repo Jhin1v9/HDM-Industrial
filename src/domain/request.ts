@@ -7,7 +7,7 @@ import type {
   Locale,
 } from "./types";
 
-/** Pure domain helpers — unit tested, locale-independent. */
+/** Pure domain helpers - unit tested, locale-independent. */
 
 export function createEmptyRequest(locale: Locale, id: string, now: string): PersonnelRequest {
   return {
@@ -64,7 +64,7 @@ export function clampQuantity(quantity: number): number {
 
 /**
  * Human-readable reference, e.g. HDM-A7F2.
- * NOT an access token — must never authorize reading request data (§95).
+ * NOT an access token - must never authorize reading request data (§95).
  */
 export function generateReference(random: () => number = Math.random): string {
   const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
@@ -92,7 +92,7 @@ export function isRequestEmpty(request: PersonnelRequest): boolean {
 
 /**
  * Serialization for persistence (Doc 09 §22–26):
- * - PII (nombre, teléfono, email) lives ONLY in memory — never in localStorage.
+ * - PII (nombre, teléfono, email) lives ONLY in memory - never in localStorage.
  * - Draft has schemaVersion + expiry.
  */
 export const REQUEST_SCHEMA_VERSION = 2;
@@ -120,7 +120,7 @@ export function serializeRequest(request: PersonnelRequest): string {
   return JSON.stringify(envelope);
 }
 
-/** Rascunhos legados podiam ter logística booleana — migra para tri-state. */
+/** Rascunhos legados podiam ter logística booleana - migra para tri-state. */
 function migrateLegacyLogistics(request: unknown): void {
   if (typeof request !== "object" || request === null) return;
   const logistics = (request as { logistics?: Record<string, unknown> }).logistics;

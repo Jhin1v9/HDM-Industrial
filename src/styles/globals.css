@@ -19,10 +19,10 @@
   --color-line-300: #d6d3cb;
   --color-line-200: #e4e2db;
   --color-paper-100: #f4f3ef;
-  --color-paper-50: #faf9f6;
-  --color-signal-700: #a63d17;
-  --color-signal-600: #c2491d;
-  --color-signal-500: #d9551f;
+  --color-paper-50: #ffffff;
+  --color-signal-700: #c2491d;
+  --color-signal-600: #e65c00;
+  --color-signal-500: #f0762b;
   --color-signal-100: #f7e4d9;
   --color-ok-600: #2e6b4f;
   --color-warn-700: #8a5a13;
@@ -147,4 +147,50 @@ body {
 .tnum {
   font-variant-numeric: tabular-nums;
   font-family: var(--font-mono);
+}
+
+/* Galeria do cliente (GalleryViewer) */
+.gallery-stage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-kenburns {
+  animation: gallery-kenburns 8s ease-out both;
+}
+@keyframes gallery-kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+.gallery-progress {
+  transform-origin: left;
+  animation-name: gallery-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes gallery-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+/* Miniaturas sin barra de scroll visible (WebKit + Firefox) */
+.gallery-no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.gallery-no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-kenburns,
+  .gallery-progress {
+    animation: none;
+  }
 }

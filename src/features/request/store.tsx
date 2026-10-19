@@ -35,7 +35,7 @@ import {
 } from "@/domain/request";
 
 /**
- * Request state — global, persistent, locale-independent (§37–39).
+ * Request state - global, persistent, locale-independent (§37–39).
  * Survives navigation and language switches via a single storage key.
  */
 const STORAGE_KEY = "hdm.request.v1";
@@ -221,7 +221,7 @@ export function RequestProvider({ locale, children }: { locale: Locale; children
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Locale switch must NOT wipe the request (§39) — only update the locale field.
+  // Locale switch must NOT wipe the request (§39) - only update the locale field.
   useEffect(() => {
     if (localeRef.current !== locale) {
       localeRef.current = locale;
@@ -229,7 +229,7 @@ export function RequestProvider({ locale, children }: { locale: Locale; children
     }
   }, [locale]);
 
-  // Persist on change — ONLY after hydration has COMMITTED (hydrated state, not
+  // Persist on change - ONLY after hydration has COMMITTED (hydrated state, not
   // the ref): persisting on the same flush as the hydrate dispatch would write
   // the initial empty request over the stored draft (React StrictMode wipes).
   useEffect(() => {
@@ -237,7 +237,7 @@ export function RequestProvider({ locale, children }: { locale: Locale; children
     try {
       window.localStorage.setItem(STORAGE_KEY, serializeRequest(request));
     } catch {
-      // Storage full/blocked — request still lives in memory. Never crash the UX.
+      // Storage full/blocked - request still lives in memory. Never crash the UX.
     }
   }, [request, hydrated]);
 

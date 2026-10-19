@@ -6,19 +6,27 @@ import { sectors } from "@/content/sectors";
 import { professionalProfiles } from "@/content/profiles";
 import { Section, SectionHeader } from "@/components/ui/layout";
 import { Media } from "@/components/media/Media";
+import { GalleryViewer } from "@/components/media/GalleryViewer";
 import { Pictogram } from "@/components/ui/pictograms";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { L } from "@/components/ui/L";
 import { PrefillNeedTypeButton, PrefillAreaButton, PrefillProfessionButton } from "./PrefillButtons";
 import { CoverageMap } from "@/features/coverage/CoverageMap";
+import { OpenRequestButton } from "./OpenRequestButton";
+import { whatsappLink } from "@/content/company";
 
 /* --------------------------------- SOLUTIONS --------------------------------- */
 
 const solutionMedia: Record<string, string> = {
-  "paradas-industriales": "PH-PHOTO-PLANT-01",
-  "refuerzo-de-personal": "PH-PHOTO-MONTADOR-01",
-  "sustitucion-temporal": "PH-PHOTO-EPI-01",
-  "trabajos-puntuales": "PH-PHOTO-STRUCTURE-01",
-  "personal-con-desplazamiento": "PH-PHOTO-MOBILIZATION-01",
+  "paradas-industriales": "PH-PROJECT-02",
+  "refuerzo-de-personal": "PH-CLIENTE-TALLER-01",
+  "sustitucion-temporal": "PH-CLIENTE-TIG-01",
+  "trabajos-puntuales": "PH-CLIENTE-OBRA-ESTRUCTURA-01",
+  "personal-con-desplazamiento": "PH-CLIENTE-GONDOLA-01",
+  "guia-soldadores-tig-barcelona": "PH-CLIENTE-TIG-BRIDA-01",
+  "guia-ett-industrial-vs-cuadrilla": "PH-CLIENTE-TALLER-FAB-01",
+  "guia-planificar-parada-planta": "PH-CLIENTE-SOLDADOR-GONDOLA-01",
+  "guia-certificaciones-soldadura": "PH-CLIENTE-TIG-PROCESO-01",
 };
 
 export function SolutionsIndexPage({ locale }: { locale: Locale }) {
@@ -33,7 +41,7 @@ export function SolutionsIndexPage({ locale }: { locale: Locale }) {
           const item = s.items[solution.id];
           return (
             <li key={solution.id} className="bg-paper-50">
-              <a
+              <L
                 href={localizedPath(locale, `soluciones/${solution.slug}`)}
                 className="flex h-full flex-col gap-2 p-6 transition-colors duration-150 hover:bg-paper-100"
               >
@@ -42,12 +50,13 @@ export function SolutionsIndexPage({ locale }: { locale: Locale }) {
                 <span className="mt-auto pt-2 text-sm font-bold text-signal-600">
                   {dict.common.readMore} →
                 </span>
-              </a>
+              </L>
             </li>
-          );
-        })}
-      </ul>
-    </Section>
+            );
+          })}
+          <GridCtaCard locale={locale} title={dict.common.ctaNoSolutionTitle} />
+        </ul>
+      </Section>
   );
 }
 
@@ -89,7 +98,7 @@ export function SolutionDetailPage({ locale, solution }: { locale: Locale; solut
           <div className="mt-10">
             <Media
               locale={locale}
-              id={solutionMedia[solution.id] ?? "PH-PHOTO-PLANT-01"}
+              id={solutionMedia[solution.id] ?? "PH-CLIENTE-TALLER-01"}
               className="border border-line-200"
               imgClassName="aspect-video w-full object-cover"
             />
@@ -107,13 +116,14 @@ export function SolutionDetailPage({ locale, solution }: { locale: Locale; solut
               locale={locale}
               needType={solution.relatedNeedType}
               displacement={solution.impliesDisplacement}
-              className="flex h-12 w-full items-center justify-center border border-signal-500 bg-signal-600 px-5 text-sm font-extrabold tracking-wide text-white uppercase hover:bg-signal-700"
+              className="flex h-11 w-full items-center justify-center rounded-md border border-signal-700 bg-signal-600 px-5 text-sm font-bold tracking-wide text-white uppercase hover:bg-signal-700"
             >
               {dict.common.startRequestSolution}
             </PrefillNeedTypeButton>
           </div>
         </aside>
       </div>
+      <RelatedAndCta locale={locale} excludeSlug={solution.slug} />
     </Section>
   );
 }
@@ -121,12 +131,12 @@ export function SolutionDetailPage({ locale, solution }: { locale: Locale; solut
 /* ---------------------------------- SECTORS ---------------------------------- */
 
 const sectorMedia: Record<string, string> = {
-  industria: "PH-PHOTO-PLANT-01",
-  construccion: "PH-PHOTO-STRUCTURE-01",
-  "mantenimiento-industrial": "PH-PHOTO-ELECTRICISTA-01",
-  energia: "PH-PHOTO-PLANT-01",
-  fabricacion: "PH-PHOTO-CALDERERO-01",
-  petroquimica: "PH-PHOTO-PLANT-01",
+  industria: "PH-CLIENTE-TALLER-MARCO-01",
+  construccion: "PH-CLIENTE-OBRA-ESTRUCTURA-01",
+  "mantenimiento-industrial": "PH-PROJECT-02",
+  energia: "PH-CLIENTE-SOLDADOR-GONDOLA-01",
+  fabricacion: "PH-CLIENTE-TALLER-FAB-01",
+  petroquimica: "PH-CLIENTE-INOX-01",
 };
 
 export function SectorsIndexPage({ locale }: { locale: Locale }) {
@@ -139,7 +149,7 @@ export function SectorsIndexPage({ locale }: { locale: Locale }) {
       <ul className="grid gap-px border border-line-200 bg-line-200 sm:grid-cols-2 lg:grid-cols-3">
         {sectors.map((sector) => (
           <li key={sector.id}>
-            <a
+            <L
               href={localizedPath(locale, `sectores/${sector.slug}`)}
               className="flex h-full flex-col gap-2 bg-paper-50 p-6 transition-colors duration-150 hover:bg-paper-100"
             >
@@ -152,7 +162,7 @@ export function SectorsIndexPage({ locale }: { locale: Locale }) {
               <span className="mt-auto pt-2 text-sm font-bold text-signal-600">
                 {dict.common.readMore} →
               </span>
-            </a>
+            </L>
           </li>
         ))}
       </ul>
@@ -182,7 +192,7 @@ export function SectorDetailPage({ locale, sector }: { locale: Locale; sector: S
           <div className="mt-8">
             <Media
               locale={locale}
-              id={sectorMedia[sector.id] ?? "PH-PHOTO-PLANT-01"}
+              id={sectorMedia[sector.id] ?? "PH-CLIENTE-TALLER-FAB-01"}
               className="border border-line-200"
               imgClassName="aspect-video w-full object-cover"
             />
@@ -191,19 +201,19 @@ export function SectorDetailPage({ locale, sector }: { locale: Locale; sector: S
             <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
               {dict.nav.profiles}
             </h2>
-            <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+            <ul className="mt-4 grid gap-2">
               {professionalProfiles.map((profile) => (
-                <li key={profile.id} className="flex items-center justify-between gap-3 border border-line-200 bg-paper-50 p-3">
-                  <span className="flex items-center gap-2.5">
-                    <Pictogram name={profile.pictogram} className="h-7 w-7 text-ink-800" />
-                    <span className="text-sm font-bold text-ink-950">
+                <li key={profile.id} className={profileRowClass}>
+                  <span className="flex min-w-0 items-center gap-2.5">
+                    <Pictogram name={profile.pictogram} className="h-7 w-7 shrink-0 text-ink-800" />
+                    <span className="min-w-0 text-sm font-bold text-ink-950">
                       {dict.profiles.items[profile.id]?.name}
                     </span>
                   </span>
                   <PrefillProfessionButton
                     locale={locale}
                     profession={profile.id}
-                    className="shrink-0 border border-signal-600 px-2.5 py-1 font-mono text-[11px] font-bold tracking-wide text-signal-600 uppercase hover:bg-signal-100"
+                    className={profileAddBtnClass}
                   >
                     + {dict.common.addToRequest}
                   </PrefillProfessionButton>
@@ -223,14 +233,138 @@ export function SectorDetailPage({ locale, sector }: { locale: Locale; sector: S
             <PrefillProfessionButton
               locale={locale}
               profession="soldador"
-              className="flex h-12 w-full items-center justify-center border border-signal-500 bg-signal-600 px-5 text-sm font-extrabold tracking-wide text-white uppercase hover:bg-signal-700"
+              className="flex h-11 w-full items-center justify-center rounded-md border border-signal-700 bg-signal-600 px-5 text-sm font-bold tracking-wide text-white uppercase hover:bg-signal-700"
             >
               {dict.common.requestPersonal}
             </PrefillProfessionButton>
           </div>
         </aside>
       </div>
+      <RelatedAndCta locale={locale} excludeSlug={sector.slug} />
     </Section>
+  );
+}
+
+/* --------------------- Relacionados + CTA final (plano v2) -------------------- */
+
+/**
+ * Card CTA branco para preencher la celda vacía de grids (perfiles/soluciones):
+ * en lugar del hueco beige, un bloque blanco con CTA de presupuesto + WhatsApp.
+ */
+export function GridCtaCard({ locale, title }: { locale: Locale; title: string }) {
+  const dict = getDictionary(locale);
+  const waHref = whatsappLink(dict.common.whatsappFloatMsg);
+  return (
+    <li className="bg-paper-50">
+      <div className="flex h-full flex-col gap-3 p-5 sm:p-6">
+        <p className="max-w-xs text-lg font-extrabold tracking-tight text-ink-950">{title}</p>
+        <div className="mt-auto flex flex-col gap-2">
+          <OpenRequestButton
+            locale={locale}
+            source="grid-cta"
+            className="flex h-9 w-full shrink-0 items-center justify-center rounded-md border border-signal-700 bg-signal-600 px-3 text-xs font-bold tracking-wide text-white uppercase transition-colors duration-150 hover:bg-signal-700"
+          >
+            {dict.common.quoteOnlineCta}
+          </OpenRequestButton>
+          {waHref ? (
+            <a
+              href={waHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 w-full shrink-0 items-center justify-center rounded-md border border-[#1ebe5d] bg-[#25d366] px-3 text-xs font-bold tracking-wide text-white uppercase transition-colors duration-150 hover:bg-[#1ebe5d]"
+            >
+              {dict.common.whatsappCta}
+            </a>
+          ) : null}
+        </div>
+      </div>
+    </li>
+  );
+}
+
+/** Linha de perfil en "Personal industrial" (detalle de sector/área): apilada
+ *  en móvil con botón a todo el ancho; en fila en sm+ para no desbordar. */
+const profileRowClass =
+  "flex flex-col gap-3 border border-line-200 bg-paper-50 p-3 sm:flex-row sm:items-center sm:justify-between";
+const profileAddBtnClass =
+  "flex min-h-10 w-full shrink-0 items-center justify-center border border-signal-600 px-3 font-mono text-[11px] font-bold tracking-wide text-signal-600 uppercase hover:bg-signal-100 sm:w-auto sm:min-h-9";
+
+/** Pool de outras páginas (soluciones + sectores), exceto a atual. */
+function relatedPool(locale: Locale, excludeSlug: string): { href: string; label: string }[] {
+  const dict = getDictionary(locale);
+  const pool: { href: string; label: string | undefined }[] = [];
+  for (const s of solutions) {
+    if (s.slug === excludeSlug) continue;
+    pool.push({ href: localizedPath(locale, `soluciones/${s.slug}`), label: dict.solutions.items[s.id]?.name });
+  }
+  for (const sec of sectors) {
+    if (sec.slug === excludeSlug) continue;
+    pool.push({ href: localizedPath(locale, `sectores/${sec.slug}`), label: dict.sectors.items[sec.id]?.name });
+  }
+  return pool.filter((p): p is { href: string; label: string } => Boolean(p.label));
+}
+
+/** Seleção determinística "pseudo-aleatória" - build estático não tem runtime random. */
+function pickRelated<T>(arr: readonly T[], seed: string, count = 3): T[] {
+  if (arr.length <= count) return [...arr];
+  const h = [...seed].reduce((a, ch) => (a * 31 + ch.charCodeAt(0)) % 100003, 7);
+  const start = h % arr.length;
+  const rotated = [...arr.slice(start), ...arr.slice(0, start)];
+  return rotated.slice(0, count);
+}
+
+/**
+ * Fecho de artigo (detalhe de solución/sector): artigos recomendados de outras
+ * categorias + CTA de contacto (plano de correções v2, itens 4b/4c).
+ */
+export function RelatedAndCta({ locale, excludeSlug }: { locale: Locale; excludeSlug: string }) {
+  const dict = getDictionary(locale);
+  const picks = pickRelated(relatedPool(locale, excludeSlug), excludeSlug);
+  const waHref = whatsappLink(dict.common.whatsappFloatMsg);
+  if (picks.length === 0) return null;
+  return (
+    <div className="mt-14 border-t border-line-200 pt-10">
+      <p className="font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase">
+        {dict.common.relatedTitle}
+      </p>
+      <ul className="mt-4 grid gap-px border border-line-200 bg-line-200 sm:grid-cols-3">
+        {picks.map((pick) => (
+          <li key={pick.href} className="bg-paper-50">
+            <L
+              href={pick.href}
+              className="flex h-full flex-col gap-2 p-5 transition-colors duration-150 hover:bg-paper-100"
+            >
+              <span className="text-base font-extrabold tracking-tight text-ink-950">{pick.label}</span>
+              <span className="mt-auto pt-1 text-sm font-bold text-signal-600">{dict.common.readMore} →</span>
+            </L>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-10 flex flex-col gap-4 border border-ink-950 bg-paper-50 p-6 sm:flex-row sm:items-center sm:justify-between">
+        <p className="max-w-xl text-lg font-extrabold tracking-tight text-ink-950">
+          {dict.common.ctaNoSolutionTitle}
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <OpenRequestButton
+            locale={locale}
+            source="related-cta"
+            className="flex h-11 shrink-0 items-center justify-center rounded-md border border-signal-700 bg-signal-600 px-5 text-sm font-bold tracking-wide text-white uppercase transition-colors duration-150 hover:bg-signal-700"
+          >
+            {dict.common.quoteOnlineCta}
+          </OpenRequestButton>
+          {waHref ? (
+            <a
+              href={waHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-11 shrink-0 items-center justify-center rounded-md border border-[#1ebe5d] bg-[#25d366] px-5 text-sm font-bold tracking-wide text-white uppercase transition-colors duration-150 hover:bg-[#1ebe5d]"
+            >
+              {dict.common.whatsappCta}
+            </a>
+          ) : null}
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -286,7 +420,7 @@ export function CoverageAreaPage({ locale, area }: { locale: Locale; area: Cover
               <PrefillAreaButton
                 locale={locale}
                 area={area.id}
-                className="flex h-12 w-full items-center justify-center border border-signal-500 bg-signal-600 px-5 text-sm font-extrabold tracking-wide text-white uppercase hover:bg-signal-700"
+                className="flex h-11 w-full items-center justify-center rounded-md border border-signal-700 bg-signal-600 px-5 text-sm font-bold tracking-wide text-white uppercase hover:bg-signal-700"
               >
                 {dict.common.startRequestArea}
               </PrefillAreaButton>
@@ -296,19 +430,19 @@ export function CoverageAreaPage({ locale, area }: { locale: Locale; area: Cover
       </Section>
       <Section tone="paper-100">
         <SectionHeader title={dict.nav.profiles} />
-        <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {professionalProfiles.map((profile) => (
-            <li key={profile.id} className="flex items-center justify-between gap-3 border border-line-300 bg-paper-50 p-3">
-              <span className="flex items-center gap-2.5">
-                <Pictogram name={profile.pictogram} className="h-7 w-7 text-ink-800" />
-                <span className="text-sm font-bold text-ink-950">
+            <li key={profile.id} className={profileRowClass}>
+              <span className="flex min-w-0 items-center gap-2.5">
+                <Pictogram name={profile.pictogram} className="h-7 w-7 shrink-0 text-ink-800" />
+                <span className="min-w-0 text-sm font-bold text-ink-950">
                   {dict.profiles.items[profile.id]?.name}
                 </span>
               </span>
               <PrefillProfessionButton
                 locale={locale}
                 profession={profile.id}
-                className="shrink-0 border border-signal-600 px-2.5 py-1 font-mono text-[11px] font-bold tracking-wide text-signal-600 uppercase hover:bg-signal-100"
+                className={profileAddBtnClass}
               >
                 + {dict.common.addToRequest}
               </PrefillProfessionButton>
@@ -351,32 +485,31 @@ export function CertificationsPage({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
   const c = dict.certifications;
   const blocks = [
-    { title: c.prlTitle, body: c.prlBody, placeholderId: "PH-CERT-PRL-01" },
-    { title: c.weldingTitle, body: c.weldingBody, placeholderId: "PH-CERT-WELDING-01" },
-    { title: c.docsTitle, body: c.docsBody, placeholderId: null },
-    { title: c.honestyTitle, body: c.honestyBody, placeholderId: null },
+    { title: c.prlTitle, body: c.prlBody },
+    { title: c.weldingTitle, body: c.weldingBody },
+    { title: c.docsTitle, body: c.docsBody },
+    { title: c.honestyTitle, body: c.honestyBody },
   ];
   return (
     <Section>
       <Breadcrumbs locale={locale} items={[{ label: dict.nav.certifications }]} />
       <SectionHeader eyebrow="HDM Industrial" title={c.title} lead={c.lead} as="h1" />
-      <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
-        <ol className="flex flex-col gap-px border border-line-200 bg-line-200">
+      {/* Bloque de confianza - profesionales verificados */}
+      <div className="border border-ok-600/40 bg-paper-50 p-6 sm:p-8">
+        <p className="font-mono text-[11px] tracking-[0.18em] text-ok-600 uppercase">✓ {c.trustTitle}</p>
+        <p className="mt-3 max-w-3xl text-base leading-relaxed text-ink-700 sm:text-lg">{c.trustBody}</p>
+      </div>
+      <div className="mt-10 grid gap-10 lg:grid-cols-[1.2fr_1fr]">
+        <ol className="flex min-w-0 flex-col gap-px border border-line-200 bg-line-200">
           {blocks.map((block) => (
             <li key={block.title} className="bg-paper-50 p-6">
               <h2 className="text-xl font-extrabold tracking-tight text-ink-950">{block.title}</h2>
               <p className="mt-2 text-base leading-relaxed text-ink-600">{block.body}</p>
-              {block.placeholderId ? (
-                <div className="mt-4">
-                  <Media id={block.placeholderId} locale={locale} />
-                </div>
-              ) : null}
             </li>
           ))}
         </ol>
         <div className="h-fit lg:sticky lg:top-24">
-          <Media id="PH-PHOTO-EPI-01" locale={locale} className="border border-line-200" imgClassName="aspect-[4/3] w-full object-cover" />
-          <p className="mt-2 text-xs text-steel-500">{dict.common.editorialPhoto}</p>
+          <Media id="PH-CLIENTE-SOLDADOR-GONDOLA-01" locale={locale} className="border border-line-200" imgClassName="aspect-[4/3] w-full object-cover" />
         </div>
       </div>
     </Section>
@@ -393,25 +526,27 @@ export function ProjectsPage({ locale }: { locale: Locale }) {
       <Breadcrumbs locale={locale} items={[{ label: dict.nav.projects }]} />
       <SectionHeader eyebrow="HDM Industrial" title={p.title} lead={p.lead} as="h1" />
       <div className="grid gap-10 lg:grid-cols-2">
-        <div className="border border-dashed border-steel-300 bg-paper-100 p-8">
+        <div className="min-w-0 border border-dashed border-steel-300 bg-paper-100 p-8">
           <p className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
             {p.confidentialLabel}
           </p>
           <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-ink-950">{p.emptyTitle}</h2>
           <p className="mt-3 text-base leading-relaxed text-ink-600">{p.emptyBody}</p>
-          <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3">
-            {["PH-PROJECT-01", "PH-PROJECT-02", "PH-PROJECT-03"].map((id) => (
-              <Media key={id} id={id} locale={locale} />
-            ))}
+          <div className="mt-6">
+            <GalleryViewer
+              locale={locale}
+              ids={["PH-PROJECT-01", "PH-PROJECT-02", "PH-PROJECT-03", "PH-CLIENTE-GONDOLA-01", "PH-CLIENTE-OBRA-ESTRUCTURA-01", "PH-CLIENTE-SOLDADOR-GONDOLA-01", "PH-CLIENTE-TALLER-FAB-01", "PH-CLIENTE-TIG-BRIDA-01", "PH-CLIENTE-TIG-PROCESO-01"]}
+              aspect="aspect-[4/3]"
+            />
           </div>
         </div>
-        <div className="border border-line-200 bg-paper-50 p-8">
+        <div className="min-w-0 border border-line-200 bg-paper-50 p-8">
           <h2 className="text-2xl font-extrabold tracking-tight text-ink-950">{p.modelTitle}</h2>
           <ul className="mt-4 flex flex-col divide-y divide-line-200 border-y border-line-200">
             {p.modelFields.map((field) => (
               <li key={field} className="flex items-center justify-between py-2.5">
                 <span className="font-mono text-[11px] tracking-widest text-steel-500 uppercase">{field}</span>
-                <span className="text-xs text-steel-400">—</span>
+                <span className="text-xs text-steel-400">-</span>
               </li>
             ))}
           </ul>
@@ -431,7 +566,7 @@ export function EmpresaPage({ locale }: { locale: Locale }) {
       <Breadcrumbs locale={locale} items={[{ label: dict.nav.company }]} />
       <SectionHeader eyebrow="HDM Industrial" title={e.title} lead={e.lead} as="h1" />
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
-        <div className="flex max-w-2xl flex-col gap-5 text-lg leading-relaxed text-ink-700">
+        <div className="flex min-w-0 max-w-2xl flex-col gap-5 text-lg leading-relaxed text-ink-700">
           <p>{e.body1}</p>
           <p>{e.body2}</p>
           <p>{e.body3}</p>
@@ -447,9 +582,34 @@ export function EmpresaPage({ locale }: { locale: Locale }) {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col gap-4">
-          <Media id="PH-PHOTO-MATHEUS-01" locale={locale} />
+        <div className="flex min-w-0 flex-col gap-4">
           <Media id="PH-PHOTO-TEAM-01" locale={locale} />
+        </div>
+      </div>
+      <div className="mt-12">
+        <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">{e.galleryTitle}</h2>
+        <div className="mt-4">
+          <GalleryViewer
+            locale={locale}
+            autoPlayMs={4500}
+            ids={[
+              "PH-PROJECT-01",
+              "PH-PROJECT-02",
+              "PH-PROJECT-03",
+              "PH-CLIENTE-TALLER-01",
+              "PH-CLIENTE-TIG-01",
+              "PH-CLIENTE-INOX-01",
+              "PH-CLIENTE-GONDOLA-01",
+              "PH-CLIENTE-TIG-BRIDA-01",
+              "PH-CLIENTE-OBRA-ESTRUCTURA-01",
+              "PH-CLIENTE-TALLER-FAB-01",
+              "PH-CLIENTE-TALLER-MARCO-01",
+              "PH-CLIENTE-TIG-PROCESO-01",
+              "PH-CLIENTE-SOLDADOR-GONDOLA-01",
+              "PH-PHOTO-TEAM-01",
+            ]}
+            aspect="aspect-[16/9]"
+          />
         </div>
       </div>
     </Section>

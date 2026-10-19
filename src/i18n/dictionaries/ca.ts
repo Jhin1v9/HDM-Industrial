@@ -1,5 +1,5 @@
 /**
- * Diccionari CA (català) — català central estàndard, professional, directe, natural.
+ * Diccionari CA (català) - català central estàndard, professional, directe, natural.
  * Copy conservador: sense claims sense prova (vegeu claims.ts). Sense lorem ipsum.
  */
 import type { Dictionary } from "./es";
@@ -7,7 +7,7 @@ import type { Dictionary } from "./es";
 const ca = {
   meta: {
     siteName: "HDM Industrial",
-    defaultTitle: "HDM Industrial — Personal industrial qualificat, on el necessita",
+    defaultTitle: "HDM Industrial - Personal industrial qualificat, on el necessita",
     defaultDescription:
       "Subministrament de personal industrial qualificat: soldadors TIG, MIG/MAG i elèctrode, calderers, muntadors, electricistes, electromecànics, mecànics industrials i supervisors. Digui-nos què necessita i HDM revisa la disponibilitat.",
     ogDescription:
@@ -33,6 +33,13 @@ const ca = {
   common: {
     requestCta: "Sol·licitar disponibilitat",
     requestPersonal: "Sol·licitar personal",
+    whatsappFloatLabel: "Contactar per WhatsApp",
+    whatsappFloatMsg: "Hola, necessito informació sobre personal industrial",
+    relatedTitle: "Articles recomanats",
+    ctaNoSolutionTitle: "No troba la solució a la seva mida?",
+    ctaNoSolutionButton: "Parli amb nosaltres ara",
+    quoteOnlineCta: "Sol·licitar Pressupost Online",
+    whatsappCta: "Parlar per WhatsApp",
     addToRequest: "Afegir a la meva sol·licitud",
     added: "Afegit",
     viewRequest: "Veure sol·licitud",
@@ -47,6 +54,11 @@ const ca = {
     from: "Des de",
     readMore: "Veure'n més",
     editorialPhoto: "Imatge editorial d'ambient industrial. No representa instal·lacions ni personal d'HDM.",
+    galleryLabel: "Galeria d'imatges del client",
+    galleryPrev: "Imatge anterior",
+    galleryNext: "Imatge següent",
+    galleryZoom: "Ampliar",
+    galleryClose: "Tancar galeria",
     pendingAsset: "Espai reservat per a material real d'HDM",
     navPrimary: "Navegació principal",
     navPrimaryMobile: "Navegació principal mòbil",
@@ -104,6 +116,7 @@ const ca = {
     profilesTitle: "Quin perfil necessita?",
     profilesLead:
       "Seleccioni perfils i quantitats. Pot combinar diversos perfils en una mateixa sol·licitud.",
+    profilesCtaTitle: "No troba el perfil que busca?",
     coverageTitle: "On és el seu projecte?",
     coverageLead:
       "Zones on HDM subministra personal per a projectes. Seleccioni la seva zona per començar: la cobertura indica àrea de treball, no disponibilitat en temps real.",
@@ -154,19 +167,21 @@ const ca = {
     items: {
       soldador: {
         name: "Soldadors",
+        chip: "Soldadors",
         singular: "Soldador",
         short: "Soldadura TIG, MIG/MAG i elèctrode per a obra, planta i aturades.",
         description:
-          "Soldadors industrials per a treballs en taller, obra i planta. Indiqui el procés de soldadura que necessita —TIG, MIG/MAG o elèctrode revestit— i els requisits del projecte: HDM revisa la disponibilitat de perfils amb la certificació de soldadura adequada. Perfil amb certificat verificat segons el procés i disponibilitat confirmada en hores laborables abans que decideixi.",
+          "Soldadors industrials per a treballs en taller, obra i planta. Indiqui el procés de soldadura que necessita -TIG, MIG/MAG o elèctrode revestit- i els requisits del projecte: HDM revisa la disponibilitat de perfils amb la certificació de soldadura adequada. Perfil amb certificat verificat segons el procés i disponibilitat confirmada en hores laborables abans que decideixi.",
         requirements:
           "Certificat de soldadura segons el procés requerit. Formació PRL. Experiència en entorn industrial.",
-        queHacen: "El soldador industrial uneix, repara i reforça estructures metàl·liques en taller, obra i planta de producció. Segons el procés —TIG, MIG/MAG o elèctrode revestit— treballa des d'acabats fins de precisió fins a cordons d'alta productivitat en espessors gruixuts. En una aturada de planta, el soldador és dels perfils que més condicionen el termini: un cordó ben executat a la primera evita retraballaments que costen hores. Per això HDM verifica el procés exacte que domina cada professional abans de proposar-lo a un projecte.. En la pràctica, el soldador que proposa HDM arriba amb el seu procés dominant ja contrastat —estructura naval, tuberia de procés, dipòsits o línia de fabricació—, el que significa menys temps d'adaptació i soldadures que passen la inspecció a la primera. Si l'obra combina processos —per exemple TIG a l'arrel i MIG/MAG a l'emplenament— indiqueu-ho a la sol·licitud: la quadrilla es compon segons el treball real.",
+        queHacen: "El soldador industrial uneix, repara i reforça estructures metàl·liques en taller, obra i planta de producció. Segons el procés -TIG, MIG/MAG o elèctrode revestit- treballa des d'acabats fins de precisió fins a cordons d'alta productivitat en espessors gruixuts. En una aturada de planta, el soldador és dels perfils que més condicionen el termini: un cordó ben executat a la primera evita retraballaments que costen hores. Per això HDM verifica el procés exacte que domina cada professional abans de proposar-lo a un projecte.. En la pràctica, el soldador que proposa HDM arriba amb el seu procés dominant ja contrastat -estructura naval, tuberia de procés, dipòsits o línia de fabricació-, el que significa menys temps d'adaptació i soldadures que passen la inspecció a la primera. Si l'obra combina processos -per exemple TIG a l'arrel i MIG/MAG a l'emplenament- indiqueu-ho a la sol·licitud: la quadrilla es compon segons el treball real.",
         cuando: ["Aturades de planta o turnaround, on cada hora de soldadura està comptada.", "Pics de producció que superen la capacitat de la quadrilla habitual.", "Obra industrial amb terminis que no admeten retards (estructura, suportació, tuberia).", "Reparacions urgents d'equips o línies de producció aturades.", "Substitucions puntuals quan el seu soldador habitual no es pot presentar."],
         verifica: "HDM verifica abans de proposar: certificat de soldadura segons el procés requerit (TIG, MIG/MAG o elèctrode), formació PRL al dia i experiència contrastada en entorn industrial. Sense dades verificades, no hi ha proposta. Quan el projecte ho exigeix, es contrasta també experiència en alçada, espais confinats i torns rotatius.",
         faq: [{ q: "Puc demanar només soldadors TIG per a una aturada d'una setmana?", a: "Sí. Configuri la sol·licitud amb el procés (TIG), el volum i les dates; HDM revisa quadrilles amb aquest certificat i li confirma disponibilitat real abans que decideixi." }, { q: "Treballen en alçada o en espais confinats?", a: "Quan el projecte ho requereix, s'indiquen a la sol·licitud les condicions (alçada, confinat, torn). HDM ho té en compte en verificar perfils i certificacions." }, { q: "En quant de temps puc tenir soldadors disponibles?", a: "Depèn del procés, volum i ubicació. HDM respon cada sol·licitud en hores laborables amb disponibilitat real, sense compromís per la seva part." }, { q: "Puc demanar una quadrilla mixta de soldadors i ajudants?", a: "Sí. Configuri tots els perfils a la mateixa sol·licitud; HDM revisa la disponibilitat del conjunt i li respon amb una sola proposta coordinada." }, { q: "Treballen fora de Catalunya?", a: "Sí, HDM subministra personal industrial a tot Espanya i Portugal. Indiqui la ubicació del projecte a la sol·licitud." }],
       },
       calderero: {
         name: "Calderers",
+        chip: "Calderers",
         singular: "Calderer",
         short: "Caldereria, canonada i estructura metàl·lica pesada.",
         description:
@@ -179,6 +194,7 @@ const ca = {
       },
       montador: {
         name: "Muntadors d'estructures",
+        chip: "Muntadors",
         singular: "Muntador",
         short: "Muntatge d'estructures metàl·liques i equips industrials.",
         description:
@@ -187,10 +203,11 @@ const ca = {
         queHacen: "El muntador d'estructures aixeca, ajusta i fixa estructura metàl·lica, suportació i equips industrials en obra i planta. Treballa coordinat amb grua, acostumat a l'alçada i amb lectura precisa de planols de muntatge. Quan el termini d'obra no admet retards, un muntador experimentat és la diferència entre mantenir la línia crítica o no. HDM verifica experiència en muntatge i treball en alçada abans de proposar.. El muntatge d'estructures metàl·liques és dels treballs on més es nota la diferència entre personal verificat i improvisat: un muntador amb ofici mesura, ajusta i deixa cada peça ferma a la primera. HDM subministra muntadors per a obra civil, naval i industrial a Catalunya i Portugal, amb disponibilitat confirmada en hores laborables, i combinable amb ajudants a la mateixa sol·licitud.",
         cuando: ["Muntatge d'estructura metàl·lica en obra industrial.", "Aixecament i ajust d'equips i suportació en planta.", "Fases crítiques d'obra amb seqüències que no admeten retards.", "Obra naval i estructures pesades amb seqüències d'izatge complexes."],
         verifica: "HDM verifica: formació PRL i experiència en muntatge d'estructures i treball en alçada. Sense dades verificades, no hi ha proposta. Si l'obra exigeix autorització de treball en alçada específica o maneig d'aparells, es contrasta abans de la proposta.",
-        faq: [{ q: "Els muntadors llegeixen planols de muntatge?", a: "Sí, és part habitual del perfil. Si el projecte exigeix una lectura de planols concreta, indiqui-ho a la sol·licitud per afinar la verificació." }, { q: "Treballen coordinats amb la nostra grua?", a: "Sí, el muntador està acostumat a treballar coordinat amb l'equip d'izatge del projecte." }, { q: "Puc demanar muntadors per a una fase curta de dues setmanes?", a: "Sí. Indiqui dates exactes a la sol·licitud; HDM revisa la disponibilitat per a aquest període i li confirma abans que decideixi." }, { q: "Puc demanar muntadors amb experiència naval?", a: "Sí, indiqui el sector del projecte —naval, obra civil o planta industrial— a la sol·licitud." }],
+        faq: [{ q: "Els muntadors llegeixen planols de muntatge?", a: "Sí, és part habitual del perfil. Si el projecte exigeix una lectura de planols concreta, indiqui-ho a la sol·licitud per afinar la verificació." }, { q: "Treballen coordinats amb la nostra grua?", a: "Sí, el muntador està acostumat a treballar coordinat amb l'equip d'izatge del projecte." }, { q: "Puc demanar muntadors per a una fase curta de dues setmanes?", a: "Sí. Indiqui dates exactes a la sol·licitud; HDM revisa la disponibilitat per a aquest període i li confirma abans que decideixi." }, { q: "Puc demanar muntadors amb experiència naval?", a: "Sí, indiqui el sector del projecte -naval, obra civil o planta industrial- a la sol·licitud." }],
       },
       electricista: {
         name: "Electricistes industrials",
+        chip: "Electricistes",
         singular: "Electricista industrial",
         short: "Instal·lacions, quadres i cablejat en entorn industrial.",
         description:
@@ -203,6 +220,7 @@ const ca = {
       },
       constructor: {
         name: "Constructors i ajudants",
+        chip: "Ajudants",
         singular: "Constructor / ajudant",
         short: "Suport operatiu per a obra i treballs industrials.",
         description:
@@ -215,6 +233,7 @@ const ca = {
       },
       supervisor: {
         name: "Supervisors i encarregats",
+        chip: "Supervisors",
         singular: "Supervisor / encarregat",
         short: "Coordinació de quadrilles i control d'execució.",
         description:
@@ -227,6 +246,7 @@ const ca = {
       },
       eletromecanico: {
         name: "Electromecànics",
+        chip: "Electromecànics",
         singular: "Electromecànic",
         short: "Instal·lació, manteniment i reparació de màquines elèctriques i mecàniques.",
         description:
@@ -239,6 +259,7 @@ const ca = {
       },
       "mecanico-industrial": {
         name: "Mecànics industrials",
+        chip: "Mecànics",
         singular: "Mecànic industrial",
         short: "Manteniment i reparació de maquinària de fàbriques.",
         description:
@@ -271,7 +292,7 @@ const ca = {
       construccion: {
         name: "Construcció",
         intro:
-          "Muntadors, soldadors i ajudants per a obra: estructura metàl·lica, instal·lacions i treballs amb terminis que no admeten retards. La construcció industrial viu de seqüències: quan un ofici es retarda, tota l'obra paga el retard. HDM subministra perfils habituats a obra amb seqüència crítica —alçades, izatges, coordinació amb altres quadrilles— i ho confirma abans de la incorporació.",
+          "Muntadors, soldadors i ajudants per a obra: estructura metàl·lica, instal·lacions i treballs amb terminis que no admeten retards. La construcció industrial viu de seqüències: quan un ofici es retarda, tota l'obra paga el retard. HDM subministra perfils habituats a obra amb seqüència crítica -alçades, izatges, coordinació amb altres quadrilles- i ho confirma abans de la incorporació.",
       },
       "mantenimiento-industrial": {
         name: "Manteniment industrial",
@@ -281,7 +302,7 @@ const ca = {
       energia: {
         name: "Energia",
         intro:
-          "Personal industrial per a projectes del sector energètic, on la qualificació del perfil i la documentació són condicions d'entrada. En energia —renovable, tèrmica o xarxes— cada projecte exigeix certificacions, formació específica i experiència demostrable en entorns regulats. HDM verifica la documentació de cada perfil abans de proposar-lo, perquè la incorporació no retardi el seu calendari.",
+          "Personal industrial per a projectes del sector energètic, on la qualificació del perfil i la documentació són condicions d'entrada. En energia -renovable, tèrmica o xarxes- cada projecte exigeix certificacions, formació específica i experiència demostrable en entorns regulats. HDM verifica la documentació de cada perfil abans de proposar-lo, perquè la incorporació no retardi el seu calendari.",
       },
       fabricacion: {
         name: "Fabricació",
@@ -361,7 +382,7 @@ const ca = {
       "sustitucion-temporal": {
         name: "Substitució temporal",
         intro:
-          "Baixes, vacances o absències que no poden frenar la producció. Sol·liciti substitucions temporals del perfil exacte que necessita cobrir. Mateixa especialitat, mateixa qualificació, documentació preparada abans de la incorporació. La durada és flexible —de dies a mesos— i HDM confirma la disponibilitat en hores laborables perquè el forat en la seva quadrilla duri el mínim possible.",
+          "Baixes, vacances o absències que no poden frenar la producció. Sol·liciti substitucions temporals del perfil exacte que necessita cobrir. Mateixa especialitat, mateixa qualificació, documentació preparada abans de la incorporació. La durada és flexible -de dies a mesos- i HDM confirma la disponibilitat en hores laborables perquè el forat en la seva quadrilla duri el mínim possible.",
         points: [
           "Mateix perfil i especialitat que la persona a substituir.",
           "Durada flexible segons la situació.",
@@ -371,7 +392,7 @@ const ca = {
       "trabajos-puntuales": {
         name: "Treballs puntuals i obra",
         intro:
-          "Un projecte concret amb una data de fi. Subministrament de personal per a treballs puntuals i obra: muntatge, soldadura, estructura i suport operatiu. Dimensionem l'equip al treball real —d'una persona a quadrilles completes amb supervisió opcional— i vostè marca dates i durada. La proposta arriba en hores laborables, amb disponibilitat confirmada per a les seves dates.",
+          "Un projecte concret amb una data de fi. Subministrament de personal per a treballs puntuals i obra: muntatge, soldadura, estructura i suport operatiu. Dimensionem l'equip al treball real -d'una persona a quadrilles completes amb supervisió opcional- i vostè marca dates i durada. La proposta arriba en hores laborables, amb disponibilitat confirmada per a les seves dates.",
         points: [
           "Equips dimensionats al treball: des d'1 persona fins a quadrilles completes.",
           "Dates i durada definides per vostè.",
@@ -394,17 +415,17 @@ const ca = {
         points: ["Defineixi procés, volum i dates abans de demanar.", "Exigeixi certificat de soldadura segons procés.", "La disponibilitat es confirma en hores laborables.", "Un perfil verificat arriba produint des del primer dia."],
       },
       "guia-ett-industrial-vs-cuadrilla": {
-        name: "Guia: ETT industrial vs quadrilla pròpia — quan convé cada opció",
+        name: "Guia: ETT industrial vs quadrilla pròpia - quan convé cada opció",
         intro: "Una de les decisions operatives més importants d'una planta és com cobrir la necessitat de personal industrial: amb quadrilla pròpia, mitjançant una ETT industrial, o amb una combinació. Aquesta guia analitza les dues opcions amb honestitat.",
         points: ["La quadrilla pròpia dóna control total però costa encara que no treballi al cent per cent.", "L'ETT industrial converteix el cost fix en variable.", "La verificació de perfils és on més es separen els subministradors.", "La combinació de totes dues fórmules és l'opció més habitual."],
       },
       "guia-planificar-parada-planta": {
-        name: "Guia: parades de planta — com planificar el personal d'una parada",
+        name: "Guia: parades de planta - com planificar el personal d'una parada",
         intro: "Una parada de planta concentra en dies o setmanes el treball de mesos. La planificació del personal és la variable que més condiciona l'èxit. Aquesta guia recull els criteris que separen una parada que compleix la seva finestra d'una que la paga dues vegades.",
         points: ["La finestra de parada mana sobre tot.", "Els perfils crítics es reserven primer.", "Els torns es defineixen abans de la parada.", "La supervisió diària detecta desviacions a temps."],
       },
       "guia-certificaciones-soldadura": {
-        name: "Guia: certificacions de soldadura — quines exigir segons el treball",
+        name: "Guia: certificacions de soldadura - quines exigir segons el treball",
         intro: "Demanar un soldador qualificat no n'hi ha prou: cada procés, cada material i cada norma exigeix una certificació concreta. Aquesta guia explica quins certificats existeixen i com verificar que són reals i estan en vigor.",
         points: ["La certificació es demana segons el procés: TIG, MIG/MAG i elèctrode no són intercanviables.", "L'EN ISO 9606 és la referència europea bàsica.", "La formació PRL és obligatòria i independent.", "Un certificat real es verifica abans de la proposta."],
       },
@@ -618,13 +639,16 @@ const caPages = {
       "El personal subministrat compta amb formació en prevenció de riscos laborals d'acord amb l'entorn de treball. Si el seu centre exigeix PRL específic, indiqui-ho a la sol·licitud.",
     weldingTitle: "Certificats de soldadura",
     weldingBody:
-      "Els soldadors s'assignen segons el procés requerit —TIG, MIG/MAG o elèctrode— i la certificació de soldadura corresponent es revisa abans de confirmar.",
+      "Els soldadors s'assignen segons el procés requerit -TIG, MIG/MAG o elèctrode- i la certificació de soldadura corresponent es revisa abans de confirmar.",
     docsTitle: "Documentació abans de començar",
     docsBody:
       "La documentació de cada incorporació es prepara abans de començar el treball. Adjunti els requisits del seu centre a la sol·licitud si en té.",
     honestyTitle: "Compromís de transparència",
     honestyBody:
       "Quan HDM disposi de certificacions addicionals documentades, es publicaran aquí amb la seva norma i abast exactes. Fins llavors, no les anunciem.",
+    trustTitle: "Professionals verificats",
+    trustBody:
+      "Cada professional que HDM proposa ha estat verificat de manera individual: identitat, experiència contrastada en l'ofici, formació PRL al dia i, en soldadura, certificació del procés (TIG, MIG/MAG o electrodo) revisada abans de la incorporació. Si el seu centre exigeix algun requisit específic, es comprova abans d'enviar la proposta. Sense documentació verificada, no hi ha proposta.",
   },
   projects: {
     title: "Projectes",
@@ -658,18 +682,25 @@ const caPages = {
     body3:
       "Aquest lloc reflecteix aquesta forma de treballar: vostè configura el que necessita i HDM confirma el que pot posar en marxa. Sense promeses automàtiques.",
     valuesTitle: "Com es comporta HDM",
+    galleryTitle: "Treballs realitzats",
     values: [
       { name: "Serietat", body: "El que es confirma, es compleix. El que no està confirmat, es diu." },
       { name: "Transparència", body: "Sense xifres inflades ni promeses automàtiques. La disponibilitat es revisa i es comunica." },
       { name: "Professionalisme", body: "Perfils correctes, documentació preparada, interlocutor clar." },
     ] as { name: string; body: string }[],
-    photoPending: "Fotografia real de l'equip HDM — pendent de lliurament",
+    photoPending: "Fotografia real de l'equip HDM - pendent de lliurament",
   },
   contact: {
     title: "Contacte",
     lead:
       "La via més ràpida és la sol·licitud: arriba estructurada i HDM pot respondre amb precisió.",
     directTitle: "Contacte directe",
+    addressLabel: "Adreça",
+    phonesLabel: "Telèfon",
+    emailLabel: "Email",
+    hoursLabel: "Obert",
+    hoursDays: "Dll - Dv",
+    hoursTime: "09:00 - 17:00",
     pendingData:
       "Dades de contacte directe en configuració. Mentrestant, utilitzi la sol·licitud en línia.",
     formTitle: "O enviï un missatge",
@@ -689,7 +720,10 @@ const caPages = {
     cookies: "Cookies",
     editorialNote:
       "Les fotografies d'ambient industrial són editorials i no representen instal·lacions ni personal d'HDM.",
-    fiscalNote: "HDM Industrial — Domicili fiscal a Portugal. Dades registrals completes a l'avís legal.",
+    fiscalNote: "HDM Industrial - Domicili fiscal a Portugal. Dades registrals completes a l'avís legal.",
+    instagram: "Instagram",
+    aiNote: "Lloc web creat amb assistència d'intel·ligència artificial.",
+    copyright: "© 2026 HDM Industrial. Tots els drets reservats.",
   },
   cookiesBanner: {
     title: "Cookies",
@@ -699,29 +733,45 @@ const caPages = {
     more: "Més informació",
   },
   legal: {
-    aviso: {
+    aviso:     {
       title: "Avís legal",
-      body: "Pàgina d'avís legal. Les dades registrals completes d'HDM Industrial (denominació, NIF, domicili fiscal a Portugal i dades de contacte) es publicaran aquí quan el departament legal les confirmi. Mentrestant, aquesta pàgina existeix com a espai reservat funcional i no s'ha d'indexar.",
-    },
-    privacidad: {
-      title: "Política de privacitat",
-      intro: "Resum clar de com es tracten les dades en aquest lloc.",
+      intro: "Informació general del titular del lloc, condicions d'ús i marc jurídic aplicable (Unió Europea).",
       sections: [
-        { title: "Quines dades demanem", body: "Només les necessàries per gestionar la seva sol·licitud: empresa, persona de contacte, telèfon i correu electrònic, a més del context de la necessitat (perfils, lloc, dates, logística i documents que adjunti voluntàriament)." },
-        { title: "Per a què s'usen", body: "Únicament per revisar la disponibilitat, preparar una proposta i comunicar-nos amb vostè sobre aquesta sol·licitud." },
-        { title: "El que no fem", body: "No venem dades, no les usem per a publicitat de tercers i no enviem dades personals a eines d'analítica." },
-        { title: "Documents adjunts", body: "Els documents que adjunti es tracten de forma privada i s'usen només per avaluar la seva sol·licitud." },
-        { title: "Dades de candidats", body: "Si envies el teu currículum des de la secció Treballa amb nosaltres, les teves dades i el teu CV s'usen únicament per valorar la teva candidatura davant necessitats de personal d'HDM. No es cedeixen a tercers ni s'usen per a publicitat." },
-        { title: "Els seus drets", body: "Pot sol·licitar accés, rectificació o eliminació de les seves dades contactant amb HDM pels canals de contacte." },
+        { title: "Titular del lloc", body: "El titular d'aquest lloc és HDM Industrial, amb domicili fiscal a Portugal. Les dades registals completes (denominació social, NIF i domicili) es publicaran en aquesta pàgina quan el departament legal de l'empresa les confirmi. Per a qualsevol comunicació formal, utilitzeu el correu electrònic de contacte publicat a la pàgina de Contacte." },
+        { title: "Objecte", body: "Aquest lloc presenta els serveis d'HDM Industrial de subministrament de personal industrial qualificat a Espanya i Portugal, permet configurar sol·licituds de personal i facilita canals de contacte per a empreses i candidats. HDM subministra i coordina personal; no executa obres per compte propi ni substitueix l'empresa client en les seves obligacions de prevenció i organització." },
+        { title: "Condicions d'ús", body: "L'accés al lloc és gratuït. L'usuari es compromet a fer un ús lícit del web i dels seus continguts, sense perjudicar tercers ni el titular. HDM pot actualitzar o retirar continguts en qualsevol moment i no garanteix la disponibilitat ininterrompuda." },
+        { title: "Propietat intel·lectual", body: "Els continguts, la marca, el disseny i el codi del lloc pertanyen a HDM Industrial o als seus legítims titulars. En queda prohibida la reproducció, transformació o distribució sense autorització expressa per escrit." },
+        { title: "Enllaços i serveis de tercers", body: "El lloc pot enllaçar amb perfils oficials de xarxes socials (per exemple, Instagram) i amb altres llocs de tercers. Aquests enllaços s'ofereixen per comoditat; els seus continguts i les seves cookies depenen dels seus titulars i HDM no controla aquests llocs." },
+        { title: "Lloc web creat amb assistència d'intel·ligència artificial", body: "El disseny, el desenvolupament i part dels continguts d'aquest lloc s'han elaborat amb assistència d'eines d'intel·ligència artificial. Tot el text comercial, els perfils professionals i les dades publicades han estat revisats i validats per l'equip d'HDM Industrial abans de publicar-los. La intel·ligència artificial s'utilitza com a eina de producció; no automatitza decisions sobre persones ni substitueix la revisió humana." },
+        { title: "Legislació aplicable", body: "Aquestes condicions es regeixen pel Dret de la Unió Europea i per la legislació del domicili fiscal del titular, amb especial referència al Reglament (UE) 2016/679 (RGPD), a la Directiva 2000/31/CE sobre comerç electrònic i, segons el país, a la Llei 34/2002 (Espanya) o a la Lei n.º 46/2004 (Portugal). Qualsevol controvèrsia se sotmetrà als jutjats competents d'aquest domicili." },
       ] as { title: string; body: string }[],
     },
-    cookies: {
-      title: "Política de cookies",
-      intro: "Aquest lloc usa el mínim de cookies possible.",
+    privacidad:     {
+      title: "Política de privacitat",
+      intro: "Com recollim i tractem les dades personals en aquest lloc, d'acord amb el RGPD (UE) 2016/679.",
       sections: [
-        { title: "Cookies tècniques", body: "Necessàries perquè el lloc funcioni: la seva sol·licitud es desa al seu navegador per no perdre-la en navegar. No requereixen consentiment." },
-        { title: "Mesurament d'ús", body: "Només si vostè accepta, es carrega mesurament anònim d'ús per millorar el lloc. Si rebutja, no es carrega cap script de mesurament." },
-        { title: "Sense publicitat", body: "No hi ha cookies publicitàries ni de seguiment comercial de tercers." },
+        { title: "Responsable del tractament", body: "HDM Industrial, amb domicili fiscal a Portugal, és responsable del tractament de les dades personals recollides a través d'aquest lloc. Podeu contactar amb el responsable a través del correu electrònic de contacte publicat a la pàgina de Contacte." },
+        { title: "Dades que tractem", body: "Tractem les dades que decidiu facilitar: nom i empresa, persona de contacte, telèfon i correu electrònic, detalls de la necessitat de personal (perfils, lloc, dates, requisits) i els documents que adjunteu voluntàriament (currículum, certificats). No recollim categories especials de dades ni dades de menors a través d'aquest lloc." },
+        { title: "Finalitats", body: "Utilitzem les vostres dades per respondre a la vostra consulta, revisar la disponibilitat de personal, preparar una proposta i mantenir la comunicació durant la gestió de la sol·licitud. Si envieu el vostre currículum a través de Treballa amb nosaltres, les vostres dades serveixen per valorar la vostra candidatura davant les necessitats de personal de HDM." },
+        { title: "Base jurídica", body: "La base del tractament és el vostre consentiment en enviar el formulari (article 6.1.a del RGPD) i, quan la sol·licitud avança, les mesures precontractuals sol·licitades per vostè (article 6.1.b del RGPD). Podeu retirar el consentiment en qualsevol moment sense que això afecti la licitud del tractament previ." },
+        { title: "Destinataris i transferències", body: "No venem ni cedim dades personals amb finalitats comercials. Només hi accedeixen els proveïdors tècnics necessaris per operar el lloc i el correu electrònic, que actuen com a encarregats amb els contractes exigits pel RGPD. Si algun proveïdor tracta dades fora de l'Espai Econòmic Europeu, la transferència s'empara en les garanties del RGPD (clàusules contractuals tipus o altres mesures adequades)." },
+        { title: "Conservació", body: "Les dades es conserven mentre es gestioni la vostra sol·licitud o candidatura i, després, durant els terminis legals aplicables." },
+        { title: "Els vostres drets", body: "Podeu exercir els drets d'accés, rectificació, supressió, oposició, limitació i portabilitat, així com retirar el vostre consentiment, adreçant-vos al responsable a través del correu electrònic de contacte. Si considereu que el tractament no compleix la normativa, podeu presentar una reclamació davant l'autoritat de control competent: a Espanya, l'Agència Espanyola de Protecció de Dades; a Portugal, la Comissão Nacional de Proteção de Dades." },
+        { title: "Ús d'intel·ligència artificial", body: "Aquest lloc s'ha desenvolupat amb eines d'intel·ligència artificial, però les dades que envieu pels formularis es tracten directament pels canals de contacte de HDM. Les vostres dades no s'utilitzen per entrenar models d'intel·ligència artificial de tercers." },
+        { title: "Menors", body: "Els serveis del lloc es dirigeixen a professionals i empreses; no es preveu el tractament de dades de menors de 14 anys." },
+      ] as { title: string; body: string }[],
+    },
+    cookies:     {
+      title: "Política de cookies",
+      intro: "Aquest lloc utilitza el mínim de cookies possible, d'acord amb la normativa de la Unió Europea (Directiva 2002/58/CE i RGPD).",
+      sections: [
+        { title: "Què són les cookies", body: "Les cookies i tecnologies semblants (per exemple, l'emmagatzematge local del navegador) permeten recordar informació sobre la visita. En aquest lloc s'utilitzen cookies i emmagatzematge local amb la mateixa finalitat i les mateixes garanties." },
+        { title: "Cookies tècniques (no requereixen consentiment)", body: "Imprescindibles perquè el lloc funcioni: guarden la sol·licitud en curs al navegador per no perdre-la en navegar, recorden l'idioma i registren la preferència de cookies. Sense elles, la configuració d'equip no funcionaria." },
+        { title: "Mesurament d'ús (només amb el vostre consentiment)", body: "Si accepteu al banner, s'activa mesurament anònim d'ús per saber quines pàgines funcionen millor. Actualment s'utilitza mesurament propi sense cookies publicitaries. Si en el futur s'incorporen eines de tercers com Google Analytics o eines de posicionament de cercadors (Google Search Console, Bing Webmaster Tools), només es carregaran després de la vostra acceptació al banner i amb la configuració d'anonimització que permeti l'eina." },
+        { title: "Sense publicitat ni seguiment comercial", body: "Aquest lloc no utilitza cookies publicitàries, no ven dades de navegació i no crea perfis comercials dels visitants." },
+        { title: "Xarxes socials", body: "El peu de pàgina enllaça amb el perfil d'Instagram de HDM. En seguir aquest enllaç visiteu Instagram, que aplicarà les seves pròpies cookies i polítiques sota la seva responsabilitat. Aquest lloc no incrusta widgets socials que carreguin cookies abans de la vostra acció." },
+        { title: "Com gestionar o eliminar les cookies", body: "Podeu permetre només les cookies tècniques (botó del banner), acceptar el mesurament o canviar d'opinió després: esborreu les cookies i l'emmagatzematge local del lloc des de la configuració del navegador (a Chrome i Firefox: Ajustos, Privacitat i seguretat, Cookies; a Safari, Preferències, Privacitat). Si rebutgeu el mesurament, no es carrega cap script de mesurament." },
+        { title: "Actualització d'aquesta política", body: "Aquesta política pot actualitzar-se quan canviin les eines del lloc. La versió vigent és sempre la publicada en aquesta pàgina." },
       ] as { title: string; body: string }[],
     },
   },
@@ -742,12 +792,12 @@ export const caCareers = {
     profilesTitle: "Perfils en què opera HDM",
     processTitle: "Com funciona",
     processSteps: [
-      { title: "Envia el teu currículum", body: "Completa el formulari: es prepararà un correu dirigit a rrhh@hdmindustrial.es. Adjunta el teu CV abans d'enviar." },
+      { title: "Envia el teu currículum", body: "Omple el formulari i adjunta el teu currículum: s'envia directament als Recursos Humans de HDM." },
       { title: "HDM revisa el teu perfil", body: "L'equip revisa la teva experiència i el teu perfil professional." },
       { title: "Contacte si encaixa", body: "Si sorgeix una necessitat que encaixi amb el teu perfil, HDM et contacta. Si no hi ha encaix en aquell moment, no hi ha resposta en aquesta ocasió." },
     ] as { title: string; body: string }[],
     formTitle: "Envia el teu currículum",
-    formLead: "S'obrirà el teu client de correu amb el missatge preparat. Revisa les dades i adjunta el teu currículum abans d'enviar.",
+    formLead: "Envia el teu currículum directament des d'aquesta pàgina amb el fitxer adjunt. Si l'enviament directe no està disponible, s'obrirà el teu client de correu amb les dades preparades.",
     nameLabel: "Nom",
     emailLabel: "Correu electrònic",
     phoneLabel: "Telèfon",
@@ -759,11 +809,81 @@ export const caCareers = {
     attachSelected: "Fitxer seleccionat",
     attachPrivacy: "El teu CV es tracta de forma privada i s'usa només per valorar la teva candidatura.",
     attachEmailLabel: "Currículum",
-    submitSuccess: "Currículum enviat — gràcies. HDM revisarà el teu perfil i et contactarà si encaixa amb una necessitat.",
+    submitSuccess: "Currículum enviat - gràcies. HDM revisarà el teu perfil i et contactarà si encaixa amb una necessitat.",
     zoneLabel: "Zona / ciutat (opcional)",
     messageLabel: "Missatge (opcional)",
     privacyNote: "Les teves dades s'usen únicament per valorar la teva candidatura. Consulta la política de privacitat.",
     send: "Preparar correu amb el meu CV",
+  },
+  reviews: {
+    badge: "Ressenyes",
+    title: "El que dien els nostres clients",
+    description: "Ressenyes reals d'empreses que ja han confiat el seu personal industrial a HDM.",
+    formTitle: "Hem treballat junts? Explica'ns",
+    formSuccessTitle: "Gràcies per la teva ressenya!",
+    formSuccessText: "La revisarem i la publicarem aviat en aquesta mateixa pàgina.",
+    formDisclaimer: "La teva ressenya serà revisada abans de publicar-se. No apareixerà immediatament.",
+    nameLabel: "Nom",
+    namePlaceholder: "El teu nom o el de la teva empresa",
+    zoneLabel: "Zona del projecte",
+    zonePlaceholder: "Ex.: Barcelona",
+    emailLabel: "Email",
+    emailPlaceholder: "tu@empresa.com",
+    emailHint: "Opcional. No es mostrarà públicament.",
+    projectTypeLabel: "Tipus de projecte",
+    ratingLabel: "Valoració",
+    ratingTerrible: "Molt malament",
+    ratingBad: "Malament",
+    ratingOkay: "Regular",
+    ratingGood: "Ben",
+    ratingExcellent: "Excel·lent",
+    charCount: "{count} / {max}",
+    textLabel: "La teva experiència",
+    textPlaceholder: "Com va ser treballar amb HDM? Explica'ns els detalls...",
+    submit: "Enviar ressenya",
+    submitting: "Enviant...",
+    emptyTitle: "Encara no hi ha ressenyes publicades.",
+    emptySubtitle: "Sigues el primer a explicar la teva experiència!",
+    errorRequired: "Si us plau, omple tots els camps.",
+    errorSubmit: "Error en enviar. Intenta-ho de nou.",
+    errorNotConfigured: "L'enviament de ressenyes s'activarà properament. Gràcies pel teu interès.",
+    gdpr: "Accepto que la meva ressenya sigui revisada abans de publicar-se",
+    verified: "Client verificat",
+    close: "Tancar",
+    reviewsCount: "ressenyes",
+    viewAll: "Veure totes les ressenyes",
+    all: "Totes",
+    sortBy: "Ordenar per",
+    recent: "Més recents",
+    rating: "Millor valorades",
+    clear: "Netejar",
+    loadMore: "Carregar més ressenyes",
+    showing: "Mostrant",
+    of: "de",
+    noResults: "No hi ha ressenyes amb aquests filtres",
+    tryOtherFilters: "Prova amb altres filtres",
+    backToAll: "Tornar a totes les ressenyes",
+    related: "Altres ressenyes",
+    viewMore: "Veure més",
+    viewLess: "Veure menys",
+    splitBadge: "La teva opinió importa",
+    splitTitle: "Com va ser la teva experiència amb HDM?",
+    splitSubtitle: "Comparteix el teu projecte i ajuda altres empreses a trobar l'equip industrial que necessiten.",
+    splitPreviewLabel: "Vista prèvia",
+    splitPreviewHint: "Així es veurà la teva ressenya publicada",
+    splitStatsAverage: "Mitjana",
+    splitStatsReviews: "Ressenyes",
+    splitYourName: "El teu nom",
+    splitYourExperience: "La teva experiència...",
+    splitEmailOptional: "Opcional",
+    projectTypes: {
+      "Parada de planta": "Aturada de planta",
+      "Refuerzo de equipo": "Reforç d'equip",
+      "Montaje de estructuras": "Muntatge d'estructures",
+      "Mantenimiento industrial": "Manteniment industrial",
+      "Sustitución temporal": "Substitució temporal",
+      "Otro": "Altre",
+    },
   },
 };
 

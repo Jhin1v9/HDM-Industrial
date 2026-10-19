@@ -10,9 +10,9 @@ import { useRequestUi } from "@/features/request/chrome";
 import { trackEvent } from "@/features/analytics/events";
 
 /**
- * Coverage Map — SVG proprietário Espanha + Portugal (§51).
+ * Coverage Map - SVG proprietário Espanha + Portugal (§51).
  * Silhueta simplificada da península ibérica, leve, acessível, responsiva,
- * selecionável — com LISTA TEXTUAL obrigatória (§109).
+ * selecionável - com LISTA TEXTUAL obrigatória (§109).
  * Selecionar uma zona = projeto nessa zona. NUNCA disponibilidade live (§52).
  */
 
@@ -102,7 +102,7 @@ export function CoverageMap({
         })}
       </svg>
 
-      {/* Lista textual — obrigatória, nunca só o mapa */}
+      {/* Lista textual - obrigatória, nunca só o mapa */}
       <nav aria-label={dict.coverage.listLabel}>
         <ul className="flex flex-col divide-y divide-line-200 border-y border-line-200">
           {coverageAreas.map((area) => {

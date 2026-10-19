@@ -1,8 +1,10 @@
 import { L as Link } from "@/components/ui/L";
+import { asset } from "@/lib/basePath";
 import type { Locale } from "@/domain/types";
 import { getDictionary } from "@/i18n";
 import { localizedPath } from "@/content/pages";
-import { companyFacts } from "@/content/company";
+import { companyFacts, whatsappLink } from "@/content/company";
+import { InstagramIcon, WhatsAppIcon } from "@/components/ui/icons";
 
 export function Footer({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
@@ -21,6 +23,7 @@ export function Footer({ locale }: { locale: Locale }) {
     { href: localizedPath(locale, "empresa"), label: dict.nav.company },
     { href: localizedPath(locale, "contacto"), label: dict.nav.contact },
     { href: localizedPath(locale, "trabaja-con-nosotros"), label: dict.nav.careers },
+    { href: localizedPath(locale, "resenas"), label: dict.reviews.badge },
   ];
   const legal = [
     { href: localizedPath(locale, "aviso-legal"), label: f.legalNotice },
@@ -32,34 +35,53 @@ export function Footer({ locale }: { locale: Locale }) {
     <footer className="border-t border-ink-800 bg-ink-950 pb-24 text-center text-paper-50 lg:pb-0 lg:text-left">
       <div className="mx-auto grid max-w-[76rem] gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
-          {/* Logo oficial do cliente — mesma marca do header */}
+          {/* Logo oficial do cliente - mesma marca do header */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/brand/hdm-logo-light.png"
+            src={asset("/images/brand/hdm-logo-light.png")}
             alt="HDM Industrial"
             width={771}
             height={330}
             className="mx-auto h-9 w-auto lg:mx-0"
           />
-          <p className="mt-3 max-w-xs text-sm text-steel-300">{f.tagline}</p>
+          <p className="mt-3 text-sm text-steel-300 sm:max-w-xs">{f.tagline}</p>
+          <div className="mt-4 flex items-center justify-center gap-4 lg:justify-start">
+            {companyFacts.instagram ? (
+              <a
+                href={companyFacts.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-steel-400 hover:text-white transition-colors duration-150"
+              >
+                <InstagramIcon className="h-5 w-5" />
+              </a>
+            ) : null}
+            {whatsappLink("") ? (
+              <a
+                href={whatsappLink("") ?? undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="text-steel-400 hover:text-white transition-colors duration-150"
+              >
+                <WhatsAppIcon className="h-5 w-5" />
+              </a>
+            ) : null}
+          </div>
           <Link
             href={localizedPath(locale, "solicitar-personal")}
             className="mt-5 inline-flex h-11 items-center border border-signal-500 bg-signal-600 px-5 font-mono text-xs font-bold tracking-widest text-white uppercase hover:bg-signal-700"
           >
             {dict.common.requestPersonal}
           </Link>
-          <div className="mt-6 flex flex-col gap-1 text-sm text-steel-300">
-            {companyFacts.phone ? (
-              <a href={`tel:${companyFacts.phone.replace(/[^+0-9]/g, "")}`} className="hover:text-white">
-                {companyFacts.phone}
-              </a>
-            ) : null}
-            {companyFacts.email ? (
+          {companyFacts.email ? (
+            <div className="mt-6 text-sm text-steel-300">
               <a href={`mailto:${companyFacts.email}`} className="hover:text-white">
                 {companyFacts.email}
               </a>
-            ) : null}
-          </div>
+            </div>
+          ) : null}
         </div>
         <nav aria-label={f.explore}>
           <p className="mb-3 font-mono text-[11px] tracking-[0.2em] text-steel-400 uppercase">{f.explore}</p>
@@ -99,9 +121,8 @@ export function Footer({ locale }: { locale: Locale }) {
         </nav>
       </div>
       <div className="border-t border-ink-800">
-        <div className="mx-auto flex max-w-[76rem] flex-col gap-2 px-5 py-5 text-xs text-steel-400 sm:px-8">
-          <p>{f.fiscalNote}</p>
-          <p>{f.editorialNote}</p>
+        <div className="mx-auto flex max-w-[76rem] items-center justify-center px-5 py-5 text-xs text-steel-400 sm:px-8">
+          <p>{f.copyright}</p>
         </div>
       </div>
     </footer>

@@ -67,12 +67,11 @@ export function CareersPage({ locale }: { locale: Locale }) {
 
           <div className="mt-10">
             <Media
-              id="PH-PHOTO-EPI-01"
+              id="PH-PHOTO-TEAM-01"
               locale={locale}
               className="border border-line-200"
               imgClassName="aspect-[4/3] w-full object-cover"
             />
-            <p className="mt-2 text-xs text-steel-500">{dict.common.editorialPhoto}</p>
           </div>
         </div>
 

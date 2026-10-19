@@ -10,7 +10,7 @@ export const dynamic = "force-static";
 
 /**
  * Sitemap: only indexable routes, all published locales (§58).
- * Detail routes derive from content registries — never hand-maintained.
+ * Detail routes derive from content registries - never hand-maintained.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const urls: MetadataRoute.Sitemap = [];

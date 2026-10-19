@@ -1,5 +1,5 @@
 /**
- * Careers/CV mailto composer (Etapa A — sem backend).
+ * Careers/CV mailto composer (Etapa A - sem backend).
  * O site prepara o correio no cliente do candidato; NUNCA simula envio
  * (mesmo invariante do ContactMailForm e do Request Engine).
  * Destino confirmado pelo cliente (Matheus, 21/09/2026, painel Nexo):
@@ -29,7 +29,7 @@ export interface CareersMailInput {
   profile: string;
   zone: string;
   message: string;
-  /** CV selecionado no navegador — metadados entram no corpo do email. */
+  /** CV selecionado no navegador - metadados entram no corpo do email. */
   attachment: CareersAttachment | null;
 }
 
@@ -43,7 +43,7 @@ export interface CareersMailLabels {
   attachment: string;
 }
 
-/** Pure validation — extension allowlist (file.type é vazio em alguns browsers). */
+/** Pure validation - extension allowlist (file.type é vazio em alguns browsers). */
 export function isAcceptedCvFile(file: { name: string }): boolean {
   const ext = file.name.toLowerCase().split(".").pop() ?? "";
   return (CAREERS_CV_LIMITS.acceptedExtensions as readonly string[]).includes(ext);
@@ -59,7 +59,7 @@ export function formatFileSize(bytes: number): string {
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
 
-/** Corpo do email em texto puro — usado tanto no mailto quanto no Web Share. */
+/** Corpo do email em texto puro - usado tanto no mailto quanto no Web Share. */
 export function buildCareersBody(
   input: CareersMailInput,
   labels: CareersMailLabels,
@@ -87,7 +87,7 @@ export function buildCareersMailto(
   hrEmail: string,
   labels: CareersMailLabels,
 ): string {
-  const subject = `CV Web HDM — ${input.profile} — ${input.name}`;
+  const subject = `CV Web HDM - ${input.profile} - ${input.name}`;
   return `mailto:${hrEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
     buildCareersBody(input, labels),
   )}`;
@@ -96,7 +96,7 @@ export function buildCareersMailto(
 /**
  * Relay response classification (VPS nexo_hdm_cv). Only a 2xx means the CV was
  * actually received server-side; anything else falls back to mailto/Web Share
- * so the candidate is never lost (§85 — never simulate success).
+ * so the candidate is never lost (§85 - never simulate success).
  */
 export type CvSubmitOutcome = "sent" | "fallback";
 

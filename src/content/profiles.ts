@@ -1,7 +1,7 @@
 import type { ProfessionalProfile } from "@/domain/types";
 
 /**
- * Single source of truth — confirmed professional profiles (Nível A form).
+ * Single source of truth - confirmed professional profiles (Nível A form).
  * Do NOT add specializations without a source (AGENTS.md).
  */
 export const professionalProfiles: readonly ProfessionalProfile[] = [

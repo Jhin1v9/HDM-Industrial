@@ -19,7 +19,7 @@ import { RequestPanel } from "./panel";
 import { getActiveLenis } from "@/lib/lenis";
 
 /**
- * Request UI shell — indicador global (§38), drawer acessível,
+ * Request UI shell - indicador global (§38), drawer acessível,
  * mobile request bar fixa (§66). O Request sobrevive à navegação (§37).
  */
 
@@ -27,7 +27,7 @@ interface RequestUiValue {
   open: boolean;
   openRequest: () => void;
   closeRequest: () => void;
-  /** Elemento que abriu o drawer — capturado no evento de abertura (efeitos dos
+  /** Elemento que abriu o drawer - capturado no evento de abertura (efeitos dos
    * filhos correm antes do efeito do drawer e roubariam este foco). */
   openerRef: React.MutableRefObject<HTMLElement | null>;
 }
@@ -39,7 +39,7 @@ export function RequestUiProvider({ children }: { children: ReactNode }) {
   const openerRef = useRef<HTMLElement | null>(null);
   const pathname = usePathname();
 
-  // Navegação NÃO apaga o request — apenas fecha o drawer.
+  // Navegação NÃO apaga o request - apenas fecha o drawer.
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional: close drawer on navigation (§39 navigation must not wipe request)
     setOpen(false);

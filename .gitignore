@@ -39,3 +39,10 @@ next-env.d.ts
 
 .vercel
 .env*
+docs/
+
+# Capturas de teste locais (não versionar)
+mobile-shots/
+
+# Workflow pendente de scope `workflow` no token (push falha se versionado)
+.github/workflows/

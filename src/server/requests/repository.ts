@@ -2,7 +2,7 @@ import type { PersonnelRequestSubmission } from "@/domain/requestSchema";
 import { generateReference } from "@/domain/request";
 
 /**
- * RequestRepository — UI nunca se acopla ao provider (§84).
+ * RequestRepository - UI nunca se acopla ao provider (§84).
  *
  * Implementações:
  * - SupabaseRequestRepository: produção, via PostgREST com anon key + RLS (ver supabase/migrations/).
@@ -27,7 +27,7 @@ const DEV_ARCHIVE_MAX_ENTRIES = 20;
 /**
  * Arquivo demo NUNCA guarda PII (o invariante §22–26 aplica-se a todo o
  * localStorage): o contacto é substituído por um marcador e o endereço fino
- * da obra é omitido. Sem TTL implícito — a lista é limitada às últimas
+ * da obra é omitido. Sem TTL implícito - a lista é limitada às últimas
  * DEV_ARCHIVE_MAX_ENTRIES submissões.
  */
 function stripSubmissionPii(submission: PersonnelRequestSubmission): PersonnelRequestSubmission {

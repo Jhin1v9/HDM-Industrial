@@ -19,14 +19,14 @@ export function Breadcrumbs({
           </Link>
         </li>
         {items.map((item) => (
-          <li key={item.label} className="flex items-center gap-1.5">
+          <li key={item.label} className="flex min-w-0 items-center gap-1.5">
             <span aria-hidden="true">/</span>
             {item.href ? (
               <Link href={item.href} className="hover:text-ink-800 hover:underline underline-offset-2">
                 {item.label}
               </Link>
             ) : (
-              <span aria-current="page" className="text-ink-800">{item.label}</span>
+              <span aria-current="page" className="min-w-0 break-words text-ink-800">{item.label}</span>
             )}
           </li>
         ))}

@@ -9,7 +9,7 @@ import { getConsent, setConsent } from "@/features/analytics/events";
 
 /**
  * Banner reflete scripts REAIS (§117): medición solo carga tras consentimiento.
- * Sin banner decorativo — rechazar = ningún script de medición.
+ * Sin banner decorativo - rechazar = ningún script de medición.
  * En mobile, o padding-bottom do body acompanha a altura do banner: o usuário
  * consegue rolar até o fim e VER o rodapé inteiro por baixo dele (revisão 26/09).
  */

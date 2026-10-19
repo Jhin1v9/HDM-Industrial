@@ -1,5 +1,5 @@
 /**
- * HDM Industrial — Domain contracts (CONTRACT FREEZE, Prompt Supremo §136).
+ * HDM Industrial - Domain contracts (CONTRACT FREEZE, Prompt Supremo §136).
  * All identifiers are locale-independent. Only labels change with language.
  */
 
@@ -7,7 +7,7 @@ export const LOCALES = ["es", "ca", "en", "pt"] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = "es";
 
-/** Locales with complete, natural translations — only these are published/indexed. */
+/** Locales with complete, natural translations - only these are published/indexed. */
 export const PUBLISHED_LOCALES: readonly Locale[] = ["es", "ca", "en", "pt"];
 
 /* ---------------------------------- profiles --------------------------------- */
@@ -128,7 +128,7 @@ export interface AttachmentMeta {
 
 /* ----------------------------------- project ---------------------------------- */
 
-/** Doc 06 §28–30: incluye "sin fecha" — no saber responder está permitido. */
+/** Doc 06 §28–30: incluye "sin fecha" - no saber responder está permitido. */
 export type TimingOption =
   | "urgente"
   | "esta-semana"

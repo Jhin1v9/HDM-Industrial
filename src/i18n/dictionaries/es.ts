@@ -1,11 +1,11 @@
 /**
- * Diccionario ES (raíz /) — español de España, profesional, directo, natural.
+ * Diccionario ES (raíz /) - español de España, profesional, directo, natural.
  * Copy conservador: sin claims sin prueba (ver claims.ts). Sin lorem ipsum.
  */
 export const es = {
   meta: {
     siteName: "HDM Industrial",
-    defaultTitle: "HDM Industrial — Personal industrial cualificado, donde lo necesita",
+    defaultTitle: "HDM Industrial - Personal industrial cualificado, donde lo necesita",
     defaultDescription:
       "Suministro de personal industrial cualificado: soldadores TIG, MIG/MAG y electrodo, caldereros, montadores, electricistas, electromecánicos, mecánicos industriales y supervisores. Díganos qué necesita y HDM revisa la disponibilidad.",
     ogDescription:
@@ -31,6 +31,13 @@ export const es = {
   common: {
     requestCta: "Solicitar disponibilidad",
     requestPersonal: "Solicitar personal",
+    whatsappFloatLabel: "Contactar por WhatsApp",
+    whatsappFloatMsg: "Hola, necesito información sobre personal industrial",
+    relatedTitle: "Artículos recomendados",
+    ctaNoSolutionTitle: "¿No encuentra la solución a su medida?",
+    ctaNoSolutionButton: "Hable con nosotros ahora",
+    quoteOnlineCta: "Solicitar Presupuesto Online",
+    whatsappCta: "Hablar por WhatsApp",
     addToRequest: "Añadir a mi solicitud",
     added: "Añadido",
     viewRequest: "Ver solicitud",
@@ -45,6 +52,11 @@ export const es = {
     from: "Desde",
     readMore: "Ver más",
     editorialPhoto: "Imagen editorial de ambiente industrial. No representa instalaciones ni personal de HDM.",
+    galleryLabel: "Galería de imágenes del cliente",
+    galleryPrev: "Imagen anterior",
+    galleryNext: "Imagen siguiente",
+    galleryZoom: "Ampliar",
+    galleryClose: "Cerrar galería",
     pendingAsset: "Espacio reservado para material real de HDM",
     navPrimary: "Navegación principal",
     navPrimaryMobile: "Navegación principal móvil",
@@ -102,6 +114,7 @@ export const es = {
     profilesTitle: "¿Qué perfil necesita?",
     profilesLead:
       "Seleccione perfiles y cantidades. Puede combinar varios perfiles en una misma solicitud.",
+    profilesCtaTitle: "¿No encuentra el perfil que busca?",
     coverageTitle: "¿Dónde está su proyecto?",
     coverageLead:
       "Zonas donde HDM suministra personal para proyectos. Seleccione su zona para empezar: la cobertura indica área de trabajo, no disponibilidad en tiempo real.",
@@ -152,43 +165,47 @@ export const es = {
     items: {
       soldador: {
         name: "Soldadores",
+        chip: "Soldadores",
         singular: "Soldador",
         short: "Soldadura TIG, MIG/MAG y electrodo para obra, planta y paradas.",
         description:
-          "Soldadores industriales para trabajos en taller, obra y planta. Indique el proceso de soldadura que necesita —TIG, MIG/MAG o electrodo revestido— y los requisitos del proyecto: HDM revisa la disponibilidad de perfiles con la certificación de soldadura adecuada.",
+          "Soldadores industriales para trabajos en taller, obra y planta. Indique el proceso de soldadura que necesita -TIG, MIG/MAG o electrodo revestido- y los requisitos del proyecto: HDM revisa la disponibilidad de perfiles con la certificación de soldadura adecuada.",
         requirements:
           "Certificado de soldadura según proceso requerido. Formación PRL. Experiencia en entorno industrial.",
-        queHacen: "El soldador industrial une, repara y refuerza estructuras metálicas en taller, obra y planta de producción. Según el proceso —TIG, MIG/MAG o electrodo revestido— trabaja desde acabados finos de precisión hasta cordones de alta productividad en espesores gruesos. En una parada de planta, el soldador es de los perfiles que más condicionan el plazo: un cordón bien ejecutado a la primera evita retrabajos que cuestan horas. Por eso HDM verifica el proceso exacto que domina cada profesional antes de proponérselo a un proyecto. En la práctica, el soldador que propone HDM llega con su proceso dominante ya contrastado —estructura naval, tubería de proceso, depósitos o línea de fabricación—, lo que significa menos tiempo de adaptación en su proyecto y soldaduras que pasan la inspección a la primera. Si la obra combina procesos —por ejemplo TIG en raíz y MIG/MAG en relleno— indíquelo en la solicitud: la cuadrilla se compone según el trabajo real, no al revés.",
+        queHacen: "El soldador industrial une, repara y refuerza estructuras metálicas en taller, obra y planta de producción. Según el proceso -TIG, MIG/MAG o electrodo revestido- trabaja desde acabados finos de precisión hasta cordones de alta productividad en espesores gruesos. En una parada de planta, el soldador es de los perfiles que más condicionan el plazo: un cordón bien ejecutado a la primera evita retrabajos que cuestan horas. Por eso HDM verifica el proceso exacto que domina cada profesional antes de proponérselo a un proyecto. En la práctica, el soldador que propone HDM llega con su proceso dominante ya contrastado -estructura naval, tubería de proceso, depósitos o línea de fabricación-, lo que significa menos tiempo de adaptación en su proyecto y soldaduras que pasan la inspección a la primera. Si la obra combina procesos -por ejemplo TIG en raíz y MIG/MAG en relleno- indíquelo en la solicitud: la cuadrilla se compone según el trabajo real, no al revés.",
         cuando: ["Paradas de planta o turnaround, donde cada hora de soldadura está contada.", "Picos de producción que superan la capacidad de la cuadrilla habitual.", "Obra industrial con plazos que no admiten retrasos (estructura, soportación, tubería).", "Reparaciones urgentes de equipos o líneas de producción detenidas.", "Sustituciones puntuales cuando su soldador habitual no puede presentarse."],
         verifica: "HDM verifica antes de proponer: certificado de soldadura según el proceso requerido (TIG, MIG/MAG o electrodo), formación PRL al día y experiencia contrastada en entorno industrial. Cuando el proyecto lo exige, se contrasta también experiencia en altura, espacios confinados y turnos rotativos. Sin datos verificados, no hay propuesta.",
         faq: [{ q: "¿Puedo pedir solo soldadores TIG para una parada de una semana?", a: "Sí. Configure la solicitud con el proceso (TIG), el volumen y las fechas; HDM revisa cuadrillas con ese certificado y le confirma disponibilidad real antes de que decida." }, { q: "¿Trabajan en altura o en espacios confinados?", a: "Cuando el proyecto lo requiere, se indican en la solicitud las condiciones (altura, confinado, turno). HDM lo tiene en cuenta al verificar perfiles y certificaciones." }, { q: "¿En cuánto tiempo puedo tener soldadores disponibles?", a: "Depende del proceso, volumen y ubicación. HDM responde cada solicitud en horas laborables con disponibilidad real, sin compromiso por su parte." }, { q: "¿Puedo pedir una cuadrilla mixta de soldadores y ayudantes?", a: "Sí. Configure todos los perfiles en la misma solicitud; HDM revisa la disponibilidad del conjunto y le responde con una sola propuesta coordinada, sin tener que gestionar proveedores por separado." }],
       },
       calderero: {
         name: "Caldereros",
+        chip: "Caldereros",
         singular: "Calderero",
         short: "Calderería, tubería y estructura metálica pesada.",
         description:
           "Caldereros para trabajos de calderería, trazado, conformado y montaje de chapa, tubería y estructuras metálicas en entorno industrial. Adecuados para paradas, mantenimiento y proyectos de fabricación.",
         requirements: "Formación PRL. Experiencia demostrable en calderería industrial.",
-        queHacen: "El calderero industrial trabaja la chapa, la tubería y la estructura metálica pesada: trazado, conformado, montaje y reparación en taller, obra y planta. Es el perfil que sostiene paradas de planta, mantenimiento de depósitos y proyectos de fabricación donde la precisión del trazado condiciona todo lo demás. HDM propone caldereros con experiencia demostrable en calderería industrial y formación PRL al día, verificados antes de cada propuesta. Un buen calderero lee el plano, anticipa el conformado y deja el montaje listo para que soldador y montador trabajen sin sorpresas: por eso en paradas de planta es de los primeros perfiles que se solicitan. HDM lo sabe y verifica años de oficio real, no solo títulos. En Cataluña y el resto de España, la demanda de caldereros se concentra en paradas de planta, mantenimiento naval y obra industrial. HDM suministra caldereros donde está el trabajo —taller, obra o planta—, con desplazamiento acordado en la propuesta. Si su proyecto combina calderería con soldadura o montaje, configúrelo todo en una sola solicitud: la coordinación entre oficios es más simple cuando el personal llega del mismo suministro. La disponibilidad se confirma siempre antes de que usted decida, sin compromiso.",
+        queHacen: "El calderero industrial trabaja la chapa, la tubería y la estructura metálica pesada: trazado, conformado, montaje y reparación en taller, obra y planta. Es el perfil que sostiene paradas de planta, mantenimiento de depósitos y proyectos de fabricación donde la precisión del trazado condiciona todo lo demás. HDM propone caldereros con experiencia demostrable en calderería industrial y formación PRL al día, verificados antes de cada propuesta. Un buen calderero lee el plano, anticipa el conformado y deja el montaje listo para que soldador y montador trabajen sin sorpresas: por eso en paradas de planta es de los primeros perfiles que se solicitan. HDM lo sabe y verifica años de oficio real, no solo títulos. En Cataluña y el resto de España, la demanda de caldereros se concentra en paradas de planta, mantenimiento naval y obra industrial. HDM suministra caldereros donde está el trabajo -taller, obra o planta-, con desplazamiento acordado en la propuesta. Si su proyecto combina calderería con soldadura o montaje, configúrelo todo en una sola solicitud: la coordinación entre oficios es más simple cuando el personal llega del mismo suministro. La disponibilidad se confirma siempre antes de que usted decida, sin compromiso.",
         cuando: ["Paradas de planta: depósitos, intercambiadores y líneas de proceso.", "Fabricación y montaje de estructura metálica pesada.", "Mantenimiento industrial con plazos cerrados.", "Sustitución o refuerzo de su equipo de calderería en proyectos largos."],
         verifica: "HDM verifica: formación PRL al día y experiencia demostrable en calderería industrial (trazado, conformado y montaje). Cuando el trabajo es en depósito, altura o espacio confinado, se contrasta experiencia específica en esa condición. Sin datos verificados, no hay propuesta. La propuesta llega con la experiencia resumida y la disponibilidad confirmada para sus fechas, para que decida con datos.",
         faq: [{ q: "¿Caldereros para trabajos en altura o depósitos?", a: "Indique las condiciones en la solicitud (altura, confinado, interior de depósito); HDM lo tiene en cuenta al verificar perfiles y certificaciones." }, { q: "¿Puedo combinar caldereros con soldadores en la misma solicitud?", a: "Sí. Configure varios perfiles en la misma solicitud; HDM revisa la disponibilidad de cada cuadrilla y le responde con el conjunto." }, { q: "¿Sirven para fabricación en serie o solo montaje?", a: "Ambos. Especifique si el trabajo es fabricación en taller, montaje en obra o mantenimiento en planta; la verificación se ajusta a ese contexto." }, { q: "¿Qué diferencia hay entre calderero y soldador?", a: "El calderero traza, conforma y monta la pieza; el soldador une por cordón. En muchas obras conviven ambos: el calderero deja el conjunto preparado y el soldador cierra la unión. Pida ambos perfiles en la misma solicitud si la fase lo requiere." }, { q: "¿Trabajan fuera de Cataluña?", a: "Sí, HDM suministra personal industrial en toda España y Portugal. Indique la ubicación del proyecto en la solicitud y la propuesta incluye el desplazamiento acordado." }],
       },
       montador: {
         name: "Montadores de estructuras",
+        chip: "Montadores",
         singular: "Montador",
         short: "Montaje de estructuras metálicas y equipos industriales.",
         description:
           "Montadores de estructuras para levantado, ajuste y montaje de estructura metálica, soportación y equipos en obra e industria. Perfil habituado a trabajo en altura y coordinación de izajes.",
         requirements: "Formación PRL. Experiencia en montaje de estructuras y trabajo en altura.",
-        queHacen: "El montador de estructuras levanta, ajusta y fija estructura metálica, soportación y equipos industriales en obra y planta. Trabaja coordinado con grúa, habituado a altura y con lectura precisa de planos de montaje. Cuando el plazo de obra no admite retrasos, un montador experimentado es la diferencia entre mantener la línea crítica o no. HDM verifica experiencia en montaje y trabajo en altura antes de proponer. El perfil es especialmente valioso en fases cortas y secuenciales —soportación, racks, naves, puentes grúa— donde el orden de montaje condiciona a todos los demás oficios que vienen detrás. El montaje de estructuras metálicas es de los trabajos donde más se nota la diferencia entre personal verificado y personal improvisado: un montador con oficio mide, ajusta y deja cada pieza firme a la primera. HDM suministra montadores para obra civil, naval e industrial en toda Cataluña y Portugal, con disponibilidad confirmada en horas laborables. Para fases críticas puede combinarlos con ayudantes en la misma solicitud y mantener la secuencia de montaje sin huecos entre especialidades.",
+        queHacen: "El montador de estructuras levanta, ajusta y fija estructura metálica, soportación y equipos industriales en obra y planta. Trabaja coordinado con grúa, habituado a altura y con lectura precisa de planos de montaje. Cuando el plazo de obra no admite retrasos, un montador experimentado es la diferencia entre mantener la línea crítica o no. HDM verifica experiencia en montaje y trabajo en altura antes de proponer. El perfil es especialmente valioso en fases cortas y secuenciales -soportación, racks, naves, puentes grúa- donde el orden de montaje condiciona a todos los demás oficios que vienen detrás. El montaje de estructuras metálicas es de los trabajos donde más se nota la diferencia entre personal verificado y personal improvisado: un montador con oficio mide, ajusta y deja cada pieza firme a la primera. HDM suministra montadores para obra civil, naval e industrial en toda Cataluña y Portugal, con disponibilidad confirmada en horas laborables. Para fases críticas puede combinarlos con ayudantes en la misma solicitud y mantener la secuencia de montaje sin huecos entre especialidades.",
         cuando: ["Montaje de estructura metálica en obra industrial.", "Levantado y ajuste de equipos y soportación en planta.", "Fases críticas de obra con secuencias que no admiten retrasos.", "Montaje de naves, racks y puentes grúa con secuencia propia.", "Obra naval y estructuras pesadas con secuencias de izaje complejas."],
         verifica: "HDM verifica: formación PRL y experiencia en montaje de estructuras y trabajo en altura. Si la obra exige autorización de trabajo en altura específica o manejo de aparejos, se contrasta antes de la propuesta. Sin datos verificados, no hay propuesta. Si la obra exige autonomía en la lectura de planos, también se verifica ese punto antes de la propuesta, no sobre el terreno.",
-        faq: [{ q: "¿Los montadores leen planos de montaje?", a: "Sí, es parte habitual del perfil. Si su proyecto exige lectura de planos concreta, indíquelo en la solicitud para afinar la verificación." }, { q: "¿Trabajan coordinados con nuestra grúa?", a: "Sí, el montador está habituado a trabajar coordinado con el equipo de izaje del proyecto." }, { q: "¿Puedo pedir montadores para una fase corta de dos semanas?", a: "Sí. Indique fechas exactas en la solicitud; HDM revisa disponibilidad para ese periodo y le confirma antes de que decida." }, { q: "¿El montador trae su propio equipo de trabajo?", a: "El equipo de protección y las herramientas básicas se acuerdan en cada solicitud; lo habitual es que el proyecto aporte aparejos y grúa, y el perfil llegue con su EPI y herramienta personal habitual." }, { q: "¿Puedo pedir montadores con experiencia naval?", a: "Sí, indique el sector del proyecto —naval, obra civil o planta industrial— en la solicitud; HDM verifica la experiencia específica de cada perfil en ese entorno antes de proponerlo." }],
+        faq: [{ q: "¿Los montadores leen planos de montaje?", a: "Sí, es parte habitual del perfil. Si su proyecto exige lectura de planos concreta, indíquelo en la solicitud para afinar la verificación." }, { q: "¿Trabajan coordinados con nuestra grúa?", a: "Sí, el montador está habituado a trabajar coordinado con el equipo de izaje del proyecto." }, { q: "¿Puedo pedir montadores para una fase corta de dos semanas?", a: "Sí. Indique fechas exactas en la solicitud; HDM revisa disponibilidad para ese periodo y le confirma antes de que decida." }, { q: "¿El montador trae su propio equipo de trabajo?", a: "El equipo de protección y las herramientas básicas se acuerdan en cada solicitud; lo habitual es que el proyecto aporte aparejos y grúa, y el perfil llegue con su EPI y herramienta personal habitual." }, { q: "¿Puedo pedir montadores con experiencia naval?", a: "Sí, indique el sector del proyecto -naval, obra civil o planta industrial- en la solicitud; HDM verifica la experiencia específica de cada perfil en ese entorno antes de proponerlo." }],
       },
       electricista: {
         name: "Electricistas industriales",
+        chip: "Electricistas",
         singular: "Electricista industrial",
         short: "Instalaciones, cuadros y cableado en entorno industrial.",
         description:
@@ -201,6 +218,7 @@ export const es = {
       },
       constructor: {
         name: "Constructores y ayudantes",
+        chip: "Ayudantes",
         singular: "Constructor / ayudante",
         short: "Apoyo operativo para obra y trabajos industriales.",
         description:
@@ -213,6 +231,7 @@ export const es = {
       },
       supervisor: {
         name: "Supervisores y encargados",
+        chip: "Supervisores",
         singular: "Supervisor / encargado",
         short: "Coordinación de cuadrillas y control de ejecución.",
         description:
@@ -225,6 +244,7 @@ export const es = {
       },
       eletromecanico: {
         name: "Electromecánicos",
+        chip: "Electromecánicos",
         singular: "Electromecánico",
         short: "Instalación, mantenimiento y reparación de máquinas eléctricas y mecánicas.",
         description:
@@ -237,14 +257,15 @@ export const es = {
       },
       "mecanico-industrial": {
         name: "Mecánicos industriales",
+        chip: "Mecánicos",
         singular: "Mecánico industrial",
         short: "Mantenimiento y reparación de maquinaria de fábricas.",
         description:
           "Mecánicos industriales: instalan, mantienen y reparan maquinaria de fábricas. Identifican averías, sustituyen piezas desgastadas y ajustan componentes para evitar paradas en la producción. Perfil clave para la disponibilidad de la línea, con experiencia verificada en maquinaria de fábricas y propuesta sin compromiso en horas laborables.",
         requirements: "Formación PRL. Experiencia demostrable en mecánica industrial.",
-        queHacen: "El mecánico industrial instala, mantiene y repara maquinaria de fábricas: identifica averías, sustituye piezas desgastadas y ajusta componentes para evitar paradas en la producción. Su trabajo directo sobre la disponibilidad de la línea lo convierte en uno de los perfiles más solicitados en mantenimiento. HDM verifica su experiencia en mecánica industrial antes de cada propuesta. Más allá de la reparación, el mecánico industrial de mantenimiento preventivo lee los síntomas de la máquina —ruidos, vibraciones, juegos— y actúa antes de que el fallo detenga la producción: esa anticipación es lo que separa un mantenimiento caro de uno que se paga solo. En plantas de proceso, cada hora de máquina parada cuesta más que el propio ajuste: por eso el mecánico industrial es de los perfiles con mayor impacto directo en la disponibilidad. HDM suministra mecánicos con experiencia verificada en maquinaria de fábricas, en España y Portugal, para preventivo programado o correctivo urgente. La disponibilidad se confirma en horas laborables y la propuesta llega sin compromiso: usted decide con datos reales.",
+        queHacen: "El mecánico industrial instala, mantiene y repara maquinaria de fábricas: identifica averías, sustituye piezas desgastadas y ajusta componentes para evitar paradas en la producción. Su trabajo directo sobre la disponibilidad de la línea lo convierte en uno de los perfiles más solicitados en mantenimiento. HDM verifica su experiencia en mecánica industrial antes de cada propuesta. Más allá de la reparación, el mecánico industrial de mantenimiento preventivo lee los síntomas de la máquina -ruidos, vibraciones, juegos- y actúa antes de que el fallo detenga la producción: esa anticipación es lo que separa un mantenimiento caro de uno que se paga solo. En plantas de proceso, cada hora de máquina parada cuesta más que el propio ajuste: por eso el mecánico industrial es de los perfiles con mayor impacto directo en la disponibilidad. HDM suministra mecánicos con experiencia verificada en maquinaria de fábricas, en España y Portugal, para preventivo programado o correctivo urgente. La disponibilidad se confirma en horas laborables y la propuesta llega sin compromiso: usted decide con datos reales.",
         cuando: ["Mantenimiento preventivo y correctivo de maquinaria de producción.", "Sustitución de piezas desgastadas con la línea detenida.", "Ajustes y alineaciones para evitar paradas repetidas.", "Puestas en marcha y verificación de maquinaria tras parada programada.", "Alineación y balanceado de equipos rotativos con vibraciones o desgaste."],
-        verifica: "HDM verifica: formación PRL y experiencia demostrable en mecánica industrial (maquinaria de fábricas, ajustes y reparación). Cuando el proyecto lo pide, se contrasta experiencia en mantenimiento preventivo, alineaciones y lectura de síntomas de desgaste. Sin datos verificados, no hay propuesta. Si su maquinaria es de un tipo concreto —envasado, troquelado, proceso—, indíquelo: la experiencia se contrasta con ese contexto.",
+        verifica: "HDM verifica: formación PRL y experiencia demostrable en mecánica industrial (maquinaria de fábricas, ajustes y reparación). Cuando el proyecto lo pide, se contrasta experiencia en mantenimiento preventivo, alineaciones y lectura de síntomas de desgaste. Sin datos verificados, no hay propuesta. Si su maquinaria es de un tipo concreto -envasado, troquelado, proceso-, indíquelo: la experiencia se contrasta con ese contexto.",
         faq: [{ q: "¿Trabajan con maquinaria de proceso específica?", a: "Indique el tipo de maquinaria en la solicitud; HDM lo tiene en cuenta al verificar la experiencia de cada perfil." }, { q: "¿Puedo pedir mecánico junto a electromecánico?", a: "Sí, son perfiles complementarios en mantenimiento de planta; configure ambos en la misma solicitud." }, { q: "¿Hacen mantenimiento preventivo programado por semanas o meses?", a: "Sí. Configure la frecuencia y el alcance en la solicitud; HDM le propone perfiles con disponibilidad estable para ese calendario." }, { q: "¿También reparan averías urgentes con la línea parada?", a: "Sí, es el caso de uso más habitual del perfil: diagnóstico rápido, pieza o ajuste, y línea otra vez en marcha. Describa la avería en la solicitud para afinar la verificación." }, { q: "¿Puedo pedir mecánico para una sola parada programada?", a: "Sí. Indique fechas exactas en la solicitud; HDM revisa disponibilidad para ese periodo concreto y le confirma antes de que decida, sin compromiso." }],
       },
     } as Record<
@@ -269,7 +290,7 @@ export const es = {
       construccion: {
         name: "Construcción",
         intro:
-          "Montadores, soldadores y ayudantes para obra: estructura metálica, instalaciones y trabajos con plazos que no admiten retrasos. La construcción industrial vive de secuencias: cuando un oficio se retrasa, toda la obra paga el retraso. Por eso HDM suministra perfiles habituados a obra con secuencia crítica —alturas, izajes, coordinación con otras cuadrillas— y lo confirma antes de la incorporación. Solicite el refuerzo con fechas y volumen, y decida con disponibilidad real.",
+          "Montadores, soldadores y ayudantes para obra: estructura metálica, instalaciones y trabajos con plazos que no admiten retrasos. La construcción industrial vive de secuencias: cuando un oficio se retrasa, toda la obra paga el retraso. Por eso HDM suministra perfiles habituados a obra con secuencia crítica -alturas, izajes, coordinación con otras cuadrillas- y lo confirma antes de la incorporación. Solicite el refuerzo con fechas y volumen, y decida con disponibilidad real.",
       },
       "mantenimiento-industrial": {
         name: "Mantenimiento industrial",
@@ -279,7 +300,7 @@ export const es = {
       energia: {
         name: "Energía",
         intro:
-          "Personal industrial para proyectos del sector energético, donde la cualificación del perfil y la documentación son condiciones de entrada. En energía —renovable, térmica o redes— cada proyecto exige certificaciones, formación específica y experiencia demostrable en entornos regulados. HDM lo sabe y verifica la documentación de cada perfil antes de proponerlo, para que la incorporación no retrase su calendario de obra ni su ventana de intervención.",
+          "Personal industrial para proyectos del sector energético, donde la cualificación del perfil y la documentación son condiciones de entrada. En energía -renovable, térmica o redes- cada proyecto exige certificaciones, formación específica y experiencia demostrable en entornos regulados. HDM lo sabe y verifica la documentación de cada perfil antes de proponerlo, para que la incorporación no retrase su calendario de obra ni su ventana de intervención.",
       },
       fabricacion: {
         name: "Fabricación",
@@ -334,7 +355,7 @@ export const es = {
   },
   solutions: {
     title: "Soluciones",
-    lead: "Formas concretas de resolver una necesidad de personal industrial. Cada situación operativa tiene su fórmula: una parada con ventana corta, un refuerzo continuado, una baja inesperada o una obra con fecha de fin. Elija la solución que describe su caso, configure perfiles y fechas, y HDM le responde con disponibilidad real — sin compromiso por su parte.",
+    lead: "Formas concretas de resolver una necesidad de personal industrial. Cada situación operativa tiene su fórmula: una parada con ventana corta, un refuerzo continuado, una baja inesperada o una obra con fecha de fin. Elija la solución que describe su caso, configure perfiles y fechas, y HDM le responde con disponibilidad real - sin compromiso por su parte.",
     items: {
       "paradas-industriales": {
         name: "Paradas industriales",
@@ -359,7 +380,7 @@ export const es = {
       "sustitucion-temporal": {
         name: "Sustitución temporal",
         intro:
-          "Bajas, vacaciones o ausencias que no pueden frenar la producción. Solicite sustituciones temporales del perfil exacto que necesita cubrir: misma especialidad, misma cualificación, documentación preparada antes de la incorporación. La duración es flexible —desde días hasta meses— y la sustitución se integra en su equipo sin fricción. HDM confirma la disponibilidad en horas laborables para que el hueco en su cuadrilla dure lo mínimo posible.",
+          "Bajas, vacaciones o ausencias que no pueden frenar la producción. Solicite sustituciones temporales del perfil exacto que necesita cubrir: misma especialidad, misma cualificación, documentación preparada antes de la incorporación. La duración es flexible -desde días hasta meses- y la sustitución se integra en su equipo sin fricción. HDM confirma la disponibilidad en horas laborables para que el hueco en su cuadrilla dure lo mínimo posible.",
         points: [
           "Mismo perfil y especialidad que la persona a sustituir.",
           "Duración flexible según la situación.",
@@ -369,7 +390,7 @@ export const es = {
       "trabajos-puntuales": {
         name: "Trabajos puntuales y obra",
         intro:
-          "Un proyecto concreto con una fecha de fin. Suministro de personal para trabajos puntuales y obra: montaje, soldadura, estructura y apoyo operativo. Dimensionamos el equipo al trabajo real —desde una persona hasta cuadrillas completas con supervisión opcional— y usted marca fechas y duración. Es la forma más directa de cubrir una fase concreta sin compromisos de largo plazo: la propuesta llega en horas laborables, con disponibilidad confirmada para sus fechas.",
+          "Un proyecto concreto con una fecha de fin. Suministro de personal para trabajos puntuales y obra: montaje, soldadura, estructura y apoyo operativo. Dimensionamos el equipo al trabajo real -desde una persona hasta cuadrillas completas con supervisión opcional- y usted marca fechas y duración. Es la forma más directa de cubrir una fase concreta sin compromisos de largo plazo: la propuesta llega en horas laborables, con disponibilidad confirmada para sus fechas.",
         points: [
           "Equipos dimensionados al trabajo: desde 1 persona a cuadrillas completas.",
           "Fechas y duración definidas por usted.",
@@ -397,23 +418,23 @@ export const es = {
           "Un perfil verificado llega produciendo desde el primer día de parada.",
         ],
         article: [
-          "El primer paso es la especificación. Cuanto más concreta sea la solicitud, más rápida y precisa será la respuesta. Indique el proceso de soldadura que necesita —TIG para raíces y acabados finos, MIG/MAG para productividad en espesores gruesos, electrodo revestido para obra y exterior—, el volumen de cordón estimado, las fechas exactas de la parada o del trabajo, las condiciones del puesto —altura, espacio confinado, turno— y la ubicación del proyecto. Una solicitud que dice necesito soldadores no permite verificar nada; una que dice necesito dos soldadores TIG con experiencia en tubería de proceso, del 12 al 16 de octubre, turno de mañana, en el corredor de Barcelona permite verificar certificados, experiencia y disponibilidad en una sola pasada.",
-          "El segundo paso es la verificación, y aquí es donde se separan los suministros serios de los improvisados. Un soldador TIG no es intercambiable con uno de electrodo: el certificado de soldadura según proceso —EN ISO 9606 u equivalente— es la prueba mínima de que la persona domina el proceso que su proyecto necesita. A ese certificado se suman la formación PRL al día, imprescindible para cualquier incorporación en entorno industrial, y la experiencia contrastada en el tipo de trabajo concreto: tubería de proceso no es lo mismo que estructura naval, y un cordón que pasa inspección a la primera ahorra horas de retrabajo que en una parada de planta cuestan más que el propio soldador.",
-          "El tercer paso es la disponibilidad. En Barcelona y su área metropolitana, la concentración industrial más densa de Cataluña, la rotación de perfiles cualificados es alta — pero la demanda también. Por eso la disponibilidad nunca se da por supuesta: se confirma. El flujo correcto es el siguiente: usted envía la solicitud con la especificación completa, el equipo revisa qué perfiles con ese certificado y esa experiencia están disponibles para sus fechas, y recibe una propuesta con disponibilidad real en horas laborables. Sin compromiso por su parte. Si la respuesta tarda días, o llega sin datos verificados, está hablando con un intermediario sin cuadrilla, no con un suministrador.",
+          "El primer paso es la especificación. Cuanto más concreta sea la solicitud, más rápida y precisa será la respuesta. Indique el proceso de soldadura que necesita -TIG para raíces y acabados finos, MIG/MAG para productividad en espesores gruesos, electrodo revestido para obra y exterior-, el volumen de cordón estimado, las fechas exactas de la parada o del trabajo, las condiciones del puesto -altura, espacio confinado, turno- y la ubicación del proyecto. Una solicitud que dice necesito soldadores no permite verificar nada; una que dice necesito dos soldadores TIG con experiencia en tubería de proceso, del 12 al 16 de octubre, turno de mañana, en el corredor de Barcelona permite verificar certificados, experiencia y disponibilidad en una sola pasada.",
+          "El segundo paso es la verificación, y aquí es donde se separan los suministros serios de los improvisados. Un soldador TIG no es intercambiable con uno de electrodo: el certificado de soldadura según proceso -EN ISO 9606 u equivalente- es la prueba mínima de que la persona domina el proceso que su proyecto necesita. A ese certificado se suman la formación PRL al día, imprescindible para cualquier incorporación en entorno industrial, y la experiencia contrastada en el tipo de trabajo concreto: tubería de proceso no es lo mismo que estructura naval, y un cordón que pasa inspección a la primera ahorra horas de retrabajo que en una parada de planta cuestan más que el propio soldador.",
+          "El tercer paso es la disponibilidad. En Barcelona y su área metropolitana, la concentración industrial más densa de Cataluña, la rotación de perfiles cualificados es alta - pero la demanda también. Por eso la disponibilidad nunca se da por supuesta: se confirma. El flujo correcto es el siguiente: usted envía la solicitud con la especificación completa, el equipo revisa qué perfiles con ese certificado y esa experiencia están disponibles para sus fechas, y recibe una propuesta con disponibilidad real en horas laborables. Sin compromiso por su parte. Si la respuesta tarda días, o llega sin datos verificados, está hablando con un intermediario sin cuadrilla, no con un suministrador.",
           "El cuarto paso es la incorporación. Un soldador TIG verificado llega al puesto con la documentación preparada antes de empezar: certificado según proceso, formación PRL al día y la experiencia resumida en la propuesta que usted ya ha visto. No hay periodo de prueba improvisado ni sorpresas el primer día. En paradas de planta, donde cada hora de soldadura está contada, esa preparación previa es la diferencia entre cumplir la ventana de parada o pagarla dos veces.",
           "Hay dos errores que repiten quienes buscan soldadores TIG en Barcelona con urgencia. El primero es pedir solo por precio: un cordón mal ejecutado obliga a retrabajar, y el retrabajo en una parada cuesta más que la diferencia entre una propuesta seria y una barata. El segundo es no indicar las condiciones del puesto: si el trabajo es en altura o en espacio confinado y eso no se dice en la solicitud, la verificación queda coja y la incorporación se retrasa exactamente cuando menos tiempo hay. Indicar todo desde el primer mensaje es gratis y acelera todo lo demás.",
-          "Una nota sobre los plazos, porque aquí es donde suelen crearse las expectativas equivocadas. Encontrar soldadores TIG en Barcelona en un plazo muy corto es posible en muchos casos —la concentración industrial de la zona trabaja a favor—, pero depende de tres variables que nadie controla por usted: el proceso y la cualificación exactos, el volumen de personas y las fechas concretas. Lo que sí puede exigir siempre es que la respuesta llegue en horas laborables y con datos verificados: disponibilidad real, certificado real y experiencia real. Una respuesta rápida con datos reales le permite decidir con criterio; una promesa genérica de rapidez, sin datos detrás, solo le traslada el riesgo a la parada.",
+          "Una nota sobre los plazos, porque aquí es donde suelen crearse las expectativas equivocadas. Encontrar soldadores TIG en Barcelona en un plazo muy corto es posible en muchos casos -la concentración industrial de la zona trabaja a favor-, pero depende de tres variables que nadie controla por usted: el proceso y la cualificación exactos, el volumen de personas y las fechas concretas. Lo que sí puede exigir siempre es que la respuesta llegue en horas laborables y con datos verificados: disponibilidad real, certificado real y experiencia real. Una respuesta rápida con datos reales le permite decidir con criterio; una promesa genérica de rapidez, sin datos detrás, solo le traslada el riesgo a la parada.",
           "Conviene también distinguir entre soldador de parada y soldador de producción. El soldador de parada trabaja contra reloj, en ventanas cortas, con frecuencia en altura o en espacios confinados, y su valor está en la precisión bajo presión: cordones que pasan inspección a la primera porque no hay margen para retrabajo. El soldador de producción trabaja en línea, con ritmo sostenido y repetibilidad. No son perfiles intercambiables, y pedir uno para el trabajo del otro es el error que más retrabajos genera. En la solicitud, indique si el trabajo es de parada, de producción o de taller: la verificación se ajusta a ese contexto y la propuesta llega con perfiles que encajan con el trabajo real, no con una categoría genérica.",
           "Por último, el criterio de decisión. Cuando compare propuestas de distintos suministradores, compare tres cosas y solo tres: la especificidad de la verificación (certificado según proceso, no genérico), la concreción de la disponibilidad (fechas, volumen y turno confirmados, no estimados) y la claridad de la documentación (qué llega preparado antes de la incorporación). El precio importa, pero en una parada el precio de un cordón retrabajado supera con creces la diferencia entre propuestas. Quien le propone con datos verificados está asumiendo parte de su riesgo; quién le propone sin datos se lo está dejando entero.",
           "En Barcelona, el mercado de soldadores TIG tiene una particularidad que conviene conocer: la demanda se concentra en oleadas. Las paradas de primavera y otoño, las campañas navales y los proyectos de infraestructura absorben cuadrillas enteras en semanas, y los perfiles con certificado TIG y experiencia en proceso son los primeros en agotarse. Si su necesidad coincide con una de esas oleadas, la anticipación vale más que la urgencia: una solicitud enviada con dos semanas de margen tiene más opciones reales que una enviada el día anterior, y la propuesta llega con mejores perfiles y mejores condiciones. La regla práctica es simple: cuando sepa que va a necesitar soldadores, pregunte antes de necesitarlos.",
-          "Y un último consejo sobre la inspección. En trabajo de soldadura regulado, el cordón se inspecciona —visual, líquidos penetrantes, radiografía según el caso—, y la persona que firma esa inspección responde ante la norma, no ante el calendario. Un soldador que sabe que su cordón va a ser inspeccionado trabaja distinto que uno que sabe que nadie va a mirarlo. Pida soldadores habituados a trabajar bajo inspección: la propuesta seria lo menciona, porque es una señal de oficio que ningún certificado resume.",
-          "Si esta guía le resolvió una duda concreta, el siguiente paso es aún más simple: configure su solicitud con lo que sabe hoy —proceso, fechas aproximadas y condiciones— y deje que la verificación complete el resto. No necesita tener todo definido para empezar; necesita empezar para tenerlo definido a tiempo.",
+          "Y un último consejo sobre la inspección. En trabajo de soldadura regulado, el cordón se inspecciona -visual, líquidos penetrantes, radiografía según el caso-, y la persona que firma esa inspección responde ante la norma, no ante el calendario. Un soldador que sabe que su cordón va a ser inspeccionado trabaja distinto que uno que sabe que nadie va a mirarlo. Pida soldadores habituados a trabajar bajo inspección: la propuesta seria lo menciona, porque es una señal de oficio que ningún certificado resume.",
+          "Si esta guía le resolvió una duda concreta, el siguiente paso es aún más simple: configure su solicitud con lo que sabe hoy -proceso, fechas aproximadas y condiciones- y deje que la verificación complete el resto. No necesita tener todo definido para empezar; necesita empezar para tenerlo definido a tiempo.",
           "Y recuerde: en soldadura industrial la prisa mal gestionada siempre se paga en retrabajo. Una hora bien invertida en la solicitud inicial ahorra días de parada después.",
           "HDM suministra soldadores TIG, MIG/MAG y electrodo para proyectos en Barcelona, el corredor industrial catalán y el resto de España y Portugal. El proceso es el descrito en esta guía: especificación concreta, verificación de certificado y experiencia, confirmación de disponibilidad en horas laborables e incorporación con documentación preparada. Configure su solicitud con el proceso, las fechas y las condiciones, y reciba una propuesta sin compromiso.",
         ],
       },
       "guia-ett-industrial-vs-cuadrilla": {
-        name: "Guía: ETT industrial vs cuadrilla propia — cuándo conviene cada opción",
+        name: "Guía: ETT industrial vs cuadrilla propia - cuándo conviene cada opción",
         intro:
           "Una de las decisiones operativas más importantes de una planta o una obra es cómo cubrir la necesidad de personal industrial: con cuadrilla propia, contratando a través de una ETT industrial, o con una combinación de ambas. Esta guía analiza las dos opciones con honestidad, sin prejuicios, para que la decisión se tome con criterio.",
         points: [
@@ -424,46 +445,46 @@ export const es = {
         ],
         article: [
           "La cuadrilla propia tiene una ventaja estructural que nadie discute: control. Los trabajadores son suyos, conocen la planta, sus estándares y sus rutinas, y responden directamente a su organización. Para el trabajo continuo, estable y predecible, esa continuidad vale. Pero ese control tiene un coste que no desaparece cuando la carga de trabajo baja: salarios, seguridad social, formación, equipamiento, gestión de bajas y vacaciones, y el tiempo de su equipo dedicado a administrar todo eso. Cuando la demanda es estable al cien por cien, el coste se amortiza. Cuando hay picos, valles, paradas puntuales o proyectos con fecha de fin, la cuadrilla propie se convierte en un coste fijo que trabaja a ocupaciones variables.",
-          "La ETT industrial —empresa de trabajo temporal especializada en perfiles industriales— ataca exactamente ese problema: convierte el coste fijo en variable. Usted paga por las horas trabajadas del perfil que necesita, cuando lo necesita, sin estructura permanente detrás. La flexibilidad no es solo económica: es también de velocidad. Incorporar a una persona por cuenta propia implica selección, contratación, documentación y formación; un suministrador industrial con perfiles verificados puede confirmar disponibilidad en horas laborables y tener a la persona en el puesto en el tiempo que la logística permita. Para paradas con ventana corta, picos de producción o sustituciones urgentes, esa velocidad es la diferencia operativa real.",
-          "El punto donde las ETT industriales se separan entre sí — y donde usted debe mirar con lupa — es la verificación. No es lo mismo un suministrador que propone perfiles con certificado según proceso, formación PRL al día y experiencia contrastada verificada antes de la propuesta, que uno que envía nombres con una llamada de teléfono de por medio. Pregunte siempre tres cosas: qué certificado tiene el perfil para el proceso concreto que necesito, qué formación PRL tiene y en vigor, y qué experiencia demostrable tiene en este tipo de trabajo. Si la respuesta es genérica, la propuesta también lo será.",
-          "Hay también situaciones donde la ETT industrial no es la respuesta correcta, y decirlo forma parte de decidir bien. Si la necesidad es permanente, estable y de volumen alto durante años, y la economía de la operación lo soporta, una cuadrilla propia bien gestionada suele ser más eficiente a largo plazo. Si el trabajo requiere conocimiento proprietario acumulado durante años —una línea concreta, un proceso propietario, una maquinaria única— la continuidad de la plantilla propia tiene valor que el suministro externo no reproduce. La ETT industrial brilla donde hay variabilidad: picos, paradas, proyectos con fin, bajas por cubrir, campañas intensivas.",
+          "La ETT industrial -empresa de trabajo temporal especializada en perfiles industriales- ataca exactamente ese problema: convierte el coste fijo en variable. Usted paga por las horas trabajadas del perfil que necesita, cuando lo necesita, sin estructura permanente detrás. La flexibilidad no es solo económica: es también de velocidad. Incorporar a una persona por cuenta propia implica selección, contratación, documentación y formación; un suministrador industrial con perfiles verificados puede confirmar disponibilidad en horas laborables y tener a la persona en el puesto en el tiempo que la logística permita. Para paradas con ventana corta, picos de producción o sustituciones urgentes, esa velocidad es la diferencia operativa real.",
+          "El punto donde las ETT industriales se separan entre sí - y donde usted debe mirar con lupa - es la verificación. No es lo mismo un suministrador que propone perfiles con certificado según proceso, formación PRL al día y experiencia contrastada verificada antes de la propuesta, que uno que envía nombres con una llamada de teléfono de por medio. Pregunte siempre tres cosas: qué certificado tiene el perfil para el proceso concreto que necesito, qué formación PRL tiene y en vigor, y qué experiencia demostrable tiene en este tipo de trabajo. Si la respuesta es genérica, la propuesta también lo será.",
+          "Hay también situaciones donde la ETT industrial no es la respuesta correcta, y decirlo forma parte de decidir bien. Si la necesidad es permanente, estable y de volumen alto durante años, y la economía de la operación lo soporta, una cuadrilla propia bien gestionada suele ser más eficiente a largo plazo. Si el trabajo requiere conocimiento proprietario acumulado durante años -una línea concreta, un proceso propietario, una maquinaria única- la continuidad de la plantilla propia tiene valor que el suministro externo no reproduce. La ETT industrial brilla donde hay variabilidad: picos, paradas, proyectos con fin, bajas por cubrir, campañas intensivas.",
           "La opción más habitual en plantas maduras no es ni una cosa ni la otra, sino la combinación: una base de plantilla propia para el trabajo continuo, y suministro industrial externo para absorber la variabilidad. Ese modelo permite mantener el control donde importa y la flexibilidad donde duele. La clave operativa es que ambas capas funcionen con los mismos estándares: si el personal suministrado trabaja con la misma documentación, los mismos criterios de seguridad y la misma calidad de verificación que la plantilla propia, la frontera entre uno y otro desaparece en el día a día de la producción.",
-          "El cálculo económico, sin adornos, funciona así: compare el coste completo de una hora de cuadrilla propia —salario, cargas, formación, equipamiento, gestión y el coste de la hora cuando no hay trabajo— con el coste de una hora de perfil suministrado verificado. En ocupaciones altas y estables, la cuadrilla propia suele ganar. En ocupaciones variables —picos estacionales, paradas puntuales, proyectos con inicio y fin—, el suministro externo gana casi siempre, porque usted paga la hora que trabaja y no la estructura que la sostiene cuando no hay trabajo. La pregunta correcta no es ¿cuál es más barato?, sino ¿cuál es más barato para MI curva de carga?",
-          "También pesa un factor que no aparece en las hojas de cálculo: la velocidad de entrada y de salida. Montar una cuadrilla propia toma semanas o meses —selección, contratación, documentación, formación— y desmontarla es un proceso laboral delicado. El suministro externo entra en días y sale cuando el trabajo termina, sin proceso laboral sobre su mesa. Para proyectos con fecha de fin, campañas intensivas o pruebas de nueva línea, esa asimetría de velocidad vale tanto como el ahorro directo: le permite probar, escalar o cerrar sin fricción organizativa.",
-          "Si decide combinar ambas fórmulas —la opción más habitual en plantas maduras—, pida al suministrador lo que pediría a un departamento de personal interno: verificación documental de cada perfil antes de la propuesta, seguimiento durante la colaboración, comunicación directa cuando algo se desvía y flexibilidad para ampliar, reducir o cambiar perfiles sin trámites nuevos. Con esos cuatro elementos, la capa externa deja de ser una contrata y se convierte en una extensión de su operación. Sin ellos, es solo mano de obra de alquiler, con todo el riesgo que la expresión implica.",
-          "Un matiz importante sobre la flexibilidad: no toda variabilidad se resuelve con el mismo instrumento. Cubrir un pico de dos meses es un caso claro de suministro externo. Cubrir una necesidad que lleva años siendo estable no lo es. Y hay un territorio intermedio —seis meses, un año, una línea nueva que aún no ha demostrado su carga— donde la respuesta correcta depende de datos que solo usted tiene: la probabilidad de que la carga se mantenga, el coste de la hora improductiva en su operación y la facilidad con la que su organización absorbe personal propio. En ese territorio intermedio, la honestidad manda: el suministro externo le da una opción real sin compromiso largo, y su propia estructura le da control. Decida con la curva de carga delante, no con la ideología.",
+          "El cálculo económico, sin adornos, funciona así: compare el coste completo de una hora de cuadrilla propia -salario, cargas, formación, equipamiento, gestión y el coste de la hora cuando no hay trabajo- con el coste de una hora de perfil suministrado verificado. En ocupaciones altas y estables, la cuadrilla propia suele ganar. En ocupaciones variables -picos estacionales, paradas puntuales, proyectos con inicio y fin-, el suministro externo gana casi siempre, porque usted paga la hora que trabaja y no la estructura que la sostiene cuando no hay trabajo. La pregunta correcta no es ¿cuál es más barato?, sino ¿cuál es más barato para MI curva de carga?",
+          "También pesa un factor que no aparece en las hojas de cálculo: la velocidad de entrada y de salida. Montar una cuadrilla propia toma semanas o meses -selección, contratación, documentación, formación- y desmontarla es un proceso laboral delicado. El suministro externo entra en días y sale cuando el trabajo termina, sin proceso laboral sobre su mesa. Para proyectos con fecha de fin, campañas intensivas o pruebas de nueva línea, esa asimetría de velocidad vale tanto como el ahorro directo: le permite probar, escalar o cerrar sin fricción organizativa.",
+          "Si decide combinar ambas fórmulas -la opción más habitual en plantas maduras-, pida al suministrador lo que pediría a un departamento de personal interno: verificación documental de cada perfil antes de la propuesta, seguimiento durante la colaboración, comunicación directa cuando algo se desvía y flexibilidad para ampliar, reducir o cambiar perfiles sin trámites nuevos. Con esos cuatro elementos, la capa externa deja de ser una contrata y se convierte en una extensión de su operación. Sin ellos, es solo mano de obra de alquiler, con todo el riesgo que la expresión implica.",
+          "Un matiz importante sobre la flexibilidad: no toda variabilidad se resuelve con el mismo instrumento. Cubrir un pico de dos meses es un caso claro de suministro externo. Cubrir una necesidad que lleva años siendo estable no lo es. Y hay un territorio intermedio -seis meses, un año, una línea nueva que aún no ha demostrado su carga- donde la respuesta correcta depende de datos que solo usted tiene: la probabilidad de que la carga se mantenga, el coste de la hora improductiva en su operación y la facilidad con la que su organización absorbe personal propio. En ese territorio intermedio, la honestidad manda: el suministro externo le da una opción real sin compromiso largo, y su propia estructura le da control. Decida con la curva de carga delante, no con la ideología.",
           "También conviene hablar de lo que pasa cuando algo falla, porque fallar es parte de toda operación humana. Con cuadrilla propia, un error de selección se paga en meses: la persona incorporada, formada y con contrato. Con suministro externo verificado, se paga en días: la sustitución es parte del servicio. Esa asimetría no significa que el personal suministrado falle más; significa que el coste del fallo es asimétrico. Quien gestiona operaciones sabe que los errores de selección ocurren siempre; la cuestión práctica es cuánto cuesta corregirlos. En eso, la flexibilidad del suministro externo es un seguro que se paga solo en cada hora trabajada.",
-          "La mejor decisión es la que se toma con datos delante. Configure una solicitud describiendo su situación —carga actual, previsión y tipo de trabajo— y compare la propuesta con sus números internos. La conclusión será suya, pero estará fundada.",
-          "HDM suministra personal industrial cualificado —soldadores, caldereros, montadores, electricistas, electromecánicos, mecánicos y supervisores— para plantas y obras en España y Portugal, con verificación documental y de experiencia antes de cada propuesta. Si está evaluando cuándo conviene suministro externo frente a cuadrilla propia, describa su situación en una solicitud: la propuesta llega con datos reales, sin compromiso y con la honestidad de decirle también cuándo no hace falta.",
+          "La mejor decisión es la que se toma con datos delante. Configure una solicitud describiendo su situación -carga actual, previsión y tipo de trabajo- y compare la propuesta con sus números internos. La conclusión será suya, pero estará fundada.",
+          "HDM suministra personal industrial cualificado -soldadores, caldereros, montadores, electricistas, electromecánicos, mecánicos y supervisores- para plantas y obras en España y Portugal, con verificación documental y de experiencia antes de cada propuesta. Si está evaluando cuándo conviene suministro externo frente a cuadrilla propia, describa su situación en una solicitud: la propuesta llega con datos reales, sin compromiso y con la honestidad de decirle también cuándo no hace falta.",
         ],
       },
       "guia-planificar-parada-planta": {
-        name: "Guía: paradas de planta — cómo planificar el personal de una parada",
+        name: "Guía: paradas de planta - cómo planificar el personal de una parada",
         intro:
-          "Una parada de planta —shutdown o turnaround— concentra en días o semanas el trabajo de meses. La planificación del personal es la variable que más condiciona el éxito: esta guía recoge los criterios que separan una parada que cumple su ventana de una que la paga dos veces.",
+          "Una parada de planta -shutdown o turnaround- concentra en días o semanas el trabajo de meses. La planificación del personal es la variable que más condiciona el éxito: esta guía recoge los criterios que separan una parada que cumple su ventana de una que la paga dos veces.",
         points: [
           "La ventana de parada manda sobre todo: el personal se planifica contra ella, no al revés.",
-          "Los perfiles críticos —soldadores y caldereros— se reservan primero.",
+          "Los perfiles críticos -soldadores y caldereros- se reservan primero.",
           "Los turnos se definen antes de la parada, no durante.",
           "La supervisión diaria es la capa que detecta desviaciones a tiempo.",
         ],
         article: [
-          "Toda planificación de personal de parada empieza con una sola pregunta: ¿cuántas horas tiene la ventana? La ventana de parada —el tiempo que la planta puede estar detenida— es la restricción que lo domina todo. Contra ella se calcula el volumen de trabajo por oficio, el número de personas por turno y la secuencia de intervención. Un error frecuente es planificar el personal al revés: partir de la cuadrilla disponible y ajustar el trabajo a ella. La planificación correcta parte del trabajo: qué hay que soldar, qué hay que desmontar, qué hay que montar, cuántas horas de oficio requiere cada tarea y en qué secuencia, y de ahí se derivan los perfiles, los volúmenes y los turnos.",
-          "El segundo criterio es la priorización de perfiles críticos. En una parada, no todos los oficios tienen la misma elasticidad. Los soldadores —especialmente TIG para tubería de proceso— y los caldereros son los perfiles que más condicionan el plazo, porque su trabajo suele estar en el camino crítico: hasta que la tubería no está soldada, no se puede presurizar; hasta que el depósito no está cerrado, no se puede llenar. Esos perfiles se reservan primero, con más margen de antelación y con la verificación más estricta. Los perfiles de apoyo —ayudantes, logística de puesto— tienen más rotación y se cierran después, pero también con fecha: un oficial sin ayudante trabaja a medio rendimiento.",
-          "El tercer criterio es la definición de turnos antes de la parada. Cuántos turnos habrá, de cuántas horas, con qué solapamientos y quién cubre cada uno se decide en la planificación, no en la primera noche de la parada. El error típico es subestimar el segundo y tercer turno: la parada parece bien planificada en el papel del turno de mañana, pero la realidad de las paradas largas se juega de noche. Defina el turnario completo, incluidos los perfiles que cubren cada franja, y verifique la disponibilidad de cada cuadrilla para ese calendario concreto — no para un trabajo abstracto.",
-          "El cuarto criterio es la supervisión diaria. Una parada con veinte personas y tres contratistas sin coordinación diaria es una suma de trabajos, no un proyecto. La capa de supervisión —un encargado que coordina cuadrillas, controla la ejecución y entrega parte de jornada— es lo que convierte el personal suministrado en un equipo: quién entró, quién salió, qué se ejecutó, qué falta y qué se desvió del plan. Sin esa capa, las desviaciones se detectan tarde; con ella, se corrigen el mismo día. En paradas con varios contratistas trabajando a la vez, la coordinación no es un lujo: es la única forma de que el trabajo de uno no bloquee el trabajo de otro.",
-          "Hay también una dimensión que se planifica menos de lo que debería: la documentación. Cada perfil que entra a planta en una parada llega con su certificado según proceso, su formación PRL en vigor y, cuando el entorno lo exige —petroquímica, energía, entorno químico— su formación específica. Preparar esa documentación antes de la incorporación, no el primer día, es lo que permite que la primera hora de la parada sea productiva. Quien descuida este punto suele descubrirlo a las siete de la mañana del primer día, que es el peor momento para descubrirlo.",
-          "Una regla práctica para dimensionar el personal: calcule el volumen de trabajo por oficio en horas, divida entre las horas disponibles de la ventana menos un margen realista de imprevistos —el veinte por ciento es una referencia honesta en paradas con interdependencias—, y obtendrá el número mínimo de personas por oficio. Redondee hacia arriba en los oficios del camino crítico y hacia abajo en los de apoyo, que siempre se puede reforzar con más agilidad. Quien planifica la parada al cien por cien de ocupación está planificando el retraso: la primera incidencia convierte el cuello de botella en atasco.",
-          "La comunicación durante la parada merece un párrafo propio porque es donde más se pierde. Antes de la parada, acuerde tres cosas con el suministrador: el canal y la frecuencia de seguimiento —parte diario, reunión breve de arranque de turno o ambos—, el interlocutor único por parte del suministrador —una persona, no una centralita— y el protocolo de desviación —qué pasa, quién decide y en cuánto tiempo cuando algo se sale del plan. En una parada, el problema no es que surjan imprevistos: es que surjan imprevistos sin circuito de decisión. Con el circuito acordado, la mayoría de los imprevistos se absorben sin coste de plazo.",
-          "Después de la parada, cierre el ciclo: revise qué perfiles funcionaron, qué volúmenes fueron los correctos y qué se desvió del plan. Esa revisión de quince minutos es el activo más barato que deja cada parada: convierte la experiencia en criterio para la siguiente. Si el suministrador trabaja con usted de forma continuada, esos datos alimentan la propuesta de la siguiente parada —los perfiles que encajaron, los turnos que funcionaron, la supervisión que hizo falta— y cada ventana sale mejor planificada que la anterior. La planificación del personal de parada no es un arte de una vez: es un proceso que mejora con cada ciclo cerrado.",
+          "Toda planificación de personal de parada empieza con una sola pregunta: ¿cuántas horas tiene la ventana? La ventana de parada -el tiempo que la planta puede estar detenida- es la restricción que lo domina todo. Contra ella se calcula el volumen de trabajo por oficio, el número de personas por turno y la secuencia de intervención. Un error frecuente es planificar el personal al revés: partir de la cuadrilla disponible y ajustar el trabajo a ella. La planificación correcta parte del trabajo: qué hay que soldar, qué hay que desmontar, qué hay que montar, cuántas horas de oficio requiere cada tarea y en qué secuencia, y de ahí se derivan los perfiles, los volúmenes y los turnos.",
+          "El segundo criterio es la priorización de perfiles críticos. En una parada, no todos los oficios tienen la misma elasticidad. Los soldadores -especialmente TIG para tubería de proceso- y los caldereros son los perfiles que más condicionan el plazo, porque su trabajo suele estar en el camino crítico: hasta que la tubería no está soldada, no se puede presurizar; hasta que el depósito no está cerrado, no se puede llenar. Esos perfiles se reservan primero, con más margen de antelación y con la verificación más estricta. Los perfiles de apoyo -ayudantes, logística de puesto- tienen más rotación y se cierran después, pero también con fecha: un oficial sin ayudante trabaja a medio rendimiento.",
+          "El tercer criterio es la definición de turnos antes de la parada. Cuántos turnos habrá, de cuántas horas, con qué solapamientos y quién cubre cada uno se decide en la planificación, no en la primera noche de la parada. El error típico es subestimar el segundo y tercer turno: la parada parece bien planificada en el papel del turno de mañana, pero la realidad de las paradas largas se juega de noche. Defina el turnario completo, incluidos los perfiles que cubren cada franja, y verifique la disponibilidad de cada cuadrilla para ese calendario concreto - no para un trabajo abstracto.",
+          "El cuarto criterio es la supervisión diaria. Una parada con veinte personas y tres contratistas sin coordinación diaria es una suma de trabajos, no un proyecto. La capa de supervisión -un encargado que coordina cuadrillas, controla la ejecución y entrega parte de jornada- es lo que convierte el personal suministrado en un equipo: quién entró, quién salió, qué se ejecutó, qué falta y qué se desvió del plan. Sin esa capa, las desviaciones se detectan tarde; con ella, se corrigen el mismo día. En paradas con varios contratistas trabajando a la vez, la coordinación no es un lujo: es la única forma de que el trabajo de uno no bloquee el trabajo de otro.",
+          "Hay también una dimensión que se planifica menos de lo que debería: la documentación. Cada perfil que entra a planta en una parada llega con su certificado según proceso, su formación PRL en vigor y, cuando el entorno lo exige -petroquímica, energía, entorno químico- su formación específica. Preparar esa documentación antes de la incorporación, no el primer día, es lo que permite que la primera hora de la parada sea productiva. Quien descuida este punto suele descubrirlo a las siete de la mañana del primer día, que es el peor momento para descubrirlo.",
+          "Una regla práctica para dimensionar el personal: calcule el volumen de trabajo por oficio en horas, divida entre las horas disponibles de la ventana menos un margen realista de imprevistos -el veinte por ciento es una referencia honesta en paradas con interdependencias-, y obtendrá el número mínimo de personas por oficio. Redondee hacia arriba en los oficios del camino crítico y hacia abajo en los de apoyo, que siempre se puede reforzar con más agilidad. Quien planifica la parada al cien por cien de ocupación está planificando el retraso: la primera incidencia convierte el cuello de botella en atasco.",
+          "La comunicación durante la parada merece un párrafo propio porque es donde más se pierde. Antes de la parada, acuerde tres cosas con el suministrador: el canal y la frecuencia de seguimiento -parte diario, reunión breve de arranque de turno o ambos-, el interlocutor único por parte del suministrador -una persona, no una centralita- y el protocolo de desviación -qué pasa, quién decide y en cuánto tiempo cuando algo se sale del plan. En una parada, el problema no es que surjan imprevistos: es que surjan imprevistos sin circuito de decisión. Con el circuito acordado, la mayoría de los imprevistos se absorben sin coste de plazo.",
+          "Después de la parada, cierre el ciclo: revise qué perfiles funcionaron, qué volúmenes fueron los correctos y qué se desvió del plan. Esa revisión de quince minutos es el activo más barato que deja cada parada: convierte la experiencia en criterio para la siguiente. Si el suministrador trabaja con usted de forma continuada, esos datos alimentan la propuesta de la siguiente parada -los perfiles que encajaron, los turnos que funcionaron, la supervisión que hizo falta- y cada ventana sale mejor planificada que la anterior. La planificación del personal de parada no es un arte de una vez: es un proceso que mejora con cada ciclo cerrado.",
           "El factor humano de la parada, además del técnico, merece atención explicita. Trabajar turnos intensivos durante una ventana corta es una condición exigente: la fatiga acumulada deteriora la calidad del cordón, la precisión del trazado y la atención a la seguridad exactamente en los últimos días de la parada, cuando la presión es máxima. Planifique el descanso con la misma seriedad con la que planifica el trabajo: rotaciones razonables, relevos en los oficios críticos y un encargado que vigile el estado del equipo, no solo el avance del plan. Una parada bien ejecutada es la que termina con el mismo nivel de calidad del primer día, no la que llega antes con la cuadrilla agotada.",
-          "Finalmente, la coordinación con otros contratistas. En las paradas modernas rara vez trabaja una sola empresa: montaje, electricidad, instrumentación y soldadura suelen pertenecer a contratas distintas, cada una con su jornada y sus prioridades. Si su suministrador de personal puede asumir la coordinación de su propia cuadrilla —horarios, partes, seguridad— y usted coordina el conjunto, el modelo funciona. Si cada contrata gestiona su parte sin interlocución, los solapamientos y los tiempos muertos son matemáticamente inevitables. Antes de la parada, una reunión de coordinación de una hora con todos los responsables evita días de fricción: acuerden secuencias, franjas de trabajo y protocolo de conflicto. Es la hora mejor pagada de toda la parada.",
+          "Finalmente, la coordinación con otros contratistas. En las paradas modernas rara vez trabaja una sola empresa: montaje, electricidad, instrumentación y soldadura suelen pertenecer a contratas distintas, cada una con su jornada y sus prioridades. Si su suministrador de personal puede asumir la coordinación de su propia cuadrilla -horarios, partes, seguridad- y usted coordina el conjunto, el modelo funciona. Si cada contrata gestiona su parte sin interlocución, los solapamientos y los tiempos muertos son matemáticamente inevitables. Antes de la parada, una reunión de coordinación de una hora con todos los responsables evita días de fricción: acuerden secuencias, franjas de trabajo y protocolo de conflicto. Es la hora mejor pagada de toda la parada.",
           "Si la próxima parada ya tiene fecha, el mejor momento para planificar el personal es ahora. Cuantas más semanas haya entre la solicitud y la ventana, más opciones reales tendrá la propuesta y menos precio pagará la urgencia.",
-          "HDM suministra equipos multiperfil para paradas de planta en España y Portugal —soldadores, caldereros, montadores, electricistas y supervisión— con disponibilidad confirmada antes de la parada y seguimiento durante toda la ventana. Configure su solicitud con las fechas de la parada, los perfiles por turno y las condiciones del entorno, y reciba una propuesta con disponibilidad real en horas laborables, sin compromiso.",
+          "HDM suministra equipos multiperfil para paradas de planta en España y Portugal -soldadores, caldereros, montadores, electricistas y supervisión- con disponibilidad confirmada antes de la parada y seguimiento durante toda la ventana. Configure su solicitud con las fechas de la parada, los perfiles por turno y las condiciones del entorno, y reciba una propuesta con disponibilidad real en horas laborables, sin compromiso.",
         ],
       },
       "guia-certificaciones-soldadura": {
-        name: "Guía: certificaciones de soldadura — cuáles exigir según el trabajo",
+        name: "Guía: certificaciones de soldadura - cuáles exigir según el trabajo",
         intro:
           "Pedir un soldador cualificado no basta: cada proceso, cada material y cada norma exige una certificación concreta. Esta guía explica qué certificados existen, cuáles exigir según el tipo de trabajo y cómo verificar que un certificado es real y está en vigor.",
         points: [
@@ -473,20 +494,20 @@ export const es = {
           "Un certificado real se verifica antes de la propuesta, no en el puesto de trabajo.",
         ],
         article: [
-          "El primer concepto es el de proceso. Soldar con TIG —soldadura con electrodo de tungsteno y gas inerte— es una disciplina distinta de soldar con MIG/MAG —soldadura semiautomática con hilo y gas—, y ambas son distintas de la soldadura con electrodo revestido. Cada proceso tiene su técnica, sus parámetros, sus defectos característicos y su certificación. Un soldador excelente en electrodo puede no dominar el TIG, y al revés. Por eso la primera pregunta correcta no es ¿tiene certificado de soldadura?, sino ¿tiene certificado para el proceso que necesito? Un certificado sin proceso especificado es, en la práctica, un certificado sin contenido.",
-          "La referencia europea básica para la cualificación de soldadores es la norma EN ISO 9606, que certifica al soldador para un proceso concreto, en un tipo de material concreto —acero al carbono, acero inoxidable, aluminio— y en posiciones concretas —soldadura en plano, horizontal, vertical o sobrecabeza. Cuando el trabajo lo exige —presión, estructuras críticas, industria naval o ferroviaria— se añaden procedimientos de soldadura cualificados bajo normas como EN ISO 15614, que certifican no solo a la persona sino al procedimiento. Saber qué nivel de cualificación exige su trabajo concreto es la base para pedir el certificado correcto.",
-          "La segunda certificación, independiente y obligatoria, es la formación PRL —prevención de riesgos laborales—. Todo trabajador que incorpora a un entorno industrial necesita su formación PRL en vigor, con la especificidad que el puesto requiera: altura, espacios confinados, trabajos en caliente. La formación PRL no certifica que alguien sepa soldar; certifica que puede trabajar en un entorno industrial sin ponerse en riesgo ni poner a otros. Un certificado de soldadura sin PRL no sirve para incorporar, igual que un PRL sin certificado de soldadura no sirve para soldar.",
-          "En ciertos entornos se suman requisitos específicos. En petroquímica y entorno químico, las plantas exigen formaciones propias de acceso y, a menudo, historiales de trabajo demostrables en entornos similares. En obra y estructura metálica, la normativa europea de producto de construcción —el marcado CE de estructuras— exige soldadores cualificados bajo los procedimientos del fabricante. En altura, la autorización específica de trabajo en altura. Cada entorno tiene su capa documental, y la planificación de la incorporación consiste en mapear esas capas antes del primer día, no durante él.",
-          "El último punto es la verificación, y es el más importante de todos. Un certificado se verifica antes de la propuesta: viéndolo, comprobando su vigencia y contrastando que cubre el proceso, el material y las posiciones del trabajo concreto. La verificación en el puesto de trabajo —descubrir el primer día que el certificado no cubre el proceso, o que caducó— es el escenario que toda incorporación bien gestionada evita. Por eso la pregunta correcta al suministrador no es ¿tiene gente?, sino ¿qué certificado tiene cada perfil que me propone, para qué proceso, con qué vigencia y qué experiencia demostrable tiene en este tipo de trabajo?",
-          "Conviene saber leer lo que un certificado no dice. Un certificado de soldador acredita que la persona soldó una pieza de ensayo bajo la supervisión de un examinador en una fecha concreta, con un proceso, un material y unas posiciones determinadas. No acredita años de experiencia, no acredita autonomía en obra y no acredita que el certificado esté en vigor hoy —los certificados caducan y se renuevan por prueba o por prolongación bajo condiciones. Por eso la verificación seria combina el certificado con dos preguntas que ningún papel responde: cuánto tiempo ha trabajado este perfil con este proceso y en qué tipo de proyectos. La respuesta a esas dos preguntas es la que separa un soldador con certificado de un soldador con oficio.",
-          "También es útil distinguir las capas documentales para no pedir de menos ni pagar de más. La capa base —certificado según proceso y PRL— cubre la mayoría del trabajo industrial general. La capa de entorno —formaciones de acceso a planta química, autorización de altura, espacios confinados— se activa cuando el proyecto lo exige y se verifica con la documentación específica de cada planta. La capa de procedimiento —procedimientos de soldadura cualificados con ensayos destructivos y no destructivos asociados— corresponde a trabajo regulado: presión, estructuras críticas, industria naval o ferroviaria. Pedir la capa tres cuando el trabajo solo necesita la capa uno encarece la propuesta sin mejorar el cordón; pedir la capa uno cuando el trabajo exige la capa tres es el error que cuesta caro. La solicitud bien hecha nombra el entorno y el trabajo, y deja que la verificación decida la capa.",
-          "Por último, una nota sobre la renovación. Los certificados de soldador tienen vigencia limitada —típicamente dos años, prorrogables bajo condiciones de trabajo continuado con el proceso—, y una planta seria no acepta certificados caducados aunque la experiencia del perfil sea indiscutible. Si gestiona personal de soldadura de forma continuada, mantenga un registro de vigencias con aviso previo de caducidad: es la forma barata de no descubrir el problema el día antes de la parada. Si trabaja con un suministrador, esa gestión forma parte de lo que la verificación profesional le ahorra: la propuesta llega con certificados en vigor, y la renovación es problema del suministrador, no suyo.",
+          "El primer concepto es el de proceso. Soldar con TIG -soldadura con electrodo de tungsteno y gas inerte- es una disciplina distinta de soldar con MIG/MAG -soldadura semiautomática con hilo y gas-, y ambas son distintas de la soldadura con electrodo revestido. Cada proceso tiene su técnica, sus parámetros, sus defectos característicos y su certificación. Un soldador excelente en electrodo puede no dominar el TIG, y al revés. Por eso la primera pregunta correcta no es ¿tiene certificado de soldadura?, sino ¿tiene certificado para el proceso que necesito? Un certificado sin proceso especificado es, en la práctica, un certificado sin contenido.",
+          "La referencia europea básica para la cualificación de soldadores es la norma EN ISO 9606, que certifica al soldador para un proceso concreto, en un tipo de material concreto -acero al carbono, acero inoxidable, aluminio- y en posiciones concretas -soldadura en plano, horizontal, vertical o sobrecabeza. Cuando el trabajo lo exige -presión, estructuras críticas, industria naval o ferroviaria- se añaden procedimientos de soldadura cualificados bajo normas como EN ISO 15614, que certifican no solo a la persona sino al procedimiento. Saber qué nivel de cualificación exige su trabajo concreto es la base para pedir el certificado correcto.",
+          "La segunda certificación, independiente y obligatoria, es la formación PRL -prevención de riesgos laborales-. Todo trabajador que incorpora a un entorno industrial necesita su formación PRL en vigor, con la especificidad que el puesto requiera: altura, espacios confinados, trabajos en caliente. La formación PRL no certifica que alguien sepa soldar; certifica que puede trabajar en un entorno industrial sin ponerse en riesgo ni poner a otros. Un certificado de soldadura sin PRL no sirve para incorporar, igual que un PRL sin certificado de soldadura no sirve para soldar.",
+          "En ciertos entornos se suman requisitos específicos. En petroquímica y entorno químico, las plantas exigen formaciones propias de acceso y, a menudo, historiales de trabajo demostrables en entornos similares. En obra y estructura metálica, la normativa europea de producto de construcción -el marcado CE de estructuras- exige soldadores cualificados bajo los procedimientos del fabricante. En altura, la autorización específica de trabajo en altura. Cada entorno tiene su capa documental, y la planificación de la incorporación consiste en mapear esas capas antes del primer día, no durante él.",
+          "El último punto es la verificación, y es el más importante de todos. Un certificado se verifica antes de la propuesta: viéndolo, comprobando su vigencia y contrastando que cubre el proceso, el material y las posiciones del trabajo concreto. La verificación en el puesto de trabajo -descubrir el primer día que el certificado no cubre el proceso, o que caducó- es el escenario que toda incorporación bien gestionada evita. Por eso la pregunta correcta al suministrador no es ¿tiene gente?, sino ¿qué certificado tiene cada perfil que me propone, para qué proceso, con qué vigencia y qué experiencia demostrable tiene en este tipo de trabajo?",
+          "Conviene saber leer lo que un certificado no dice. Un certificado de soldador acredita que la persona soldó una pieza de ensayo bajo la supervisión de un examinador en una fecha concreta, con un proceso, un material y unas posiciones determinadas. No acredita años de experiencia, no acredita autonomía en obra y no acredita que el certificado esté en vigor hoy -los certificados caducan y se renuevan por prueba o por prolongación bajo condiciones. Por eso la verificación seria combina el certificado con dos preguntas que ningún papel responde: cuánto tiempo ha trabajado este perfil con este proceso y en qué tipo de proyectos. La respuesta a esas dos preguntas es la que separa un soldador con certificado de un soldador con oficio.",
+          "También es útil distinguir las capas documentales para no pedir de menos ni pagar de más. La capa base -certificado según proceso y PRL- cubre la mayoría del trabajo industrial general. La capa de entorno -formaciones de acceso a planta química, autorización de altura, espacios confinados- se activa cuando el proyecto lo exige y se verifica con la documentación específica de cada planta. La capa de procedimiento -procedimientos de soldadura cualificados con ensayos destructivos y no destructivos asociados- corresponde a trabajo regulado: presión, estructuras críticas, industria naval o ferroviaria. Pedir la capa tres cuando el trabajo solo necesita la capa uno encarece la propuesta sin mejorar el cordón; pedir la capa uno cuando el trabajo exige la capa tres es el error que cuesta caro. La solicitud bien hecha nombra el entorno y el trabajo, y deja que la verificación decida la capa.",
+          "Por último, una nota sobre la renovación. Los certificados de soldador tienen vigencia limitada -típicamente dos años, prorrogables bajo condiciones de trabajo continuado con el proceso-, y una planta seria no acepta certificados caducados aunque la experiencia del perfil sea indiscutible. Si gestiona personal de soldadura de forma continuada, mantenga un registro de vigencias con aviso previo de caducidad: es la forma barata de no descubrir el problema el día antes de la parada. Si trabaja con un suministrador, esa gestión forma parte de lo que la verificación profesional le ahorra: la propuesta llega con certificados en vigor, y la renovación es problema del suministrador, no suyo.",
           "Tres preguntas concretas le sirven para evaluar a cualquier suministrador de soldadores en menos de cinco minutos. Primera: ¿puedo ver el certificado de este perfil antes de decidir?, con proceso, material y vigencia visibles. Segunda: ¿qué pasa si el perfil no encaja en el puesto?, con la sustitución definida en plazos concretos. Tercera: ¿quién se ocupa de las renovaciones documentales?, con un responsable nombrado y no un departamento difuso. Un suministrador que responde a las tres con datos está verificando de verdad; uno que responde con generalidades está gestionando su riesgo en su contra. Las tres preguntas son gratis y dicen casi todo.",
           "Y para cerrar, una reflexión sobre lo que está comprando realmente. Cuando pide un soldador con certificado TIG, no está comprando una hora de soldadura: está comprando la seguridad de que el cordón va a pasar inspección a la primera, de que la persona va a llegar con la documentación en regla y de que, si algo falla, hay un circuito que lo corrige sin detener su proyecto. El certificado es la prueba visible de esa compra; la verificación seria es la garantía. En soldadura industrial, como en casi todo lo que importa, lo barato que no está verificado es lo más caro que existe.",
           "Guarde esta guía como referencia: las tres capas documentales y las tres preguntas de evaluación le servirán en cada incorporación de soldador, sea con HDM o con cualquier otro suministrador serio. El criterio es suyo; la verificación, negociable.",
           "Comparta esta guía con quien gestione las incorporaciones en su organización: el criterio compartido es la forma más barata de subir el nivel de todas las contrataciones futuras.",
           "La documentación bien gestionada es productividad silenciosa: nadie la nota hasta que falla.",
-          "HDM verifica antes de proponer: certificado de soldadura según el proceso requerido —TIG, MIG/MAG o electrodo—, formación PRL al día y experiencia contrastada en entorno industrial, con la documentación preparada antes de cada incorporación. Si su proyecto requiere cualificación específica —procedimientos cualificados, formaciones de acceso a planta, autorizaciones de altura— indíquelo en la solicitud: la verificación se ajusta a ese contexto y la propuesta llega con datos reales, sin compromiso.",
+          "HDM verifica antes de proponer: certificado de soldadura según el proceso requerido -TIG, MIG/MAG o electrodo-, formación PRL al día y experiencia contrastada en entorno industrial, con la documentación preparada antes de cada incorporación. Si su proyecto requiere cualificación específica -procedimientos cualificados, formaciones de acceso a planta, autorizaciones de altura- indíquelo en la solicitud: la verificación se ajusta a ese contexto y la propuesta llega con datos reales, sin compromiso.",
         ],
       },
     } as Record<string, { name: string; intro: string; points: string[]; article?: string[] }>,
@@ -699,13 +720,16 @@ export const esPages = {
       "El personal suministrado cuenta con formación en prevención de riesgos laborales acorde al entorno de trabajo. Si su centro exige PRL específico, indíquelo en la solicitud.",
     weldingTitle: "Certificados de soldadura",
     weldingBody:
-      "Los soldadores se asignan según el proceso requerido —TIG, MIG/MAG o electrodo— y la certificación de soldadura correspondiente se revisa antes de confirmar.",
+      "Los soldadores se asignan según el proceso requerido -TIG, MIG/MAG o electrodo- y la certificación de soldadura correspondiente se revisa antes de confirmar.",
     docsTitle: "Documentación antes de empezar",
     docsBody:
       "La documentación de cada incorporación se prepara antes de empezar el trabajo. Adjunte los requisitos de su centro a la solicitud si los tiene.",
     honestyTitle: "Compromiso de transparencia",
     honestyBody:
       "Cuando HDM disponga de certificaciones adicionales documentadas, se publicarán aquí con su norma y alcance exactos. Hasta entonces, no las anunciamos.",
+    trustTitle: "Profesionales verificados",
+    trustBody:
+      "Cada profesional que HDM propone ha sido verificado de forma individual: identidad, experiencia contrastada en el oficio, formación PRL al día y, en soldadura, certificación del proceso (TIG, MIG/MAG o electrodo) revisada antes de la incorporación. Si su centro exige algún requisito específico, se comprueba antes de enviar la propuesta. Sin documentación verificada, no hay propuesta.",
   },
   projects: {
     title: "Proyectos",
@@ -739,18 +763,25 @@ export const esPages = {
     body3:
       "Este sitio refleja esa forma de trabajar: usted configura lo que necesita y HDM confirma lo que puede poner en marcha. Sin promesas automáticas.",
     valuesTitle: "Cómo se comporta HDM",
+    galleryTitle: "Trabajos realizados",
     values: [
       { name: "Seriedad", body: "Lo que se confirma, se cumple. Lo que no está confirmado, se dice." },
       { name: "Transparencia", body: "Sin cifras infladas ni promesas automáticas. La disponibilidad se revisa y se comunica." },
       { name: "Profesionalismo", body: "Perfiles correctos, documentación preparada, interlocutor claro." },
     ] as { name: string; body: string }[],
-    photoPending: "Fotografía real del equipo HDM — pendiente de entrega",
+    photoPending: "Fotografía real del equipo HDM - pendiente de entrega",
   },
   contact: {
     title: "Contacto",
     lead:
       "La vía más rápida es la solicitud: llega estructurada y HDM puede responder con precisión.",
     directTitle: "Contacto directo",
+    addressLabel: "Dirección",
+    phonesLabel: "Teléfono",
+    emailLabel: "Email",
+    hoursLabel: "Abierto",
+    hoursDays: "Lun - Vie",
+    hoursTime: "09:00 - 17:00",
     pendingData:
       "Datos de contacto directo en configuración. Mientras tanto, use la solicitud online.",
     formTitle: "O envíe un mensaje",
@@ -770,7 +801,10 @@ export const esPages = {
     cookies: "Cookies",
     editorialNote:
       "Las fotografías de ambiente industrial son editoriales y no representan instalaciones ni personal de HDM.",
-    fiscalNote: "HDM Industrial — Domicilio fiscal en Portugal. Datos registrales completos en aviso legal.",
+    fiscalNote: "HDM Industrial - Domicilio fiscal en Portugal. Datos registrales completos en aviso legal.",
+    instagram: "Instagram",
+    aiNote: "Sitio web creado con asistencia de inteligencia artificial.",
+    copyright: "© 2026 HDM Industrial. Todos los derechos reservados.",
   },
   cookiesBanner: {
     title: "Cookies",
@@ -780,29 +814,45 @@ export const esPages = {
     more: "Más información",
   },
   legal: {
-    aviso: {
+    aviso:     {
       title: "Aviso legal",
-      body: "Página de aviso legal. Los datos registrales completos de HDM Industrial (denominación, NIF, domicilio fiscal en Portugal y datos de contacto) se publicarán aquí cuando el departamento legal los confirme. Mientras tanto, esta página existe como espacio reservado funcional y no debe indexarse.",
-    },
-    privacidad: {
-      title: "Política de privacidad",
-      intro: "Resumen claro de cómo se tratan los datos en este sitio.",
+      intro: "Información general del titular del sitio, condiciones de uso y marco jurídico aplicable (Unión Europea).",
       sections: [
-        { title: "Qué datos pedimos", body: "Solo los necesarios para gestionar su solicitud: empresa, persona de contacto, teléfono y email, además del contexto de la necesidad (perfiles, lugar, fechas, logística y documentos que adjunte voluntariamente)." },
-        { title: "Para qué se usan", body: "Únicamente para revisar la disponibilidad, preparar una propuesta y comunicarnos con usted sobre esa solicitud." },
-        { title: "Lo que no hacemos", body: "No vendemos datos, no los usamos para publicidad de terceros y no enviamos datos personales a herramientas de analítica." },
-        { title: "Documentos adjuntos", body: "Los documentos que adjunte se tratan de forma privada y se usan solo para evaluar su solicitud." },
-        { title: "Datos de candidatos", body: "Si envías tu currículum desde la sección Trabaja con nosotros, tus datos y tu CV se usan únicamente para valorar tu candidatura ante necesidades de personal de HDM. No se ceden a terceros ni se usan para publicidad." },
-        { title: "Sus derechos", body: "Puede solicitar acceso, rectificación o eliminación de sus datos contactando con HDM por los canales de contacto." },
+        { title: "Titular del sitio", body: "El titular de este sitio es HDM Industrial, con domicilio fiscal en Portugal. Los datos registrales completos (denominación social, NIF y domicilio) se publicarán en esta página en cuanto el departamento legal de la empresa los confirme. Para cualquier comunicación formal puede usar el email de contacto publicado en la página de Contacto." },
+        { title: "Objeto", body: "Este sitio presenta los servicios de HDM Industrial de suministro de personal industrial cualificado en España y Portugal, permite configurar solicitudes de personal y facilita canales de contacto para empresas y candidatos. HDM suministra y coordina personal; no ejecuta obras por cuenta propia ni sustituye a la empresa cliente en sus obligaciones de prevención y organización." },
+        { title: "Condiciones de uso", body: "El acceso al sitio es gratuito. El usuario se compromete a hacer un uso lícito de la web y de sus contenidos, sin perjudicar a terceros ni al titular. HDM puede actualizar o retirar contenidos en cualquier momento y no garantiza la disponibilidad ininterrumpida del sitio." },
+        { title: "Propiedad intelectual", body: "Los contenidos, la marca, el diseño y el código del sitio pertenecen a HDM Industrial o a sus legítimos titulares. Queda prohibida la reproducción, transformación o distribución sin autorización expresa por escrito." },
+        { title: "Enlaces y servicios de terceros", body: "El sitio puede enlazar a perfiles oficiales de redes sociales (por ejemplo, Instagram) y a otros sitios de terceros. Esos enlaces se ofrecen por comodidad; sus contenidos y sus cookies dependen de sus titulares y HDM no controla esos sitios." },
+        { title: "Sitio web creado con asistencia de inteligencia artificial", body: "El diseño, el desarrollo y parte de los contenidos de este sitio se han elaborado con asistencia de herramientas de inteligencia artificial. Todo el texto comercial, los perfiles profesionales y los datos publicados han sido revisados y validados por el equipo de HDM Industrial antes de publicarse. La inteligencia artificial se utiliza como herramienta de producción; no automatiza decisiones sobre personas ni sustituye la revisión humana." },
+        { title: "Legislación aplicable", body: "Estas condiciones se rigen por el Derecho de la Unión Europea y por la legislación del domicilio fiscal del titular, con especial referencia al Reglamento (UE) 2016/679 (RGPD), a la Directiva 2000/31/CE sobre comercio electrónico y, según el país, a la Ley 34/2002 (España) o a la Lei n.º 46/2004 (Portugal). Cualquier controversia se someterá a los juzgados competentes de ese domicilio." },
       ] as { title: string; body: string }[],
     },
-    cookies: {
-      title: "Política de cookies",
-      intro: "Este sitio usa el mínimo de cookies posible.",
+    privacidad:     {
+      title: "Política de privacidad",
+      intro: "Cómo recogemos y tratamos los datos personales en este sitio, conforme al RGPD (UE) 2016/679.",
       sections: [
-        { title: "Cookies técnicas", body: "Necesarias para que el sitio funcione: su solicitud se guarda en su navegador para no perderla al navegar. No requieren consentimiento." },
-        { title: "Medición de uso", body: "Solo si usted acepta, se carga medición anónima de uso para mejorar el sitio. Si rechaza, no se carga ningún script de medición." },
-        { title: "Sin publicidad", body: "No hay cookies publicitarias ni de seguimiento comercial de terceros." },
+        { title: "Responsable del tratamiento", body: "HDM Industrial, con domicilio fiscal en Portugal, es responsable del tratamiento de los datos personales recogidos a través de este sitio. Puede contactar con el responsable a través del email publicado en la página de Contacto." },
+        { title: "Datos que tratamos", body: "Tratamos los datos que usted decide facilitar: nombre y empresa, persona de contacto, teléfono y email, detalles de la necesidad de personal (perfiles, lugar, fechas, requisitos) y los documentos que adjunte voluntariamente (currículum, certificados). No recogemos categorías especiales de datos ni datos de menores a través de este sitio." },
+        { title: "Finalidades", body: "Usamos sus datos para responder a su consulta, revisar la disponibilidad de personal, preparar una propuesta y mantener la comunicación durante la gestión de la solicitud. Si envía su currículum a través de Trabaja con nosotros, sus datos se usan para valorar su candidatura frente a las necesidades de personal de HDM." },
+        { title: "Base jurídica", body: "La base del tratamiento es su consentimiento al enviar el formulario (artículo 6.1.a del RGPD) y, cuando la solicitud avanza, las medidas precontractuales solicitadas por usted (artículo 6.1.b del RGPD). Puede retirar el consentimiento en cualquier momento sin que ello afecte a la licitud del tratamiento previo." },
+        { title: "Destinatarios y transferencias", body: "No vendemos ni cedemos datos personales con fines comerciales. Solo acceden a la información los proveedores técnicos necesarios para operar el sitio y el correo electrónico, que actúan como encargados del tratamiento con los contratos exigidos por el RGPD. Si algún proveedor trata datos fuera del Espacio Económico Europeo, la transferencia se ampara en las garantías del RGPD (cláusulas contractuales tipo u otras medidas adecuadas)." },
+        { title: "Conservación", body: "Los datos se conservan mientras se gestione su solicitud o candidatura y, después, durante los plazos legales que puedan resultar aplicables." },
+        { title: "Sus derechos", body: "Puede ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad, así como retirar su consentimiento, dirigiéndose al responsable por el email de contacto. Si considera que el tratamiento no se ajusta a la normativa, puede presentar una reclamación ante la autoridad de control competente: en España, la Agencia Española de Protección de Datos; en Portugal, a Comissão Nacional de Proteção de Dados." },
+        { title: "Uso de inteligencia artificial", body: "Este sitio se ha desarrollado con herramientas de inteligencia artificial, pero los datos que usted envía por los formularios se tratan directamente por los canales de contacto de HDM. Sus datos no se utilizan para entrenar modelos de inteligencia artificial de terceros." },
+        { title: "Menores", body: "Los servicios del sitio se dirigen a profesionales y empresas; no está previsto el tratamiento de datos de menores de 14 años." },
+      ] as { title: string; body: string }[],
+    },
+    cookies:     {
+      title: "Política de cookies",
+      intro: "Este sitio usa el mínimo de cookies posible, conforme a la normativa de la Unión Europea (Directiva 2002/58/CE y RGPD).",
+      sections: [
+        { title: "Qué son las cookies", body: "Las cookies y tecnologías similares (por ejemplo, el almacenamiento local del navegador) permiten recordar información sobre su visita. En este sitio se usan tanto cookies como almacenamiento local, con la misma finalidad y las mismas garantías." },
+        { title: "Cookies técnicas (no requieren consentimiento)", body: "Imprescindibles para que el sitio funcione: guardan su solicitud en curso en el navegador para que no se pierda al navegar, recuerdan el idioma y registran la preferencia de cookies. Sin ellas, la configuración de personal no funcionaría." },
+        { title: "Medición de uso (solo con su consentimiento)", body: "Si usted acepta en el banner, se activa medición anónima de uso para saber qué páginas funcionan mejor. Actualmente se usa medición propia sin cookies publicitarias. Si en el futuro se incorporan herramientas de terceros como Google Analytics o herramientas de posicionamiento de buscadores (Google Search Console, Bing Webmaster Tools), solo se cargarán tras su aceptación en el banner y con la configuración de anonimización que permita la herramienta." },
+        { title: "Sin publicidad ni seguimiento comercial", body: "Este sitio no usa cookies publicitarias, no vende datos de navegación y no realiza perfiles comerciales de los visitantes." },
+        { title: "Redes sociales", body: "El footer enlaza con el perfil de Instagram de HDM. Al seguir ese enlace usted visita Instagram, que aplicará sus propias cookies y políticas bajo su responsabilidad. Este sitio no incrusta widgets sociales que carguen cookies antes de su acción." },
+        { title: "Cómo gestionar o eliminar las cookies", body: "Puede permitir solo las cookies técnicas (botón del banner), aceptar la medición o cambiar de idea después: borre las cookies y el almacenamiento local del sitio desde la configuración de su navegador (en Chrome y Firefox: Ajustes, Privacidad y seguridad, Cookies; en Safari, Preferencias, Privacidad). Si rechaza la medición, no se carga ningún script de medición." },
+        { title: "Actualización de esta política", body: "Esta política puede actualizarse cuando cambien las herramientas del sitio. La versión vigente es siempre la publicada en esta página." },
       ] as { title: string; body: string }[],
     },
   },
@@ -823,12 +873,12 @@ export const esCareers = {
     profilesTitle: "Perfiles en los que opera HDM",
     processTitle: "Cómo funciona",
     processSteps: [
-      { title: "Envía tu currículum", body: "Completa el formulario: se preparará un correo dirigido a rrhh@hdmindustrial.es. Adjunta tu CV antes de enviar." },
+      { title: "Envía tu currículum", body: "Completa el formulario y adjunta tu currículum: se envía directamente a Recursos Humanos de HDM." },
       { title: "HDM revisa tu perfil", body: "El equipo revisa tu experiencia y tu perfil profesional." },
       { title: "Contacto si encaja", body: "Si surge una necesidad que encaja con tu perfil, HDM te contacta. Si no hay encaje en ese momento, no hay respuesta en esta ocasión." },
     ] as { title: string; body: string }[],
     formTitle: "Envía tu currículum",
-    formLead: "Se abrirá tu cliente de correo con el mensaje preparado. Revisa los datos y adjunta tu currículum antes de enviar.",
+    formLead: "Envía tu currículum directamente desde esta página con el archivo adjunto. Si el envío directo no está disponible, se abrirá tu cliente de correo con los datos preparados.",
     nameLabel: "Nombre",
     emailLabel: "Email",
     phoneLabel: "Teléfono",
@@ -840,11 +890,81 @@ export const esCareers = {
     attachSelected: "Archivo seleccionado",
     attachPrivacy: "Tu CV se trata de forma privada y solo se usa para valorar tu candidatura.",
     attachEmailLabel: "Currículum",
-    submitSuccess: "Currículum enviado — gracias. HDM revisará tu perfil y te contactará si encaja con una necesidad.",
+    submitSuccess: "Currículum enviado - gracias. HDM revisará tu perfil y te contactará si encaja con una necesidad.",
     zoneLabel: "Zona / ciudad (opcional)",
     messageLabel: "Mensaje (opcional)",
     privacyNote: "Tus datos se usan únicamente para valorar tu candidatura. Consulta la política de privacidad.",
     send: "Preparar correo con mi CV",
+  },
+  reviews: {
+    badge: "Reseñas",
+    title: "Lo que dicen nuestros clientes",
+    description: "Reseñas reales de empresas que ya confiaron su personal industrial a HDM.",
+    formTitle: "¿Trabajamos juntos? Cuéntanos",
+    formSuccessTitle: "¡Gracias por tu reseña!",
+    formSuccessText: "La revisaremos y la publicaremos pronto en esta misma página.",
+    formDisclaimer: "Tu reseña será revisada antes de publicarse. No aparecerá inmediatamente.",
+    nameLabel: "Nombre",
+    namePlaceholder: "Tu nombre o el de tu empresa",
+    zoneLabel: "Zona del proyecto",
+    zonePlaceholder: "Ej: Barcelona",
+    emailLabel: "Email",
+    emailPlaceholder: "tu@empresa.com",
+    emailHint: "Opcional. No se mostrará públicamente.",
+    projectTypeLabel: "Tipo de proyecto",
+    ratingLabel: "Valoración",
+    ratingTerrible: "Muy mal",
+    ratingBad: "Mal",
+    ratingOkay: "Regular",
+    ratingGood: "Bien",
+    ratingExcellent: "Excelente",
+    charCount: "{count} / {max}",
+    textLabel: "Tu experiencia",
+    textPlaceholder: "¿Cómo fue trabajar con HDM? Cuéntanos los detalles...",
+    submit: "Enviar reseña",
+    submitting: "Enviando...",
+    emptyTitle: "Aún no hay reseñas publicadas.",
+    emptySubtitle: "¡Sé el primero en contar tu experiencia!",
+    errorRequired: "Por favor, completa todos los campos.",
+    errorSubmit: "Error al enviar. Inténtalo de nuevo.",
+    errorNotConfigured: "El envío de reseñas se activará próximamente. Gracias por tu interés.",
+    gdpr: "Acepto que mi reseña sea revisada antes de publicarse",
+    verified: "Cliente verificado",
+    close: "Cerrar",
+    reviewsCount: "reseñas",
+    viewAll: "Ver todas las reseñas",
+    all: "Todas",
+    sortBy: "Ordenar por",
+    recent: "Más recientes",
+    rating: "Mejor valoradas",
+    clear: "Limpiar",
+    loadMore: "Cargar más reseñas",
+    showing: "Mostrando",
+    of: "de",
+    noResults: "No hay reseñas con estos filtros",
+    tryOtherFilters: "Prueba con otros filtros",
+    backToAll: "Volver a todas las reseñas",
+    related: "Otras reseñas",
+    viewMore: "Ver más",
+    viewLess: "Ver menos",
+    splitBadge: "Tu opinión importa",
+    splitTitle: "¿Cómo fue tu experiencia con HDM?",
+    splitSubtitle: "Comparte tu proyecto y ayuda a otras empresas a encontrar al equipo industrial que necesitan.",
+    splitPreviewLabel: "Vista previa",
+    splitPreviewHint: "Así se verá tu reseña publicada",
+    splitStatsAverage: "Media",
+    splitStatsReviews: "Reseñas",
+    splitYourName: "Tu nombre",
+    splitYourExperience: "Tu experiencia...",
+    splitEmailOptional: "Opcional",
+    projectTypes: {
+      "Parada de planta": "Parada de planta",
+      "Refuerzo de equipo": "Refuerzo de equipo",
+      "Montaje de estructuras": "Montaje de estructuras",
+      "Mantenimiento industrial": "Mantenimiento industrial",
+      "Sustitución temporal": "Sustitución temporal",
+      "Otro": "Otro",
+    },
   },
 };
 

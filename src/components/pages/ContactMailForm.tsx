@@ -4,7 +4,7 @@ import type { Locale } from "@/domain/types";
 import { getDictionary } from "@/i18n";
 import { companyFacts } from "@/content/company";
 
-/** Form simples via mailto — sem backend próprio (sem duplicar o Request). */
+/** Form simples via mailto - sem backend próprio (sem duplicar o Request). */
 export function ContactMailForm({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
   const c = dict.contact;
@@ -19,7 +19,7 @@ export function ContactMailForm({ locale }: { locale: Locale }) {
         const email = companyFacts.email;
         if (!email) return;
         window.location.href = `mailto:${email}?subject=${encodeURIComponent(
-          `Web HDM — ${name}`,
+          `Web HDM - ${name}`,
         )}&body=${encodeURIComponent(message)}`;
       }}
     >

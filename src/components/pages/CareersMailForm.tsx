@@ -53,6 +53,8 @@ export function CareersMailForm({ locale }: { locale: Locale }) {
     if (!hrEmail) return;
     const form = e.currentTarget;
     const data = new FormData(form);
+    /* Locale da página - o relay localiza os rótulos do email para a RRHH. */
+    data.set("locale", locale);
     const input: CareersMailInput = {
       name: String(data.get("name") ?? ""),
       email: String(data.get("email") ?? ""),
@@ -116,7 +118,7 @@ export function CareersMailForm({ locale }: { locale: Locale }) {
 
   return (
     <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-      {/* Honeypot — invisível para humanos, obrigatório para bots (§115). */}
+      {/* Honeypot - invisível para humanos, obrigatório para bots (§115). */}
       <input
         name="website"
         type="text"

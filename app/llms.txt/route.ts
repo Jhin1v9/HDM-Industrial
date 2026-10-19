@@ -11,8 +11,8 @@ export const dynamic = "force-static";
 
 /**
  * llms.txt (convenção emergente p/ LLMs): índice markdown legível por máquina
- * do site inteiro — o que é a HDM, o que oferece, todas as páginas indexáveis
- * com URLs absolutas. Gerado dos mesmos registros do sitemap — nunca hardcoded
+ * do site inteiro - o que é a HDM, o que oferece, todas as páginas indexáveis
+ * com URLs absolutas. Gerado dos mesmos registros do sitemap - nunca hardcoded
  * à mão. ES é o idioma canônico (site primário); variantes /ca /en /pt listadas
  * na seção de idiomas. GEO legítimo: fatos verificados, sem cifras inventadas.
  */
@@ -38,7 +38,7 @@ export function GET() {
   lines.push("# HDM Industrial");
   lines.push("");
   lines.push(
-    "> HDM Industrial suministra personal industrial verificado —soldadores, caldereros, montadores de estructuras, electricistas industriales, electromecánicos, mecánicos industriales, ayudantes y supervisores— para paradas de planta, refuerzo de cuadrillas, sustituciones temporales y trabajos puntuales en España y Portugal. Cada perfil se verifica antes de proponerse (certificado de soldadura según proceso, formación PRL, experiencia contrastada) y la disponibilidad se confirma en horas laborables, sin compromiso.",
+    "> HDM Industrial suministra personal industrial verificado -soldadores, caldereros, montadores de estructuras, electricistas industriales, electromecánicos, mecánicos industriales, ayudantes y supervisores- para paradas de planta, refuerzo de cuadrillas, sustituciones temporales y trabajos puntuales en España y Portugal. Cada perfil se verifica antes de proponerse (certificado de soldadura según proceso, formación PRL, experiencia contrastada) y la disponibilidad se confirma en horas laborables, sin compromiso.",
   );
   lines.push("");
   lines.push(`Site: ${siteUrl()}/`);
@@ -49,17 +49,17 @@ export function GET() {
   lines.push("## Páginas principales");
   lines.push("");
   const mainPages: Array<[string, string]> = [
-    ["Inicio — qué es HDM y cómo pedir personal", link("es", "")],
-    ["Personal industrial — índice de perfiles", link("es", "personal-industrial")],
-    ["Soluciones — paradas, refuerzo, sustitución, trabajos puntuales", link("es", "soluciones")],
-    ["Sectores — entornos donde trabaja el personal", link("es", "sectores")],
-    ["Cobertura — zonas de servicio en España y Portugal", link("es", "cobertura")],
-    ["Cómo trabajamos — proceso de solicitud y verificación", link("es", "como-trabajamos")],
-    ["Certificaciones y seguridad — PRL y verificación de perfiles", link("es", "certificaciones-y-seguridad")],
-    ["Proyectos — casos de trabajo industrial", link("es", "proyectos")],
-    ["Empresa — quiénes son", link("es", "empresa")],
+    ["Inicio - qué es HDM y cómo pedir personal", link("es", "")],
+    ["Personal industrial - índice de perfiles", link("es", "personal-industrial")],
+    ["Soluciones - paradas, refuerzo, sustitución, trabajos puntuales", link("es", "soluciones")],
+    ["Sectores - entornos donde trabaja el personal", link("es", "sectores")],
+    ["Cobertura - zonas de servicio en España y Portugal", link("es", "cobertura")],
+    ["Cómo trabajamos - proceso de solicitud y verificación", link("es", "como-trabajamos")],
+    ["Certificaciones y seguridad - PRL y verificación de perfiles", link("es", "certificaciones-y-seguridad")],
+    ["Proyectos - casos de trabajo industrial", link("es", "proyectos")],
+    ["Empresa - quiénes son", link("es", "empresa")],
     ["Contacto", link("es", "contacto")],
-    ["Trabaja con nosotros — envío de CV", link("es", "trabaja-con-nosotros")],
+    ["Trabaja con nosotros - envío de CV", link("es", "trabaja-con-nosotros")],
   ];
   for (const [label, url] of mainPages) lines.push(`- [${label}](${url})`);
   lines.push("");
@@ -69,7 +69,7 @@ export function GET() {
   for (const profile of professionalProfiles) {
     const item = p.items[profile.id];
     if (!item) continue;
-    lines.push(`- [${item.name}](${link("es", `personal-industrial/${profile.slug}`)}) — ${item.short}`);
+    lines.push(`- [${item.name}](${link("es", `personal-industrial/${profile.slug}`)}) - ${item.short}`);
   }
   lines.push("");
 
@@ -78,7 +78,7 @@ export function GET() {
   for (const s of solutions) {
     const item = sol.items[s.id];
     if (!item) continue;
-    lines.push(`- [${item.name}](${link("es", `soluciones/${s.slug}`)}) — ${firstSentence(item.intro)}`);
+    lines.push(`- [${item.name}](${link("es", `soluciones/${s.slug}`)}) - ${firstSentence(item.intro)}`);
   }
   lines.push("");
 
@@ -88,7 +88,7 @@ export function GET() {
     if (!s.indexable) continue;
     const item = sec.items[s.id];
     if (!item) continue;
-    lines.push(`- [${item.name}](${link("es", `sectores/${s.slug}`)}) — ${firstSentence(item.intro)}`);
+    lines.push(`- [${item.name}](${link("es", `sectores/${s.slug}`)}) - ${firstSentence(item.intro)}`);
   }
   lines.push("");
 

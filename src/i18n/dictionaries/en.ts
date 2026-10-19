@@ -1,5 +1,5 @@
 /**
- * EN dictionary — professional international (British-leaning) business English.
+ * EN dictionary - professional international (British-leaning) business English.
  * Conservative copy: no unproven claims (see claims.ts). No lorem ipsum.
  * Mirrors the ES dictionary key-for-key.
  */
@@ -8,7 +8,7 @@ import { type Dictionary } from "./es";
 const en = {
   meta: {
     siteName: "HDM Industrial",
-    defaultTitle: "HDM Industrial — Qualified industrial personnel, where you need them",
+    defaultTitle: "HDM Industrial - Qualified industrial personnel, where you need them",
     defaultDescription:
       "Supply of qualified industrial personnel: TIG, MIG/MAG and stick welders, boilermakers, structural fitters, industrial electricians, electromechanics, industrial mechanics and supervisors. Tell us what you need and HDM will review availability.",
     ogDescription:
@@ -34,6 +34,13 @@ const en = {
   common: {
     requestCta: "Request availability",
     requestPersonal: "Request personnel",
+    whatsappFloatLabel: "Contact via WhatsApp",
+    whatsappFloatMsg: "Hi, I need information about industrial personnel",
+    relatedTitle: "Recommended articles",
+    ctaNoSolutionTitle: "Can't find the right solution for you?",
+    ctaNoSolutionButton: "Talk to us now",
+    quoteOnlineCta: "Request an Online Quote",
+    whatsappCta: "Chat on WhatsApp",
     addToRequest: "Add to my request",
     added: "Added",
     viewRequest: "View request",
@@ -48,6 +55,11 @@ const en = {
     from: "From",
     readMore: "Read more",
     editorialPhoto: "Editorial image of an industrial setting. It does not depict HDM facilities or personnel.",
+    galleryLabel: "Client image gallery",
+    galleryPrev: "Previous image",
+    galleryNext: "Next image",
+    galleryZoom: "Zoom",
+    galleryClose: "Close gallery",
     pendingAsset: "Placeholder reserved for genuine HDM material",
     navPrimary: "Primary navigation",
     navPrimaryMobile: "Primary mobile navigation",
@@ -105,6 +117,7 @@ const en = {
     profilesTitle: "Which profile do you need?",
     profilesLead:
       "Select profiles and quantities. You can combine several profiles in a single request.",
+    profilesCtaTitle: "Can't find the profile you need?",
     coverageTitle: "Where is your project?",
     coverageLead:
       "Areas where HDM supplies personnel for projects. Select your area to begin: coverage indicates a working area, not real-time availability.",
@@ -155,31 +168,34 @@ const en = {
     items: {
       soldador: {
         name: "Welders",
+        chip: "Welders",
         singular: "Welder",
         short: "TIG, MIG/MAG and stick welding for construction sites, plants and shutdowns.",
         description:
-          "Industrial welders for workshop, site and plant work. State the welding process you need — TIG, MIG/MAG or stick welding (SMAW) — and the project requirements: HDM will review the availability of profiles with the appropriate welding certification. Verified certification for the process you need, with availability confirmed within business hours before you decide.",
+          "Industrial welders for workshop, site and plant work. State the welding process you need - TIG, MIG/MAG or stick welding (SMAW) - and the project requirements: HDM will review the availability of profiles with the appropriate welding certification. Verified certification for the process you need, with availability confirmed within business hours before you decide.",
         requirements:
           "Welding certificate for the required process. Risk prevention training (PRL). Experience in industrial environments.",
-        queHacen: "The industrial welder joins, repairs and reinforces metal structures in workshops, job sites and production plants. Depending on the process —TIG, MIG/MAG or stick electrode— they work from fine precision finishes to high-productivity welds on thick sections. During a plant shutdown, welders are among the profiles that most determine the schedule: a weld done right the first time avoids rework that costs hours. That is why HDM verifies the exact process each professional masters before proposing them for a project.. In practice, the welder HDM proposes arrives with their core process already proven —naval structures, process piping, tanks or fabrication lines— which means less ramp-up time on your project and welds that pass inspection first time. If the job mixes processes —say TIG on the root and MIG/MAG on fill— say so in the request: the crew is built around the real work, not the other way round.",
+        queHacen: "The industrial welder joins, repairs and reinforces metal structures in workshops, job sites and production plants. Depending on the process -TIG, MIG/MAG or stick electrode- they work from fine precision finishes to high-productivity welds on thick sections. During a plant shutdown, welders are among the profiles that most determine the schedule: a weld done right the first time avoids rework that costs hours. That is why HDM verifies the exact process each professional masters before proposing them for a project.. In practice, the welder HDM proposes arrives with their core process already proven -naval structures, process piping, tanks or fabrication lines- which means less ramp-up time on your project and welds that pass inspection first time. If the job mixes processes -say TIG on the root and MIG/MAG on fill- say so in the request: the crew is built around the real work, not the other way round.",
         cuando: ["Plant shutdowns or turnarounds, where every welding hour is counted.", "Production peaks that exceed your regular crew's capacity.", "Industrial construction with schedules that admit no delays (structures, supports, piping).", "Urgent repairs on stopped equipment or production lines.", "Short-notice cover when your regular welder cannot attend."],
         verifica: "HDM verifies before proposing: welding certificate for the required process (TIG, MIG/MAG or electrode), up-to-date PRL training and proven experience in industrial environments. No verified data, no proposal. Where the project requires it, experience working at height, in confined spaces and on rotating shifts is also checked.",
         faq: [{ q: "Can I request only TIG welders for a one-week shutdown?", a: "Yes. Configure the request with the process (TIG), volume and dates; HDM checks crews with that certificate and confirms real availability before you decide." }, { q: "Do they work at height or in confined spaces?", a: "When the project requires it, state the conditions (height, confined space, shift) in the request. HDM takes them into account when verifying profiles and certifications." }, { q: "How fast can I have welders available?", a: "It depends on process, volume and location. HDM answers every request within business hours with real availability, with no commitment on your side." }, { q: "Can I request a mixed crew of welders and helpers?", a: "Yes. Configure every profile in the same request; HDM reviews availability for the whole crew and replies with a single coordinated proposal." }, { q: "Do they work outside Catalonia?", a: "Yes, HDM supplies industrial personnel across Spain and Portugal. State the project location in the request." }],
       },
       calderero: {
         name: "Boilermakers",
+        chip: "Boilermakers",
         singular: "Boilermaker",
         short: "Boilermaking, pipework and heavy steel structures.",
         description:
           "Boilermakers for boilermaking work, marking out, forming and assembly of plate, pipework and steel structures in industrial environments. Well suited to shutdowns, maintenance and fabrication projects. Availability confirmed within business hours, with simple coordination with welders and fitters from the same supply.",
         requirements: "Risk prevention training (PRL). Proven experience in industrial boilermaking.",
-        queHacen: "The industrial boilermaker works plate, pipework and heavy steel structures: marking out, forming, assembly and repair in workshops, on job sites and in plants. It is the profile that underpins plant shutdowns, tank maintenance and fabrication projects where layout precision conditions everything else. HDM proposes boilermakers with proven industrial boilermaking experience and up-to-date PRL training, verified before every proposal.. A good boilermaker reads the drawing, anticipates the forming and leaves the assembly ready for welders and fitters to work without surprises — which is why they are among the first profiles requested for plant shutdowns. HDM checks years of real craft, not just certificates. Across Catalonia and Spain, demand concentrates on shutdowns, naval maintenance and industrial construction, with travel agreed in the proposal.",
+        queHacen: "The industrial boilermaker works plate, pipework and heavy steel structures: marking out, forming, assembly and repair in workshops, on job sites and in plants. It is the profile that underpins plant shutdowns, tank maintenance and fabrication projects where layout precision conditions everything else. HDM proposes boilermakers with proven industrial boilermaking experience and up-to-date PRL training, verified before every proposal.. A good boilermaker reads the drawing, anticipates the forming and leaves the assembly ready for welders and fitters to work without surprises - which is why they are among the first profiles requested for plant shutdowns. HDM checks years of real craft, not just certificates. Across Catalonia and Spain, demand concentrates on shutdowns, naval maintenance and industrial construction, with travel agreed in the proposal.",
         cuando: ["Plant shutdowns: tanks, heat exchangers and process lines.", "Fabrication and erection of heavy steel structures.", "Industrial maintenance with fixed deadlines.", "Cover or reinforcement for your boilermaking team on long projects."],
         verifica: "HDM verifies: up-to-date PRL training and proven experience in industrial boilermaking (layout, forming and assembly). No verified data, no proposal. For work in tanks, at height or in confined spaces, specific experience in that condition is checked.",
         faq: [{ q: "Boilermakers for work at height or inside tanks?", a: "State the conditions in the request (height, confined space, tank interior); HDM takes them into account when verifying profiles and certifications." }, { q: "Can I combine boilermakers with welders in one request?", a: "Yes. Configure several profiles in the same request; HDM checks each crew's availability and answers with the complete package." }, { q: "What is the difference between a boilermaker and a welder?", a: "The boilermaker lays out, forms and assembles the part; the welder joins it. Request both profiles in the same request if the phase requires it." }, { q: "Are they suitable for batch fabrication or only assembly?", a: "Both. State whether the work is shop fabrication, site assembly or plant maintenance." }],
       },
       montador: {
         name: "Structural fitters",
+        chip: "Riggers",
         singular: "Structural fitter",
         short: "Erection of steel structures and industrial equipment.",
         description:
@@ -188,10 +204,11 @@ const en = {
         queHacen: "The structural fitter lifts, aligns and secures steel structures, supports and industrial equipment on job sites and in plants. They work coordinated with the crane, accustomed to height and with precise reading of erection drawings. When the job schedule admits no delays, an experienced fitter is the difference between holding the critical path or not. HDM verifies erection and work-at-height experience before proposing.. Steel structure erection is where verified personnel makes the biggest difference against improvised crews: a skilled fitter measures, adjusts and leaves every piece firm first time. HDM supplies erectors for civil, naval and industrial works across Catalonia and Portugal, with availability confirmed within business hours, and combinable with helpers in the same request.",
         cuando: ["Erection of steel structures on industrial sites.", "Lifting and alignment of equipment and supports in plants.", "Critical job phases with sequences that admit no delays.", "Naval and heavy structures with complex lifting sequences."],
         verifica: "HDM verifies: PRL training and experience in structural erection and working at height. No verified data, no proposal. Where the job requires a specific work-at-height authorization or rigging skills, that is checked before the proposal.",
-        faq: [{ q: "Do structural fitters read erection drawings?", a: "Yes, it is a standard part of the profile. If your project requires specific drawing literacy, state it in the request to fine-tune verification." }, { q: "Do they work coordinated with our crane?", a: "Yes, the fitter is accustomed to working coordinated with the project's lifting crew." }, { q: "Can I request erectors for a short two-week phase?", a: "Yes. State exact dates in the request; HDM checks availability for that period and confirms before you decide." }, { q: "Can I request erectors with naval experience?", a: "Yes, state the project sector —naval, civil works or industrial plant— in the request." }],
+        faq: [{ q: "Do structural fitters read erection drawings?", a: "Yes, it is a standard part of the profile. If your project requires specific drawing literacy, state it in the request to fine-tune verification." }, { q: "Do they work coordinated with our crane?", a: "Yes, the fitter is accustomed to working coordinated with the project's lifting crew." }, { q: "Can I request erectors for a short two-week phase?", a: "Yes. State exact dates in the request; HDM checks availability for that period and confirms before you decide." }, { q: "Can I request erectors with naval experience?", a: "Yes, state the project sector -naval, civil works or industrial plant- in the request." }],
       },
       electricista: {
         name: "Industrial electricians",
+        chip: "Electricians",
         singular: "Industrial electrician",
         short: "Installations, switchboards and cabling in industrial environments.",
         description:
@@ -204,6 +221,7 @@ const en = {
       },
       constructor: {
         name: "Construction workers and labourers",
+        chip: "Helpers",
         singular: "Construction worker / labourer",
         short: "Operational support for construction sites and industrial work.",
         description:
@@ -216,6 +234,7 @@ const en = {
       },
       supervisor: {
         name: "Supervisors and foremen",
+        chip: "Supervisors",
         singular: "Supervisor / foreman",
         short: "Crew coordination and control of work execution.",
         description:
@@ -228,6 +247,7 @@ const en = {
       },
       eletromecanico: {
         name: "Electromechanics",
+        chip: "Electromech.",
         singular: "Electromechanic",
         short: "Installation, maintenance and repair of electric and mechanical machinery.",
         description:
@@ -240,6 +260,7 @@ const en = {
       },
       "mecanico-industrial": {
         name: "Industrial mechanics",
+        chip: "Mechanics",
         singular: "Industrial mechanic",
         short: "Maintenance and repair of factory machinery.",
         description:
@@ -272,7 +293,7 @@ const en = {
       construccion: {
         name: "Construction",
         intro:
-          "Structural fitters, welders and labourers for construction sites: steel structures, installations and work with deadlines that allow no delays. Industrial construction lives on sequences: when one trade falls behind, the whole job pays for it. HDM supplies profiles used to critical-sequence work —heights, lifting, coordination with other crews— and confirms it before onboarding.",
+          "Structural fitters, welders and labourers for construction sites: steel structures, installations and work with deadlines that allow no delays. Industrial construction lives on sequences: when one trade falls behind, the whole job pays for it. HDM supplies profiles used to critical-sequence work -heights, lifting, coordination with other crews- and confirms it before onboarding.",
       },
       "mantenimiento-industrial": {
         name: "Industrial maintenance",
@@ -282,7 +303,7 @@ const en = {
       energia: {
         name: "Energy",
         intro:
-          "Industrial personnel for energy sector projects, where profile qualification and documentation are conditions of entry. In energy —renewables, thermal or grids— every project demands certifications, specific training and demonstrable experience in regulated environments. HDM verifies each profile's documentation before proposing them, so onboarding does not delay your schedule.",
+          "Industrial personnel for energy sector projects, where profile qualification and documentation are conditions of entry. In energy -renewables, thermal or grids- every project demands certifications, specific training and demonstrable experience in regulated environments. HDM verifies each profile's documentation before proposing them, so onboarding does not delay your schedule.",
       },
       fabricacion: {
         name: "Manufacturing",
@@ -337,7 +358,7 @@ const en = {
   },
   solutions: {
     title: "Solutions",
-    lead: "Concrete ways to resolve an industrial personnel requirement. Every operational situation has its formula: a shutdown with a short window, sustained reinforcement, an unexpected absence or a job with an end date. Choose the solution that matches your case, configure profiles and dates, and HDM replies with real availability — with no commitment on your side.",
+    lead: "Concrete ways to resolve an industrial personnel requirement. Every operational situation has its formula: a shutdown with a short window, sustained reinforcement, an unexpected absence or a job with an end date. Choose the solution that matches your case, configure profiles and dates, and HDM replies with real availability - with no commitment on your side.",
     items: {
       "paradas-industriales": {
         name: "Industrial shutdowns",
@@ -362,7 +383,7 @@ const en = {
       "sustitucion-temporal": {
         name: "Temporary replacement",
         intro:
-          "Sick leave, holidays or absences that cannot slow production down. Request temporary replacements for the exact profile you need to cover. Same speciality, same qualification, documentation prepared before onboarding. Duration is flexible —from days to months— and HDM confirms availability within business hours so the gap in your crew lasts as little as possible.",
+          "Sick leave, holidays or absences that cannot slow production down. Request temporary replacements for the exact profile you need to cover. Same speciality, same qualification, documentation prepared before onboarding. Duration is flexible -from days to months- and HDM confirms availability within business hours so the gap in your crew lasts as little as possible.",
         points: [
           "Same profile and speciality as the person being replaced.",
           "Flexible duration according to the situation.",
@@ -372,7 +393,7 @@ const en = {
       "trabajos-puntuales": {
         name: "One-off jobs and site work",
         intro:
-          "A specific project with an end date. Supply of personnel for one-off jobs and site work: erection, welding, structures and operational support. We size the crew to the real work —from one person to full crews with optional supervision— and you set dates and duration. The proposal arrives within business hours, with availability confirmed for your dates.",
+          "A specific project with an end date. Supply of personnel for one-off jobs and site work: erection, welding, structures and operational support. We size the crew to the real work -from one person to full crews with optional supervision- and you set dates and duration. The proposal arrives within business hours, with availability confirmed for your dates.",
         points: [
           "Teams sized to the job: from 1 person to complete crews.",
           "Dates and duration defined by you.",
@@ -394,46 +415,46 @@ const en = {
         intro: "Finding qualified TIG welders in Barcelona at short notice is one of the most common operational problems in Catalan industry. This guide explains, step by step, how to cover that need as quickly as possible without compromising weld quality.",
         points: ["Define process, volume and dates before requesting.", "Require a welding certificate for the specific process.", "Availability is confirmed within business hours.", "A verified profile is productive from day one."],
         article: [
-          "The first step is specification. The more concrete the request, the faster and more precise the response: state the process —TIG for roots and fine finishes, MIG/MAG for productivity on thick sections, electrode for site work and outdoor—, the estimated weld volume, exact dates, site conditions —height, confined space, shift— and location. A request that says I need welders allows no verification; one that specifies process, dates, volume and conditions allows certificates, experience and availability to be checked in a single pass.",
+          "The first step is specification. The more concrete the request, the faster and more precise the response: state the process -TIG for roots and fine finishes, MIG/MAG for productivity on thick sections, electrode for site work and outdoor-, the estimated weld volume, exact dates, site conditions -height, confined space, shift- and location. A request that says I need welders allows no verification; one that specifies process, dates, volume and conditions allows certificates, experience and availability to be checked in a single pass.",
           "The second step is verification. A TIG welder is not interchangeable with an electrode welder: the welding certificate for the specific process is the minimum proof that the person masters the process your project needs. To that certificate add PRL training in date and proven experience in the specific type of work: process piping is not the same as naval structures, and a weld that passes inspection first time saves hours of rework that cost more than the welder himself during a plant shutdown.",
-          "The third step is availability, which is never assumed: it is confirmed. Send the request with the full specification, the team reviews which profiles with that certificate and experience are available for your dates, and you receive a proposal with real availability within business hours, with no commitment. A fast answer with verified data lets you decide with criteria; a generic promise of speed only shifts the risk onto your shutdown. And mind the calendar: demand for TIG welders in Barcelona comes in waves —spring and autumn shutdowns, naval campaigns— and anticipating beats rushing.",
-          "The fourth step is onboarding: the verified welder arrives with documentation prepared before starting —certificate for the process, PRL in date, experience summarised in the proposal— with no improvised trial period. Also distinguish between shutdown welders and production welders: the former work against the clock in demanding conditions, the latter at sustained pace; they are not interchangeable profiles. HDM supplies TIG, MIG/MAG and electrode welders for projects in Barcelona, Catalonia and the rest of Spain and Portugal: concrete specification, certificate and experience verification, availability confirmation and onboarding with prepared documentation.",
+          "The third step is availability, which is never assumed: it is confirmed. Send the request with the full specification, the team reviews which profiles with that certificate and experience are available for your dates, and you receive a proposal with real availability within business hours, with no commitment. A fast answer with verified data lets you decide with criteria; a generic promise of speed only shifts the risk onto your shutdown. And mind the calendar: demand for TIG welders in Barcelona comes in waves -spring and autumn shutdowns, naval campaigns- and anticipating beats rushing.",
+          "The fourth step is onboarding: the verified welder arrives with documentation prepared before starting -certificate for the process, PRL in date, experience summarised in the proposal- with no improvised trial period. Also distinguish between shutdown welders and production welders: the former work against the clock in demanding conditions, the latter at sustained pace; they are not interchangeable profiles. HDM supplies TIG, MIG/MAG and electrode welders for projects in Barcelona, Catalonia and the rest of Spain and Portugal: concrete specification, certificate and experience verification, availability confirmation and onboarding with prepared documentation.",
         ],
         
       },
       "guia-ett-industrial-vs-cuadrilla": {
-        name: "Guide: industrial temp agency vs own crew — when each option makes sense",
+        name: "Guide: industrial temp agency vs own crew - when each option makes sense",
         intro: "One of the most important operational decisions for a plant is how to cover industrial staffing needs: with an in-house crew, through an industrial temp agency, or a combination. This guide analyses both options honestly.",
         points: ["An in-house crew gives full control but costs even when not fully busy.", "A temp agency turns fixed cost into variable cost.", "Profile verification is where suppliers differ most.", "Combining both is the most common setup in mature plants."],
         article: [
           "An in-house crew has one structural advantage: control. The workers know the plant, its standards and its routines. But that control has a cost that does not disappear when workload drops: wages, social security, training, equipment and management. When demand is stable, the cost amortises; when there are peaks, troughs or projects with an end date, the in-house crew becomes a fixed cost working at variable occupancy.",
           "An industrial temp agency turns that fixed cost into a variable one: you pay for the hours worked by the profile you need, when you need it, with no permanent structure behind it. It is also speed: hiring your own person takes selection, contracting and paperwork; a supplier with verified profiles can confirm availability within business hours. For shutdowns with a short window, production peaks or urgent cover, that speed is the real operational difference.",
           "Where temp agencies differ most is verification. Always ask three things: what certificate the profile holds for the specific process, what PRL training is in date, and what demonstrable experience they have in this type of work. There are situations where the agency is not the right answer: needs that are permanent and stable for years, work requiring accumulated proprietary knowledge, or workloads that do not justify the flexibility. The most common setup in mature plants is the combination: an in-house base for continuous work and external supply to absorb variability.",
-          "The calculation is simple: compare the full cost of an in-house crew hour —including the cost of the hour with no work— with the cost of a verified supplied profile hour. And when something goes wrong, the asymmetry is clear: a selection mistake with your own staff costs months; with verified external supply, days. HDM supplies qualified industrial personnel for plants and works across Spain and Portugal, with verification before every proposal: describe your situation in a request and receive a response with real data, no commitment.",
+          "The calculation is simple: compare the full cost of an in-house crew hour -including the cost of the hour with no work- with the cost of a verified supplied profile hour. And when something goes wrong, the asymmetry is clear: a selection mistake with your own staff costs months; with verified external supply, days. HDM supplies qualified industrial personnel for plants and works across Spain and Portugal, with verification before every proposal: describe your situation in a request and receive a response with real data, no commitment.",
         ],
         
       },
       "guia-planificar-parada-planta": {
-        name: "Guide: plant shutdowns — how to plan shutdown staffing",
+        name: "Guide: plant shutdowns - how to plan shutdown staffing",
         intro: "A plant shutdown concentrates months of work into days or weeks. Staffing planning is the variable that most determines success. This guide covers the criteria that separate a shutdown that meets its window from one that pays for it twice.",
         points: ["The shutdown window rules everything.", "Critical profiles are reserved first.", "Shifts are defined before the shutdown.", "Daily supervision catches deviations in time."],
         article: [
-          "All shutdown staffing planning starts with one question: how many hours does the window have? The shutdown window is the constraint that rules everything: against it you calculate workload per trade, headcount per shift and the intervention sequence. The common mistake is planning backwards —starting from the available crew and fitting the work to it—; correct planning starts from the work: what must be welded, dismantled and assembled, how many trade hours each task takes and in what sequence.",
-          "The second criterion is prioritising critical profiles. Welders —especially TIG for process piping— and boilermakers most constrain the schedule because their work usually sits on the critical path: until the piping is welded it cannot be pressurised; until the tank is closed it cannot be filled. These profiles are reserved first, with more lead time and the strictest verification. Support profiles turn over faster and close later, but also with a date.",
+          "All shutdown staffing planning starts with one question: how many hours does the window have? The shutdown window is the constraint that rules everything: against it you calculate workload per trade, headcount per shift and the intervention sequence. The common mistake is planning backwards -starting from the available crew and fitting the work to it-; correct planning starts from the work: what must be welded, dismantled and assembled, how many trade hours each task takes and in what sequence.",
+          "The second criterion is prioritising critical profiles. Welders -especially TIG for process piping- and boilermakers most constrain the schedule because their work usually sits on the critical path: until the piping is welded it cannot be pressurised; until the tank is closed it cannot be filled. These profiles are reserved first, with more lead time and the strictest verification. Support profiles turn over faster and close later, but also with a date.",
           "The third criterion: shifts are defined before the shutdown, not during. How many shifts, how many hours, what overlaps and who covers each are planning decisions; the typical mistake is underestimating the second and third shifts, because the reality of long shutdowns is played out at night. The fourth criterion is daily supervision: a foreman who coordinates crews, controls execution and delivers an end-of-shift report turns supplied personnel into a team; without that layer, deviations are detected late.",
-          "Dimension with margin: calculate trade hours divided by window hours minus a realistic contingency margin —twenty percent is an honest reference—, and round up on critical trades. Agree beforehand the reporting channel and frequency, the single point of contact on the supplier side and the deviation protocol. And after the shutdown, close the loop: fifteen minutes of review turns experience into criteria for the next one. HDM supplies multi-profile crews for shutdowns across Spain and Portugal, with availability confirmed before the window and follow-up throughout.",
+          "Dimension with margin: calculate trade hours divided by window hours minus a realistic contingency margin -twenty percent is an honest reference-, and round up on critical trades. Agree beforehand the reporting channel and frequency, the single point of contact on the supplier side and the deviation protocol. And after the shutdown, close the loop: fifteen minutes of review turns experience into criteria for the next one. HDM supplies multi-profile crews for shutdowns across Spain and Portugal, with availability confirmed before the window and follow-up throughout.",
         ],
         
       },
       "guia-certificaciones-soldadura": {
-        name: "Guide: welding certifications — which ones to require for the job",
+        name: "Guide: welding certifications - which ones to require for the job",
         intro: "Asking for a qualified welder is not enough: every process, material and standard requires a specific certification. This guide explains which certificates exist and how to verify they are real and current.",
         points: ["Certification is requested per process: TIG, MIG/MAG and electrode are not interchangeable.", "EN ISO 9606 is the core European reference.", "PRL training is mandatory and separate.", "A real certificate is verified before the proposal."],
         article: [
           "The first concept is the process. TIG welding is a different discipline from MIG/MAG, and both differ from electrode welding: each process has its technique, parameters and certification. An excellent electrode welder may not master TIG. The right first question is not do they hold a welding certificate?, but do they hold a certificate for the process I need? A certificate without a specified process is, in practice, a certificate without content.",
-          "The core European reference is EN ISO 9606, which certifies the welder for a specific process, material and positions. Where the work requires it —pressure, critical structures, naval or rail— qualified procedures under standards such as EN ISO 15614 are added. The second certification, separate and mandatory, is PRL training: it does not certify that someone can weld, it certifies they can work in an industrial environment safely. A welding certificate without PRL does not serve for onboarding, just as PRL without a welding certificate does not serve for welding.",
-          "Certain environments have additional requirements: petrochemical and chemical sites demand their own access training and demonstrable track records; construction and steel structures require welders qualified under the fabricator's procedures; height work requires a specific authorisation. Each is a documentary layer mapped before day one. And a certificate is verified before the proposal: by viewing it, checking its validity and confirming it covers the process, material and positions of the actual work — never at the workplace, where the discovery comes too late.",
-          "It also pays to read what a certificate does not say: it proves the person welded a test piece on a specific date, not years of experience or current validity —certificates expire and are renewed by test or extension under conditions—. That is why serious verification combines the certificate with two questions: how long has this profile worked with this process and on which projects. Three questions evaluate any supplier in five minutes: can I see the certificate before deciding, what happens if the profile does not fit, and who manages renewals. HDM verifies before proposing, with documentation prepared before every onboarding.",
+          "The core European reference is EN ISO 9606, which certifies the welder for a specific process, material and positions. Where the work requires it -pressure, critical structures, naval or rail- qualified procedures under standards such as EN ISO 15614 are added. The second certification, separate and mandatory, is PRL training: it does not certify that someone can weld, it certifies they can work in an industrial environment safely. A welding certificate without PRL does not serve for onboarding, just as PRL without a welding certificate does not serve for welding.",
+          "Certain environments have additional requirements: petrochemical and chemical sites demand their own access training and demonstrable track records; construction and steel structures require welders qualified under the fabricator's procedures; height work requires a specific authorisation. Each is a documentary layer mapped before day one. And a certificate is verified before the proposal: by viewing it, checking its validity and confirming it covers the process, material and positions of the actual work - never at the workplace, where the discovery comes too late.",
+          "It also pays to read what a certificate does not say: it proves the person welded a test piece on a specific date, not years of experience or current validity -certificates expire and are renewed by test or extension under conditions-. That is why serious verification combines the certificate with two questions: how long has this profile worked with this process and on which projects. Three questions evaluate any supplier in five minutes: can I see the certificate before deciding, what happens if the profile does not fit, and who manages renewals. HDM verifies before proposing, with documentation prepared before every onboarding.",
         ],
         
       },
@@ -647,13 +668,16 @@ const enPages = {
       "The supplied personnel hold occupational risk prevention training appropriate to the working environment. If your site requires site-specific PRL training, state this in the request.",
     weldingTitle: "Welding certificates",
     weldingBody:
-      "Welders are assigned according to the required process — TIG, MIG/MAG or stick welding — and the corresponding welding certification is reviewed before confirming.",
+      "Welders are assigned according to the required process - TIG, MIG/MAG or stick welding - and the corresponding welding certification is reviewed before confirming.",
     docsTitle: "Documentation before starting",
     docsBody:
       "The documentation for each placement is prepared before work begins. Attach your site's requirements to the request if you have them.",
     honestyTitle: "Commitment to transparency",
     honestyBody:
       "When HDM holds additional documented certifications, they will be published here with their exact standard and scope. Until then, we do not advertise them.",
+    trustTitle: "Verified professionals",
+    trustBody:
+      "Every professional HDM proposes is individually verified: identity, proven experience in the role, up-to-date PRL safety training and, for welding, process certification (TIG, MIG/MAG or stick) reviewed before onboarding. If your facility requires specific requirements, they are checked before the proposal is sent. No verified documentation, no proposal.",
   },
   projects: {
     title: "Projects",
@@ -687,18 +711,25 @@ const enPages = {
     body3:
       "This site reflects that way of working: you configure what you need and HDM confirms what it can put in place. No automatic promises.",
     valuesTitle: "How HDM behaves",
+    galleryTitle: "Completed work",
     values: [
       { name: "Reliability", body: "What is confirmed is delivered. What is not confirmed is stated as such." },
       { name: "Transparency", body: "No inflated figures and no automatic promises. Availability is reviewed and communicated." },
       { name: "Professionalism", body: "The right profiles, documentation prepared, a clear point of contact." },
     ] as { name: string; body: string }[],
-    photoPending: "Genuine photograph of the HDM team — pending delivery",
+    photoPending: "Genuine photograph of the HDM team - pending delivery",
   },
   contact: {
     title: "Contact",
     lead:
       "The fastest route is the request: it arrives structured and HDM can respond precisely.",
     directTitle: "Direct contact",
+    addressLabel: "Address",
+    phonesLabel: "Phone",
+    emailLabel: "Email",
+    hoursLabel: "Open",
+    hoursDays: "Mon - Fri",
+    hoursTime: "09:00 - 17:00",
     pendingData:
       "Direct contact details are being configured. In the meantime, please use the online request.",
     formTitle: "Or send a message",
@@ -718,7 +749,10 @@ const enPages = {
     cookies: "Cookies",
     editorialNote:
       "The industrial setting photographs are editorial and do not depict HDM facilities or personnel.",
-    fiscalNote: "HDM Industrial — Registered office in Portugal. Full registry details in the legal notice.",
+    fiscalNote: "HDM Industrial - Registered office in Portugal. Full registry details in the legal notice.",
+    instagram: "Instagram",
+    aiNote: "Website created with the assistance of artificial intelligence.",
+    copyright: "© 2026 HDM Industrial. All rights reserved.",
   },
   cookiesBanner: {
     title: "Cookies",
@@ -728,29 +762,45 @@ const enPages = {
     more: "More information",
   },
   legal: {
-    aviso: {
+    aviso:     {
       title: "Legal notice",
-      body: "Legal notice page. The full registry details of HDM Industrial (company name, tax ID, registered office in Portugal and contact details) will be published here once the legal department confirms them. In the meantime, this page exists as a functional placeholder and should not be indexed.",
-    },
-    privacidad: {
-      title: "Privacy policy",
-      intro: "A clear summary of how data is handled on this site.",
+      intro: "General information about the site owner, terms of use and applicable legal framework (European Union).",
       sections: [
-        { title: "What data we ask for", body: "Only what is necessary to process your request: company, contact person, telephone and email, plus the context of the requirement (profiles, location, dates, logistics and any documents you attach voluntarily)." },
-        { title: "What it is used for", body: "Solely to review availability, prepare a proposal and communicate with you about that request." },
-        { title: "What we do not do", body: "We do not sell data, we do not use it for third-party advertising and we do not send personal data to analytics tools." },
-        { title: "Attached documents", body: "Any documents you attach are treated privately and used only to evaluate your request." },
-        { title: "Applicant data", body: "If you send your CV from the Work with us section, your data and CV are used solely to assess your application against HDM personnel requirements. They are not shared with third parties or used for advertising." },
-        { title: "Your rights", body: "You may request access to, rectification of or deletion of your data by contacting HDM through the contact channels." },
+        { title: "Site owner", body: "The owner of this site is HDM Industrial, with its registered office in Portugal. Full registry details (company name, tax ID and address) will be published on this page once the company's legal department confirms them. For any formal communication, use the contact email published on the Contact page." },
+        { title: "Purpose", body: "This site presents HDM Industrial's industrial personnel supply services in Spain and Portugal, allows the configuration of personnel requests and provides contact channels for companies and candidates. HDM supplies and coordinates personnel; it does not carry out works on its own account nor replace the client company in its prevention and organisation obligations." },
+        { title: "Terms of use", body: "Access to the site is free of charge. Users agree to make lawful use of the website and its contents, without harming third parties or the owner. HDM may update or remove content at any time and does not guarantee uninterrupted availability." },
+        { title: "Intellectual property", body: "The contents, brand, design and code of the site belong to HDM Industrial or its legitimate owners. Reproduction, transformation or distribution without prior written authorisation is prohibited." },
+        { title: "Third-party links and services", body: "The site may link to official social media profiles (for example, Instagram) and to other third-party sites. These links are offered for convenience; their contents and cookies are the responsibility of their owners and HDM does not control those sites." },
+        { title: "Website created with the assistance of artificial intelligence", body: "The design, development and part of the contents of this site have been produced with the assistance of artificial intelligence tools. All commercial text, professional profiles and published data have been reviewed and validated by the HDM Industrial team before publication. Artificial intelligence is used as a production tool; it does not automate decisions about people nor replace human review." },
+        { title: "Applicable law", body: "These terms are governed by European Union law and by the legislation of the owner's registered office, with particular reference to Regulation (EU) 2016/679 (GDPR), Directive 2000/31/EC on electronic commerce and, depending on the country, Law 34/2002 (Spain) or Law No 46/2004 (Portugal). Any dispute will be submitted to the competent courts of that registered office." },
       ] as { title: string; body: string }[],
     },
-    cookies: {
-      title: "Cookie policy",
-      intro: "This site uses the minimum possible number of cookies.",
+    privacidad:     {
+      title: "Privacy policy",
+      intro: "How we collect and process personal data on this site, in accordance with the GDPR (EU) 2016/679.",
       sections: [
-        { title: "Technical cookies", body: "Necessary for the site to work: your request is saved in your browser so you do not lose it while browsing. They do not require consent." },
-        { title: "Usage measurement", body: "Only if you accept, anonymous usage measurement is loaded to improve the site. If you decline, no measurement script is loaded." },
-        { title: "No advertising", body: "There are no advertising cookies or third-party commercial tracking." },
+        { title: "Data controller", body: "HDM Industrial, with its registered office in Portugal, is the data controller for personal data collected through this site. You can contact the controller through the contact email published on the Contact page." },
+        { title: "Data we process", body: "We process the data you choose to provide: name and company, contact person, phone and email, details of the personnel need (profiles, location, dates, requirements) and any documents you voluntarily attach (CV, certificates). We do not collect special categories of data or data of minors through this site." },
+        { title: "Purposes", body: "We use your data to answer your enquiry, review personnel availability, prepare a proposal and stay in communication while your request is being handled. If you send your CV through Work with us, your data is used to assess your application against HDM's personnel needs." },
+        { title: "Legal basis", body: "The basis for processing is your consent when you submit the form (Article 6(1)(a) GDPR) and, as the request progresses, the pre-contractual measures you request (Article 6(1)(b) GDPR). You may withdraw your consent at any time without affecting the lawfulness of previous processing." },
+        { title: "Recipients and transfers", body: "We do not sell or transfer personal data for commercial purposes. Only the technical providers needed to operate the site and email access the information, acting as processors under the contracts required by the GDPR. If any provider processes data outside the European Economic Area, the transfer relies on GDPR safeguards (standard contractual clauses or other adequate measures)." },
+        { title: "Retention", body: "Data is kept while your request or application is being handled and, afterwards, for the applicable statutory periods." },
+        { title: "Your rights", body: "You may exercise the rights of access, rectification, erasure, objection, restriction and portability, and withdraw your consent, by contacting the controller via the contact email. If you believe the processing does not comply with the law, you may lodge a complaint with the competent supervisory authority: in Spain, the Spanish Data Protection Agency; in Portugal, the National Data Protection Commission." },
+        { title: "Use of artificial intelligence", body: "This site has been developed with artificial intelligence tools, but the data you submit through the forms is processed directly through HDM's contact channels. Your data is not used to train third-party artificial intelligence models." },
+        { title: "Minors", body: "The site's services are aimed at professionals and companies; the processing of data of children under 14 is not envisaged." },
+      ] as { title: string; body: string }[],
+    },
+    cookies:     {
+      title: "Cookie policy",
+      intro: "This site uses as few cookies as possible, in accordance with European Union rules (Directive 2002/58/EC and the GDPR).",
+      sections: [
+        { title: "What cookies are", body: "Cookies and similar technologies (for example, browser local storage) allow information about your visit to be remembered. This site uses both cookies and local storage for the same purpose and with the same safeguards." },
+        { title: "Technical cookies (no consent required)", body: "Essential for the site to work: they store your request in progress in the browser so you don't lose it while navigating, remember the language and record your cookie preference. Without them, the team configuration would not work." },
+        { title: "Usage measurement (only with your consent)", body: "If you accept on the banner, anonymous usage measurement is activated to learn which pages work best. Currently, own measurement is used with no advertising cookies. If third-party tools such as Google Analytics or search engine ranking tools (Google Search Console, Bing Webmaster Tools) are incorporated in the future, they will only load after your acceptance on the banner and with the anonymisation settings the tool allows." },
+        { title: "No advertising or commercial tracking", body: "This site does not use advertising cookies, does not sell browsing data and does not build commercial profiles of visitors." },
+        { title: "Social networks", body: "The footer links to HDM's Instagram profile. By following that link you visit Instagram, which will apply its own cookies and policies under its own responsibility. This site does not embed social widgets that load cookies before your action." },
+        { title: "How to manage or delete cookies", body: "You can allow only technical cookies (banner button), accept measurement or change your mind later: delete the site's cookies and local storage in your browser settings (in Chrome and Firefox: Settings, Privacy and security, Cookies; in Safari, Preferences, Privacy). If you decline measurement, no measurement script is loaded." },
+        { title: "Updates to this policy", body: "This policy may be updated when the site's tools change. The version in force is always the one published on this page." },
       ] as { title: string; body: string }[],
     },
   },
@@ -771,12 +821,12 @@ export const enCareers = {
     profilesTitle: "The profiles HDM works with",
     processTitle: "How it works",
     processSteps: [
-      { title: "Send your CV", body: "Fill in the form: an email will be prepared addressed to rrhh@hdmindustrial.es. Attach your CV before sending." },
+      { title: "Send your CV", body: "Fill in the form and attach your CV: it is sent directly to HDM's HR team." },
       { title: "HDM reviews your profile", body: "The team reviews your experience and professional profile." },
       { title: "Contact if there is a match", body: "If a requirement arises that matches your profile, HDM will contact you. If there is no match at that time, there will be no reply on this occasion." },
     ] as { title: string; body: string }[],
     formTitle: "Send your CV",
-    formLead: "Your mail client will open with the message prepared. Review the details and attach your CV before sending.",
+    formLead: "Send your CV directly from this page with the file attached. If direct sending is unavailable, your mail client will open with the details prepared.",
     nameLabel: "Name",
     emailLabel: "Email",
     phoneLabel: "Telephone",
@@ -788,11 +838,81 @@ export const enCareers = {
     attachSelected: "File selected",
     attachPrivacy: "Your CV is treated privately and used only to assess your application.",
     attachEmailLabel: "CV",
-    submitSuccess: "CV sent — thank you. HDM will review your profile and contact you if there is a match.",
+    submitSuccess: "CV sent - thank you. HDM will review your profile and contact you if there is a match.",
     zoneLabel: "Area / city (optional)",
     messageLabel: "Message (optional)",
     privacyNote: "Your data is used only to assess your application. See the privacy policy.",
     send: "Prepare email with my CV",
+  },
+  reviews: {
+    badge: "Reviews",
+    title: "What our clients say",
+    description: "Real reviews from companies that already trusted their industrial workforce to HDM.",
+    formTitle: "Worked with us? Tell us",
+    formSuccessTitle: "Thank you for your review!",
+    formSuccessText: "We will review it and publish it soon on this same page.",
+    formDisclaimer: "Your review will be checked before publishing. It will not appear immediately.",
+    nameLabel: "Name",
+    namePlaceholder: "Your name or your company",
+    zoneLabel: "Project zone",
+    zonePlaceholder: "E.g. Barcelona",
+    emailLabel: "Email",
+    emailPlaceholder: "you@company.com",
+    emailHint: "Optional. Will not be shown publicly.",
+    projectTypeLabel: "Project type",
+    ratingLabel: "Rating",
+    ratingTerrible: "Very bad",
+    ratingBad: "Bad",
+    ratingOkay: "Average",
+    ratingGood: "Good",
+    ratingExcellent: "Excellent",
+    charCount: "{count} / {max}",
+    textLabel: "Your experience",
+    textPlaceholder: "What was it like working with HDM? Tell us the details...",
+    submit: "Submit review",
+    submitting: "Sending...",
+    emptyTitle: "No reviews published yet.",
+    emptySubtitle: "Be the first to share your experience!",
+    errorRequired: "Please fill in all fields.",
+    errorSubmit: "Error sending. Please try again.",
+    errorNotConfigured: "Review submissions will be enabled soon. Thanks for your interest.",
+    gdpr: "I accept that my review will be checked before publishing",
+    verified: "Verified client",
+    close: "Close",
+    reviewsCount: "reviews",
+    viewAll: "View all reviews",
+    all: "All",
+    sortBy: "Sort by",
+    recent: "Most recent",
+    rating: "Best rated",
+    clear: "Clear",
+    loadMore: "Load more reviews",
+    showing: "Showing",
+    of: "of",
+    noResults: "No reviews match these filters",
+    tryOtherFilters: "Try other filters",
+    backToAll: "Back to all reviews",
+    related: "Other reviews",
+    viewMore: "View more",
+    viewLess: "View less",
+    splitBadge: "Your opinion matters",
+    splitTitle: "What was your experience with HDM?",
+    splitSubtitle: "Share your project and help other companies find the industrial team they need.",
+    splitPreviewLabel: "Preview",
+    splitPreviewHint: "This is how your review will look published",
+    splitStatsAverage: "Average",
+    splitStatsReviews: "Reviews",
+    splitYourName: "Your name",
+    splitYourExperience: "Your experience...",
+    splitEmailOptional: "Optional",
+    projectTypes: {
+      "Parada de planta": "Plant shutdown",
+      "Refuerzo de equipo": "Team reinforcement",
+      "Montaje de estructuras": "Structural assembly",
+      "Mantenimiento industrial": "Industrial maintenance",
+      "Sustitución temporal": "Temporary replacement",
+      "Otro": "Other",
+    },
   },
 };
 

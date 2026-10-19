@@ -6,6 +6,7 @@ import type { NextConfig } from "next";
  * Request backend is provider-based (env). See src/server/requests/.
  */
 const nextConfig: NextConfig = {
+  basePath: process.env.HDM_BASE_PATH || undefined,
   output: "export",
   trailingSlash: false,
   images: {

@@ -1,7 +1,7 @@
 import type { JSX } from "react";
 
 /**
- * Pictogramas proprietários — TECHNICAL SIGNAGE (§53).
+ * Pictogramas proprietários - TECHNICAL SIGNAGE (§53).
  * Traço técnico, geométrico, sem cartoon. stroke-based, viewBox 0 0 48 48.
  */
 const stroke = {

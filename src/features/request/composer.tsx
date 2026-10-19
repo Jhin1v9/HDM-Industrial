@@ -10,7 +10,7 @@ import { Pictogram } from "@/components/ui/pictograms";
 import { trackEvent } from "@/features/analytics/events";
 
 /**
- * TeamComposer (§26) — assinatura visual do produto.
+ * TeamComposer (§26) - assinatura visual do produto.
  * O total representa O QUE O CLIENTE SOLICITOU. Nunca capacidade HDM.
  */
 export function TeamComposer({
@@ -42,9 +42,10 @@ export function TeamComposer({
       {/* Añadir perfil */}
       <div>
         <p className="mb-2 text-sm font-bold text-ink-800">{t.addProfile}</p>
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
           {professionalProfiles.map((profile) => {
-            const name = dict.profiles.items[profile.id]?.name ?? profile.id;
+            const item = dict.profiles.items[profile.id as keyof typeof dict.profiles.items] as { name?: string; chip?: string } | undefined;
+            const name = item?.chip ?? item?.name ?? profile.id;
             return (
               <button
                 key={profile.id}
@@ -54,18 +55,18 @@ export function TeamComposer({
                   trackEvent("profile_added", { profession: profile.id, locale });
                   onProfilesFocus?.();
                 }}
-                className="flex items-center gap-2 border border-line-300 bg-paper-50 p-3 text-left text-sm font-semibold text-ink-800 transition-colors duration-150 hover:border-ink-600 hover:bg-paper-100"
+                className="relative flex min-h-11 items-center gap-2 border border-line-300 bg-paper-50 py-2 pr-7 pl-2.5 text-left text-[11px] leading-tight font-semibold text-ink-800 transition-colors duration-150 hover:border-ink-600 hover:bg-paper-100 sm:text-xs md:p-3 md:pr-8 md:text-sm"
               >
-                <Pictogram name={profile.pictogram} className="h-6 w-6 shrink-0 text-steel-500" />
-                <span>{name}</span>
-                <span aria-hidden="true" className="ml-auto text-lg text-signal-600">+</span>
+                <Pictogram name={profile.pictogram} className="h-5 w-5 shrink-0 text-steel-500 md:h-6 md:w-6" />
+                <span className="min-w-0 flex-1">{name}</span>
+                <span aria-hidden="true" className="absolute top-1 right-1.5 text-lg leading-none text-signal-600">+</span>
               </button>
             );
           })}
         </div>
       </div>
 
-      {/* Total — visualização por números/barras, nunca bonequinhos (§54) */}
+      {/* Total - visualização por números/barras, nunca bonequinhos (§54) */}
       {total > 0 ? (
         <div className="flex items-end justify-between border-t-2 border-ink-950 pt-3" aria-live="polite">
           <div className="flex items-baseline gap-3">

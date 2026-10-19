@@ -5,12 +5,12 @@ import { useEffect } from "react";
 import { setActiveLenis } from "@/lib/lenis";
 
 /**
- * MotionProvider — motor de motion global do site (GSAP ScrollTrigger + Lenis).
+ * MotionProvider - motor de motion global do site (GSAP ScrollTrigger + Lenis).
  *
  * Roda 100% client-side pós-hidratação (export estático). Re-executa a cada
  * navegação interna (pathname): a página nova chega com elementos
  * [data-reveal] novos, escondidos pelo portão .js-reveal, e precisam ser
- * processados de novo — sem isso, navegação client-side deixava a página em
+ * processados de novo - sem isso, navegação client-side deixava a página em
  * branco até um reload completo.
  *
  * Responsabilidades:
@@ -23,10 +23,10 @@ import { setActiveLenis } from "@/lib/lenis";
  *
  * Contratos de segurança:
  * - Conteúdo NUNCA fica invisível sem JS: o CSS só oculta sob `.js-reveal`
- *   (portão adicionado por script inline antes do primeiro paint — RevealInit).
+ *   (portão adicionado por script inline antes do primeiro paint - RevealInit).
  * - Se o GSAP/Lenis falhar ao carregar, o portão é removido e os estilos
- *   inline limpos — conteúdo volta a ficar visível.
- * - prefers-reduced-motion: nada é montado — scroll nativo, conteúdo visível.
+ *   inline limpos - conteúdo volta a ficar visível.
+ * - prefers-reduced-motion: nada é montado - scroll nativo, conteúdo visível.
  * - Cleanup completo a cada troca de rota (gsap.context().revert(), ticker, Lenis).
  */
 export function MotionProvider() {
@@ -149,13 +149,26 @@ export function MotionProvider() {
           if (revealEls.length) {
             // Entrada 3D perceptível: o bloco levanta de baixo com rotação de
             // perspectiva (como uma placa se erguendo), não um simples fade.
-            gsap.set(revealEls, {
-              y: 64,
-              rotationX: -14,
-              transformPerspective: 900,
-              transformOrigin: "50% 100%",
-              autoAlpha: 0,
-            });
+            // ATENÇÃO: rotationX + transformPerspective pequeno QUEBRA elementos
+            // altos (> ~2× a perspectiva): a projeção 3D explode o bounding rect
+            // (um section de 4.000px reportava top 4.211px / height 50.000px),
+            // o ScrollTrigger julgava o bloco "abaixo da dobra" e o reveal nunca
+            // disparava — página de guia inteira em branco com JS (bug 10/10/2026).
+            // Altos recebem fade+deslocamento plano (sem 3D).
+            const TALL_REVEAL_PX = 1500;
+            for (const el of revealEls) {
+              if (el.offsetHeight > TALL_REVEAL_PX) {
+                gsap.set(el, { y: 40, autoAlpha: 0 });
+              } else {
+                gsap.set(el, {
+                  y: 64,
+                  rotationX: -14,
+                  transformPerspective: 900,
+                  transformOrigin: "50% 100%",
+                  autoAlpha: 0,
+                });
+              }
+            }
             ScrollTrigger.batch(revealEls, {
               start: "top 92%",
               onEnter: (batch, triggers) => {
@@ -241,7 +254,7 @@ export function MotionProvider() {
           // ── Parallax em imagens editoriais (mais profundo) ───────────────
           for (const el of gsap.utils.toArray<HTMLElement>("[data-parallax]")) {
             const trigger = el.closest("[data-parallax-root]") ?? el.parentElement ?? el;
-            // Escala 1.25 dá margem de 12,5% para cada lado — maior que o
+            // Escala 1.25 dá margem de 12,5% para cada lado - maior que o
             // deslocamento máximo de ±10% (yPercent é relativo à altura sem
             // escala), garantindo que nunca apareça gap nas bordas do crop.
             gsap.set(el, { scale: 1.25, yPercent: -10 });
@@ -304,14 +317,26 @@ export function MotionProvider() {
 
         // Failsafe anti-conteúdo-preso: se 2,5s após o boot algum elemento com
         // [data-reveal] estiver na viewport mas ainda oculto (batch que não
-        // disparou — rede lenta, edge case de refresh etc.), força a revelação.
+        // disparou - rede lenta, edge case de refresh etc.), força a revelação.
         // Elementos abaixo da dobra mantêm a animação normal no scroll.
+        // Nota: usa posição de LAYOUT (offsetTop acumulado), não getBoundingClientRect:
+        // com rotationX+perspectiva o rect visual explode e o failsafe nunca
+        // considerava o elemento "na viewport" (mesmo bug de 10/10/2026).
         const failsafeTimer = window.setTimeout(() => {
           if (disposed) return;
+          const layoutTop = (el: HTMLElement) => {
+            let top = 0;
+            let node: HTMLElement | null = el;
+            while (node) {
+              top += node.offsetTop;
+              node = node.offsetParent as HTMLElement | null;
+            }
+            return top;
+          };
           const stuck = revealEls.filter((el) => {
             if (Number(gsap.getProperty(el, "autoAlpha")) > 0.05) return false;
-            const rect = el.getBoundingClientRect();
-            return rect.top < window.innerHeight && rect.bottom > 0;
+            const top = layoutTop(el);
+            return top < window.scrollY + window.innerHeight && top + el.offsetHeight > window.scrollY;
           });
           if (stuck.length) {
             gsap.to(stuck, {

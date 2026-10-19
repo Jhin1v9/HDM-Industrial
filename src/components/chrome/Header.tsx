@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { L as Link } from "@/components/ui/L";
+import { asset } from "@/lib/basePath";
 import { usePathname } from "next/navigation";
 import { LOCALES, type Locale } from "@/domain/types";
 import { getDictionary } from "@/i18n";
@@ -48,10 +49,10 @@ export function Header({ locale }: { locale: Locale }) {
           className="flex items-center"
           aria-label="HDM Industrial"
         >
-          {/* Logo oficial fornecida pelo cliente (Matheus, 21/09) — PDF em documentos/brand/ */}
+          {/* Logo oficial fornecida pelo cliente (Matheus, 21/09) - PDF em documentos/brand/ */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/brand/hdm-logo-light.png"
+            src={asset("/images/brand/hdm-logo-light.png")}
             alt="HDM Industrial"
             width={771}
             height={330}

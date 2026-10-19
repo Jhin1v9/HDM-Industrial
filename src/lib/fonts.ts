@@ -1,6 +1,6 @@
 import { Archivo, IBM_Plex_Mono } from "next/font/google";
 
-/** Brand fonts (ADR 001 — Doc 08 absent): Archivo + IBM Plex Mono. */
+/** Brand fonts (ADR 001 - Doc 08 absent): Archivo + IBM Plex Mono. */
 export const archivo = Archivo({
   subsets: ["latin"],
   variable: "--font-archivo",

@@ -238,5 +238,197 @@
     "license": "Uso autorizado pelo cliente",
     "width": 1600,
     "height": 1200
+  },
+  {
+    "id": "PH-PHOTO-TEAM-01",
+    "file": "/images/cliente/hdm-equipo-taller.jpg",
+    "alt": {
+      "es": "Operario de HDM Industrial con chaqueta de empresa trabajando en una máquina de acero inoxidable en el taller, con carretilla elevadora al lado",
+      "ca": "Operari de HDM Industrial amb jaqueta d'empresa treballant en una màquina d'acer inoxidable al taller, amb carretó elevador al costat",
+      "en": "HDM Industrial operator in company jacket working on a stainless steel machine in the workshop, with a forklift alongside",
+      "pt": "Operário da HDM Industrial com jaqueta da empresa a trabalhar numa máquina de aço inoxidável na oficina, com empilhador ao lado"
+    },
+    "context": "Foto real do cliente: operário HDM com marca visível na oficina, montando/ajustando equipamento de inox com empilhadeira Crown ao lado.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1920,
+    "height": 864
+  },
+  {
+    "id": "PH-PROJECT-01",
+    "file": "/images/cliente/hdm-proyecto-inox-bomba.jpg",
+    "alt": {
+      "es": "Equipo de proceso de acero inoxidable con bomba azul y mangueras trenzadas instaladas sobre bastidor, obra de HDM Industrial",
+      "ca": "Equip de procés d'acer inoxidable amb bomba blava i màniques trenyades instal·lats sobre bastidor, obra de HDM Industrial",
+      "en": "Stainless steel process skid with blue pump and braided hoses installed on a frame, HDM Industrial project",
+      "pt": "Skid de processo em aço inoxidável com bomba azul e mangueiras trançadas instaladas sobre bastidor, obra da HDM Industrial"
+    },
+    "context": "Foto real do cliente (projeto): equipamento de inox com bomba Grundfos e tubagem instalada em skid.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "PH-PROJECT-02",
+    "file": "/images/cliente/hdm-proyecto-prensa.jpg",
+    "alt": {
+      "es": "Gran máquina industrial hidráulica con motor azul y cuadro de mando, fabricada e instalada por HDM Industrial en taller",
+      "ca": "Gran màquina industrial hidràulica amb motor blau i quadre de comandament, fabricada i instal·lada per HDM Industrial al taller",
+      "en": "Large hydraulic industrial machine with blue motor and power unit, manufactured and installed by HDM Industrial in the workshop",
+      "pt": "Grande máquina industrial hidráulica com motor azul e quadro de comando, fabricada e instalada pela HDM Industrial na oficina"
+    },
+    "context": "Foto real do cliente (projeto): prensa/estrutura hidráulica completa com motor, válvulas e depósito de óleo.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "PH-PROJECT-03",
+    "file": "/images/cliente/hdm-proyecto-hopper.jpg",
+    "alt": {
+      "es": "Depósito troncocónico de acero inoxidable con bridas y refuerzos soldados, fabricación de HDM Industrial",
+      "ca": "Dipòsit troncocònic d'acer inoxidable amb brides i reforços soldats, fabricació de HDM Industrial",
+      "en": "Stainless steel truncated-cone vessel with welded flanges and reinforcements, fabricated by HDM Industrial",
+      "pt": "Depósito troncocónico em aço inoxidável com bridas e reforços soldados, fabricação da HDM Industrial"
+    },
+    "context": "Foto real do cliente (projeto): hopper/cone de inox grande em oficina, reforços verticais e bridas de topo.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "PH-CLIENTE-GONDOLA-01",
+    "file": "/images/cliente/hdm-obra-gondola.jpg",
+    "alt": {
+      "es": "Soldador de HDM Industrial en plataforma elevadora trabajando sobre una tubería industrial de gran diámetro a cielo abierto",
+      "ca": "Soldador de HDM Industrial en plataforma elevadora treballant sobre una tuberia industrial de gran diàmetre a cel obert",
+      "en": "HDM Industrial welder on a mobile elevating work platform working on a large-diameter industrial pipe outdoors",
+      "pt": "Soldador da HDM Industrial em plataforma elevatória a trabalhar sobre uma tubagem industrial de grande diâmetro ao ar livre"
+    },
+    "context": "Foto real do cliente: cesta/lança telescópica sobre tubo de duto em planta industrial, céu azul.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TIG-BRIDA-01",
+    "file": "/images/cliente/hdm-tig-brida.jpg",
+    "alt": {
+      "es": "Soldadura TIG de calidad en brida de acero inoxidable con colores de arcoíris en el cordón, trabajo de HDM Industrial",
+      "ca": "Soldadura TIG de qualitat en brida d'acer inoxidable amb colors d'arc de Sant Martí al cordó, treball de HDM Industrial",
+      "en": "Quality TIG weld on a stainless steel flange with rainbow colours in the bead, HDM Industrial work",
+      "pt": "Soldadura TIG de qualidade numa brida de aço inoxidável com cores de arco-íris no cordão, trabalho da HDM Industrial"
+    },
+    "context": "Foto real do cliente: cordão TIG perfeito em brida inox com coloração azul-roxa dourada.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 784,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-ESTRUCTURA-01",
+    "file": "/images/cliente/hdm-obra-estructura.jpg",
+    "alt": {
+      "es": "Trabajador de HDM Industrial con arnés trabajando entre tuberías y estructuras metálicas en altura en planta industrial",
+      "ca": "Treballador de HDM Industrial amb arnès treballant entre tuberies i estructures metàliques en alçada en planta industrial",
+      "en": "HDM Industrial worker with a safety harness working among pipes and steel structures at height in an industrial plant",
+      "pt": "Trabalhador da HDM Industrial com arnês a trabalhar entre tubagens e estruturas metálicas em altura numa planta industrial"
+    },
+    "context": "Foto real do cliente (junho 2026): operário com arnés entre pasarelas de tuberías en planta.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TALLER-FAB-01",
+    "file": "/images/cliente/hdm-taller-fabricacion.jpg",
+    "alt": {
+      "es": "Pieza de acero inoxidable con bridas dobles fabricada por HDM Industrial en taller, lista para montaje",
+      "ca": "Peça d'acer inoxidable amb brides dobles fabricada per HDM Industrial al taller, llesta per al muntatge",
+      "en": "Stainless steel piece with double flanges fabricated by HDM Industrial in the workshop, ready for assembly",
+      "pt": "Peça de aço inoxidável com bridas duplas fabricada pela HDM Industrial na oficina, pronta para montagem"
+    },
+    "context": "Foto real do cliente: peça cónica de inox com duas bridas usinadas em oficina industrial.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TALLER-MARCO-01",
+    "file": "/images/cliente/hdm-taller-marco.jpg",
+    "alt": {
+      "es": "Estructura metálica soldada de gran formato fabricada por HDM Industrial en taller",
+      "ca": "Estructura metàl·lica soldada de gran format fabricada per HDM Industrial al taller",
+      "en": "Large-format welded steel structure fabricated by HDM Industrial in the workshop",
+      "pt": "Estrutura metálica soldada de grande formato fabricada pela HDM Industrial na oficina"
+    },
+    "context": "Foto real do cliente: bastidor/marco de perfíl tubular negro soldado em oficina.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 720,
+    "height": 1280
+  },
+  {
+    "id": "PH-CLIENTE-TIG-PROCESO-01",
+    "file": "/images/cliente/hdm-tig-proceso.jpg",
+    "alt": {
+      "es": "Proceso de soldadura TIG en tubo de acero inoxidable con antorcha y varilla de aporte, trabajo de HDM Industrial",
+      "ca": "Procés de soldadura TIG en tub d'acer inoxidable amb torxa i vareta d'aportació, treball de HDM Industrial",
+      "en": "TIG welding process on a stainless steel tube with torch and filler rod, HDM Industrial work",
+      "pt": "Processo de soldadura TIG em tubo de aço inoxidável com tocha e vareta de aporte, trabalho da HDM Industrial"
+    },
+    "context": "Foto real do cliente: tocha TIG pink em tubo inox com cordão colorido e varilla de aporte.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 900,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-SOLDADOR-GONDOLA-01",
+    "file": "/images/cliente/hdm-obra-soldador-gondola.jpg",
+    "alt": {
+      "es": "Soldador de HDM Industrial con arnés y careta soldando en cesta elevadora sobre columna estructural en planta",
+      "ca": "Soldador de HDM Industrial amb arnès i careta soldant en cistella elevadora sobre columna estructural en planta",
+      "en": "HDM Industrial welder with harness and helmet welding from a work basket on a structural column in a plant",
+      "pt": "Soldador da HDM Industrial com arnês e máscara a soldar em cesta elevatória sobre coluna estrutural numa planta"
+    },
+    "context": "Foto real do cliente (junho 2026): soldadura en cesta naranja sobre columna verde en planta, con arnés de seguridad.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-VIDEO-HERO-01",
+    "file": "/videos/hdm-hero-obra.mp4",
+    "alt": {
+      "es": "Grúa de puente elevando un depósito de acero inoxidable en el taller de HDM Industrial",
+      "ca": "Grua de pont elevant un dipòsit d'acer inoxidable al taller de HDM Industrial",
+      "en": "Overhead crane lifting a stainless steel vessel in the HDM Industrial workshop",
+      "pt": "Guindaste de ponte a içar um depósito de aço inoxidável na oficina da HDM Industrial"
+    },
+    "context": "Vídeo real do cliente (envio 11/10/2026): grúa de taller içando peça de inox com operários a guiar; 18s reencodado a 1280x720 H.264 crf28 sem áudio.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envio 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1280,
+    "height": 720
   }
 ]

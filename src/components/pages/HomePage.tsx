@@ -14,9 +14,9 @@ import { Pictogram } from "@/components/ui/pictograms";
 import { TeamComposer } from "@/features/request/composer";
 import { OpenRequestButton } from "@/components/pages/OpenRequestButton";
 import { CoverageMap } from "@/features/coverage/CoverageMap";
-import { companyFacts } from "@/content/company";
-import { PhoneIcon } from "@/components/ui/icons";
+import { GridCtaCard } from "./InfoPages";
 import { HeroRotator } from "@/components/chrome/HeroRotator";
+import { ReviewsSection } from "@/features/reviews/ReviewsSection";
 
 /**
  * HOME = interface comercial (§46). Primeiro viewport: entender HDM,
@@ -40,20 +40,31 @@ export function HomePage({ locale }: { locale: Locale }) {
 
   return (
     <>
-      {/* HERO — Brand moment 01: "Opa, posso mexer" */}
+      {/* HERO - Brand moment 01: "Opa, posso mexer" */}
       <section className="relative overflow-hidden bg-ink-950 text-paper-50">
-        {/* Wallpaper: carrossel automático (Ken Burns) no FUNDO do hero —
+        {/* Wallpaper: carrossel automático (Ken Burns) no FUNDO do hero -
             pedido do cliente Matheus 2026-09-25: fotos passando atrás do
             conteúdo. Overlay escuro mantém o texto impecável. */}
         <div className="absolute inset-0" aria-hidden="true">
           <HeroRotator
             slides={[
-              // Fotos REAIS do cliente (Matheus, envio 02/10/2026) — substituem
-              // o wallpaper editorial como pedido: "assim que tivermos imagens
-              // nossas, enviamos". Alt registrado no mediaManifest.
+              // Fotos REAIS do cliente (Matheus, envio 02/10/2026 + lote 11/10/2026)
+              // La primera es la de mayor resolución (1920px) — el fotograma
+              // del vídeo (1280×720) iba antes y se veía borroso estirado.
               { src: "/images/cliente/hdm-taller-montaje.jpg", alt: getMedia("PH-CLIENTE-TALLER-01")?.alt[locale] ?? "" },
               { src: "/images/cliente/hdm-soldadura-tig.jpg", alt: getMedia("PH-CLIENTE-TIG-01")?.alt[locale] ?? "" },
+              { src: "/images/cliente/hdm-obra-gondola.jpg", alt: getMedia("PH-CLIENTE-GONDOLA-01")?.alt[locale] ?? "" },
+              { src: "/images/cliente/hdm-tig-brida.jpg", alt: getMedia("PH-CLIENTE-TIG-BRIDA-01")?.alt[locale] ?? "" },
               { src: "/images/cliente/hdm-equipo-inox.jpg", alt: getMedia("PH-CLIENTE-INOX-01")?.alt[locale] ?? "" },
+              // Fotograma del vídeo real del cliente (envio 11/10/2026, PH-VIDEO-HERO-01).
+              // Vídeo en desktop desde 19/10/2026 (>=769px, muted+loop); en móvil solo póster
+              // hasta investigar autoplay mobile; 1280×720.
+              {
+                src: "/images/cliente/hdm-video-hero-poster.jpg",
+                videoSrc: "/videos/hdm-hero-obra.mp4",
+                alt: getMedia("PH-VIDEO-HERO-01")?.alt[locale] ?? "",
+              },
+              // Fallback editorial (seguem identificadas como editoriais no manifest)
               { src: "/images/hero-industrial.jpg", mobileSrc: "/images/hero-mobile.jpg", alt: getMedia("PH-PHOTO-HERO-01")?.alt[locale] ?? "" },
               { src: "/images/plant-industrial.jpg", alt: getMedia("PH-PHOTO-PLANT-01")?.alt[locale] ?? "" },
             ]}
@@ -77,24 +88,16 @@ export function HomePage({ locale }: { locale: Locale }) {
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <OpenRequestButton
                 locale={locale}
-                className="flex h-13 items-center border border-signal-500 bg-signal-600 px-7 text-base font-extrabold tracking-wide text-white uppercase transition-colors duration-150 hover:bg-signal-700"
+                className="flex h-11 items-center rounded-md border border-signal-500 bg-signal-600 px-6 text-sm font-bold tracking-wide text-white uppercase transition-colors duration-150 hover:bg-signal-700"
               >
                 {h.heroStart}
               </OpenRequestButton>
               <Link
                 href={localizedPath(locale, "personal-industrial")}
-                className="flex h-13 items-center border border-paper-50/30 px-7 text-base font-bold text-paper-50 transition-colors duration-150 hover:border-paper-50"
+                className="flex h-11 items-center rounded-md border border-paper-50/30 px-6 text-sm font-bold text-paper-50 transition-colors duration-150 hover:border-paper-50"
               >
                 {h.heroSecondary}
               </Link>
-              {companyFacts.phone ? (
-                <a
-                  href={`tel:${companyFacts.phone.replace(/[^+0-9]/g, "")}`}
-                  className="flex items-center gap-2 text-sm font-semibold text-steel-300 hover:text-white"
-                >
-                  <PhoneIcon className="h-4 w-4" /> {companyFacts.phone}
-                </a>
-              ) : null}
             </div>
             <p className="mt-5 text-sm text-steel-400">{h.heroNote}</p>
           </Reveal>
@@ -107,7 +110,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             <TeamComposer locale={locale} />
             <OpenRequestButton
               locale={locale}
-              className="mt-4 flex h-12 w-full items-center justify-center border border-ink-950 bg-ink-950 text-sm font-extrabold tracking-wide text-paper-50 uppercase transition-colors duration-150 hover:bg-ink-800"
+              className="mt-4 flex h-11 w-full items-center justify-center rounded-md border border-signal-700 bg-signal-600 text-sm font-bold tracking-wide text-white uppercase transition-colors duration-150 hover:bg-signal-700"
             >
               {dict.common.requestCta}
             </OpenRequestButton>
@@ -118,9 +121,9 @@ export function HomePage({ locale }: { locale: Locale }) {
       </section>
 
 
-      {/* Cómo funciona — 3 passos (Fase 1 do plano mobile+SEO) */}
+      {/* Cómo funciona - 3 passos (Fase 1 do plano mobile+SEO) */}
       <section className="border-b border-line-200 bg-paper-100">
-        <div className="mx-auto max-w-[76rem] px-5 py-14 sm:px-8">
+        <div className="mx-auto max-w-[76rem] px-6 py-14 sm:px-8">
           <SectionHeader eyebrow={h.comoTitle} title={h.comoSub} />
           <div className="mt-8 grid gap-5 sm:grid-cols-3">
             {[
@@ -157,7 +160,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         </Reveal>
       </section>
 
-      {/* Perfis — Brand moment 02: "Opa, posso aumentar" */}
+      {/* Perfis - Brand moment 02: "Opa, posso aumentar" */}
       <Section id="perfiles">
         <SectionHeader eyebrow={dict.nav.profiles} title={h.profilesTitle} lead={h.profilesLead} />
         <ul className="grid gap-px border border-line-200 bg-line-200 sm:grid-cols-2 lg:grid-cols-3">
@@ -187,16 +190,17 @@ export function HomePage({ locale }: { locale: Locale }) {
               </li>
             );
           })}
+          <GridCtaCard locale={locale} title={h.profilesCtaTitle} />
         </ul>
       </Section>
 
-      {/* Cobertura — Brand moment 03: "Eles atendem aqui" */}
+      {/* Cobertura - Brand moment 03: "Eles atendem aqui" */}
       <Section id="cobertura" tone="ink">
         <SectionHeader dark eyebrow={h.coverageEyebrow} title={h.coverageTitle} lead={h.coverageLead} />
         <CoverageMap locale={locale} mode="request" dark />
       </Section>
 
-      {/* Processo — wording conservador (§55) */}
+      {/* Processo - wording conservador (§55) */}
       <Section id="proceso" tone="paper-100">
         <SectionHeader eyebrow={h.processEyebrow} title={h.processTitle} lead={h.processLead} />
         <ol className="grid gap-px border border-line-300 bg-line-300 sm:grid-cols-2 lg:grid-cols-4">
@@ -210,7 +214,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         </ol>
       </Section>
 
-      {/* Confiança distribuída — documentação */}
+      {/* Confiança distribuída - documentação */}
       <Section id="confianza">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>
@@ -222,7 +226,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               {dict.nav.certifications}
             </Link>
           </div>
-          <Media id="PH-PHOTO-EPI-01" locale={locale} className="border border-line-200" imgClassName="h-72 w-full object-cover" />
+          <Media id="PH-PHOTO-TEAM-01" locale={locale} className="border border-line-200" imgClassName="h-72 w-full object-cover" />
         </div>
       </Section>
 
@@ -261,18 +265,22 @@ export function HomePage({ locale }: { locale: Locale }) {
                   {dict.solutions.items[solution.id]?.intro}
                 </span>
                 <span className="mt-auto pt-2 text-sm font-bold text-signal-600 group-hover:underline underline-offset-4">
-                  {dict.common.readMore} →
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </Section>
+                {dict.common.readMore} →
+              </span>
+            </Link>
+          </li>
+        ))}
+        <GridCtaCard locale={locale} title={dict.common.ctaNoSolutionTitle} />
+      </ul>
+    </Section>
 
-      {/* CTA final — reabre o Request (Brand moment 04 acontece no resumen) */}
-            {/* FAQ (Fase 1) — acordeão simples + FAQPage schema */}
-      <section className="border-b border-line-200 bg-paper-100">
-        <div className="mx-auto max-w-[52rem] px-5 py-14 sm:px-8">
+      {/* Reseñas (user-submitted, moderated) */}
+      <ReviewsSection locale={locale} dict={dict} />
+
+      {/* CTA final - reabre o Request (Brand moment 04 acontece no resumen) */}
+            {/* FAQ (Fase 1) - acordeão simples + FAQPage schema */}
+      <section className="border-b border-line-200 bg-white">
+        <div className="mx-auto max-w-[52rem] px-6 py-14 sm:px-8">
           <SectionHeader title={h.faqTitle} />
           <div className="mt-6 divide-y divide-line-200 border border-line-200 bg-paper-50">
             {[

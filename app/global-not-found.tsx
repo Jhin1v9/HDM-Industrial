@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 /**
  * 404 global do export estático (404.html). Não pertence a nenhum route group,
- * por isso renderiza o seu próprio <html lang="es"> — o fallback estático usa
+ * por isso renderiza o seu próprio <html lang="es"> - o fallback estático usa
  * o dicionário ES (documentado em SWARM_ARCHITECTURE.md).
  */
 export default function GlobalNotFound() {
@@ -53,7 +53,7 @@ export default function GlobalNotFound() {
         </main>
         <footer className="border-t border-line-200 py-6">
           <p className="mx-auto max-w-[76rem] px-5 font-mono text-xs text-steel-500 sm:px-8">
-            HDM Industrial — {dict.footer.tagline}
+            HDM Industrial - {dict.footer.tagline}
           </p>
         </footer>
       </body>

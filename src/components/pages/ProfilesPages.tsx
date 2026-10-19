@@ -6,11 +6,24 @@ import { PROFESSION_EXTRA } from "@/content/profession-extra";
 import { professionalProfiles } from "@/content/profiles";
 import { sectors } from "@/content/sectors";
 import { Section, SectionHeader } from "@/components/ui/layout";
-import { Media } from "@/components/media/Media";
+import { GalleryViewer } from "@/components/media/GalleryViewer";
 import { Pictogram } from "@/components/ui/pictograms";
 import { OpenRequestButton } from "./OpenRequestButton";
 import { PrefillProfessionButton } from "./PrefillButtons";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { RelatedAndCta } from "./InfoPages";
+
+/** Fotos reales de trabajos HDM por perfil (envío cliente 11/10/2026). */
+const PROFILE_GALLERY: Record<string, readonly string[]> = {
+  soldador: ["PH-CLIENTE-TIG-01", "PH-CLIENTE-TIG-BRIDA-01", "PH-CLIENTE-TIG-PROCESO-01", "PH-CLIENTE-SOLDADOR-GONDOLA-01"],
+  calderero: ["PH-CLIENTE-INOX-01", "PH-CLIENTE-TALLER-FAB-01", "PH-CLIENTE-TALLER-MARCO-01", "PH-PROJECT-01", "PH-PROJECT-03"],
+  montador: ["PH-CLIENTE-TALLER-01", "PH-CLIENTE-GONDOLA-01", "PH-CLIENTE-OBRA-ESTRUCTURA-01", "PH-CLIENTE-SOLDADOR-GONDOLA-01"],
+  electricista: ["PH-CLIENTE-OBRA-ESTRUCTURA-01", "PH-CLIENTE-TALLER-01", "PH-CLIENTE-GONDOLA-01"],
+  constructor: ["PH-CLIENTE-TALLER-01", "PH-CLIENTE-OBRA-ESTRUCTURA-01", "PH-CLIENTE-GONDOLA-01"],
+  supervisor: ["PH-CLIENTE-SOLDADOR-GONDOLA-01", "PH-CLIENTE-TALLER-01", "PH-CLIENTE-OBRA-ESTRUCTURA-01"],
+  eletromecanico: ["PH-CLIENTE-TALLER-MARCO-01", "PH-CLIENTE-TALLER-FAB-01", "PH-PROJECT-02"],
+  "mecanico-industrial": ["PH-PROJECT-02", "PH-CLIENTE-TALLER-MARCO-01", "PH-CLIENTE-TALLER-FAB-01"],
+};
 
 export function ProfilesIndexPage({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
@@ -93,7 +106,7 @@ export function ProfileDetailPage({
           ]}
         />
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
-          <div>
+          <div className="min-w-0">
             <div className="flex items-center gap-4">
               <Pictogram name={profile.pictogram} className="h-14 w-14 text-ink-800" />
               <h1 className="text-[clamp(2rem,4vw,3.4rem)] leading-none font-extrabold tracking-tight text-ink-950">
@@ -119,20 +132,17 @@ export function ProfileDetailPage({
                     );
                   })}
                 </ul>
-                {/* Galeria editorial por especialidad (fotos públicas verificadas) */}
-                <ul className="mt-4 grid gap-4 sm:grid-cols-3">
-                  {["PH-PHOTO-TIG-01", "PH-PHOTO-MIGMAG-01", "PH-PHOTO-ELECTRODO-01"].map((id) => (
-                    <li key={id}>
-                      <Media id={id} locale={locale} className="border border-line-200" imgClassName="aspect-[4/3] w-full object-cover" />
-                    </li>
-                  ))}
-                </ul>
               </div>
-            ) : (
-              <div className="mt-8">
-                <Media id={profile.mediaId} locale={locale} className="border border-line-200" imgClassName="aspect-[4/3] w-full object-cover" />
-              </div>
-            )}
+            ) : null}
+
+            {/* Galeria de trabajos reales HDM - visor com setas */}
+            <div className="mt-8">
+              <GalleryViewer
+                locale={locale}
+                ids={PROFILE_GALLERY[profile.id] ?? ["PH-CLIENTE-TALLER-01", "PH-CLIENTE-OBRA-ESTRUCTURA-01", "PH-CLIENTE-GONDOLA-01"]}
+                aspect="aspect-[4/3]"
+              />
+            </div>
 
             {item.queHacen ? (
               <>
@@ -223,7 +233,7 @@ export function ProfileDetailPage({
             </div>
           </div>
 
-          {/* Card de ação — perfil é objeto (§61) */}
+          {/* Card de ação - perfil é objeto (§61) */}
           <aside className="h-fit border border-ink-950 bg-paper-50 lg:sticky lg:top-24">
             <div className="border-b border-line-200 p-5">
               <p className="font-mono text-[11px] tracking-[0.2em] text-steel-500 uppercase">
@@ -237,7 +247,7 @@ export function ProfileDetailPage({
               <PrefillProfessionButton
                 locale={locale}
                 profession={profile.id}
-                className="flex h-12 items-center justify-center border border-signal-500 bg-signal-600 px-5 text-sm font-extrabold tracking-wide text-white uppercase hover:bg-signal-700"
+                className="flex h-11 items-center justify-center rounded-md border border-signal-700 bg-signal-600 px-5 text-sm font-bold tracking-wide text-white uppercase hover:bg-signal-700"
               >
                 {dict.common.startRequestHere}
               </PrefillProfessionButton>
@@ -250,6 +260,9 @@ export function ProfileDetailPage({
             </div>
           </aside>
         </div>
+      </Section>
+      <Section>
+        <RelatedAndCta locale={locale} excludeSlug={profile.slug} />
       </Section>
     </>
   );

@@ -7,7 +7,7 @@ import {
 } from "./sectors";
 
 /**
- * Page registry — single source of truth for routes, indexability and locales.
+ * Page registry - single source of truth for routes, indexability and locales.
  * Indexability rule (§45): distinct intent + own content + value + proof + CTA + internal links.
  * Paths below are the ES (root) canonical slugs; other locales resolve via sectionSlugs.
  */
@@ -42,11 +42,13 @@ export const pageRegistry: readonly PageDefinition[] = [
   { path: "certificaciones-y-seguridad", family: "company", indexable: true, dynamic: false },
   { path: "proyectos", family: "company", indexable: true, dynamic: false },
   { path: "empresa", family: "company", indexable: true, dynamic: false },
-  // Request engine: noindex (Doc 09 §58 — transactional page, canonical is the home CTA).
+  // Request engine: noindex (Doc 09 §58 - transactional page, canonical is the home CTA).
   { path: "solicitar-personal", family: "request", indexable: false, dynamic: false },
   { path: "contacto", family: "company", indexable: true, dynamic: false },
-  // Careers/CV intake — client request 21/09/2026 (Matheus, Nexo panel cmub9zxnq0011k011dz4f8qso).
+  // Careers/CV intake - client request 21/09/2026 (Matheus, Nexo panel cmub9zxnq0011k011dz4f8qso).
   { path: "trabaja-con-nosotros", family: "company", indexable: true, dynamic: false },
+  // Reviews: user-submitted, moderated via GitHub Issues (sync to public/data/reviews.json).
+  { path: "resenas", family: "company", indexable: true, dynamic: false },
   { path: "aviso-legal", family: "legal", indexable: false, dynamic: false },
   { path: "privacidad", family: "legal", indexable: false, dynamic: false },
   { path: "cookies", family: "legal", indexable: false, dynamic: false },
@@ -57,7 +59,7 @@ export const pageRegistry: readonly PageDefinition[] = [
  * paths; other locales are direct translations listed in the sitemap doc.
  * Detail slugs: coverage = city names (shared); sectors = localized
  * (sectorLocalizedSlugs); profiles/solutions = shared base slugs (Doc 05 §42
- * only specifies ES detail slugs exhaustively — conservative reuse).
+ * only specifies ES detail slugs exhaustively - conservative reuse).
  */
 export const sectionSlugs = {
   "personal-industrial": {
@@ -96,6 +98,7 @@ export const sectionSlugs = {
     en: "work-with-us",
     ca: "treballa-amb-nosaltres",
   },
+  resenas: { es: "resenas", pt: "avaliacoes", en: "reviews", ca: "ressenyes" },
   "aviso-legal": { es: "aviso-legal", pt: "aviso-legal", en: "legal-notice", ca: "avis-legal" },
   privacidad: { es: "privacidad", pt: "privacidade", en: "privacy", ca: "privacitat" },
   cookies: { es: "cookies", pt: "cookies", en: "cookies", ca: "cookies" },

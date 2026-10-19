@@ -29,14 +29,14 @@ export interface Solution {
   impliesDisplacement: boolean;
 }
 
-/** Sitemap §42 — /soluciones family. */
+/** Sitemap §42 - /soluciones family. */
 export const solutions: readonly Solution[] = [
   { id: "paradas-industriales", slug: "paradas-industriales", relatedNeedType: "parada-programada", impliesDisplacement: false },
   { id: "refuerzo-de-personal", slug: "refuerzo-de-personal", relatedNeedType: "trabajo-continuado", impliesDisplacement: false },
   { id: "sustitucion-temporal", slug: "sustitucion-temporal", relatedNeedType: "sustitucion-temporal", impliesDisplacement: false },
   { id: "trabajos-puntuales", slug: "trabajos-puntuales", relatedNeedType: "trabajo-puntual", impliesDisplacement: false },
   { id: "personal-con-desplazamiento", slug: "personal-con-desplazamiento", relatedNeedType: null, impliesDisplacement: true },
-  // Guías editoriales (Fase 4 del plano SEO — artigos-pilares, 1.000+ palavras ES).
+  // Guías editoriales (Fase 4 del plano SEO - artigos-pilares, 1.000+ palavras ES).
   { id: "guia-soldadores-tig-barcelona", slug: "guia-soldadores-tig-barcelona", relatedNeedType: null, impliesDisplacement: false },
   { id: "guia-ett-industrial-vs-cuadrilla", slug: "guia-ett-industrial-vs-cuadrilla", relatedNeedType: null, impliesDisplacement: false },
   { id: "guia-planificar-parada-planta", slug: "guia-planificar-parada-planta", relatedNeedType: null, impliesDisplacement: false },

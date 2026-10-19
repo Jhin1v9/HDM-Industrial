@@ -54,7 +54,7 @@ export function RequestPanel({ locale }: { locale: Locale }) {
 
   return (
     <div className="flex flex-col gap-6">
-      {/* Progresso — orientação, não decoração */}
+      {/* Progresso - orientação, não decoração */}
       <nav aria-label={dict.common.requestProgress} className="flex flex-wrap gap-1">
         {STEPS.map((s, i) => (
           <button
@@ -63,7 +63,7 @@ export function RequestPanel({ locale }: { locale: Locale }) {
             onClick={() => i <= stepIndex && setStep(s)}
             aria-current={s === step ? "step" : undefined}
             disabled={i > stepIndex}
-            className={`h-8 border px-2.5 font-mono text-[11px] tracking-wide uppercase transition-colors duration-150 ${
+            className={`h-10 border px-3 font-mono text-[11px] tracking-wide uppercase transition-colors duration-150 ${
               s === step
                 ? "border-ink-950 bg-ink-950 text-paper-50"
                 : i < stepIndex
@@ -407,7 +407,7 @@ function ContactStep({ locale }: { locale: Locale }) {
         />
       </div>
 
-      {/* Honeypot — invisível para humanos (§115) */}
+      {/* Honeypot - invisível para humanos (§115) */}
       <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
         <label>
           {t.honeypotLabel}

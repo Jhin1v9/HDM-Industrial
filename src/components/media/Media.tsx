@@ -2,15 +2,16 @@ import mediaManifest from "@/content/mediaManifest.json";
 import { getPlaceholder } from "@/content/placeholders";
 import type { Locale } from "@/domain/types";
 import { getDictionary } from "@/i18n";
+import { asset } from "@/lib/basePath";
 
 /**
- * MediaPlaceholder (§21) — componente estruturado:
+ * MediaPlaceholder (§21) - componente estruturado:
  * - Se existe mídia real verificada (mediaManifest, fotos públicas editoriais full HD
  *   revisadas por contexto): renderiza a imagem com dimensões conhecidas (sem CLS).
  * - Se não: fallback técnico intencional (grid técnico + id + propósito), nunca
  *   uma imagem stock fingindo ser HDM.
  *
- * Imagens editoriais NUNCA são apresentadas como prova (equipe/projetos HDM) — o alt
+ * Imagens editoriais NUNCA são apresentadas como prova (equipe/projetos HDM) - o alt
  * e a nota editorial (rodapé) deixam isso explícito.
  */
 
@@ -68,7 +69,7 @@ export function Media({
         {/* eslint-disable-next-line @next/next/no-img-element -- static export, dimensões conhecidas */}
         <img
           data-parallax
-          src={entry.file}
+          src={asset(entry.file)}
           alt={entry.alt[locale] ?? entry.alt.es}
           width={entry.width}
           height={entry.height}
@@ -82,7 +83,7 @@ export function Media({
   }
 
   // Fallback técnico intencional (§21): staging parece desenhado, não quebrado.
-  // NUNCA expõe metadados internos (IDs, prioridades, formatos) — apenas a nota
+  // NUNCA expõe metadados internos (IDs, prioridades, formatos) - apenas a nota
   // localizada de "material pendente".
   return (
     <div

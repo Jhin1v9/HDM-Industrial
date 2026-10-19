@@ -1,5 +1,5 @@
 /**
- * Analytics — eventos estruturados (Doc 06 §86 = fonte unificada; §98: sem PII).
+ * Analytics - eventos estruturados (Doc 06 §86 = fonte unificada; §98: sem PII).
  * Provider-agnóstico: eventos só saem se houver consentimento (ver CookieConsent).
  * Ativação de produção (Vercel Web Analytics / Speed Insights) documentada no README.
  */

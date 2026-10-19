@@ -4,14 +4,14 @@ import { CA } from './profession-extra-ca';
 
 /**
  * Conteúdo GORDO das páginas de profissão (Fase 2 do plano mobile+SEO).
- * ES é o idioma primário do site (locale `/`) — Google indexa principalmente
+ * ES é o idioma primário do site (locale `/`) - Google indexa principalmente
  * ele. Regras AGENTS.md: nada de cifras/clientes inventados; gatilhos de
  * confiança naturais, PNL leve ("disponibilidad real", "sin compromiso").
  */
 
 export interface ProfessionExtra {
-  when: string[]; // cuándo lo necesitas — 3 cenários
-  verify: string[]; // qué verifica HDM — 3 verificações (confiança)
+  when: string[]; // cuándo lo necesitas - 3 cenários
+  verify: string[]; // qué verifica HDM - 3 verificações (confiança)
   faq: Array<{ q: string; a: string }>; // 3 perguntas com schema
 }
 
@@ -156,7 +156,7 @@ const ES: Record<string, ProfessionExtra> = {
 
 
 
-/** Conteúdo gordo por locale — fallback ES enquanto a tradução não existe. */
+/** Conteúdo gordo por locale - fallback ES enquanto a tradução não existe. */
 export const PROFESSION_EXTRA: Record<string, Record<string, ProfessionExtra>> = {
   es: ES,
   ca: CA,

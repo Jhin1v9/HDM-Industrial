@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 /**
- * Submission schema — same conceptual schema on client, server adapters and tests.
+ * Submission schema - same conceptual schema on client, server adapters and tests.
  * Server (provider) must revalidate everything (Prompt Supremo §87).
  */
 
@@ -143,7 +143,7 @@ export const personnelRequestSubmissionSchema = z
     jobDescription: z.string().max(4000).nullable(),
     approximateQuantity: z.number().int().min(1).max(500).nullable(),
     contact: contactSchema,
-    /** Honeypot — must remain empty (§115). */
+    /** Honeypot - must remain empty (§115). */
     website: z.string().max(0).optional().or(z.literal("").optional()),
   })
   .superRefine((value, ctx) => {

@@ -54,7 +54,7 @@ describe("MotionProvider", () => {
       </div>
     );
 
-    // O motor aplica os estados iniciais (opacity 0) inline — prova de que
+    // O motor aplica os estados iniciais (opacity 0) inline - prova de que
     // o GSAP carregou e o conteúdo não está preso ao CSS do portão.
     await waitFor(
       () => {

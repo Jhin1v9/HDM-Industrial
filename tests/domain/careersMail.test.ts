@@ -31,7 +31,7 @@ describe("buildCareersMailto", () => {
   it("targets the confirmed HR inbox with a structured subject", () => {
     const mailto = buildCareersMailto(base, "rrhh@hdmindustrial.es", labels);
     expect(mailto.startsWith("mailto:rrhh@hdmindustrial.es?")).toBe(true);
-    expect(decodeURIComponent(mailto)).toContain("CV Web HDM — Soldadores — Ana López");
+    expect(decodeURIComponent(mailto)).toContain("CV Web HDM - Soldadores - Ana López");
   });
 
   it("includes the filled fields in the body", () => {

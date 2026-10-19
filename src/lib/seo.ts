@@ -3,7 +3,7 @@ import type { Locale } from "@/domain/types";
 import { PUBLISHED_LOCALES } from "@/domain/types";
 
 /**
- * SEO helpers — canonical + hreflang per Doc 05 §44-46 and Doc 09 §58.
+ * SEO helpers - canonical + hreflang per Doc 05 §44-46 and Doc 09 §58.
  * Site URL is configurable; the fallback is a conservative placeholder that
  * MUST be overridden with NEXT_PUBLIC_SITE_URL at launch (see .env.example).
  */
@@ -23,7 +23,7 @@ export function absoluteUrl(localizedPathValue: string): string {
 }
 
 /**
- * Section paths per locale — thin wrapper over the canonical mapping in
+ * Section paths per locale - thin wrapper over the canonical mapping in
  * content/pages.ts (Doc 05 §42). `section` is the ES canonical section slug.
  */
 export function sectionPath(locale: Locale, esSectionSlug: string): string {

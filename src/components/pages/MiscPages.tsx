@@ -1,12 +1,12 @@
 import type { Locale } from "@/domain/types";
 import { getDictionary } from "@/i18n";
 import { localizedPath } from "@/content/pages";
-import { companyFacts, whatsappLink } from "@/content/company";
+import { companyFacts, contactData, whatsappLink } from "@/content/company";
 import { Section, SectionHeader, Container } from "@/components/ui/layout";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { RequestPanel } from "@/features/request/panel";
 import { OpenRequestButton } from "./OpenRequestButton";
-import { PhoneIcon, MailIcon, WhatsAppIcon } from "@/components/ui/icons";
+import { MailIcon, PhoneIcon, WhatsAppIcon } from "@/components/ui/icons";
 import { ContactMailForm } from "./ContactMailForm";
 import { L as Link } from "@/components/ui/L";
 
@@ -46,7 +46,7 @@ export function ContactoPage({ locale }: { locale: Locale }) {
         <div className="flex flex-col gap-8">
           <OpenRequestButton
             locale={locale}
-            className="flex h-14 items-center justify-center border border-signal-500 bg-signal-600 px-8 text-base font-extrabold tracking-wide text-white uppercase hover:bg-signal-700"
+            className="flex h-11 items-center justify-center rounded-md border border-signal-700 bg-signal-600 px-6 text-sm font-bold tracking-wide text-white uppercase hover:bg-signal-700"
           >
             {dict.common.requestCta}
           </OpenRequestButton>
@@ -55,47 +55,72 @@ export function ContactoPage({ locale }: { locale: Locale }) {
             <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">
               {c.directTitle}
             </h2>
-            {companyFacts.phone || companyFacts.email || companyFacts.whatsapp ? (
-              <ul className="mt-4 flex flex-col gap-3">
-                {companyFacts.phone ? (
-                  <li>
-                    <a
-                      href={`tel:${companyFacts.phone.replace(/[^+0-9]/g, "")}`}
-                      className="flex items-center gap-3 text-lg font-bold text-ink-950 hover:text-signal-600"
-                    >
-                      <PhoneIcon className="h-5 w-5 text-steel-500" /> {companyFacts.phone}
-                    </a>
-                  </li>
-                ) : null}
-                {companyFacts.email ? (
-                  <li>
-                    <a
-                      href={`mailto:${companyFacts.email}`}
-                      className="flex items-center gap-3 text-lg font-bold text-ink-950 hover:text-signal-600"
-                    >
-                      <MailIcon className="h-5 w-5 text-steel-500" /> {companyFacts.email}
-                    </a>
-                  </li>
-                ) : null}
-                {wa ? (
-                  <li>
-                    <a
-                      href={wa}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-lg font-bold text-ink-950 hover:text-signal-600"
-                    >
-                      <WhatsAppIcon className="h-5 w-5 text-steel-500" /> WhatsApp
-                    </a>
-                  </li>
-                ) : null}
-              </ul>
-            ) : (
-              <p className="mt-4 border-l-2 border-signal-600 pl-4 text-base text-ink-600">
-                {c.pendingData}
-              </p>
-            )}
-            <p className="mt-6 text-xs text-steel-500">{dict.footer.fiscalNote}</p>
+            <div className="mt-4 flex flex-col gap-5">
+              <div>
+                <p className="font-mono text-[11px] tracking-[0.18em] text-steel-500 uppercase">
+                  {c.addressLabel}
+                </p>
+                <ul className="mt-1 flex flex-col gap-0.5 text-base font-bold text-ink-950">
+                  {contactData.addresses.map((address) => (
+                    <li key={address}>{address}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="font-mono text-[11px] tracking-[0.18em] text-steel-500 uppercase">
+                  {c.phonesLabel}
+                </p>
+                <ul className="mt-1 flex flex-col gap-0.5">
+                  {contactData.phones.map((phone) => (
+                    <li key={phone.href}>
+                      <a
+                        href={phone.href}
+                        className="flex items-center gap-2 text-base font-bold text-ink-950 hover:text-signal-600"
+                      >
+                        <PhoneIcon className="h-4 w-4 text-steel-500" /> {phone.label}
+                      </a>
+                    </li>
+                  ))}
+                  {wa ? (
+                    <li>
+                      <a
+                        href={wa}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-base font-bold text-ink-950 hover:text-signal-600"
+                      >
+                        <WhatsAppIcon className="h-4 w-4 text-steel-500" /> WhatsApp
+                      </a>
+                    </li>
+                  ) : null}
+                </ul>
+              </div>
+              <div>
+                <p className="font-mono text-[11px] tracking-[0.18em] text-steel-500 uppercase">
+                  {c.emailLabel}
+                </p>
+                <ul className="mt-1 flex flex-col gap-0.5">
+                  {contactData.emails.map((email) => (
+                    <li key={email}>
+                      <a
+                        href={`mailto:${email}`}
+                        className="flex items-center gap-2 text-base font-bold text-ink-950 hover:text-signal-600"
+                      >
+                        <MailIcon className="h-4 w-4 text-steel-500" /> {email}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="font-mono text-[11px] tracking-[0.18em] text-steel-500 uppercase">
+                  {c.hoursLabel}
+                </p>
+                <p className="mt-1 text-base font-bold text-ink-950">
+                  {c.hoursDays} · {c.hoursTime}
+                </p>
+              </div>
+            </div>
           </div>
 
           {companyFacts.email ? (
@@ -134,19 +159,15 @@ export function LegalPage({
       <Container narrow>
         <Breadcrumbs locale={locale} items={[{ label: labels[kind] }]} />
         <SectionHeader eyebrow={dict.footer.legal} title={content.title} as="h1" />
-        {"body" in content ? (
-          <p className="max-w-2xl text-base leading-relaxed text-ink-700">{content.body}</p>
-        ) : (
-          <div className="flex flex-col gap-6">
-            <p className="max-w-2xl text-base leading-relaxed text-ink-700">{content.intro}</p>
-            {content.sections.map((s) => (
-              <div key={s.title} className="border-l-2 border-ink-950 pl-5">
-                <h2 className="text-lg font-extrabold text-ink-950">{s.title}</h2>
-                <p className="mt-1 max-w-2xl text-base leading-relaxed text-ink-600">{s.body}</p>
-              </div>
-            ))}
-          </div>
-        )}
+        <div className="flex flex-col gap-6">
+          <p className="max-w-2xl text-base leading-relaxed text-ink-700">{content.intro}</p>
+          {content.sections.map((s) => (
+            <div key={s.title} className="border-l-2 border-ink-950 pl-5">
+              <h2 className="text-lg font-extrabold text-ink-950">{s.title}</h2>
+              <p className="mt-1 max-w-2xl text-base leading-relaxed text-ink-600">{s.body}</p>
+            </div>
+          ))}
+        </div>
       </Container>
     </Section>
   );
