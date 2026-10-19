@@ -11,8 +11,10 @@ Nada aqui bloqueia o build. Atualizar quando o cliente confirmar.
   tarde)**: primero se restauró solo-en-desktop a petición suya; tras
   investigar el autoplay móvil (pendiente de 12/10) se activó también en
   móviles — decisión: "como teníamos antes, primero comprobar el ordenador
-  y luego el móvil". `HeroRotator` renderiza `<video muted loop playsInline
-  poster= fotograma preload="metadata">` (slide 6, `videoSrc:
+  y luego el móvil". A petición suya pasó a ser la **1.ª diapositiva** del
+  slider (antes la 6 de 8; con rotación a 30s tardaba 2,5 min en verse —
+  el usuario "no lo veía"). `HeroRotator` renderiza `<video muted loop
+  playsInline poster= fotograma preload="metadata">` (`videoSrc:
   "/videos/hdm-hero-obra.mp4"`, 18,4s) sin gating de ancho; pausa/repasa
   según slide activo. `prefers-reduced-motion` sigue quedándose solo con
   imagen (accesibilidad). Si un device real no reproduce el autoplay, el

@@ -48,22 +48,22 @@ export function HomePage({ locale }: { locale: Locale }) {
         <div className="absolute inset-0" aria-hidden="true">
           <HeroRotator
             slides={[
-              // Fotos REAIS do cliente (Matheus, envio 02/10/2026 + lote 11/10/2026)
-              // La primera es la de mayor resolución (1920px) — el fotograma
-              // del vídeo (1280×720) iba antes y se veía borroso estirado.
-              { src: "/images/cliente/hdm-taller-montaje.jpg", alt: getMedia("PH-CLIENTE-TALLER-01")?.alt[locale] ?? "" },
-              { src: "/images/cliente/hdm-soldadura-tig.jpg", alt: getMedia("PH-CLIENTE-TIG-01")?.alt[locale] ?? "" },
-              { src: "/images/cliente/hdm-obra-gondola.jpg", alt: getMedia("PH-CLIENTE-GONDOLA-01")?.alt[locale] ?? "" },
-              { src: "/images/cliente/hdm-tig-brida.jpg", alt: getMedia("PH-CLIENTE-TIG-BRIDA-01")?.alt[locale] ?? "" },
-              { src: "/images/cliente/hdm-equipo-inox.jpg", alt: getMedia("PH-CLIENTE-INOX-01")?.alt[locale] ?? "" },
-              // Fotograma del vídeo real del cliente (envio 11/10/2026, PH-VIDEO-HERO-01).
-              // Vídeo en desktop desde 19/10/2026 (>=769px, muted+loop); en móvil solo póster
-              // hasta investigar autoplay mobile; 1280×720.
+              // Vídeo real do cliente (envio 11/10/2026, PH-VIDEO-HERO-01; 1280×720).
+              // PRIMEIRA diapositiva desde 19/10/2026 tarde (pedido do utilizador
+              // para revisão): muted+loop+playsInline em TODOS os viewports;
+              // poster = fotograma se o autoplay falhar num device; reduced-motion
+              // fica só com a imagem. As fotos seguem abaixo.
               {
                 src: "/images/cliente/hdm-video-hero-poster.jpg",
                 videoSrc: "/videos/hdm-hero-obra.mp4",
                 alt: getMedia("PH-VIDEO-HERO-01")?.alt[locale] ?? "",
               },
+              // Fotos REAIS do cliente (Matheus, envio 02/10/2026 + lote 11/10/2026)
+              { src: "/images/cliente/hdm-taller-montaje.jpg", alt: getMedia("PH-CLIENTE-TALLER-01")?.alt[locale] ?? "" },
+              { src: "/images/cliente/hdm-soldadura-tig.jpg", alt: getMedia("PH-CLIENTE-TIG-01")?.alt[locale] ?? "" },
+              { src: "/images/cliente/hdm-obra-gondola.jpg", alt: getMedia("PH-CLIENTE-GONDOLA-01")?.alt[locale] ?? "" },
+              { src: "/images/cliente/hdm-tig-brida.jpg", alt: getMedia("PH-CLIENTE-TIG-BRIDA-01")?.alt[locale] ?? "" },
+              { src: "/images/cliente/hdm-equipo-inox.jpg", alt: getMedia("PH-CLIENTE-INOX-01")?.alt[locale] ?? "" },
               // Fallback editorial (seguem identificadas como editoriais no manifest)
               { src: "/images/hero-industrial.jpg", mobileSrc: "/images/hero-mobile.jpg", alt: getMedia("PH-PHOTO-HERO-01")?.alt[locale] ?? "" },
               { src: "/images/plant-industrial.jpg", alt: getMedia("PH-PHOTO-PLANT-01")?.alt[locale] ?? "" },
