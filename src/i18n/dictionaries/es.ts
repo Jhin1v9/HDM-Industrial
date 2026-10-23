@@ -791,7 +791,7 @@ export const esPages = {
     send: "Enviar mensaje",
     sent: "Mensaje preparado. Se abrirá su cliente de correo.",
     sending: "Enviando…",
-    sentOk: "Mensaje enviado. Le responderemos lo antes posible.",
+    sentOk: "Mensaje enviado correctamente. Si tiene cualquier duda, escríbanos por WhatsApp.",
     error: "No se pudo enviar. Escríbanos a info@hdmindustrial.es.",
   },
   footer: {
@@ -893,7 +893,8 @@ export const esCareers = {
     attachSelected: "Archivo seleccionado",
     attachPrivacy: "Tu CV se trata de forma privada y solo se usa para valorar tu candidatura.",
     attachEmailLabel: "Currículum",
-    submitSuccess: "Currículum enviado - gracias. HDM revisará tu perfil y te contactará si encaja con una necesidad.",
+    submitSuccess: "Currículum enviado correctamente - gracias. HDM revisará tu perfil y te contactará si encaja. Si tienes dudas, escríbenos por WhatsApp.",
+    cvTooLarge: "El currículum supera el tamaño máximo permitido (10 MB).",
     zoneLabel: "Zona / ciudad (opcional)",
     messageLabel: "Mensaje (opcional)",
     privacyNote: "Tus datos se usan únicamente para valorar tu candidatura. Consulta la política de privacidad.",

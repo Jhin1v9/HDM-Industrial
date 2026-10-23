@@ -23,6 +23,13 @@ export const companyFacts = {
    */
   cvEndpoint:
     process.env.NEXT_PUBLIC_HDM_CV_ENDPOINT ?? "https://vps.nexo-digital.app/hdm-cv",
+  /** FormSubmit (sem conta/sem SMTP): entrega direta ao destino, sem cópias. */
+  contactFormEndpoint:
+    process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT ??
+    "https://formsubmit.co/ajax/info@hdmindustrial.es",
+  cvFormEndpoint:
+    process.env.NEXT_PUBLIC_CV_FORM_ENDPOINT ??
+    "https://formsubmit.co/ajax/rrhh@hdmindustrial.es",
 } as const;
 
 /**

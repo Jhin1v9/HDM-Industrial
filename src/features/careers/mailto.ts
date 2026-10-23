@@ -13,7 +13,7 @@
  */
 
 export const CAREERS_CV_LIMITS = {
-  maxSizeBytes: 25 * 1024 * 1024,
+  maxSizeBytes: 10 * 1024 * 1024,
   acceptedExtensions: ["pdf", "doc", "docx", "jpg", "jpeg", "png"],
 } as const;
 

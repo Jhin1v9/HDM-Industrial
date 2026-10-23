@@ -710,7 +710,7 @@ const caPages = {
     send: "Enviar missatge",
     sent: "Missatge preparat. S'obrirà el seu client de correu.",
     sending: "Enviant…",
-    sentOk: "Missatge enviat. Et respondrem al més aviat possible.",
+    sentOk: "Missatge enviat correctament. Si tens qualsevol dubte, escriu-nos per WhatsApp.",
     error: "No s'ha pogut enviar. Escriu a info@hdmindustrial.es.",
   },
   footer: {
@@ -812,7 +812,8 @@ export const caCareers = {
     attachSelected: "Fitxer seleccionat",
     attachPrivacy: "El teu CV es tracta de forma privada i s'usa només per valorar la teva candidatura.",
     attachEmailLabel: "Currículum",
-    submitSuccess: "Currículum enviat - gràcies. HDM revisarà el teu perfil i et contactarà si encaixa amb una necessitat.",
+    submitSuccess: "Currículum enviat correctament - gràcies. HDM revisarà el teu perfil i et contactarà si encaixa. Si tens dubtes, escriu-nos per WhatsApp.",
+    cvTooLarge: "El currículum supera la mida màxima permesa (10 MB).",
     zoneLabel: "Zona / ciutat (opcional)",
     messageLabel: "Missatge (opcional)",
     privacyNote: "Les teves dades s'usen únicament per valorar la teva candidatura. Consulta la política de privacitat.",

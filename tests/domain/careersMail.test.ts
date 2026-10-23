@@ -83,10 +83,10 @@ describe("CV file validation", () => {
     }
   });
 
-  it("enforces the 25 MB size limit", () => {
+  it("enforces the 10 MB size limit", () => {
     expect(isCvSizeAllowed(1)).toBe(true);
-    expect(isCvSizeAllowed(25 * 1024 * 1024)).toBe(true);
-    expect(isCvSizeAllowed(25 * 1024 * 1024 + 1)).toBe(false);
+    expect(isCvSizeAllowed(10 * 1024 * 1024)).toBe(true);
+    expect(isCvSizeAllowed(10 * 1024 * 1024 + 1)).toBe(false);
     expect(isCvSizeAllowed(0)).toBe(false);
   });
 });
