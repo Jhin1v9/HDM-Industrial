@@ -14,6 +14,9 @@ export function siteUrl(): string {
   );
 }
 
+/** Token de verificación de Google Search Console (env NEXT_PUBLIC_GSC_VERIFICATION). */
+export const googleSiteVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION || undefined;
+
 export { localePrefix, sectionSlugs, localizedPath } from "@/content/pages";
 import { localizedPath } from "@/content/pages";
 

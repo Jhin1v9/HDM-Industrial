@@ -6,6 +6,7 @@ import { RequestUiProvider, RequestDrawer, MobileRequestBar } from "@/features/r
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { CookieConsent } from "./CookieConsent";
+import { GoogleAnalytics } from "@/features/analytics/ga4";
 import { WhatsappFloat } from "./WhatsappFloat";
 import { BackToTop } from "./BackToTop";
 import { mainAnchorId, jsonLdScript, siteUrl } from "@/lib/seo";
@@ -87,6 +88,7 @@ export function SiteShell({
         <MobileRequestBar locale={locale} />
         <RequestDrawer locale={locale} />
         <CookieConsent locale={locale} />
+        <GoogleAnalytics />
         <WhatsappFloat locale={locale} />
         <BackToTop />
         <OrganizationJsonLd locale={locale} />

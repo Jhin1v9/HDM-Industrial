@@ -85,6 +85,34 @@ Solo crear/ajustar 2 registros:
 - [ ] El correo sigue entrando (test a `info@hdmindustrial.es`)
 - [ ] Form CV desde el dominio nuevo → 200 (relay VPS + CORS)
 
+## Paso 5 — Google Analytics 4 + Search Console
+
+**GA4** (consent-gated: el script solo carga tras "Aceptar medición"):
+1. <https://analytics.google.com> → Administrar (engranaje) → **Crear
+   propiedad** → Web → nombre "HDM Industrial" → URL
+   `https://www.hdmindustrial.es` → sector "Empleo/Recursos humanos".
+2. Copiar el **Medición ID** (`G-XXXXXXXXXX`) → Vercel → Settings →
+   Environment Variables → `NEXT_PUBLIC_GA_ID` → **Redeploy**.
+3. Verificación: en GA4 → Admin → Flujo de datos → Web → "Verificación de
+   etiqueta" (tras aceptar cookies en el sitio, el estado pasa a "Activa").
+   Los eventos personalizados del panel de solicitudes
+   (`request_started`, `profile_added`…) salen también a GA4.
+
+**Search Console**:
+1. <https://search.google.com/search-console> → **+ Añadir propiedad** →
+   método **URL prefix** → `https://www.hdmindustrial.es` →
+   verificar por **Etiqueta HTML** → copiar el token.
+2. Vercel env `NEXT_PUBLIC_GSC_VERIFICATION=<token>` → **Redeploy** →
+   volver a Search Console → **Verificar**.
+3. Tras propagar el DNS (Paso 3): **Sitemaps** → enviar
+   `https://www.hdmindustrial.es/sitemap.xml` (160 URLs).
+4. Si la web vieja (CloudFront) ya tenía propiedad en Search Console,
+   reutilizar la misma (mismo dominio) y solo reenviar el sitemap; no hace
+   falta "cambio de dirección".
+
+Opcional: Vercel → Settings → Web Analytics (el código ya soporta
+`window.va`). No duplica GA4 si prefieres solo uno de los dos.
+
 ## Avisos
 
 - **Plan Hobby = uso no comercial** (Fair Use de Vercel). Si el sitio es

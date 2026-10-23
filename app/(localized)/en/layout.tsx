@@ -5,7 +5,7 @@ import { SiteShell } from "@/components/chrome/SiteShell";
 import { RevealInit } from "@/components/chrome/RevealInit";
 import { MotionProvider } from "@/components/chrome/MotionProvider";
 import { getDictionary } from "@/i18n";
-import { siteUrl } from "@/lib/seo";
+import { siteUrl, googleSiteVerification } from "@/lib/seo";
 
 const LOCALE = "en" as const;
 
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     template: `%s | ${getDictionary(LOCALE).meta.siteName}`,
   },
   description: getDictionary(LOCALE).meta.defaultDescription,
+  verification: googleSiteVerification ? { google: googleSiteVerification } : undefined,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

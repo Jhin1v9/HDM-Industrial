@@ -46,11 +46,15 @@ export function setConsent(value: "accepted" | "rejected"): void {
   } catch {
     /* sem storage, sem tracking */
   }
+  // Avisar listeners (GA4 carga en canto o utilizador aceita).
+  window.dispatchEvent(new CustomEvent("hdm:consent", { detail: value }));
 }
 
 declare global {
   interface Window {
     va?: (action: string, event: string, props?: SafeEventProps) => void;
+    dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
@@ -60,6 +64,10 @@ export function trackEvent(event: AnalyticsEvent, props: SafeEventProps = {}): v
     // Vercel Web Analytics custom events quando o script estiver ativo (produção Vercel).
     if (typeof window !== "undefined" && typeof window.va === "function") {
       window.va("event", event, props);
+    }
+    // GA4 (gtag) — mesmo evento, consentido, sem PII.
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", event, props);
     }
     if (process.env.NODE_ENV !== "production") {
       console.debug("[analytics]", event, props);
