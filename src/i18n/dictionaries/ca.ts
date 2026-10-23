@@ -811,6 +811,7 @@ export const caCareers = {
     attachCta: "Seleccionar fitxer",
     attachSelected: "Fitxer seleccionat",
     attachPrivacy: "El teu CV es tracta de forma privada i s'usa només per valorar la teva candidatura.",
+    attachSizeHint: "Mida màxima del fitxer: 10 MB.",
     attachEmailLabel: "Currículum",
     submitSuccess: "Currículum enviat correctament - gràcies. HDM revisarà el teu perfil i et contactarà si encaixa. Si tens dubtes, escriu-nos per WhatsApp.",
     cvTooLarge: "El currículum supera la mida màxima permesa (10 MB).",

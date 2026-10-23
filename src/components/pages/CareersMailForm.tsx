@@ -195,6 +195,7 @@ export function CareersMailForm({ locale }: { locale: Locale }) {
             onChange={(e) => handleFile(e.target.files?.[0])}
           />
         </label>
+        <span className="text-xs text-ink-600">{c.attachSizeHint}</span>
         {fileError ? <span className="text-sm font-semibold text-signal-600">{fileError}</span> : null}
         <span className="text-xs text-steel-500">{c.attachPrivacy}</span>
       </div>

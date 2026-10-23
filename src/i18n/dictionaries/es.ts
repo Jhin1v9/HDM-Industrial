@@ -892,6 +892,7 @@ export const esCareers = {
     attachCta: "Seleccionar archivo",
     attachSelected: "Archivo seleccionado",
     attachPrivacy: "Tu CV se trata de forma privada y solo se usa para valorar tu candidatura.",
+    attachSizeHint: "Tamaño máximo del archivo: 10 MB.",
     attachEmailLabel: "Currículum",
     submitSuccess: "Currículum enviado correctamente - gracias. HDM revisará tu perfil y te contactará si encaja. Si tienes dudas, escríbenos por WhatsApp.",
     cvTooLarge: "El currículum supera el tamaño máximo permitido (10 MB).",
