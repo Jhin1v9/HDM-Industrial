@@ -10,7 +10,7 @@ import { PUBLISHED_LOCALES } from "@/domain/types";
 export function siteUrl(): string {
   return (
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-    "https://www.hdm-industrial.es"
+    "https://www.hdmindustrial.es"
   );
 }
 
