@@ -1,3 +1,13 @@
+## 23/10/2026 — Formularios reais + GA4 em producao
+- Contacto: `ContactMailForm` POSTa a `https://vps.nexo-digital.app/hdm-cv/contact` (novo endpoint
+  no relay `nexo_hdm_cv`: SMTP IONOS -> info@hdmindustrial.es, replyTo visitante, honeypot,
+  5/h/IP); fallback mailto para info@ se o relay falhar. `company.ts` cai em info@ por defeito.
+- CV (`/submit`): relay passou a ter credencial (`HDM_CV_SMTP_URL`, From contacto@nexo-digital.app)
+  e CORS para www.hdmindustrial.es — envio com anexo operacional (testado 200).
+- GA4 `G-RXQ87GDQT9` por defeito em `ga4.ts` (env `NEXT_PUBLIC_GA_ID` ainda tem prioridade),
+  restrito a www.hdmindustrial.es / hdmindustrial.es / hdm-six.vercel.app e so apos consentimento.
+- Pendente: GSC (token do utilizador) e formulario de solicitacao (Supabase) ainda em modo humano.
+
 # PENDING.md — HDM Industrial
 
 Fatos não confirmados, assets pendentes, claims amber/red, integrações sem credentials.
