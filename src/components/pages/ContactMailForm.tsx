@@ -83,6 +83,7 @@ export function ContactMailForm({ locale }: { locale: Locale }) {
         <input
           name="email"
           type="email"
+          required
           autoComplete="email"
           className="h-12 border border-line-300 bg-paper-50 px-3 text-base text-ink-950 focus:border-ink-800"
         />
