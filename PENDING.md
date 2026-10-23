@@ -6,6 +6,9 @@
   e CORS para www.hdmindustrial.es — envio com anexo operacional (testado 200).
 - GA4 `G-RXQ87GDQT9` por defeito em `ga4.ts` (env `NEXT_PUBLIC_GA_ID` ainda tem prioridade),
   restrito a www.hdmindustrial.es / hdmindustrial.es / hdm-six.vercel.app e so apos consentimento.
+- 23/10 (tarde): acuse de rececao localizado tambem para candidaturas (`/submit`) + replyTo do
+  candidato no email interno; fix rate-limit atras de Caddy/Cloudflare (`CF-Connecting-IP`/
+  `X-Forwarded-For`) e fix do campo `cv` vazio que devolvia 400 `bad_type`.
 - Pendente: GSC (token do utilizador) e formulario de solicitacao (Supabase) ainda em modo humano.
 
 # PENDING.md — HDM Industrial
