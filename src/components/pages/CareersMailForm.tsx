@@ -8,6 +8,7 @@ import { companyFacts } from "@/content/company";
 import {
   buildCareersBody,
   buildCareersMailto,
+  classifyCvResponse,
   formatFileSize,
   isAcceptedCvFile,
   isCvSizeAllowed,
@@ -74,20 +75,11 @@ export function CareersMailForm({ locale }: { locale: Locale }) {
 
     void (async () => {
       /* Caminho principal: relay VPS. Só 2xx conta como enviado. */
-      const endpoint = companyFacts.cvFormEndpoint;
+      const endpoint = companyFacts.cvEndpoint;
       if (endpoint) {
         try {
-          data.set("_subject", `Candidatura web HDM — ${input.name}`);
-          data.set("_template", "table");
-          data.set("_captcha", "false");
-          data.set("_honey", "");
-          const res = await fetch(endpoint, {
-            method: "POST",
-            headers: { Accept: "application/json" },
-            body: data,
-          });
-          const result = (await res.json().catch(() => ({}))) as { success?: boolean | string };
-          if (res.ok && (result.success === true || result.success === "true")) {
+          const res = await fetch(`${endpoint}/submit`, { method: "POST", body: data });
+          if (classifyCvResponse(res.status) === "sent") {
             setSent(true);
             return;
           }

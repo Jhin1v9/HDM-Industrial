@@ -41,29 +41,13 @@ export function ContactMailForm({ locale }: { locale: Locale }) {
     setStatus("sending");
     let ok = false;
     try {
-      const subject = {
-        es: `Contacto web HDM — ${name}`,
-        pt: `Contacto web HDM — ${name}`,
-        en: `HDM website contact — ${name}`,
-        ca: `Contacte web HDM — ${name}`,
-      }[locale];
-      const body = new FormData();
-      body.set("name", name);
-      body.set("email", email);
-      body.set("message", message);
-      body.set("locale", locale);
-      body.set("_subject", subject);
-      body.set("_template", "table");
-      body.set("_captcha", "false");
-      body.set("_honey", "");
-      const res = await fetch(companyFacts.contactFormEndpoint, {
+      const res = await fetch(`${companyFacts.cvEndpoint}/contact`, {
         method: "POST",
-        headers: { Accept: "application/json" },
-        body,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message, locale, website: "" }),
         signal: AbortSignal.timeout(15000),
       });
-      const result = (await res.json().catch(() => ({}))) as { success?: boolean | string };
-      ok = res.ok && (result.success === true || result.success === "true");
+      ok = res.ok;
     } catch {
       ok = false;
     }
