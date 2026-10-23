@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Locale } from "@/domain/types";
 import { getDictionary } from "@/i18n";
 import { companyFacts } from "@/content/company";
+import { FormSuccess } from "./FormSuccess";
 
 type Status = "idle" | "sending" | "sent" | "fallback" | "error";
 
@@ -17,6 +18,7 @@ export function ContactMailForm({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
   const c = dict.contact;
   const [status, setStatus] = useState<Status>("idle");
+  const [reference, setReference] = useState<string | null>(null);
 
   const openMailto = (name: string, message: string) => {
     const email = companyFacts.email;
@@ -48,6 +50,10 @@ export function ContactMailForm({ locale }: { locale: Locale }) {
         signal: AbortSignal.timeout(15000),
       });
       ok = res.ok;
+      if (ok) {
+        const payload = (await res.json().catch(() => null)) as { reference?: string } | null;
+        setReference(payload?.reference ?? null);
+      }
     } catch {
       ok = false;
     }
@@ -58,6 +64,22 @@ export function ContactMailForm({ locale }: { locale: Locale }) {
     }
     setStatus(openMailto(name, message) ? "fallback" : "error");
   };
+
+  if (status === "sent") {
+    return (
+      <div className="mt-4">
+        <FormSuccess
+          locale={locale}
+          kind="contact"
+          reference={reference}
+          onReset={() => {
+            setReference(null);
+            setStatus("idle");
+          }}
+        />
+      </div>
+    );
+  }
 
   return (
     <form className="mt-4 flex flex-col gap-4" onSubmit={handleSubmit}>
@@ -104,14 +126,6 @@ export function ContactMailForm({ locale }: { locale: Locale }) {
       >
         {status === "sending" ? c.sending : c.send}
       </button>
-      {status === "sent" ? (
-        <p
-          role="status"
-          className="border border-line-200 bg-paper-100 p-4 text-base font-semibold text-ink-900"
-        >
-          {c.sentOk}
-        </p>
-      ) : null}
       {status === "fallback" ? (
         <p role="status" className="text-sm font-semibold text-ink-700">
           {c.sent}

@@ -5,6 +5,7 @@ import type { Locale } from "@/domain/types";
 import { getDictionary } from "@/i18n";
 import { professionalProfiles } from "@/content/profiles";
 import { companyFacts } from "@/content/company";
+import { FormSuccess } from "./FormSuccess";
 import {
   buildCareersBody,
   buildCareersMailto,
@@ -31,6 +32,7 @@ export function CareersMailForm({ locale }: { locale: Locale }) {
   const [cv, setCv] = useState<File | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
   const [sent, setSent] = useState(false);
+  const [reference, setReference] = useState<string | null>(null);
 
   const handleFile = (file: File | undefined) => {
     if (!file) return;
@@ -80,6 +82,8 @@ export function CareersMailForm({ locale }: { locale: Locale }) {
         try {
           const res = await fetch(`${endpoint}/submit`, { method: "POST", body: data });
           if (classifyCvResponse(res.status) === "sent") {
+            const payload = (await res.json().catch(() => null)) as { reference?: string } | null;
+            setReference(payload?.reference ?? null);
             setSent(true);
             return;
           }
@@ -110,9 +114,16 @@ export function CareersMailForm({ locale }: { locale: Locale }) {
 
   if (sent) {
     return (
-      <p className="border border-line-200 bg-paper-100 p-4 text-base font-semibold text-ink-900">
-        {c.submitSuccess}
-      </p>
+      <FormSuccess
+        locale={locale}
+        kind="careers"
+        reference={reference}
+        onReset={() => {
+          setReference(null);
+          setCv(null);
+          setSent(false);
+        }}
+      />
     );
   }
 
