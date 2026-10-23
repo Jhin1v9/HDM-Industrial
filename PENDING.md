@@ -10,7 +10,7 @@
   candidato no email interno; fix rate-limit atras de Caddy/Cloudflare (`CF-Connecting-IP`/
   `X-Forwarded-For`) e fix do campo `cv` vazio que devolvia 400 `bad_type`.
 - 23/10 (final): decisao do utilizador = **manter o relay proprio** (sem FormSubmit/Formgopher/
-  Resend, sem DNS nem credenciais do cliente). Remetente com nome visivel `HDM Industrial (web)`
+  Resend, sem DNS nem credenciais do cliente). Remetente com nome visivel `HDM Industrial`
   (endereco `contacto@nexo-digital.app`; IONOS nao permite enviar como @hdmindustrial.es sem
   credenciais/DNS); entregas verificadas: contacto -> info@ + acuse ao visitante, CV -> rrhh@
   com anexo. `HDM_CV_FROM`/`HDM_CONTACT_FROM` no `.env` do VPS (backup `.bak-hdmfrom-20261023`).
