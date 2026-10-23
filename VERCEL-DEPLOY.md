@@ -44,12 +44,14 @@ Comparativa previa (Vercel vs Hostinger): `docs/hdm-industrial-hostinger-vs-verc
 ## Paso 3 — DNS en IONOS (panel IONOS → dominios → hdmindustrial.es → Zona DNS)
 
 **NO cambiar los nameservers** (se quedan en IONOS; así el correo no se toca).
-Solo crear/ajustar 2 registros:
+Solo crear/ajustar 2 registros (valores mostrados por Vercel 23/10/2026 —
+rango de IPs nuevas; los legacy `76.76.21.21` / `cname.vercel-dns.com`
+siguen válidos pero Vercel recomienda estos):
 
 | Tipo | Nombre | Valor |
 |------|--------|-------|
-| `CNAME` | `www` | `cname.vercel-dns.com` |
-| `A` | `@` (apex / raíz) | `76.76.21.21` |
+| `A` | `@` (apex / raíz) | `216.198.79.1` |
+| `CNAME` | `www` | `c87c469a44a05fd6.vercel-dns-017.com` |
 
 - **NO tocar los MX** (`mx00/mx01.ionos.de`) — el correo
   (`info@`, `rrhh@`, `administracion@hdmindustrial.es`) sigue entrando igual.
