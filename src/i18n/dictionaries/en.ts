@@ -738,6 +738,9 @@ const enPages = {
     messageLabel: "Message",
     send: "Send message",
     sent: "Message prepared. Your email client will open.",
+    sending: "Sending…",
+    sentOk: "Message sent. We will reply as soon as possible.",
+    error: "Could not send. Write to info@hdmindustrial.es.",
   },
   footer: {
     tagline: "Qualified industrial personnel, where you need them.",

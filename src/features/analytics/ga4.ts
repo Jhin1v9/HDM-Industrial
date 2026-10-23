@@ -3,11 +3,15 @@
 import { useEffect } from "react";
 import { getConsent } from "./events";
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-RXQ87GDQT9";
+
+/* Só domínios de produção contam: preview da VPS e localhost não poluem o GA4. */
+const GA_HOSTS = ["www.hdmindustrial.es", "hdmindustrial.es", "hdm-six.vercel.app"];
 
 /** Carrega gtag.js (GA4) uma vez — só após consentimento "accepted". */
 export function loadGA4(): void {
   if (!GA_ID || typeof window === "undefined" || window.gtag) return;
+  if (!GA_HOSTS.includes(window.location.hostname)) return;
   const script = document.createElement("script");
   script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA_ID)}`;
   script.async = true;

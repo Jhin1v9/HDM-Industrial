@@ -709,6 +709,9 @@ const caPages = {
     messageLabel: "Missatge",
     send: "Enviar missatge",
     sent: "Missatge preparat. S'obrirà el seu client de correu.",
+    sending: "Enviant…",
+    sentOk: "Missatge enviat. Et respondrem al més aviat possible.",
+    error: "No s'ha pogut enviar. Escriu a info@hdmindustrial.es.",
   },
   footer: {
     tagline: "Personal industrial qualificat, on el necessita.",

@@ -737,6 +737,9 @@ export const ptPages = {
     messageLabel: "Mensagem",
     send: "Enviar mensagem",
     sent: "Mensagem preparada. O seu cliente de email irá abrir.",
+    sending: "A enviar…",
+    sentOk: "Mensagem enviada. Responderemos o mais breve possível.",
+    error: "Não foi possível enviar. Escreva para info@hdmindustrial.es.",
   },
   footer: {
     tagline: "Pessoal industrial qualificado, onde precisa dele.",

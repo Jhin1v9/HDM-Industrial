@@ -9,7 +9,7 @@ export const companyFacts = {
   fiscalCountry: "Portugal",
   phone: process.env.NEXT_PUBLIC_HDM_PHONE ?? null,
   whatsapp: process.env.NEXT_PUBLIC_HDM_WHATSAPP ?? null,
-  email: process.env.NEXT_PUBLIC_HDM_EMAIL ?? null,
+  email: process.env.NEXT_PUBLIC_HDM_EMAIL ?? "info@hdmindustrial.es",
   /** Instagram oficial (confirmado por el cliente el 09/10/2026). */
   instagram: "https://www.instagram.com/hdmindustriallda/",  /**
    * HR inbox for CV/applications - confirmed by the client (Matheus) on 21/09/2026
