@@ -8,7 +8,7 @@ export const companyFacts = {
   /** Fiscal address is in Portugal (known). Full data pending legal confirmation. */
   fiscalCountry: "Portugal",
   phone: process.env.NEXT_PUBLIC_HDM_PHONE ?? null,
-  whatsapp: process.env.NEXT_PUBLIC_HDM_WHATSAPP ?? null,
+  whatsapp: process.env.NEXT_PUBLIC_HDM_WHATSAPP ?? "+34645181733",
   email: process.env.NEXT_PUBLIC_HDM_EMAIL ?? "info@hdmindustrial.es",
   /** Instagram oficial (confirmado por el cliente el 09/10/2026). */
   instagram: "https://www.instagram.com/hdmindustriallda/",  /**
