@@ -430,5 +430,437 @@
     "license": "Uso autorizado pelo cliente",
     "width": 1280,
     "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-01",
+    "file": "/images/cliente/hdm-trabajo-01.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 1'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-02",
+    "file": "/images/cliente/hdm-trabajo-02.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 2'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-03",
+    "file": "/images/cliente/hdm-trabajo-03.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 3'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-04",
+    "file": "/images/cliente/hdm-trabajo-04.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 4'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 828,
+    "height": 932
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-05",
+    "file": "/images/cliente/hdm-trabajo-05.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 5'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-06",
+    "file": "/images/cliente/hdm-trabajo-06.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 7'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 900,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-07",
+    "file": "/images/cliente/hdm-trabajo-07.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 8'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-08",
+    "file": "/images/cliente/hdm-trabajo-08.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 10'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 828,
+    "height": 1505
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-09",
+    "file": "/images/cliente/hdm-trabajo-09.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 14'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 720,
+    "height": 1280
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-10",
+    "file": "/images/cliente/hdm-trabajo-10.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 16'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 960,
+    "height": 1280
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-11",
+    "file": "/images/cliente/hdm-trabajo-11.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 18'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-12",
+    "file": "/images/cliente/hdm-trabajo-12.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 19'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-13",
+    "file": "/images/cliente/hdm-trabajo-13.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 21'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-14",
+    "file": "/images/cliente/hdm-trabajo-14.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 22'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 737,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-15",
+    "file": "/images/cliente/hdm-trabajo-15.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 23'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 960,
+    "height": 1280
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-16",
+    "file": "/images/cliente/hdm-trabajo-16.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 24'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-17",
+    "file": "/images/cliente/hdm-trabajo-17.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 25'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 737,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-18",
+    "file": "/images/cliente/hdm-trabajo-18.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 29'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-19",
+    "file": "/images/cliente/hdm-trabajo-19.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 30'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 740,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-20",
+    "file": "/images/cliente/hdm-trabajo-20.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 31'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 828,
+    "height": 1031
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-21",
+    "file": "/images/cliente/hdm-trabajo-21.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 32'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-22",
+    "file": "/images/cliente/hdm-trabajo-22.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 34'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-23",
+    "file": "/images/cliente/hdm-trabajo-23.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 36'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 828,
+    "height": 1391
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-24",
+    "file": "/images/cliente/hdm-trabajo-24.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 38'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 742,
+    "height": 1355
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-25",
+    "file": "/images/cliente/hdm-trabajo-25.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 39'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 816,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-26",
+    "file": "/images/cliente/hdm-trabajo-26.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 40'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 828,
+    "height": 1073
+  },
+  {
+    "id": "PH-CLIENTE-TRABAJO-27",
+    "file": "/images/cliente/hdm-trabajo-27.jpg",
+    "alt": {
+      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
+      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
+      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
+      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+    },
+    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - IMG_0081'. Seleção automática por nitidez, sem duplicados.",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
+    "license": "Uso autorizado pelo cliente",
+    "width": 1200,
+    "height": 1600
   }
 ]
