@@ -18,6 +18,7 @@ import { asset } from "@/lib/basePath";
 interface ManifestEntry {
   id: string;
   file: string;
+  thumb?: string;
   alt: Record<Locale, string>;
   source: string;
   width: number;

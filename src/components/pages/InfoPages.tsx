@@ -7,7 +7,6 @@ import { professionalProfiles } from "@/content/profiles";
 import { Section, SectionHeader } from "@/components/ui/layout";
 import { Media } from "@/components/media/Media";
 import { GalleryViewer } from "@/components/media/GalleryViewer";
-import { WorkWall } from "@/components/media/WorkWall";
 import { Pictogram } from "@/components/ui/pictograms";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { L } from "@/components/ui/L";
@@ -591,8 +590,9 @@ export function EmpresaPage({ locale }: { locale: Locale }) {
         <h2 className="font-mono text-xs tracking-[0.2em] text-steel-500 uppercase">{e.worksTitle}</h2>
         <p className="mt-3 max-w-2xl text-base leading-relaxed text-ink-600">{e.worksLead}</p>
         <div className="mt-6">
-          <WorkWall
+          <GalleryViewer
             locale={locale}
+            autoPlayMs={4500}
             ids={[
               "PH-CLIENTE-OBRA-01",
               "PH-CLIENTE-OBRA-02",
@@ -682,6 +682,7 @@ export function EmpresaPage({ locale }: { locale: Locale }) {
               "PH-CLIENTE-OBRA-86",
               "PH-CLIENTE-OBRA-87",
             ]}
+            aspect="aspect-[16/9]"
           />
         </div>
       </div>

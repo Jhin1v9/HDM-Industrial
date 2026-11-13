@@ -45,6 +45,9 @@ export function GalleryViewer({
   const count = slides.length;
 
   const [index, setIndex] = useState(0);
+  /* Só carrega o slide atual e os vizinhos (evita baixar 87 imagens de uma vez);
+     tudo o que já foi visto permanece carregado para o crossfade. */
+  const [loaded, setLoaded] = useState<Set<number>>(() => new Set([0, 1, 2]));
   const [hovering, setHovering] = useState(false);
   const [lightbox, setLightbox] = useState(false);
   const mounted = useSyncExternalStore(
@@ -99,11 +102,26 @@ export function GalleryViewer({
     updateThumbArrows();
   }, [index, updateThumbArrows]);
 
-  const goTo = useCallback(
-    (i: number) => {
-      setIndex(((i % count) + count) % count);
+  const markLoaded = useCallback(
+    (center: number) => {
+      setLoaded((prev) => {
+        const next = new Set(prev);
+        for (let i = center - 1; i <= center + 1; i += 1) {
+          if (i >= 0 && i < count) next.add(i);
+        }
+        return next.size === prev.size ? prev : next;
+      });
     },
     [count],
+  );
+
+  const goTo = useCallback(
+    (i: number) => {
+      const next = ((i % count) + count) % count;
+      markLoaded(next);
+      setIndex(next);
+    },
+    [count, markLoaded],
   );
 
   useEffect(() => {
@@ -136,12 +154,16 @@ export function GalleryViewer({
     setPan({ x: 0, y: 0 });
   }, []);
 
-  const openLightbox = useCallback((i: number) => {
-    setIndex(i);
-    setZoom(1);
-    setPan({ x: 0, y: 0 });
-    setLightbox(true);
-  }, []);
+  const openLightbox = useCallback(
+    (i: number) => {
+      markLoaded(i);
+      setIndex(i);
+      setZoom(1);
+      setPan({ x: 0, y: 0 });
+      setLightbox(true);
+    },
+    [markLoaded],
+  );
 
   const onStageClick = useCallback(() => {
     const now = Date.now();
@@ -228,19 +250,21 @@ export function GalleryViewer({
               }`}
               aria-hidden={i !== index}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element -- static export, dimensões conhecidas */}
-              <img
-                src={asset(entry.file)}
-                alt={entry.alt[locale] ?? entry.alt.es}
-                width={entry.width}
-                height={entry.height}
-                loading={i === 0 ? "eager" : "lazy"}
-                fetchPriority={i === 0 ? "high" : "auto"}
-                decoding="async"
-                draggable={false}
-                onClick={onStageClick}
-                className={`h-full w-full object-cover select-none ${i === index ? "gallery-kenburns" : ""}`}
-              />
+              {loaded.has(i) ? (
+                // eslint-disable-next-line @next/next/no-img-element -- static export, dimensões conhecidas
+                <img
+                  src={asset(entry.file)}
+                  alt={entry.alt[locale] ?? entry.alt.es}
+                  width={entry.width}
+                  height={entry.height}
+                  loading={i === 0 ? "eager" : "lazy"}
+                  fetchPriority={i === 0 ? "high" : "auto"}
+                  decoding="async"
+                  draggable={false}
+                  onClick={onStageClick}
+                  className={`h-full w-full object-cover select-none ${i === index ? "gallery-kenburns" : ""}`}
+                />
+              ) : null}
             </figure>
           ))}
         </div>
@@ -325,7 +349,7 @@ export function GalleryViewer({
               >
                 {/* eslint-disable-next-line @next/next/no-img-element -- miniatura */}
                 <img
-                  src={asset(entry.file)}
+                  src={asset(entry.thumb ?? entry.file)}
                   alt=""
                   loading="lazy"
                   decoding="async"

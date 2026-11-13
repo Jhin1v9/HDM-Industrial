@@ -43,7 +43,7 @@ export function Footer({ locale }: { locale: Locale }) {
               alt="HDM Industrial"
               width={600}
               height={227}
-              className="mx-auto h-14 w-auto lg:mx-0"
+              className="mx-auto h-20 w-auto lg:mx-0"
             />
           </picture>
           <p className="mt-3 text-sm text-steel-300 sm:max-w-xs">{f.tagline}</p>
