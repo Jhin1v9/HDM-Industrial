@@ -52,13 +52,12 @@ export function Header({ locale }: { locale: Locale }) {
           {/* Logo oficial fornecida pelo cliente (Matheus, 21/09) - PDF em documentos/brand/ */}
           <picture>
             <source srcSet={asset("/images/brand/hdm-logo-light.webp")} type="image/webp" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={asset("/images/brand/hdm-logo-light.png")}
               alt="HDM Industrial"
               width={600}
               height={227}
-              className="h-8 w-auto"
+              className="h-11 w-auto"
             />
           </picture>
         </Link>

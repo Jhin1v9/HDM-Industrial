@@ -15,12 +15,12 @@
   --color-ink-800: #0d2239;
   --color-ink-700: #003366;
   --color-ink-600: #1c4a78;
-  --color-steel-500: #52697f;
+  --color-steel-500: #5c6166;  /* gris pizarra exacto del logo */
   --color-steel-400: #73899d;
   --color-steel-300: #a3b3c2;
-  --color-line-300: #d3dae0;
-  --color-line-200: #e3e8ec;
-  --color-paper-100: #f4f6f7;
+  --color-line-300: #d2d2d2;  /* gris claro del logo */
+  --color-line-200: #e6e6e6;
+  --color-paper-100: #f4f4f4;
   --color-paper-50: #ffffff;
   --color-signal-700: #c43a00;
   --color-signal-600: #ed4d00;

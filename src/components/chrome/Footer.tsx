@@ -38,13 +38,12 @@ export function Footer({ locale }: { locale: Locale }) {
           {/* Logo oficial do cliente - mesma marca do header */}
           <picture>
             <source srcSet={asset("/images/brand/hdm-logo-light.webp")} type="image/webp" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={asset("/images/brand/hdm-logo-light.png")}
               alt="HDM Industrial"
               width={600}
               height={227}
-              className="mx-auto h-9 w-auto lg:mx-0"
+              className="mx-auto h-14 w-auto lg:mx-0"
             />
           </picture>
           <p className="mt-3 text-sm text-steel-300 sm:max-w-xs">{f.tagline}</p>
