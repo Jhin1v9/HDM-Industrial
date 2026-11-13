@@ -11,8 +11,8 @@ export function generateMetadata(): Metadata {
   return pageMetadata({
     locale: LOCALE,
     esPath: ES_PATH,
-    title: dict.company.title,
-    description: dict.company.lead,
+    title: dict.company.seoTitle,
+    description: dict.company.seoDescription,
     indexable: true,
   });
 }

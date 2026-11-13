@@ -711,6 +711,12 @@ export const ptPages = {
       "Este site reflete essa forma de trabalhar: o cliente configura o que precisa e a HDM confirma o que pode pôr em marcha. Sem promessas automáticas.",
     valuesTitle: "Como se comporta a HDM",
     galleryTitle: "Trabalhos realizados",
+    seoTitle: "Empresa e trabalhos realizados em Valladolid",
+    seoDescription:
+      "A HDM Industrial fornece pessoal qualificado e realiza trabalhos na zona industrial do polígono San Cristóbal (Valladolid) e polígonos próximos. Fotografias reais de obra, oficina e montagem.",
+    worksTitle: "Trabalhos realizados em Valladolid e polígonos próximos",
+    worksLead:
+      "Seleção de trabalhos reais da HDM Industrial na zona industrial do polígono San Cristóbal (Valladolid) e polígonos próximos: oficina, caldeiraria, soldadura, montagem de estruturas e instalações. Todas as imagens são fotografias próprias de obra e equipa.",
     values: [
       { name: "Seriedade", body: "O que se confirma, cumpre-se. O que não está confirmado, diz-se." },
       { name: "Transparência", body: "Sem números inflacionados nem promessas automáticas. A disponibilidade é revista e comunicada." },

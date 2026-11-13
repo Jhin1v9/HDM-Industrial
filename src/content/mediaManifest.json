@@ -432,435 +432,1395 @@
     "height": 720
   },
   {
-    "id": "PH-CLIENTE-TRABAJO-01",
-    "file": "/images/cliente/hdm-trabajo-01.jpg",
+    "id": "PH-CLIENTE-OBRA-01",
+    "file": "/images/obras/hdm-caldereria-soldadura-industrial-01.jpeg",
     "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+      "es": "Trabajo de calderería y soldadura industrial realizado por HDM Industrial",
+      "pt": "Trabalho de caldeiraria e soldadura industrial realizado pela HDM Industrial",
+      "en": "Industrial boilermaking and welding work carried out by HDM Industrial",
+      "ca": "Treball de caldereria i soldadura industrial realitzat per HDM Industrial"
     },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 1'. Seleção automática por nitidez, sem duplicados.",
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-caldereria-soldadura-industrial-01.jpeg",
     "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1204,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-02",
+    "file": "/images/obras/hdm-caldereria-soldadura-industrial-02.jpeg",
+    "alt": {
+      "es": "Trabajo de calderería y soldadura industrial realizado por HDM Industrial",
+      "pt": "Trabalho de caldeiraria e soldadura industrial realizado pela HDM Industrial",
+      "en": "Industrial boilermaking and welding work carried out by HDM Industrial",
+      "ca": "Treball de caldereria i soldadura industrial realitzat per HDM Industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-caldereria-soldadura-industrial-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
     "width": 1200,
     "height": 1600
   },
   {
-    "id": "PH-CLIENTE-TRABAJO-02",
-    "file": "/images/cliente/hdm-trabajo-02.jpg",
+    "id": "PH-CLIENTE-OBRA-03",
+    "file": "/images/obras/hdm-caldereria-soldadura-industrial-03.jpeg",
     "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+      "es": "Trabajo de calderería y soldadura industrial realizado por HDM Industrial",
+      "pt": "Trabalho de caldeiraria e soldadura industrial realizado pela HDM Industrial",
+      "en": "Industrial boilermaking and welding work carried out by HDM Industrial",
+      "ca": "Treball de caldereria i soldadura industrial realitzat per HDM Industrial"
     },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 2'. Seleção automática por nitidez, sem duplicados.",
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-caldereria-soldadura-industrial-03.jpeg",
     "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
     "width": 720,
     "height": 1600
   },
   {
-    "id": "PH-CLIENTE-TRABAJO-03",
-    "file": "/images/cliente/hdm-trabajo-03.jpg",
+    "id": "PH-CLIENTE-OBRA-04",
+    "file": "/images/obras/hdm-caldereria-soldadura-industrial-04.jpeg",
     "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+      "es": "Trabajo de calderería y soldadura industrial realizado por HDM Industrial",
+      "pt": "Trabalho de caldeiraria e soldadura industrial realizado pela HDM Industrial",
+      "en": "Industrial boilermaking and welding work carried out by HDM Industrial",
+      "ca": "Treball de caldereria i soldadura industrial realitzat per HDM Industrial"
     },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 3'. Seleção automática por nitidez, sem duplicados.",
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-caldereria-soldadura-industrial-04.jpeg",
     "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
     "width": 720,
     "height": 1600
   },
   {
-    "id": "PH-CLIENTE-TRABAJO-04",
-    "file": "/images/cliente/hdm-trabajo-04.jpg",
+    "id": "PH-CLIENTE-OBRA-05",
+    "file": "/images/obras/hdm-calderero-industrial-cualificado-01.jpeg",
     "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+      "es": "Calderero industrial cualificado de HDM Industrial en el taller",
+      "pt": "Caldeireiro industrial qualificado da HDM Industrial na oficina",
+      "en": "Qualified industrial boilermaker from HDM Industrial in the workshop",
+      "ca": "Calderer industrial qualificat d'HDM Industrial al taller"
     },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 4'. Seleção automática por nitidez, sem duplicados.",
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-calderero-industrial-cualificado-01.jpeg",
     "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 828,
-    "height": 932
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-05",
-    "file": "/images/cliente/hdm-trabajo-05.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 5'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
     "width": 1200,
     "height": 1600
   },
   {
-    "id": "PH-CLIENTE-TRABAJO-06",
-    "file": "/images/cliente/hdm-trabajo-06.jpg",
+    "id": "PH-CLIENTE-OBRA-06",
+    "file": "/images/obras/hdm-calderero-industrial-cualificado-02.jpeg",
     "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+      "es": "Calderero industrial cualificado de HDM Industrial en el taller",
+      "pt": "Caldeireiro industrial qualificado da HDM Industrial na oficina",
+      "en": "Qualified industrial boilermaker from HDM Industrial in the workshop",
+      "ca": "Calderer industrial qualificat d'HDM Industrial al taller"
     },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 7'. Seleção automática por nitidez, sem duplicados.",
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-calderero-industrial-cualificado-02.jpeg",
     "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-07",
+    "file": "/images/obras/hdm-calderero-industrial-cualificado-03.jpeg",
+    "alt": {
+      "es": "Calderero industrial cualificado de HDM Industrial en el taller",
+      "pt": "Caldeireiro industrial qualificado da HDM Industrial na oficina",
+      "en": "Qualified industrial boilermaker from HDM Industrial in the workshop",
+      "ca": "Calderer industrial qualificat d'HDM Industrial al taller"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-calderero-industrial-cualificado-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-08",
+    "file": "/images/obras/hdm-calderero-industrial-cualificado-04.jpeg",
+    "alt": {
+      "es": "Calderero industrial cualificado de HDM Industrial en el taller",
+      "pt": "Caldeireiro industrial qualificado da HDM Industrial na oficina",
+      "en": "Qualified industrial boilermaker from HDM Industrial in the workshop",
+      "ca": "Calderer industrial qualificat d'HDM Industrial al taller"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-calderero-industrial-cualificado-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-09",
+    "file": "/images/obras/hdm-calderero-industrial-cualificado-05.jpeg",
+    "alt": {
+      "es": "Calderero industrial cualificado de HDM Industrial en el taller",
+      "pt": "Caldeireiro industrial qualificado da HDM Industrial na oficina",
+      "en": "Qualified industrial boilermaker from HDM Industrial in the workshop",
+      "ca": "Calderer industrial qualificat d'HDM Industrial al taller"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-calderero-industrial-cualificado-05.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-10",
+    "file": "/images/obras/hdm-el-personal-que-necesitas-donde-lo-necesitas-01.jpeg",
+    "alt": {
+      "es": "El personal que necesita, donde lo necesita: trabajo industrial de HDM",
+      "pt": "O pessoal que precisa, onde precisa: trabalho industrial da HDM",
+      "en": "The personnel you need, where you need it: HDM industrial work",
+      "ca": "El personal que necessita, on el necessita: treball industrial d'HDM"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-el-personal-que-necesitas-donde-lo-necesitas-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1204,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-11",
+    "file": "/images/obras/hdm-el-personal-que-necesitas-donde-lo-necesitas-02.jpeg",
+    "alt": {
+      "es": "El personal que necesita, donde lo necesita: trabajo industrial de HDM",
+      "pt": "O pessoal que precisa, onde precisa: trabalho industrial da HDM",
+      "en": "The personnel you need, where you need it: HDM industrial work",
+      "ca": "El personal que necessita, on el necessita: treball industrial d'HDM"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-el-personal-que-necesitas-donde-lo-necesitas-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-12",
+    "file": "/images/obras/hdm-el-personal-que-necesitas-donde-lo-necesitas-03.jpeg",
+    "alt": {
+      "es": "El personal que necesita, donde lo necesita: trabajo industrial de HDM",
+      "pt": "O pessoal que precisa, onde precisa: trabalho industrial da HDM",
+      "en": "The personnel you need, where you need it: HDM industrial work",
+      "ca": "El personal que necessita, on el necessita: treball industrial d'HDM"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-el-personal-que-necesitas-donde-lo-necesitas-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-13",
+    "file": "/images/obras/hdm-el-personal-que-necesitas-donde-lo-necesitas-04.jpeg",
+    "alt": {
+      "es": "El personal que necesita, donde lo necesita: trabajo industrial de HDM",
+      "pt": "O pessoal que precisa, onde precisa: trabalho industrial da HDM",
+      "en": "The personnel you need, where you need it: HDM industrial work",
+      "ca": "El personal que necessita, on el necessita: treball industrial d'HDM"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-el-personal-que-necesitas-donde-lo-necesitas-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-14",
+    "file": "/images/obras/hdm-electricista-cualificado-industrial-01.jpeg",
+    "alt": {
+      "es": "Electricista cualificado en una instalación industrial",
+      "pt": "Eletricista qualificado numa instalação industrial",
+      "en": "Qualified electrician in an industrial installation",
+      "ca": "Electricista qualificat en una instal·lació industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electricista-cualificado-industrial-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-15",
+    "file": "/images/obras/hdm-electricista-cualificado-industrial-02.jpeg",
+    "alt": {
+      "es": "Electricista cualificado en una instalación industrial",
+      "pt": "Eletricista qualificado numa instalação industrial",
+      "en": "Qualified electrician in an industrial installation",
+      "ca": "Electricista qualificat en una instal·lació industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electricista-cualificado-industrial-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-16",
+    "file": "/images/obras/hdm-electricista-cualificado-industrial-03.jpeg",
+    "alt": {
+      "es": "Electricista cualificado en una instalación industrial",
+      "pt": "Eletricista qualificado numa instalação industrial",
+      "en": "Qualified electrician in an industrial installation",
+      "ca": "Electricista qualificat en una instal·lació industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electricista-cualificado-industrial-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-17",
+    "file": "/images/obras/hdm-electricista-cualificado-industrial-04.jpeg",
+    "alt": {
+      "es": "Electricista cualificado en una instalación industrial",
+      "pt": "Eletricista qualificado numa instalação industrial",
+      "en": "Qualified electrician in an industrial installation",
+      "ca": "Electricista qualificat en una instal·lació industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electricista-cualificado-industrial-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-18",
+    "file": "/images/obras/hdm-electricista-industrial-disponible-01.jpeg",
+    "alt": {
+      "es": "Electricista industrial de HDM Industrial en el puesto de trabajo",
+      "pt": "Eletricista industrial da HDM Industrial no posto de trabalho",
+      "en": "HDM Industrial electrician at the worksite",
+      "ca": "Electricista industrial d'HDM Industrial al lloc de treball"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electricista-industrial-disponible-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-19",
+    "file": "/images/obras/hdm-electricista-industrial-disponible-02.jpeg",
+    "alt": {
+      "es": "Electricista industrial de HDM Industrial en el puesto de trabajo",
+      "pt": "Eletricista industrial da HDM Industrial no posto de trabalho",
+      "en": "HDM Industrial electrician at the worksite",
+      "ca": "Electricista industrial d'HDM Industrial al lloc de treball"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electricista-industrial-disponible-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-20",
+    "file": "/images/obras/hdm-electricista-industrial-disponible-03.jpeg",
+    "alt": {
+      "es": "Electricista industrial de HDM Industrial en el puesto de trabajo",
+      "pt": "Eletricista industrial da HDM Industrial no posto de trabalho",
+      "en": "HDM Industrial electrician at the worksite",
+      "ca": "Electricista industrial d'HDM Industrial al lloc de treball"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electricista-industrial-disponible-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-21",
+    "file": "/images/obras/hdm-electricista-industrial-disponible-04.jpeg",
+    "alt": {
+      "es": "Electricista industrial de HDM Industrial en el puesto de trabajo",
+      "pt": "Eletricista industrial da HDM Industrial no posto de trabalho",
+      "en": "HDM Industrial electrician at the worksite",
+      "ca": "Electricista industrial d'HDM Industrial al lloc de treball"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electricista-industrial-disponible-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-22",
+    "file": "/images/obras/hdm-electricista-industrial-disponible-05.jpeg",
+    "alt": {
+      "es": "Electricista industrial de HDM Industrial en el puesto de trabajo",
+      "pt": "Eletricista industrial da HDM Industrial no posto de trabalho",
+      "en": "HDM Industrial electrician at the worksite",
+      "ca": "Electricista industrial d'HDM Industrial al lloc de treball"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electricista-industrial-disponible-05.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-23",
+    "file": "/images/obras/hdm-electromecanico-disponible-industrial-01.jpeg",
+    "alt": {
+      "es": "Electromecánico en una operación industrial",
+      "pt": "Eletromecânico numa operação industrial",
+      "en": "Electromechanical technician in an industrial operation",
+      "ca": "Electromecànic en una operació industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electromecanico-disponible-industrial-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-24",
+    "file": "/images/obras/hdm-electromecanico-disponible-industrial-02.jpeg",
+    "alt": {
+      "es": "Electromecánico en una operación industrial",
+      "pt": "Eletromecânico numa operação industrial",
+      "en": "Electromechanical technician in an industrial operation",
+      "ca": "Electromecànic en una operació industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electromecanico-disponible-industrial-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-25",
+    "file": "/images/obras/hdm-electromecanico-disponible-industrial-03.jpeg",
+    "alt": {
+      "es": "Electromecánico en una operación industrial",
+      "pt": "Eletromecânico numa operação industrial",
+      "en": "Electromechanical technician in an industrial operation",
+      "ca": "Electromecànic en una operació industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electromecanico-disponible-industrial-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-26",
+    "file": "/images/obras/hdm-electromecanico-disponible-industrial-04.jpeg",
+    "alt": {
+      "es": "Electromecánico en una operación industrial",
+      "pt": "Eletromecânico numa operação industrial",
+      "en": "Electromechanical technician in an industrial operation",
+      "ca": "Electromecànic en una operació industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electromecanico-disponible-industrial-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-27",
+    "file": "/images/obras/hdm-electromecanico-industrial-01.jpeg",
+    "alt": {
+      "es": "Electromecánico industrial de HDM Industrial trabajando en planta",
+      "pt": "Eletromecânico industrial da HDM Industrial a trabalhar em fábrica",
+      "en": "HDM Industrial electromechanical technician working on site",
+      "ca": "Electromecànic industrial d'HDM Industrial treballant a planta"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electromecanico-industrial-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-28",
+    "file": "/images/obras/hdm-electromecanico-industrial-02.jpeg",
+    "alt": {
+      "es": "Electromecánico industrial de HDM Industrial trabajando en planta",
+      "pt": "Eletromecânico industrial da HDM Industrial a trabalhar em fábrica",
+      "en": "HDM Industrial electromechanical technician working on site",
+      "ca": "Electromecànic industrial d'HDM Industrial treballant a planta"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electromecanico-industrial-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-29",
+    "file": "/images/obras/hdm-electromecanico-industrial-03.jpeg",
+    "alt": {
+      "es": "Electromecánico industrial de HDM Industrial trabajando en planta",
+      "pt": "Eletromecânico industrial da HDM Industrial a trabalhar em fábrica",
+      "en": "HDM Industrial electromechanical technician working on site",
+      "ca": "Electromecànic industrial d'HDM Industrial treballant a planta"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electromecanico-industrial-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-30",
+    "file": "/images/obras/hdm-electromecanico-industrial-04.jpeg",
+    "alt": {
+      "es": "Electromecánico industrial de HDM Industrial trabajando en planta",
+      "pt": "Eletromecânico industrial da HDM Industrial a trabalhar em fábrica",
+      "en": "HDM Industrial electromechanical technician working on site",
+      "ca": "Electromecànic industrial d'HDM Industrial treballant a planta"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electromecanico-industrial-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-31",
+    "file": "/images/obras/hdm-electromecanico-industrial-05.jpeg",
+    "alt": {
+      "es": "Electromecánico industrial de HDM Industrial trabajando en planta",
+      "pt": "Eletromecânico industrial da HDM Industrial a trabalhar em fábrica",
+      "en": "HDM Industrial electromechanical technician working on site",
+      "ca": "Electromecànic industrial d'HDM Industrial treballant a planta"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-electromecanico-industrial-05.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-32",
+    "file": "/images/obras/hdm-empresa-personal-industrial-confianza-01.jpeg",
+    "alt": {
+      "es": "Equipo de HDM Industrial: personal industrial de confianza",
+      "pt": "Equipa da HDM Industrial: pessoal industrial de confiança",
+      "en": "HDM Industrial team: trusted industrial personnel",
+      "ca": "Equip d'HDM Industrial: personal industrial de confiança"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-empresa-personal-industrial-confianza-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-33",
+    "file": "/images/obras/hdm-empresa-personal-industrial-confianza-02.jpeg",
+    "alt": {
+      "es": "Equipo de HDM Industrial: personal industrial de confianza",
+      "pt": "Equipa da HDM Industrial: pessoal industrial de confiança",
+      "en": "HDM Industrial team: trusted industrial personnel",
+      "ca": "Equip d'HDM Industrial: personal industrial de confiança"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-empresa-personal-industrial-confianza-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-34",
+    "file": "/images/obras/hdm-empresa-personal-industrial-confianza-03.jpeg",
+    "alt": {
+      "es": "Equipo de HDM Industrial: personal industrial de confianza",
+      "pt": "Equipa da HDM Industrial: pessoal industrial de confiança",
+      "en": "HDM Industrial team: trusted industrial personnel",
+      "ca": "Equip d'HDM Industrial: personal industrial de confiança"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-empresa-personal-industrial-confianza-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-35",
+    "file": "/images/obras/hdm-empresa-personal-industrial-confianza-04.jpeg",
+    "alt": {
+      "es": "Equipo de HDM Industrial: personal industrial de confianza",
+      "pt": "Equipa da HDM Industrial: pessoal industrial de confiança",
+      "en": "HDM Industrial team: trusted industrial personnel",
+      "ca": "Equip d'HDM Industrial: personal industrial de confiança"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-empresa-personal-industrial-confianza-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 1204
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-36",
+    "file": "/images/obras/hdm-mecanica-industrial-confianza-01.jpeg",
+    "alt": {
+      "es": "Trabajo de mecánica industrial con la confianza de HDM Industrial",
+      "pt": "Trabalho de mecânica industrial com a confiança da HDM Industrial",
+      "en": "Industrial mechanical work backed by HDM Industrial",
+      "ca": "Treball de mecànica industrial amb la confiança d'HDM Industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-mecanica-industrial-confianza-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-37",
+    "file": "/images/obras/hdm-mecanica-industrial-confianza-02.jpeg",
+    "alt": {
+      "es": "Trabajo de mecánica industrial con la confianza de HDM Industrial",
+      "pt": "Trabalho de mecânica industrial com a confiança da HDM Industrial",
+      "en": "Industrial mechanical work backed by HDM Industrial",
+      "ca": "Treball de mecànica industrial amb la confiança d'HDM Industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-mecanica-industrial-confianza-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-38",
+    "file": "/images/obras/hdm-mecanica-industrial-confianza-03.jpeg",
+    "alt": {
+      "es": "Trabajo de mecánica industrial con la confianza de HDM Industrial",
+      "pt": "Trabalho de mecânica industrial com a confiança da HDM Industrial",
+      "en": "Industrial mechanical work backed by HDM Industrial",
+      "ca": "Treball de mecànica industrial amb la confiança d'HDM Industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-mecanica-industrial-confianza-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-39",
+    "file": "/images/obras/hdm-mecanica-industrial-confianza-04.jpeg",
+    "alt": {
+      "es": "Trabajo de mecánica industrial con la confianza de HDM Industrial",
+      "pt": "Trabalho de mecânica industrial com a confiança da HDM Industrial",
+      "en": "Industrial mechanical work backed by HDM Industrial",
+      "ca": "Treball de mecànica industrial amb la confiança d'HDM Industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-mecanica-industrial-confianza-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-40",
+    "file": "/images/obras/hdm-mecanico-industrial-mantenimiento-01.jpeg",
+    "alt": {
+      "es": "Mecánico industrial en tareas de mantenimiento",
+      "pt": "Mecânico industrial em tarefas de manutenção",
+      "en": "Industrial mechanic carrying out maintenance work",
+      "ca": "Mecànic industrial en tasques de manteniment"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-mecanico-industrial-mantenimiento-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-41",
+    "file": "/images/obras/hdm-mecanico-industrial-mantenimiento-02.jpeg",
+    "alt": {
+      "es": "Mecánico industrial en tareas de mantenimiento",
+      "pt": "Mecânico industrial em tarefas de manutenção",
+      "en": "Industrial mechanic carrying out maintenance work",
+      "ca": "Mecànic industrial en tasques de manteniment"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-mecanico-industrial-mantenimiento-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-42",
+    "file": "/images/obras/hdm-mecanico-industrial-mantenimiento-03.jpeg",
+    "alt": {
+      "es": "Mecánico industrial en tareas de mantenimiento",
+      "pt": "Mecânico industrial em tarefas de manutenção",
+      "en": "Industrial mechanic carrying out maintenance work",
+      "ca": "Mecànic industrial en tasques de manteniment"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-mecanico-industrial-mantenimiento-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-43",
+    "file": "/images/obras/hdm-mecanico-industrial-mantenimiento-04.jpeg",
+    "alt": {
+      "es": "Mecánico industrial en tareas de mantenimiento",
+      "pt": "Mecânico industrial em tarefas de manutenção",
+      "en": "Industrial mechanic carrying out maintenance work",
+      "ca": "Mecànic industrial en tasques de manteniment"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-mecanico-industrial-mantenimiento-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-44",
+    "file": "/images/obras/hdm-mecanico-industrial-mantenimiento-05.jpeg",
+    "alt": {
+      "es": "Mecánico industrial en tareas de mantenimiento",
+      "pt": "Mecânico industrial em tarefas de manutenção",
+      "en": "Industrial mechanic carrying out maintenance work",
+      "ca": "Mecànic industrial en tasques de manteniment"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-mecanico-industrial-mantenimiento-05.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-45",
+    "file": "/images/obras/hdm-montador-industrial-experiencia-01.jpeg",
+    "alt": {
+      "es": "Montador industrial con experiencia montando equipos y estructuras",
+      "pt": "Montador industrial com experiência a montar equipamentos e estruturas",
+      "en": "Experienced industrial fitter assembling equipment and structures",
+      "ca": "Muntador industrial amb experiència muntant equips i estructures"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-montador-industrial-experiencia-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-46",
+    "file": "/images/obras/hdm-montador-industrial-experiencia-02.jpeg",
+    "alt": {
+      "es": "Montador industrial con experiencia montando equipos y estructuras",
+      "pt": "Montador industrial com experiência a montar equipamentos e estruturas",
+      "en": "Experienced industrial fitter assembling equipment and structures",
+      "ca": "Muntador industrial amb experiència muntant equips i estructures"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-montador-industrial-experiencia-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-47",
+    "file": "/images/obras/hdm-montador-industrial-experiencia-03.jpeg",
+    "alt": {
+      "es": "Montador industrial con experiencia montando equipos y estructuras",
+      "pt": "Montador industrial com experiência a montar equipamentos e estruturas",
+      "en": "Experienced industrial fitter assembling equipment and structures",
+      "ca": "Muntador industrial amb experiència muntant equips i estructures"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-montador-industrial-experiencia-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-48",
+    "file": "/images/obras/hdm-montador-industrial-experiencia-04.jpeg",
+    "alt": {
+      "es": "Montador industrial con experiencia montando equipos y estructuras",
+      "pt": "Montador industrial com experiência a montar equipamentos e estruturas",
+      "en": "Experienced industrial fitter assembling equipment and structures",
+      "ca": "Muntador industrial amb experiència muntant equips i estructures"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-montador-industrial-experiencia-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-49",
+    "file": "/images/obras/hdm-montador-industrial-experiencia-05.jpeg",
+    "alt": {
+      "es": "Montador industrial con experiencia montando equipos y estructuras",
+      "pt": "Montador industrial com experiência a montar equipamentos e estruturas",
+      "en": "Experienced industrial fitter assembling equipment and structures",
+      "ca": "Muntador industrial amb experiència muntant equips i estructures"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-montador-industrial-experiencia-05.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-50",
+    "file": "/images/obras/hdm-montaje-estructuras-metalicas-01.jpeg",
+    "alt": {
+      "es": "Montaje de estructuras metálicas en obra industrial",
+      "pt": "Montagem de estruturas metálicas em obra industrial",
+      "en": "Steel structure assembly on an industrial site",
+      "ca": "Muntatge d'estructures metàl·liques en obra industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-montaje-estructuras-metalicas-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-51",
+    "file": "/images/obras/hdm-montaje-estructuras-metalicas-02.jpeg",
+    "alt": {
+      "es": "Montaje de estructuras metálicas en obra industrial",
+      "pt": "Montagem de estruturas metálicas em obra industrial",
+      "en": "Steel structure assembly on an industrial site",
+      "ca": "Muntatge d'estructures metàl·liques en obra industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-montaje-estructuras-metalicas-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-52",
+    "file": "/images/obras/hdm-montaje-estructuras-metalicas-03.jpeg",
+    "alt": {
+      "es": "Montaje de estructuras metálicas en obra industrial",
+      "pt": "Montagem de estruturas metálicas em obra industrial",
+      "en": "Steel structure assembly on an industrial site",
+      "ca": "Muntatge d'estructures metàl·liques en obra industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-montaje-estructuras-metalicas-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-53",
+    "file": "/images/obras/hdm-montaje-estructuras-metalicas-04.jpeg",
+    "alt": {
+      "es": "Montaje de estructuras metálicas en obra industrial",
+      "pt": "Montagem de estruturas metálicas em obra industrial",
+      "en": "Steel structure assembly on an industrial site",
+      "ca": "Muntatge d'estructures metàl·liques en obra industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-montaje-estructuras-metalicas-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-54",
+    "file": "/images/obras/hdm-personal-industrial-cualificado-01.jpeg",
+    "alt": {
+      "es": "Personal industrial cualificado de HDM Industrial",
+      "pt": "Pessoal industrial qualificado da HDM Industrial",
+      "en": "Qualified industrial personnel from HDM Industrial",
+      "ca": "Personal industrial qualificat d'HDM Industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-personal-industrial-cualificado-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-55",
+    "file": "/images/obras/hdm-personal-industrial-cualificado-02.jpeg",
+    "alt": {
+      "es": "Personal industrial cualificado de HDM Industrial",
+      "pt": "Pessoal industrial qualificado da HDM Industrial",
+      "en": "Qualified industrial personnel from HDM Industrial",
+      "ca": "Personal industrial qualificat d'HDM Industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-personal-industrial-cualificado-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-56",
+    "file": "/images/obras/hdm-personal-industrial-cualificado-03.jpeg",
+    "alt": {
+      "es": "Personal industrial cualificado de HDM Industrial",
+      "pt": "Pessoal industrial qualificado da HDM Industrial",
+      "en": "Qualified industrial personnel from HDM Industrial",
+      "ca": "Personal industrial qualificat d'HDM Industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-personal-industrial-cualificado-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-57",
+    "file": "/images/obras/hdm-personal-industrial-cualificado-04.jpeg",
+    "alt": {
+      "es": "Personal industrial cualificado de HDM Industrial",
+      "pt": "Pessoal industrial qualificado da HDM Industrial",
+      "en": "Qualified industrial personnel from HDM Industrial",
+      "ca": "Personal industrial qualificat d'HDM Industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-personal-industrial-cualificado-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-58",
+    "file": "/images/obras/hdm-personal-industrial-cualificado-05.jpeg",
+    "alt": {
+      "es": "Personal industrial cualificado de HDM Industrial",
+      "pt": "Pessoal industrial qualificado da HDM Industrial",
+      "en": "Qualified industrial personnel from HDM Industrial",
+      "ca": "Personal industrial qualificat d'HDM Industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-personal-industrial-cualificado-05.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-59",
+    "file": "/images/obras/hdm-personal-industrial-disponible-inmediato-01.jpeg",
+    "alt": {
+      "es": "Personal industrial preparado para incorporarse a su proyecto",
+      "pt": "Pessoal industrial preparado para integrar o seu projeto",
+      "en": "Industrial personnel ready to join your project",
+      "ca": "Personal industrial preparat per incorporar-se al seu projecte"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-personal-industrial-disponible-inmediato-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-60",
+    "file": "/images/obras/hdm-personal-industrial-disponible-inmediato-02.jpeg",
+    "alt": {
+      "es": "Personal industrial preparado para incorporarse a su proyecto",
+      "pt": "Pessoal industrial preparado para integrar o seu projeto",
+      "en": "Industrial personnel ready to join your project",
+      "ca": "Personal industrial preparat per incorporar-se al seu projecte"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-personal-industrial-disponible-inmediato-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-61",
+    "file": "/images/obras/hdm-personal-industrial-disponible-inmediato-03.jpeg",
+    "alt": {
+      "es": "Personal industrial preparado para incorporarse a su proyecto",
+      "pt": "Pessoal industrial preparado para integrar o seu projeto",
+      "en": "Industrial personnel ready to join your project",
+      "ca": "Personal industrial preparat per incorporar-se al seu projecte"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-personal-industrial-disponible-inmediato-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-62",
+    "file": "/images/obras/hdm-personal-industrial-disponible-inmediato-04.jpeg",
+    "alt": {
+      "es": "Personal industrial preparado para incorporarse a su proyecto",
+      "pt": "Pessoal industrial preparado para integrar o seu projeto",
+      "en": "Industrial personnel ready to join your project",
+      "ca": "Personal industrial preparat per incorporar-se al seu projecte"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-personal-industrial-disponible-inmediato-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
     "width": 900,
     "height": 1600
   },
   {
-    "id": "PH-CLIENTE-TRABAJO-07",
-    "file": "/images/cliente/hdm-trabajo-07.jpg",
+    "id": "PH-CLIENTE-OBRA-63",
+    "file": "/images/obras/hdm-personal-industrial-verificado-01.jpeg",
     "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+      "es": "Personal industrial verificado por HDM Industrial",
+      "pt": "Pessoal industrial verificado pela HDM Industrial",
+      "en": "Industrial personnel verified by HDM Industrial",
+      "ca": "Personal industrial verificat per HDM Industrial"
     },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 8'. Seleção automática por nitidez, sem duplicados.",
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-personal-industrial-verificado-01.jpeg",
     "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 1200,
-    "height": 1600
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-08",
-    "file": "/images/cliente/hdm-trabajo-08.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 10'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 828,
-    "height": 1505
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-09",
-    "file": "/images/cliente/hdm-trabajo-09.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 14'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
     "width": 720,
-    "height": 1280
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-10",
-    "file": "/images/cliente/hdm-trabajo-10.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 16'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 960,
-    "height": 1280
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-11",
-    "file": "/images/cliente/hdm-trabajo-11.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 18'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 1200,
     "height": 1600
   },
   {
-    "id": "PH-CLIENTE-TRABAJO-12",
-    "file": "/images/cliente/hdm-trabajo-12.jpg",
+    "id": "PH-CLIENTE-OBRA-64",
+    "file": "/images/obras/hdm-personal-industrial-verificado-02.jpeg",
     "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+      "es": "Personal industrial verificado por HDM Industrial",
+      "pt": "Pessoal industrial verificado pela HDM Industrial",
+      "en": "Industrial personnel verified by HDM Industrial",
+      "ca": "Personal industrial verificat per HDM Industrial"
     },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 19'. Seleção automática por nitidez, sem duplicados.",
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-personal-industrial-verificado-02.jpeg",
     "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
     "width": 1600,
     "height": 720
   },
   {
-    "id": "PH-CLIENTE-TRABAJO-13",
-    "file": "/images/cliente/hdm-trabajo-13.jpg",
+    "id": "PH-CLIENTE-OBRA-65",
+    "file": "/images/obras/hdm-personal-industrial-verificado-03.jpeg",
     "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+      "es": "Personal industrial verificado por HDM Industrial",
+      "pt": "Pessoal industrial verificado pela HDM Industrial",
+      "en": "Industrial personnel verified by HDM Industrial",
+      "ca": "Personal industrial verificat per HDM Industrial"
     },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 21'. Seleção automática por nitidez, sem duplicados.",
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-personal-industrial-verificado-03.jpeg",
     "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 1200,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
     "height": 1600
   },
   {
-    "id": "PH-CLIENTE-TRABAJO-14",
-    "file": "/images/cliente/hdm-trabajo-14.jpg",
+    "id": "PH-CLIENTE-OBRA-66",
+    "file": "/images/obras/hdm-personal-industrial-verificado-04.jpeg",
     "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+      "es": "Personal industrial verificado por HDM Industrial",
+      "pt": "Pessoal industrial verificado pela HDM Industrial",
+      "en": "Industrial personnel verified by HDM Industrial",
+      "ca": "Personal industrial verificat per HDM Industrial"
     },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 22'. Seleção automática por nitidez, sem duplicados.",
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-personal-industrial-verificado-04.jpeg",
     "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 737,
-    "height": 1600
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-15",
-    "file": "/images/cliente/hdm-trabajo-15.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 23'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 960,
-    "height": 1280
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-16",
-    "file": "/images/cliente/hdm-trabajo-16.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 24'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 1200,
-    "height": 1600
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-17",
-    "file": "/images/cliente/hdm-trabajo-17.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 25'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 737,
-    "height": 1600
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-18",
-    "file": "/images/cliente/hdm-trabajo-18.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 29'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 1200,
-    "height": 1600
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-19",
-    "file": "/images/cliente/hdm-trabajo-19.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 30'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 740,
-    "height": 1600
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-20",
-    "file": "/images/cliente/hdm-trabajo-20.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 31'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 828,
-    "height": 1031
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-21",
-    "file": "/images/cliente/hdm-trabajo-21.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 32'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
     "width": 1600,
     "height": 720
   },
   {
-    "id": "PH-CLIENTE-TRABAJO-22",
-    "file": "/images/cliente/hdm-trabajo-22.jpg",
+    "id": "PH-CLIENTE-OBRA-67",
+    "file": "/images/obras/hdm-revisa-disponibilidad-antes-confirmar-01.jpeg",
     "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+      "es": "HDM revisa la disponibilidad del personal antes de confirmar un servicio",
+      "pt": "A HDM revê a disponibilidade do pessoal antes de confirmar um serviço",
+      "en": "HDM checks personnel availability before confirming a service",
+      "ca": "HDM revisa la disponibilitat del personal abans de confirmar un servei"
     },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 34'. Seleção automática por nitidez, sem duplicados.",
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-revisa-disponibilidad-antes-confirmar-01.jpeg",
     "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-68",
+    "file": "/images/obras/hdm-revisa-disponibilidad-antes-confirmar-02.jpeg",
+    "alt": {
+      "es": "HDM revisa la disponibilidad del personal antes de confirmar un servicio",
+      "pt": "A HDM revê a disponibilidade do pessoal antes de confirmar um serviço",
+      "en": "HDM checks personnel availability before confirming a service",
+      "ca": "HDM revisa la disponibilitat del personal abans de confirmar un servei"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-revisa-disponibilidad-antes-confirmar-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-69",
+    "file": "/images/obras/hdm-revisa-disponibilidad-antes-confirmar-03.jpeg",
+    "alt": {
+      "es": "HDM revisa la disponibilidad del personal antes de confirmar un servicio",
+      "pt": "A HDM revê a disponibilidade do pessoal antes de confirmar um serviço",
+      "en": "HDM checks personnel availability before confirming a service",
+      "ca": "HDM revisa la disponibilitat del personal abans de confirmar un servei"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-revisa-disponibilidad-antes-confirmar-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
     "width": 1200,
     "height": 1600
   },
   {
-    "id": "PH-CLIENTE-TRABAJO-23",
-    "file": "/images/cliente/hdm-trabajo-23.jpg",
+    "id": "PH-CLIENTE-OBRA-70",
+    "file": "/images/obras/hdm-revisa-disponibilidad-antes-confirmar-04.jpeg",
     "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+      "es": "HDM revisa la disponibilidad del personal antes de confirmar un servicio",
+      "pt": "A HDM revê a disponibilidade do pessoal antes de confirmar um serviço",
+      "en": "HDM checks personnel availability before confirming a service",
+      "ca": "HDM revisa la disponibilitat del personal abans de confirmar un servei"
     },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 36'. Seleção automática por nitidez, sem duplicados.",
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-revisa-disponibilidad-antes-confirmar-04.jpeg",
     "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 828,
-    "height": 1391
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-24",
-    "file": "/images/cliente/hdm-trabajo-24.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 38'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 742,
-    "height": 1355
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-25",
-    "file": "/images/cliente/hdm-trabajo-25.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 39'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 816,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
     "height": 1600
   },
   {
-    "id": "PH-CLIENTE-TRABAJO-26",
-    "file": "/images/cliente/hdm-trabajo-26.jpg",
+    "id": "PH-CLIENTE-OBRA-71",
+    "file": "/images/obras/hdm-soldador-industrial-certificado-01.jpeg",
     "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
+      "es": "Soldador industrial certificado realizando una soldadura",
+      "pt": "Soldador industrial certificado a realizar uma soldadura",
+      "en": "Certified industrial welder at work",
+      "ca": "Soldador industrial certificat realitzant una soldadura"
     },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - 40'. Seleção automática por nitidez, sem duplicados.",
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-soldador-industrial-certificado-01.jpeg",
     "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
-    "width": 828,
-    "height": 1073
-  },
-  {
-    "id": "PH-CLIENTE-TRABAJO-27",
-    "file": "/images/cliente/hdm-trabajo-27.jpg",
-    "alt": {
-      "es": "Trabajo de fabricación, montaje o soldadura industrial realizado por el equipo de HDM Industrial",
-      "ca": "Treball de fabricació, muntatge o soldadura industrial realitzat per l'equip d'HDM Industrial",
-      "en": "Fabrication, assembly or industrial welding job carried out by the HDM Industrial team",
-      "pt": "Trabalho de fabricação, montagem ou soldadura industrial realizado pela equipa da HDM Industrial"
-    },
-    "context": "Foto real enviada pelo cliente (lote 11/10/2026): 'HDM Industrial - IMG_0081'. Seleção automática por nitidez, sem duplicados.",
-    "sourceUrl": null,
-    "source": "Cliente HDM Industrial (envío privado 11/10/2026)",
-    "license": "Uso autorizado pelo cliente",
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
     "width": 1200,
     "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-72",
+    "file": "/images/obras/hdm-soldador-industrial-certificado-02.jpeg",
+    "alt": {
+      "es": "Soldador industrial certificado realizando una soldadura",
+      "pt": "Soldador industrial certificado a realizar uma soldadura",
+      "en": "Certified industrial welder at work",
+      "ca": "Soldador industrial certificat realitzant una soldadura"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-soldador-industrial-certificado-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-73",
+    "file": "/images/obras/hdm-soldador-industrial-certificado-03.jpeg",
+    "alt": {
+      "es": "Soldador industrial certificado realizando una soldadura",
+      "pt": "Soldador industrial certificado a realizar uma soldadura",
+      "en": "Certified industrial welder at work",
+      "ca": "Soldador industrial certificat realitzant una soldadura"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-soldador-industrial-certificado-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-74",
+    "file": "/images/obras/hdm-soldador-industrial-certificado-04.jpeg",
+    "alt": {
+      "es": "Soldador industrial certificado realizando una soldadura",
+      "pt": "Soldador industrial certificado a realizar uma soldadura",
+      "en": "Certified industrial welder at work",
+      "ca": "Soldador industrial certificat realitzant una soldadura"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-soldador-industrial-certificado-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-75",
+    "file": "/images/obras/hdm-soldador-tig-mig-mag-electrodo-01.jpeg",
+    "alt": {
+      "es": "Soldador TIG, MIG, MAG y electrodo trabajando en una pieza industrial",
+      "pt": "Soldador TIG, MIG, MAG e elétrodo a trabalhar numa peça industrial",
+      "en": "TIG, MIG, MAG and stick welder working on an industrial part",
+      "ca": "Soldador TIG, MIG, MAG i elèctrode treballant en una peça industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-soldador-tig-mig-mag-electrodo-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-76",
+    "file": "/images/obras/hdm-soldador-tig-mig-mag-electrodo-02.jpeg",
+    "alt": {
+      "es": "Soldador TIG, MIG, MAG y electrodo trabajando en una pieza industrial",
+      "pt": "Soldador TIG, MIG, MAG e elétrodo a trabalhar numa peça industrial",
+      "en": "TIG, MIG, MAG and stick welder working on an industrial part",
+      "ca": "Soldador TIG, MIG, MAG i elèctrode treballant en una peça industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-soldador-tig-mig-mag-electrodo-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-77",
+    "file": "/images/obras/hdm-soldador-tig-mig-mag-electrodo-03.jpeg",
+    "alt": {
+      "es": "Soldador TIG, MIG, MAG y electrodo trabajando en una pieza industrial",
+      "pt": "Soldador TIG, MIG, MAG e elétrodo a trabalhar numa peça industrial",
+      "en": "TIG, MIG, MAG and stick welder working on an industrial part",
+      "ca": "Soldador TIG, MIG, MAG i elèctrode treballant en una peça industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-soldador-tig-mig-mag-electrodo-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1204,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-78",
+    "file": "/images/obras/hdm-soldador-tig-mig-mag-electrodo-04.jpeg",
+    "alt": {
+      "es": "Soldador TIG, MIG, MAG y electrodo trabajando en una pieza industrial",
+      "pt": "Soldador TIG, MIG, MAG e elétrodo a trabalhar numa peça industrial",
+      "en": "TIG, MIG, MAG and stick welder working on an industrial part",
+      "ca": "Soldador TIG, MIG, MAG i elèctrode treballant en una peça industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-soldador-tig-mig-mag-electrodo-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-79",
+    "file": "/images/obras/hdm-soldador-tig-mig-mag-electrodo-05.jpeg",
+    "alt": {
+      "es": "Soldador TIG, MIG, MAG y electrodo trabajando en una pieza industrial",
+      "pt": "Soldador TIG, MIG, MAG e elétrodo a trabalhar numa peça industrial",
+      "en": "TIG, MIG, MAG and stick welder working on an industrial part",
+      "ca": "Soldador TIG, MIG, MAG i elèctrode treballant en una peça industrial"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-soldador-tig-mig-mag-electrodo-05.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 720
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-80",
+    "file": "/images/obras/hdm-supervision-personal-industrial-01.jpeg",
+    "alt": {
+      "es": "Supervisión de personal industrial en planta",
+      "pt": "Supervisão de pessoal industrial em fábrica",
+      "en": "Supervision of industrial personnel on site",
+      "ca": "Supervisió de personal industrial a planta"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-supervision-personal-industrial-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-81",
+    "file": "/images/obras/hdm-supervision-personal-industrial-02.jpeg",
+    "alt": {
+      "es": "Supervisión de personal industrial en planta",
+      "pt": "Supervisão de pessoal industrial em fábrica",
+      "en": "Supervision of industrial personnel on site",
+      "ca": "Supervisió de personal industrial a planta"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-supervision-personal-industrial-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-82",
+    "file": "/images/obras/hdm-supervision-personal-industrial-03.jpeg",
+    "alt": {
+      "es": "Supervisión de personal industrial en planta",
+      "pt": "Supervisão de pessoal industrial em fábrica",
+      "en": "Supervision of industrial personnel on site",
+      "ca": "Supervisió de personal industrial a planta"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-supervision-personal-industrial-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-83",
+    "file": "/images/obras/hdm-supervision-personal-industrial-04.jpeg",
+    "alt": {
+      "es": "Supervisión de personal industrial en planta",
+      "pt": "Supervisão de pessoal industrial em fábrica",
+      "en": "Supervision of industrial personnel on site",
+      "ca": "Supervisió de personal industrial a planta"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-supervision-personal-industrial-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-84",
+    "file": "/images/obras/hdm-supervisor-obras-industriales-01.jpeg",
+    "alt": {
+      "es": "Supervisor de obras industriales coordinando el trabajo",
+      "pt": "Supervisor de obras industriais a coordenar o trabalho",
+      "en": "Industrial works supervisor coordinating the job",
+      "ca": "Supervisor d'obres industrials coordinant la feina"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-supervisor-obras-industriales-01.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-85",
+    "file": "/images/obras/hdm-supervisor-obras-industriales-02.jpeg",
+    "alt": {
+      "es": "Supervisor de obras industriales coordinando el trabajo",
+      "pt": "Supervisor de obras industriais a coordenar o trabalho",
+      "en": "Industrial works supervisor coordinating the job",
+      "ca": "Supervisor d'obres industrials coordinant la feina"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-supervisor-obras-industriales-02.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-86",
+    "file": "/images/obras/hdm-supervisor-obras-industriales-03.jpeg",
+    "alt": {
+      "es": "Supervisor de obras industriales coordinando el trabajo",
+      "pt": "Supervisor de obras industriais a coordenar o trabalho",
+      "en": "Industrial works supervisor coordinating the job",
+      "ca": "Supervisor d'obres industrials coordinant la feina"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-supervisor-obras-industriales-03.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 720,
+    "height": 1600
+  },
+  {
+    "id": "PH-CLIENTE-OBRA-87",
+    "file": "/images/obras/hdm-supervisor-obras-industriales-04.jpeg",
+    "alt": {
+      "es": "Supervisor de obras industriales coordinando el trabajo",
+      "pt": "Supervisor de obras industriais a coordenar o trabalho",
+      "en": "Industrial works supervisor coordinating the job",
+      "ca": "Supervisor d'obres industrials coordinant la feina"
+    },
+    "context": "Foto real del cliente (lote 12/11/2026): hdm-supervisor-obras-industriales-04.jpeg",
+    "sourceUrl": null,
+    "source": "Cliente HDM Industrial (envío privado 12/11/2026)",
+    "license": "Uso autorizado por el cliente",
+    "width": 1600,
+    "height": 900
   }
 ]

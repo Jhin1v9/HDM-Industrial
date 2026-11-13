@@ -8,22 +8,24 @@
  */
 @theme {
   /* color — tinta profunda + papel quente + aço + acento sinal contido */
-  --color-ink-950: #10151a;
-  --color-ink-900: #161d24;
-  --color-ink-800: #1f2831;
-  --color-ink-700: #2b3742;
-  --color-ink-600: #3d4b58;
-  --color-steel-500: #5f7183;
-  --color-steel-400: #8195a6;
-  --color-steel-300: #a9b8c4;
-  --color-line-300: #d6d3cb;
-  --color-line-200: #e4e2db;
-  --color-paper-100: #f4f3ef;
+  /* Paleta alineada con el logo HDM (2026-11): azul marino profundo
+     #003366 + naranja de marca #FF5500 + neutros pizarra. */
+  --color-ink-950: #050f1c;
+  --color-ink-900: #08182b;
+  --color-ink-800: #0d2239;
+  --color-ink-700: #003366;
+  --color-ink-600: #1c4a78;
+  --color-steel-500: #52697f;
+  --color-steel-400: #73899d;
+  --color-steel-300: #a3b3c2;
+  --color-line-300: #d3dae0;
+  --color-line-200: #e3e8ec;
+  --color-paper-100: #f4f6f7;
   --color-paper-50: #ffffff;
-  --color-signal-700: #c2491d;
-  --color-signal-600: #e65c00;
-  --color-signal-500: #f0762b;
-  --color-signal-100: #f7e4d9;
+  --color-signal-700: #c43a00;
+  --color-signal-600: #ed4d00;
+  --color-signal-500: #ff5500;
+  --color-signal-100: #ffe7da;
   --color-ok-600: #2e6b4f;
   --color-warn-700: #8a5a13;
 

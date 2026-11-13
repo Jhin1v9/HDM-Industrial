@@ -36,14 +36,17 @@ export function Footer({ locale }: { locale: Locale }) {
       <div className="mx-auto grid max-w-[76rem] gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           {/* Logo oficial do cliente - mesma marca do header */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={asset("/images/brand/hdm-logo-light.png")}
-            alt="HDM Industrial"
-            width={771}
-            height={330}
-            className="mx-auto h-9 w-auto lg:mx-0"
-          />
+          <picture>
+            <source srcSet={asset("/images/brand/hdm-logo-light.webp")} type="image/webp" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={asset("/images/brand/hdm-logo-light.png")}
+              alt="HDM Industrial"
+              width={600}
+              height={227}
+              className="mx-auto h-9 w-auto lg:mx-0"
+            />
+          </picture>
           <p className="mt-3 text-sm text-steel-300 sm:max-w-xs">{f.tagline}</p>
           <div className="mt-4 flex items-center justify-center gap-4 lg:justify-start">
             {companyFacts.instagram ? (

@@ -72,6 +72,26 @@ Nada aqui bloqueia o build. Atualizar quando o cliente confirmar.
   (dispositivo) y luego `git add -f .github/workflows/sync-reviews.yml` +
   commit + push, o pegarlo desde la web de GitHub.
 
+## Rediseño de marca + trabajos Valladolid (13/11/2026)
+
+- **Paleta nueva** alineada con el logo (azul marino #003366 + naranja #FF5500 + neutros pizarra):
+  tokens actualizados en `src/styles/globals.css` (ink/steel/line/paper/signal). Todo el sitio
+  hereda; único hardcode corregido: lightbox (`bg-[#10151a]` → `bg-ink-950`).
+- **Logo** (lote 12/11): `hdm-industrial-marca-hdm.png` procesado a PNG/WebP transparentes:
+  `hdm-logo-light.*` (papel+naranja, para header/footer oscuros) y `hdm-logo-dark.*` (navy+naranja).
+  Header y Footer usan `<picture>` (WebP + PNG fallback). Favicon desde
+  `hdm-industrial-logo-empresa.jpeg`: `app/icon.png` (512), `app/apple-icon.png` (180) y `app/favicon.ico`
+  (PIL genera el ICO en RGBA; en RGB Next falla al decodificar).
+- **Trabajos realizados** (`/empresa`, 4 locales): 87 fotos reales del lote 12/11 en
+  `public/images/obras/` (+ thumbs 520px en `obras/thumbs/`) con nombres SEO; componente nuevo
+  `WorkWall` (grid lazy 2/3/4 cols + lightbox con teclado/flechas). Manifest
+  `PH-CLIENTE-OBRA-01..87` con alt en 4 idiomas derivado del nombre del archivo.
+- **SEO local**: title/description de `/empresa` mencionan «trabajos realizados en Valladolid,
+  polígono industrial San Cristóbal y polígonos cercanos» en 4 idiomas (`company.seoTitle/seoDescription`
+  + `worksTitle/worksLead`). H2 visible con la misma keyword.
+- **Limpieza**: retiradas las 27 fotos `hdm-trabajo-*` del lote anterior (11/10), sustituidas por el lote nuevo.
+- Pendiente del lote 12/11: 2 vídeos en `hdm-newbranch/Img/` sin usar (el hero es solo imágenes por decisión previa).
+
 ## Novedades recientes (11/10/2026 — lote imágenes + galerías)
 
 - **Miniaturas sin barra de scroll (11/10 noche)**: la tira de miniaturas

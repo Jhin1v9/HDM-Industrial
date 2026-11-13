@@ -712,6 +712,12 @@ const enPages = {
       "This site reflects that way of working: you configure what you need and HDM confirms what it can put in place. No automatic promises.",
     valuesTitle: "How HDM behaves",
     galleryTitle: "Completed work",
+    seoTitle: "Company and completed works in Valladolid",
+    seoDescription:
+      "HDM Industrial supplies qualified personnel and carries out works in the San Cristóbal industrial estate (Valladolid) and nearby estates. Real photos of site work, workshop and assembly.",
+    worksTitle: "Completed works in Valladolid and nearby industrial estates",
+    worksLead:
+      "A selection of real HDM Industrial works in the San Cristóbal industrial estate (Valladolid) and nearby estates: workshop, boilermaking, welding, steel structure assembly and installations. All images are our own site and team photographs.",
     values: [
       { name: "Reliability", body: "What is confirmed is delivered. What is not confirmed is stated as such." },
       { name: "Transparency", body: "No inflated figures and no automatic promises. Availability is reviewed and communicated." },

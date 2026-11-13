@@ -352,7 +352,7 @@ export function GalleryViewer({
       {mounted && lightbox
         ? createPortal(
             <div
-              className="fixed inset-0 z-[100] flex flex-col bg-[#10151a]"
+              className="fixed inset-0 z-[100] flex flex-col bg-ink-950"
               role="dialog"
               aria-modal="true"
               aria-label={active.alt[locale] ?? dict.common.galleryLabel}

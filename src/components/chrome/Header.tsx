@@ -50,14 +50,17 @@ export function Header({ locale }: { locale: Locale }) {
           aria-label="HDM Industrial"
         >
           {/* Logo oficial fornecida pelo cliente (Matheus, 21/09) - PDF em documentos/brand/ */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={asset("/images/brand/hdm-logo-light.png")}
-            alt="HDM Industrial"
-            width={771}
-            height={330}
-            className="h-8 w-auto"
-          />
+          <picture>
+            <source srcSet={asset("/images/brand/hdm-logo-light.webp")} type="image/webp" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={asset("/images/brand/hdm-logo-light.png")}
+              alt="HDM Industrial"
+              width={600}
+              height={227}
+              className="h-8 w-auto"
+            />
+          </picture>
         </Link>
 
         <nav aria-label={dict.common.navPrimary} className="ml-6 hidden items-center gap-1 lg:flex">
